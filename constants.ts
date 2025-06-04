@@ -12,7 +12,7 @@ export const USER_ID = "user-json";
 
 export const WISHLIST_FORM_ID = "wishlist-form";
 
-export const HEADER_HEIGHT_MOBILE = "104px";
-export const NAVBAR_HEIGHT_MOBILE = "56px";
-export const HEADER_HEIGHT_DESKTOP = "176px";
+export const HEADER_HEIGHT_MOBILE = "120px";
+export const NAVBAR_HEIGHT_MOBILE = "32px";
+export const HEADER_HEIGHT_DESKTOP = "136px";
 export const NAVBAR_HEIGHT_DESKTOP = "44px";

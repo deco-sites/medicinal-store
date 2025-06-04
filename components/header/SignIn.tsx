@@ -18,34 +18,28 @@ const onLoad = (containerID: string) => {
     }
   });
 };
-function SignIn({ variant }: {
-  variant: "mobile" | "desktop";
-}) {
+function SignIn() {
   const id = useId();
   return (
     <div id={id}>
       <a
-        class={clx(
-          "btn btn-sm font-thin btn-ghost no-animation",
-          variant === "mobile" && "btn-square",
-        )}
+        class="flex items-center gap-2"
         href="/login"
         aria-label="Login"
       >
-        <Icon id="account_circle" />
-        {variant === "desktop" && <span>Sign in</span>}
+        <Icon id="account_circle" size={24} />
+        <p class="text-sm m-0 leading-4">Faça seu <b>login</b><br />ou <b>cadastre-se</b></p>
       </a>
       <a
         class={clx(
           "hidden",
-          "btn btn-sm font-thin btn-ghost no-animation",
-          variant === "mobile" && "btn-square",
+          "flex items-center gap-2"
         )}
         href="/account"
         aria-label="Account"
       >
-        <Icon id="account_circle" />
-        {variant === "desktop" && <span>My account</span>}
+        <Icon id="account_circle" size={24} />
+        <p class="text-sm m-0 leading-4">Acesse sua conta</p>
       </a>
       <script
         type="module"

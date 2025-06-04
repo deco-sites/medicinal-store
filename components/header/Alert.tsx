@@ -1,32 +1,56 @@
-import Slider from "../../components/ui/Slider.tsx";
-import { useId } from "../../sdk/useId.ts";
+import Image from "apps/website/components/Image.tsx";
+import Slider from "../ui/Slider.tsx";
+import { useDevice } from "@deco/deco/hooks";
+
+import type { AlertProps } from "../../sections/Header/Header.tsx";
 
 export interface Props {
-  alerts?: string[];
-  /**
-   * @title Autoplay interval
-   * @description time (in seconds) to start the carousel autoplay
-   */
-  interval?: number;
+  alerts?: AlertProps[];
 }
 
-function Alert({ alerts = [], interval = 5 }: Props) {
-  const id = useId();
+const Card = ({
+  icon = "",
+  text = ""
+}) => (
+  <div class="flex items-center gap-2">
+    <Image
+      src={icon}
+      width={16}
+      height={16}
+      loading="lazy"
+    />
+    <div
+      class="fluid-text text-sm"
+      dangerouslySetInnerHTML={{ __html: text }}
+    />
+  </div>
+);
+
+function Alert({ alerts = [] }: Props) {
+  const device = useDevice();
 
   return (
-    <div id={id}>
-      <Slider class="carousel carousel-center w-screen gap-6 bg-secondary text-secondary-content text-sm/4">
-        {alerts.map((alert, index) => (
-          <Slider.Item index={index} class="carousel-item">
-            <span
-              class="px-5 py-4 w-screen text-center"
-              dangerouslySetInnerHTML={{ __html: alert }}
-            />
-          </Slider.Item>
-        ))}
-      </Slider>
-
-      <Slider.JS rootId={id} interval={interval && interval * 1e3} />
+    <div class="border-b border-base-400">
+      {device === "mobile" ? (
+        <Slider class="carousel carousel-center gap-4 sm:gap-6 w-full">
+          {alerts.map((alert, index) => (
+            <Slider.Item
+              index={index}
+              class="carousel-item w-screen flex justify-center text-center"
+            >
+              <Card {...alert} />
+            </Slider.Item>
+          ))}
+        </Slider>
+      ) : (
+        <div class="w-full container px-4 mx-auto">
+          <div class="flex items-center justify-between gap-4">
+            {alerts.map((alert) => (
+              <Card {...alert} />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
