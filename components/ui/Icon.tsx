@@ -4,10 +4,12 @@ import type { JSX } from "preact";
 export type AvailableIcons =
   | "search"
   | "shopping_bag"
+  | "big_shopping_bag"
   | "menu"
   | "account_circle"
   | "close"
   | "chevron-right"
+  | "chevron-down"
   | "favorite"
   | "home_pin"
   | "call"
@@ -17,7 +19,9 @@ export type AvailableIcons =
   | "sell"
   | "check-circle"
   | "error"
-  | "trash";
+  | "trash"
+  | "check-error"
+  | "check-success";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**
