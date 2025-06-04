@@ -1,17 +1,20 @@
-import type { ProductListingPage } from "apps/commerce/types.ts";
-import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
-import ProductCard from "../../components/product/ProductCard.tsx";
-import Filters from "../../components/search/Filters.tsx";
-import Icon from "../../components/ui/Icon.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
-import Breadcrumb from "../ui/Breadcrumb.tsx";
-import Drawer from "../ui/Drawer.tsx";
-import Sort from "./Sort.tsx";
+import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import { useDevice, useScript, useSection } from "@deco/deco/hooks";
-import { type SectionProps } from "@deco/deco";
+
+import Sort from "./Sort.tsx";
+import Icon from "../../components/ui/Icon.tsx";
+import Drawer from "../ui/Drawer.tsx";
+import Filters from "../../components/search/Filters.tsx";
+import Breadcrumb from "../ui/Breadcrumb.tsx";
+import ProductCard from "../../components/product/ProductCard.tsx";
+
+import type { SectionProps } from "@deco/deco";
+import type { ProductListingPage } from "apps/commerce/types.ts";
+
 export interface Layout {
   /**
    * @title Pagination
@@ -19,6 +22,7 @@ export interface Layout {
    */
   pagination?: "show-more" | "pagination";
 }
+
 export interface Props {
   /** @title Integration */
   page: ProductListingPage | null;
@@ -28,6 +32,7 @@ export interface Props {
   /** @hidden */
   partial?: "hideMore" | "hideLess";
 }
+
 function NotFound() {
   return (
     <div class="w-full flex justify-center items-center py-10">
@@ -35,6 +40,7 @@ function NotFound() {
     </div>
   );
 }
+
 const useUrlRebased = (overrides: string | undefined, base: string) => {
   let url: string | undefined = undefined;
   if (overrides) {
@@ -48,6 +54,7 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
   }
   return url;
 };
+
 function PageResult(props: SectionProps<typeof loader>) {
   const { layout, startingPage = 0, url, partial } = props;
   const page = props.page!;
@@ -92,7 +99,7 @@ function PageResult(props: SectionProps<typeof loader>) {
         class={clx(
           "grid items-center",
           "grid-cols-2 gap-2",
-          "sm:grid-cols-4 sm:gap-10",
+          "sm:grid-cols-4 sm:gap-4",
           "w-full",
         )}
       >
@@ -156,6 +163,7 @@ function PageResult(props: SectionProps<typeof loader>) {
     </div>
   );
 }
+
 const setPageQuerystring = (page: string, id: string) => {
   const element = document.getElementById(id)?.querySelector(
     "[data-product-list]",
@@ -179,13 +187,14 @@ const setPageQuerystring = (page: string, id: string) => {
     history.replaceState({ prevPage }, "", url.href);
   }).observe(element);
 };
+
 function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
   const device = useDevice();
   const { startingPage = 0, url, partial } = props;
   const page = props.page!;
-  const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
+  const { products, filters, breadcrumb, pageInfo, sortOptions, seo = {} } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
   const offset = zeroIndexedOffsetPage * perPage;
@@ -208,32 +217,46 @@ function Result(props: SectionProps<typeof loader>) {
       },
     },
   });
+
+
+  function extractSearchTerms() {
+    const newURL = new URL(url);
+    const search = newURL.search;
+    const match = search.match(/q=([^&]*)/);
+    if (!match) {
+      return breadcrumb?.itemListElement[0]?.name || "";
+    }
+    // @ts-ignore title exists in SEO
+    return seo?.title ?? 'Produtos';
+  }
+
+  const title = extractSearchTerms();
+
   const results = (
     <span class="text-sm font-normal">
       {page.pageInfo.recordPerPage} of {page.pageInfo.records} results
     </span>
   );
+
   const sortBy = sortOptions.length > 0 && (
     <Sort sortOptions={sortOptions} url={url} />
   );
+
+  console.log('pageInfo', pageInfo);
+
   return (
     <>
       <div id={container} {...viewItemListEvent} class="w-full">
         {partial
           ? <PageResult {...props} />
           : (
-            <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 sm:px-0">
-              <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
-
+            <div class="container flex flex-col gap-4 sm:gap-6 w-full px-4 py-10">
               {device === "mobile" && (
                 <Drawer
                   id={controls}
                   aside={
                     <div class="bg-base-100 flex flex-col h-full divide-y overflow-y-hidden">
                       <div class="flex justify-between items-center">
-                        <h1 class="px-4 py-3">
-                          <span class="font-medium text-2xl">Filters</span>
-                        </h1>
                         <label class="btn btn-ghost" for={controls}>
                           <Icon id="close" />
                         </label>
@@ -257,28 +280,26 @@ function Result(props: SectionProps<typeof loader>) {
                 </Drawer>
               )}
 
-              <div class="grid place-items-center grid-cols-1 sm:grid-cols-[250px_1fr]">
-                {device === "desktop" && (
-                  <aside class="place-self-start flex flex-col gap-9">
-                    <span class="text-base font-semibold h-12 flex items-center">
-                      Filters
-                    </span>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                  <h1 class="text-2xl font-semibold uppercase">{title}</h1>
+                  {`(${pageInfo?.records ?? pageInfo?.recordPerPage})`}
+                </div>
+                <div>
+                  {sortBy}
+                </div>
+              </div>
 
+              <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+
+              <div class="grid grid-cols-1 sm:grid-cols-[350px_1fr]">
+                {device === "desktop" && (
+                  <aside>
                     <Filters filters={filters} />
                   </aside>
                 )}
 
-                <div class="flex flex-col gap-9">
-                  {device === "desktop" && (
-                    <div class="flex justify-between items-center">
-                      {results}
-                      <div>
-                        {sortBy}
-                      </div>
-                    </div>
-                  )}
-                  <PageResult {...props} />
-                </div>
+                <PageResult {...props} />
               </div>
             </div>
           )}
@@ -297,16 +318,19 @@ function Result(props: SectionProps<typeof loader>) {
     </>
   );
 }
+
 function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
   if (!page) {
     return <NotFound />;
   }
   return <Result {...props} page={page} />;
 }
+
 export const loader = (props: Props, req: Request) => {
   return {
     ...props,
     url: req.url,
   };
 };
+
 export default SearchResult;
