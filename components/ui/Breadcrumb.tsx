@@ -1,5 +1,6 @@
 import type { BreadcrumbList } from "apps/commerce/types.ts";
 import { relative } from "../../sdk/url.ts";
+import Icon from "./Icon.tsx";
 
 interface Props {
   itemListElement: BreadcrumbList["itemListElement"];
@@ -13,11 +14,22 @@ function Breadcrumb({ itemListElement = [] }: Props) {
       <ul>
         {items
           .filter(({ name, item }) => name && item)
-          .map(({ name, item }) => (
-            <li>
-              <a href={relative(item)}>{name}</a>
-            </li>
-          ))}
+          .map(({ name, item }) => {
+            if (name === 'Home') {
+              return (
+                <li>
+                  <a href={relative(item)}>
+                    <Icon id="home" size={16} />
+                  </a>
+                </li>
+              )
+            }
+            return (
+              <li>
+                <a href={relative(item)}>{name}</a>
+              </li>
+            )
+          })}
       </ul>
     </div>
   );

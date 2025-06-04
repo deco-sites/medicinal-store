@@ -158,7 +158,7 @@ function ProductCard({
             product={product}
             seller={seller}
             item={item}
-            class="btn border-primary text-primary bg-white hover:bg-white hover:border-primary disabled:bg-white disabled:border-base-300 disabled:text-base-300"
+            class="btn btn-sm sm:btn-md border-primary text-primary bg-white hover:bg-white hover:border-primary disabled:bg-white disabled:border-base-300 disabled:text-base-300"
           />
         )}
       </div>

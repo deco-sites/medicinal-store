@@ -105,8 +105,8 @@ function AddToCartButton(props: Props) {
         class={clx("flex items-center gap-2 flex-grow", _class?.toString())}
         hx-on:click={useScript(onClick)}
       >
-        <Icon id="shopping_bag" />
-        Adicionar ao carrinho
+        <Icon id="shopping_bag" width={24} height={21} />
+        Comprar
       </button>
 
       <script

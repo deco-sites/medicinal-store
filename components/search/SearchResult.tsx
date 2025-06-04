@@ -35,8 +35,20 @@ export interface Props {
 
 function NotFound() {
   return (
-    <div class="w-full flex justify-center items-center py-10">
-      <span>Not Found!</span>
+    <div class="w-full py-10 flex flex-col gap-6 items-center">
+      <p class="text-2xl text-base-200 text-center px-4 font-bold">Página Indisponível</p>
+      <h1 class="text-lg text-center px-4 font-bold">A página que você tentou acessar está indisponível.</h1>
+      <p class="text-primary text-center px-4 font-bold">Que tal fazer uma nova busca?</p>
+    </div>
+  );
+}
+
+function EmptySearch() {
+  return (
+    <div class="w-full py-10 flex flex-col gap-6 items-center">
+      <Icon id="search" size={100} class="text-base-200" />
+      <h1 class="text-2xl text-center px-4 font-bold">Não encontramos a sua pesquisa.</h1>
+      <p class="text-primary text-center px-4 font-bold">Que tal fazer uma nova busca?</p>
     </div>
   );
 }
@@ -218,31 +230,17 @@ function Result(props: SectionProps<typeof loader>) {
     },
   });
 
-
-  function extractSearchTerms() {
-    const newURL = new URL(url);
-    const search = newURL.search;
-    const match = search.match(/q=([^&]*)/);
-    if (!match) {
-      return breadcrumb?.itemListElement[0]?.name || "";
-    }
-    // @ts-ignore title exists in SEO
-    return seo?.title ?? 'Produtos';
-  }
-
-  const title = extractSearchTerms();
-
-  const results = (
-    <span class="text-sm font-normal">
-      {page.pageInfo.recordPerPage} of {page.pageInfo.records} results
-    </span>
-  );
+  const {
+    itemListElement: [
+      {
+        name: title
+      }
+    ]
+  } = breadcrumb;
 
   const sortBy = sortOptions.length > 0 && (
     <Sort sortOptions={sortOptions} url={url} />
   );
-
-  console.log('pageInfo', pageInfo);
 
   return (
     <>
@@ -250,12 +248,31 @@ function Result(props: SectionProps<typeof loader>) {
         {partial
           ? <PageResult {...props} />
           : (
-            <div class="container flex flex-col gap-4 sm:gap-6 w-full px-4 py-10">
-              {device === "mobile" && (
+            <div class="container flex flex-col gap-4 sm:gap-8 w-full px-4 py-6 sm:py-10">
+              <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                  <h1 class="text-2xl font-semibold uppercase leading-none">{title}</h1>
+                  {`(${pageInfo?.records ?? pageInfo?.recordPerPage})`}
+                </div>
+                {device !== "mobile" && (
+                  <div>
+                    {sortBy}
+                  </div>
+                )}
+              </div>
+
+              {device === 'mobile' && (
                 <Drawer
                   id={controls}
                   aside={
-                    <div class="bg-base-100 flex flex-col h-full divide-y overflow-y-hidden">
+                    <div
+                      class="bg-base-100 flex flex-col h-full rounded-r-2xl w-full"
+                      style={{
+                        maxWidth: '90vw'
+                      }}
+                    >
                       <div class="flex justify-between items-center">
                         <label class="btn btn-ghost" for={controls}>
                           <Icon id="close" />
@@ -267,30 +284,17 @@ function Result(props: SectionProps<typeof loader>) {
                     </div>
                   }
                 >
-                  <div class="flex sm:hidden justify-between items-end">
-                    <div class="flex flex-col">
-                      {results}
-                      {sortBy}
-                    </div>
-
-                    <label class="btn btn-ghost" for={controls}>
+                  <div class="flex items-center justify-between">
+                    <label class="btn btn-ghost btn-sm bg-ice flex items-center gap-1" for={controls}>
+                      <Icon id="menu" width={20} height={19} class="-mt-[1px]" />
                       Filters
                     </label>
+                    <div class="w-full max-w-32">
+                      {sortBy}
+                    </div>
                   </div>
                 </Drawer>
               )}
-
-              <div class="flex justify-between items-center">
-                <div class="flex items-center gap-2">
-                  <h1 class="text-2xl font-semibold uppercase">{title}</h1>
-                  {`(${pageInfo?.records ?? pageInfo?.recordPerPage})`}
-                </div>
-                <div>
-                  {sortBy}
-                </div>
-              </div>
-
-              <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
 
               <div class="grid grid-cols-1 sm:grid-cols-[350px_1fr]">
                 {device === "desktop" && (
@@ -323,6 +327,11 @@ function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
   if (!page) {
     return <NotFound />;
   }
+
+  if (page.products.length === 0) {
+    return <EmptySearch />;
+  }
+
   return <Result {...props} page={page} />;
 }
 
