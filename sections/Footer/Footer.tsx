@@ -1,16 +1,25 @@
-import { type ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-import PoweredByDeco from "apps/website/components/PoweredByDeco.tsx";
 import Section from "../../components/ui/Section.tsx";
+
+import { asset } from "$fresh/runtime.ts";
+import { useId } from "../../sdk/useId.ts";
+import { useDevice } from "@deco/deco/hooks";
+import { useComponent } from "../Component.tsx";
+
+import type { ImageWidget } from "apps/admin/widgets.ts";
 
 /** @titleBy title */
 interface Item {
-  title: string;
   href: string;
+  title: string;
+  /** @description size 20x20 */
+  icon?: ImageWidget;
 }
 
 /** @titleBy title */
-interface Link extends Item {
+interface Link {
+  href: string;
+  title: string;
   children: Item[];
 }
 
@@ -21,65 +30,151 @@ interface Social {
   image: ImageWidget;
 }
 
+/** @titleBy alt */
+interface Seal {
+  alt: string;
+  href?: string;
+  image: ImageWidget;
+  width: number;
+  height: number;
+}
+
+interface Logo {
+  image: ImageWidget;
+  width: number;
+  height: number;
+}
+
 interface Props {
+  logo?: Logo;
+  seals?: Seal[];
   links?: Link[];
   social?: Social[];
+  policies?: string;
   paymentMethods?: Social[];
-  policies?: Item[];
-  logo?: ImageWidget;
-  trademark?: string;
 }
 
 function Footer({
   links = [],
+  seals = [],
   social = [],
-  policies = [],
+  policies = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper facilisis dignissim. Vivamus gravida enim vitae tristique suscipit. Curabitur sed magna leo. Vestibulum eu varius velit. Nam ullamcorper, diam ac efficitur tempor, augue tellus ornare urna, vitae venenatis urna mauris non arcu. Fusce malesuada pellentesque ex, et lacinia nibh tempus eu. Nulla interdum condimentum orci, vel fermentum felis congue sed. Ut nec nisl ex.",
   paymentMethods = [],
   logo,
-  trademark,
 }: Props) {
+  const id = useId();
+  const device = useDevice();
+
   return (
     <footer
-      class="px-5 sm:px-0 mt-5 sm:mt-10"
-      style={{ backgroundColor: "#EFF0F0" }}
+      class="mt-6 rounded-t-3xl"
+      style={{
+        backgroundColor: "#F0E9E9"
+      }}
     >
-      <div class="container flex flex-col gap-5 sm:gap-10 py-10">
-        <ul class="grid grid-flow-row sm:grid-flow-col gap-6 ">
-          {links.map(({ title, href, children }) => (
-            <li class="flex flex-col gap-4">
-              <a class="text-base font-semibold" href={href}>{title}</a>
-              <ul class="flex flex-col gap-2">
-                {children.map(({ title, href }) => (
-                  <li>
-                    <a class="text-sm font-medium text-base-400" href={href}>
-                      {title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-
-        <div class="flex flex-col sm:flex-row gap-12 justify-between items-start sm:items-center">
-          <ul class="flex gap-4">
-            {social.map(({ image, href, alt }) => (
-              <li>
-                <a href={href}>
-                  <Image
-                    src={image}
-                    alt={alt}
-                    loading="lazy"
-                    width={24}
-                    height={24}
-                  />
+      <div class="container mx-auto px-4 flex flex-col gap-5 sm:gap-10 py-10">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pb-10 border-b border-base-200">
+          <div>
+            <form
+              hx-swap="innerHTML"
+              hx-sync="this:replace"
+              hx-post={useComponent(import.meta.resolve("./Result.tsx"))}
+              hx-target={`#${id}`}
+              class="flex flex-col sm:flex-row gap-2 w-full max-w-6xl items-center"
+            >
+              <div class="text-lg sm:text-2xl font-bold w-full max-w-96">Receba promoções e novidades exclusivas por e-mail!</div>
+              <input
+                name="name"
+                class="input input-bordered flex-grow text-sm w-full max-w-80"
+                type="text"
+                placeholder="Seu nome"
+              />
+              <input
+                name="email"
+                class="input input-bordered flex-grow text-sm w-full max-w-80"
+                type="text"
+                placeholder="seu@email.com.br"
+              />
+              <button class="btn btn-primary px-8 w-full sm:w-auto max-w-80" type="submit">
+                <span class="[.htmx-request_&]:hidden inline">
+                  Assinar
+                </span>
+                <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
+              </button>
+            </form>
+            <div id={id} />
+          </div>
+          {social && social.length > 0 && (
+            <ul class="flex gap-4">
+              {social.map(({ image, href, alt }) => (
+                <li class="w-12 h-12 flex items-center justify-center border border-primary rounded-full">
+                  <a href={href}>
+                    <Image
+                      src={image}
+                      alt={alt}
+                      loading="lazy"
+                      width={24}
+                      height={24}
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        {device === "mobile" ? (
+          <div>
+            {links.map(({ title, children }) => (
+              <details class="collapse collapse-arrow rounded-none border-b border-base-200">
+                <summary class="collapse-title font-semibold flex items-center justify-between uppercase pl-0">{title}</summary >
+                <div class="collapse-content p-0">
+                  <ul class="flex flex-col gap-4">
+                    {children.map(({ title, href }) => (
+                      <li>
+                        <a class="text-sm font-medium text-base-400" href={href}>
+                          {title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </details>
+            ))}
+          </div>
+        ) : (
+          <ul class="grid grid-flow-row sm:grid-flow-col gap-6 pb-10 border-b border-base-200">
+            {links.map(({ title, href, children }) => (
+              <li class="flex flex-col gap-4">
+                <a class="text-base font-semibold uppercase" href={href}>
+                  {title}
                 </a>
+                <ul class="flex flex-col gap-4">
+                  {children.map(({ title, href, icon }) => (
+                    <li>
+                      <a class="flex items-center gap-1 text-sm font-medium text-base-400" href={href}>
+                        {icon && (
+                          <Image
+                            src={icon}
+                            alt={title}
+                            width={20}
+                            height={20}
+                            loading="lazy"
+                          />
+                        )}
+                        {title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </li>
             ))}
           </ul>
-          <ul class="flex flex-wrap gap-2">
+        )}
+
+        <div class="flex flex-col gap-5 sm:flex-row sm:gap-12 justify-between items-start sm:items-center pb-5 sm:pb-0">
+          <ul class="flex flex-wrap gap-3 sm:gap-4 justify-center sm:justify-start w-full sm:w-auto">
             {paymentMethods.map(({ image, alt }) => (
-              <li class="h-8 w-10 border border-base-100 rounded flex justify-center items-center">
+              <li class="h-6 w-12 border border-accent rounded flex justify-center items-center">
                 <Image
                   src={image}
                   alt={alt}
@@ -90,35 +185,57 @@ function Footer({
               </li>
             ))}
           </ul>
+
+          {seals.length > 0 && (
+            <ul class="flex items-center gap-4 justify-center sm:justify-start w-full sm:w-auto">
+              {seals.map(({ image, alt, href, width, height }) => {
+
+                if (href) {
+                  return (
+                    <li>
+                      <a href={href}>
+                        <Image
+                          src={image}
+                          alt={alt}
+                          width={width}
+                          height={height}
+                          loading="lazy"
+                        />
+                      </a>
+                    </li>
+                  )
+                }
+
+                return (
+                  <li>
+                    <Image
+                      src={image}
+                      alt={alt}
+                      width={width}
+                      height={height}
+                      loading="lazy"
+                    />
+                  </li>
+                )
+              })}
+            </ul>
+          )}
         </div>
 
-        <hr class="w-full text-base-400" />
-
-        <div class="grid grid-flow-row sm:grid-flow-col gap-8">
-          <ul class="flex flex-col sm:flex-row gap-2 sm:gap-4 sm:items-center">
-            {policies.map(({ title, href }) => (
-              <li>
-                <a class="text-xs font-medium" href={href}>
-                  {title}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          <div class="flex flex-nowrap items-center justify-between sm:justify-center gap-4">
-            <div>
-              <img loading="lazy" src={logo} />
-            </div>
-            <span class="text-xs font-normal text-base-400">{trademark}</span>
-          </div>
-
-          <div class="flex flex-nowrap items-center justify-center gap-4">
-            <span class="text-sm font-normal text-base-400">Powered by</span>
-            <PoweredByDeco />
+        <div class="flex flex-col sm:grid sm:grid-cols-[auto_1fr] sm:items-center gap-x-8 gap-y-4">
+          <img loading="lazy" src={logo?.image} width={logo?.width} height={logo?.height} />
+          <p class="text-sm">{policies}</p>
+          <div class="flex flex-nowrap items-center justify-center sm:justify-end gap-4 col-span-2">
+            <a href="#">
+              <img width={97} height={17} src={asset('/wave.png')} />
+            </a>
+            <a href="#">
+              <img width={88} height={30} src={asset('/vtex.png')} />
+            </a>
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 }
 
