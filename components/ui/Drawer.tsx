@@ -2,7 +2,7 @@ import { type ComponentChildren } from "preact";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import Icon from "./Icon.tsx";
-import { useScript } from "@deco/deco/hooks";
+import { useDevice, useScript } from "@deco/deco/hooks";
 export interface Props {
   open?: boolean;
   class?: string;
@@ -60,25 +60,37 @@ function Drawer(
     </>
   );
 }
-function Aside({ title, drawer, children }: {
-  title: string;
+function Aside({ title = 'menu', drawer, children }: {
+  title?: 'cart' | 'menu';
   drawer: string;
   children: ComponentChildren;
 }) {
+  const device = useDevice();
+
   return (
     <div
       data-aside
-      class="bg-base-100 grid grid-rows-[auto_1fr] h-full divide-y"
-      style={{ maxWidth: "100vw" }}
+      class="w-full bg-base-100 grid grid-rows-[auto_1fr] h-full rounded-l-2xl overflow-hidden"
+      style={{ maxWidth: device === "mobile" ? "90vw" : "425px" }}
     >
-      <div class="flex justify-between items-center">
-        <h1 class="px-4 py-3">
-          <span class="font-medium text-2xl">{title}</span>
-        </h1>
-        <label for={drawer} aria-label="X" class="btn btn-ghost">
-          <Icon id="close" />
-        </label>
-      </div>
+      {title === 'menu' && (
+        <div class="flex items-center justify-end">
+          <label for={drawer} aria-label="X" class="btn btn-ghost">
+            <Icon id="close" />
+          </label>
+        </div>
+      )}
+      {title === 'cart' && (
+        <div class="flex items-center justify-between pl-4 border-b border-base-200 font-bold text-sm sm:text-base">
+          <span class="flex items-center gap-2 uppercase">
+            <Icon id="shopping_bag" />
+            Carrinho
+          </span>
+          <label for={drawer} aria-label="X" class="btn btn-ghost">
+            <Icon id="close" />
+          </label>
+        </div>
+      )}
       {children}
     </div>
   );
