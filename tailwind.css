@@ -96,4 +96,12 @@
       @apply my-3 text-xs;
     }
   }
+
+  .custom-category-title {
+    @apply text-base sm:text-lg font-bold;
+  }
+
+  .custom-category-title strong {
+    @apply text-primary;
+  }
 }

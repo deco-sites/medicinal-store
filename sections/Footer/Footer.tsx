@@ -67,10 +67,7 @@ function Footer({
 
   return (
     <footer
-      class="mt-6 rounded-t-3xl"
-      style={{
-        backgroundColor: "#F0E9E9"
-      }}
+      class="mt-6 rounded-t-3xl bg-ice"
     >
       <div class="container mx-auto px-4 flex flex-col gap-5 sm:gap-10 py-10">
         <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pb-10 border-b border-base-200">
@@ -82,7 +79,7 @@ function Footer({
               hx-target={`#${id}`}
               class="flex flex-col sm:flex-row gap-2 w-full max-w-6xl items-center"
             >
-              <div class="text-lg sm:text-2xl font-bold w-full max-w-96">Receba promoções e novidades exclusivas por e-mail!</div>
+              <div class="text-lg sm:text-2xl font-bold w-full max-w-80 sm:max-w-96">Receba promoções e novidades exclusivas por e-mail!</div>
               <input
                 name="name"
                 class="input input-bordered flex-grow text-sm w-full max-w-80"
