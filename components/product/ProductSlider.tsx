@@ -15,45 +15,41 @@ function ProductSlider({ products, itemListName }: Props) {
 
   return (
     <>
-      <div
-        id={id}
-        class="grid grid-rows-1"
-        style={{
-          gridTemplateColumns: "min-content 1fr min-content",
-        }}
-      >
-        <div class="col-start-1 col-span-3 row-start-1 row-span-1">
-          <Slider class="carousel carousel-center sm:carousel-end gap-5 sm:gap-10 w-full">
-            {products?.map((product, index) => (
-              <Slider.Item
-                index={index}
-                class={clx(
-                  "carousel-item",
-                  "first:pl-5 first:sm:pl-0",
-                  "last:pr-5 last:sm:pr-0",
-                )}
-              >
-                <ProductCard
+      <div id={id}>
+        <div className="relative">
+          <div>
+            <Slider class="carousel carousel-center sm:carousel-end gap-2 sm:gap-4 w-full">
+              {products?.map((product, index) => (
+                <Slider.Item
                   index={index}
-                  product={product}
-                  itemListName={itemListName}
-                  class="w-[287px] sm:w-[300px]"
-                />
-              </Slider.Item>
-            ))}
-          </Slider>
-        </div>
+                  class={clx(
+                    "carousel-item",
+                    "first:pl-4 first:sm:pl-0",
+                    "last:pr-4 last:sm:pr-0",
+                  )}
+                >
+                  <ProductCard
+                    index={index}
+                    product={product}
+                    itemListName={itemListName}
+                    class="w-[287px] sm:w-[300px]"
+                  />
+                </Slider.Item>
+              ))}
+            </Slider>
+          </div>
 
-        <div class="col-start-1 col-span-1 row-start-1 row-span-1 z-10 self-center p-2 relative bottom-[15%]">
-          <Slider.PrevButton class="hidden sm:flex disabled:invisible btn btn-outline btn-sm btn-circle no-animation">
-            <Icon id="chevron-right" class="rotate-180" />
-          </Slider.PrevButton>
-        </div>
+          <div class="hidden sm:flex items-center justify-center z-10 absolute top-1/2 -translate-y-1/2 left-0 mx-4">
+            <Slider.PrevButton class="hidden sm:flex disabled:invisible btn btn-outline text-black hover:text-black btn-circle no-animation border-0 bg-white hover:bg-white shadow-lg">
+              <Icon id="chevron-right" size={24} class="rotate-180" />
+            </Slider.PrevButton>
+          </div>
 
-        <div class="col-start-3 col-span-1 row-start-1 row-span-1 z-10 self-center p-2 relative bottom-[15%]">
-          <Slider.NextButton class="hidden sm:flex disabled:invisible btn btn-outline btn-sm btn-circle no-animation">
-            <Icon id="chevron-right" />
-          </Slider.NextButton>
+          <div class="hidden sm:flex items-center justify-center z-10 absolute top-1/2 -translate-y-1/2 right-0 mx-4">
+            <Slider.NextButton class="hidden sm:flex disabled:invisible btn btn-outline text-black hover:text-black btn-circle no-animation border-0 bg-white hover:bg-white shadow-lg">
+              <Icon id="chevron-right" size={24} />
+            </Slider.NextButton>
+          </div>
         </div>
       </div>
       <Slider.JS rootId={id} />
