@@ -1,28 +1,76 @@
 import Icon from "../../components/ui/Icon.tsx";
-import type { SiteNavigationElement } from "apps/commerce/types.ts";
+import { clx } from "../../sdk/clx.ts";
+import type { INavItem } from "./NavItem.tsx";
+import SignIn from "./SignIn.tsx";
 
 export interface Props {
-  navItems?: SiteNavigationElement[];
+  navItems?: INavItem[];
 }
 
-function MenuItem({ item }: { item: SiteNavigationElement }) {
+function MenuItem({ item }: { item: INavItem }) {
+  const {
+    isBold = false,
+    children = [],
+    isHighlighted = false,
+  } = item;
+
+  const itemClass = clx(
+    "text-sm border-2 border-transparent",
+    isBold && "text-primary font-bold",
+    isHighlighted && "px-4 rounded-full bg-primary text-white !border-primary active:!bg-white active:!text-primary focus-visible:!bg-white focus-visible:!text-primary font-bold group-open:!text-primary group-open:!bg-white",
+    !isHighlighted && "active:!bg-transparent active:!text-primary focus-visible:!bg-transparent focus-visible:!text-primary"
+  );
+
+  if (!children || children.length === 0) {
+    return (
+      <li class="!bg-transparent">
+        <a
+          href={item.href}
+          class={itemClass}
+        >{item.name}</a>
+      </li>
+    );
+  }
+
   return (
-    <div class="collapse collapse-plus">
-      <input type="checkbox" />
-      <div class="collapse-title">{item.name}</div>
-      <div class="collapse-content">
-        <ul>
-          <li>
-            <a class="underline text-sm" href={item.url}>Ver todos</a>
-          </li>
-          {item.children?.map((node) => (
-            <li>
-              <MenuItem item={node} />
+    <li>
+      <details class="group">
+        <summary class={itemClass}>{item.name}</summary>
+        <ul class="before:w-[0] p-0">
+          {item.href && (
+            <li class="!bg-transparent text-primary font-bold uppercase">
+              <a href={item.href}>Ver tudo</a>
             </li>
-          ))}
+          )}
+          {children.map((sub) => {
+            if (!sub.children || sub.children.length === 0) {
+              return (
+                <li class="!bg-transparent text-base-300">
+                  <a href={item.href}>{item.name}</a>
+                </li>
+              )
+            }
+
+            return (
+              <li>
+                <details>
+                  <summary class="!bg-transparent text-base-300">{sub.name}</summary>
+                  <ul class="before:w-[0] p-0">
+                    {sub.children.map((leaf) => {
+                      return (
+                        <li class="!bg-transparent text-base-300">
+                          <a href={leaf.href}>{leaf.name}</a>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </details>
+              </li>
+            )
+          })}
         </ul>
-      </div>
-    </div>
+      </details>
+    </li>
   );
 }
 
@@ -30,53 +78,18 @@ function Menu({ navItems = [] }: Props) {
   return (
     <div
       class="flex flex-col h-full overflow-y-auto"
-      style={{ minWidth: "100vw" }}
+      style={{ minWidth: "90vw" }}
     >
-      <ul class="px-4 flex-grow flex flex-col divide-y divide-base-200 overflow-y-auto">
-        {navItems.map((item) => (
-          <li>
-            <MenuItem item={item} />
-          </li>
-        ))}
+      <ul class="p-4">
+        <li class="flex items-center justify-between px-4 py-2 bg-base-200 rounded-full">
+          <SignIn />
+          <Icon id="chevron-down" size={16} class="-rotate-90" />
+        </li>
       </ul>
-
-      <ul class="flex flex-col py-2 bg-base-200">
-        <li>
-          <a
-            class="flex items-center gap-4 px-4 py-2"
-            href="/wishlist"
-          >
-            <Icon id="favorite" />
-            <span class="text-sm">Lista de desejos</span>
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center gap-4 px-4 py-2"
-            href="https://www.deco.cx"
-          >
-            <Icon id="home_pin" />
-            <span class="text-sm">Nossas lojas</span>
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center gap-4 px-4 py-2"
-            href="https://www.deco.cx"
-          >
-            <Icon id="call" />
-            <span class="text-sm">Fale conosco</span>
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center gap-4 px-4 py-2"
-            href="https://www.deco.cx"
-          >
-            <Icon id="account_circle" />
-            <span class="text-sm">Minha conta</span>
-          </a>
-        </li>
+      <ul class="menu rounded-box py-0 px-4">
+        {navItems.map((item) => (
+          <MenuItem item={item} />
+        ))}
       </ul>
     </div>
   );
