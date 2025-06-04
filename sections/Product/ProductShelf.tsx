@@ -10,7 +10,7 @@ import { type LoadingFallbackProps } from "@deco/deco";
 export interface Props extends SectionHeaderProps {
   products: Product[] | null;
 }
-export default function ProductShelf({ products, title, cta }: Props) {
+export default function ProductShelf({ products, title }: Props) {
   if (!products || products.length === 0) {
     return null;
   }
@@ -30,19 +30,23 @@ export default function ProductShelf({ products, title, cta }: Props) {
       },
     },
   });
+
   return (
-    <Section.Container {...viewItemListEvent}>
-      <Section.Header title={title} cta={cta} />
+    <div
+      {...viewItemListEvent}
+      class="w-full container p-0 py-4 lg:p-4 mx-auto"
+    >
+      <Section.Header title={title} />
 
       <ProductSlider products={products} itemListName={title} />
-    </Section.Container>
+    </div>
   );
 }
 export const LoadingFallback = (
   { title, cta }: LoadingFallbackProps<Props>,
 ) => (
   <Section.Container>
-    <Section.Header title={title} cta={cta} />
+    <Section.Header title={title} />
     <Section.Placeholder height="471px" />;
   </Section.Container>
 );

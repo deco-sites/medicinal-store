@@ -6,11 +6,8 @@ import { formatPrice } from "../../sdk/format.ts";
 import { relative } from "../../sdk/url.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
-import { useVariantPossibilities } from "../../sdk/useVariantPossiblities.ts";
 import WishlistButton from "../wishlist/WishlistButton.tsx";
 import AddToCartButton from "./AddToCartButton.tsx";
-import { Ring } from "./ProductVariantSelector.tsx";
-import { useId } from "../../sdk/useId.ts";
 
 interface Props {
   product: Product;
@@ -37,26 +34,20 @@ function ProductCard({
   index,
   class: _class,
 }: Props) {
-  const id = useId();
-
   const { url, image: images, offers, isVariantOf } = product;
-  const hasVariant = isVariantOf?.hasVariant ?? [];
   const title = isVariantOf?.name ?? product.name;
   const [front, back] = images ?? [];
 
-  const { listPrice, price, seller = "1", availability } = useOffer(offers);
+  const { listPrice, price, seller = "1", availability, installment } = useOffer(offers);
   const inStock = availability === "https://schema.org/InStock";
-  const possibilities = useVariantPossibilities(hasVariant, product);
-  const firstSkuVariations = Object.entries(possibilities)?.[0];
-  const variants = Object.entries(firstSkuVariations?.[1] ?? {});
   const relativeUrl = relative(url);
   const percent = listPrice && price
-    ? Math.round(((listPrice - price) / listPrice) * 100)
+    ? Math.round(((price - listPrice) / listPrice) * 100)
     : 0;
 
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
 
-  {/* Add click event to dataLayer */}
+  {/* Add click event to dataLayer */ }
   const event = useSendEvent({
     on: "click",
     event: {
@@ -67,10 +58,6 @@ function ProductCard({
       },
     },
   });
-
-  //Added it to check the variant name in the SKU Selector later, so it doesn't render the SKU to "shoes size" in the Product Card
-  const firstVariantName = firstSkuVariations?.[0]?.toLowerCase();
-  const shoeSizeVariant = "shoe size";
 
   return (
     <div
@@ -130,103 +117,50 @@ function ProductCard({
           />
         </a>
 
-        {/* Wishlist button */}
         <div class="absolute top-0 left-0 w-full flex items-center justify-between">
-          {/* Notify Me */}
           <span
             class={clx(
-              "text-sm/4 font-normal text-black bg-error bg-opacity-15 text-center rounded-badge px-2 py-1",
-              inStock && "opacity-0",
+              "text-xs font-bold text-white bg-primary text-center rounded-badge px-3 py-1 m-3 uppercase",
+              (percent <= 0 || !inStock) && "opacity-0",
             )}
           >
-            Notify me
-          </span>
-
-          {/* Discounts */}
-          <span
-            class={clx(
-              "text-sm/4 font-normal text-black bg-primary bg-opacity-15 text-center rounded-badge px-2 py-1",
-              (percent < 1 || !inStock) && "opacity-0",
-            )}
-          >
-            {percent} % off
+            {percent}% off
           </span>
         </div>
 
-        <div class="absolute bottom-0 right-0">
+        <div class="absolute top-0 right-0 m-2">
           <WishlistButton item={item} variant="icon" />
         </div>
       </figure>
 
       <a href={relativeUrl} class="pt-5">
-        <span class="font-medium">
+        <span class="text-sm text-ellipsis font-bold line-clamp-2 h-10">
           {title}
         </span>
 
-        <div class="flex gap-2 pt-2">
+        <div class="flex gap-2 my-2">
           {listPrice && (
             <span class="line-through font-normal text-gray-400">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
           )}
-          <span class="font-medium text-base-400">
+          <span class="font-bold text-primary">
             {formatPrice(price, offers?.priceCurrency)}
           </span>
         </div>
       </a>
 
-      {/* SKU Selector */}
-      {variants.length > 1 && firstVariantName !== shoeSizeVariant && (
-        <ul class="flex items-center justify-start gap-2 pt-4 pb-1 pl-1 overflow-x-auto">
-          {variants.map(([value, link]) => [value, relative(link)] as const)
-            .map(([value, link]) => (
-              <li>
-                <a href={link} class="cursor-pointer">
-                  <input
-                    class="hidden peer"
-                    type="radio"
-                    name={`${id}-${firstSkuVariations?.[0]}`}
-                    checked={link === relativeUrl}
-                  />
-                  <Ring value={value} checked={link === relativeUrl} />
-                </a>
-              </li>
-            ))}
-        </ul>
-      )}
-
       <div class="flex-grow" />
 
       <div>
-        {inStock
-          ? (
-            <AddToCartButton
-              product={product}
-              seller={seller}
-              item={item}
-              class={clx(
-                "btn",
-                "btn-outline justify-start border-none !text-sm !font-medium px-0 no-animation w-full",
-                "hover:!bg-transparent",
-                "disabled:!bg-transparent disabled:!opacity-50",
-                "btn-primary hover:!text-primary disabled:!text-primary",
-              )}
-            />
-          )
-          : (
-            <a
-              href={relativeUrl}
-              class={clx(
-                "btn",
-                "btn-outline justify-start border-none !text-sm !font-medium px-0 no-animation w-full",
-                "hover:!bg-transparent",
-                "disabled:!bg-transparent disabled:!opacity-75",
-                "btn-error hover:!text-error disabled:!text-error",
-              )}
-            >
-              Sold out
-            </a>
-          )}
+        {inStock && (
+          <AddToCartButton
+            product={product}
+            seller={seller}
+            item={item}
+            class="btn border-primary text-primary bg-white hover:bg-white hover:border-primary disabled:bg-white disabled:border-base-300 disabled:text-base-300"
+          />
+        )}
       </div>
     </div>
   );
