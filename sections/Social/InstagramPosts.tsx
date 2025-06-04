@@ -108,8 +108,8 @@ function InstagramPosts({
             index={index}
             class={clx(
               "carousel-item",
-              "first:pl-5 first:sm:pl-0",
-              "last:pr-5 last:sm:pr-0",
+              "first:pl-4 first:sm:pl-0",
+              "last:pr-4 last:sm:pr-0",
             )}
           >
             <a href={item.permalink} target="_blank">
