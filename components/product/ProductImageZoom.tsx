@@ -40,11 +40,11 @@ function ProductImageZoom({ images, width, height, id = useId() }: Props) {
         </Slider>
 
         <Slider.PrevButton class="btn btn-circle btn-outline col-start-1 col-end-2 row-start-1 row-span-full">
-          <Icon id="chevron-right" class="rotate-180" />
+          <Icon id="chevron-right" size={24} class="rotate-180" />
         </Slider.PrevButton>
 
         <Slider.NextButton class="btn btn-circle btn-outline col-start-3 col-end-4 row-start-1 row-span-full">
-          <Icon id="chevron-right" />
+          <Icon id="chevron-right" size={24} />
         </Slider.NextButton>
       </div>
       <Slider.JS rootId={container} />
