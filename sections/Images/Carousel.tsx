@@ -2,7 +2,6 @@ import type { ImageWidget } from "apps/admin/widgets.ts";
 import { Picture, Source } from "apps/website/components/Picture.tsx";
 import Icon from "../../components/ui/Icon.tsx";
 import Slider from "../../components/ui/Slider.tsx";
-import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 
@@ -19,16 +18,8 @@ export interface Banner {
   /** @description Image's alt text */
   alt: string;
 
-  action?: {
-    /** @description when user clicks on the image, go to this link */
-    href: string;
-    /** @description Image text title */
-    title: string;
-    /** @description Image text subtitle */
-    subTitle: string;
-    /** @description Button label */
-    label: string;
-  };
+  /** @description when user clicks on the image, go to this link */
+  href: string;
 }
 
 export interface Props {
@@ -53,7 +44,7 @@ function BannerItem(
     alt,
     mobile,
     desktop,
-    action,
+    href,
   } = image;
   const params = { promotion_name: image.alt };
 
@@ -70,33 +61,9 @@ function BannerItem(
   return (
     <a
       {...selectPromotionEvent}
-      href={action?.href ?? "#"}
-      aria-label={action?.label}
+      href={href ?? "#"}
       class="relative block overflow-y-hidden w-full"
     >
-      {action && (
-        <div
-          class={clx(
-            "absolute h-full w-full top-0 left-0",
-            "flex flex-col justify-center items-center",
-            "px-5 sm:px-0",
-            "sm:left-40 sm:items-start sm:max-w-96",
-          )}
-        >
-          <span class="text-7xl font-bold text-base-100">
-            {action.title}
-          </span>
-          <span class="font-normal text-base text-base-100 pt-4 pb-12">
-            {action.subTitle}
-          </span>
-          <button
-            class="btn btn-primary btn-outline border-0 bg-base-100 min-w-[180px]"
-            aria-label={action.label}
-          >
-            {action.label}
-          </button>
-        </div>
-      )}
       <Picture preload={lcp} {...viewPromotionEvent}>
         <Source
           media="(max-width: 767px)"
@@ -113,7 +80,7 @@ function BannerItem(
           height={600}
         />
         <img
-          class="object-cover w-full h-full"
+          class="object-cover w-full h-full rounded-2xl"
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
           alt={alt}
@@ -129,61 +96,46 @@ function Carousel({ images = [], preload, interval }: Props) {
   return (
     <div
       id={id}
-      class={clx(
-        "grid",
-        "grid-rows-[1fr_32px_1fr_64px]",
-        "grid-cols-[32px_1fr_32px] min-h-[660px]",
-        "sm:grid-cols-[112px_1fr_112px] sm:min-h-min",
-        "w-screen",
-      )}
+      class="w-full container p-4 mx-auto"
     >
-      <div class="col-span-full row-span-full">
-        <Slider class="carousel carousel-center w-full gap-6">
+      <div class="relative">
+        <Slider class="carousel carousel-center w-full gap-6 rounded-2xl">
           {images.map((image, index) => (
             <Slider.Item index={index} class="carousel-item w-full">
               <BannerItem image={image} lcp={index === 0 && preload} />
             </Slider.Item>
           ))}
         </Slider>
-      </div>
 
-      <div class="hidden sm:flex items-center justify-center z-10 col-start-1 row-start-2">
-        <Slider.PrevButton
-          class="btn btn-neutral btn-outline btn-circle no-animation btn-sm"
-          disabled={false}
-        >
-          <Icon id="chevron-right" class="rotate-180" />
-        </Slider.PrevButton>
-      </div>
+        <div class="hidden sm:flex items-center justify-center z-10 absolute top-1/2 -translate-y-1/2 left-0 mx-4">
+          <Slider.PrevButton
+            class="hidden sm:flex disabled:invisible btn btn-outline text-black hover:text-black btn-circle no-animation border-0 bg-white hover:bg-white shadow-lg"
+            disabled={false}
+          >
+            <Icon id="chevron-right" size={24} class="rotate-180" />
+          </Slider.PrevButton>
+        </div>
 
-      <div class="hidden sm:flex items-center justify-center z-10 col-start-3 row-start-2">
-        <Slider.NextButton
-          class="btn btn-neutral btn-outline btn-circle no-animation btn-sm"
-          disabled={false}
-        >
-          <Icon id="chevron-right" />
-        </Slider.NextButton>
-      </div>
+        <div class="hidden sm:flex items-center justify-center z-10 absolute top-1/2 -translate-y-1/2 right-0 mx-4">
+          <Slider.NextButton
+            class="hidden sm:flex disabled:invisible btn btn-outline text-black hover:text-black btn-circle no-animation border-0 bg-white hover:bg-white shadow-lg"
+            disabled={false}
+          >
+            <Icon id="chevron-right" size={24} />
+          </Slider.NextButton>
+        </div>
 
-      <ul
-        class={clx(
-          "col-span-full row-start-4 z-10",
-          "carousel justify-center gap-3",
-        )}
-      >
-        {images.map((_, index) => (
-          <li class="carousel-item">
-            <Slider.Dot
-              index={index}
-              class={clx(
-                "bg-black opacity-20 h-3 w-3 no-animation rounded-full",
-                "disabled:w-8 disabled:bg-base-100 disabled:opacity-100 transition-[width]",
-              )}
-            >
-            </Slider.Dot>
-          </li>
-        ))}
-      </ul>
+        <ul class="flex items-center justify-center w-full gap-3 mt-2">
+          {images.map((_, index) => (
+            <li class="carousel-item">
+              <Slider.Dot
+                index={index}
+                class="bg-base-200 h-2 w-2 no-animation rounded-full disabled:bg-primary"
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <Slider.JS rootId={id} interval={interval && interval * 1e3} infinite />
     </div>
