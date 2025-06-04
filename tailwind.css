@@ -37,3 +37,63 @@
     --dot-progress: 100%
   }
 }
+
+@layer utilities {
+  .fluid-text br {
+    content: "";
+    @apply block mt-3;
+  }
+
+  .fluid-text a {
+    @apply underline text-primary;
+  }
+
+  .fluid-text h1 {
+    @apply block my-5 text-3xl font-bold uppercase;
+  }
+
+  .fluid-text h2 {
+    @apply block my-4 text-lg font-bold uppercase;
+  }
+
+  .fluid-text h3,
+  .fluid-text h4 {
+    @apply block mt-4 text-base font-bold;
+  }
+
+  .fluid-text ul {
+    @apply my-3 mr-2;
+    list-style: inside;
+  }
+
+  .fluid-text li {
+    @apply my-2 mx-0;
+  }
+
+  .c p,
+  .fluid-text p,
+  .fluid-text p span {
+    @apply text-sm my-3 mx-0;
+  }
+
+  @media (max-width: 1024px) {
+    .fluid-text h1 {
+      @apply text-xl;
+    }
+
+    .fluid-text h2 {
+      @apply text-base;
+    }
+
+    .fluid-text h3,
+    .fluid-text h4 {
+      @apply text-sm;
+    }
+
+    .fluid-text li,
+    .fluid-text p,
+    .fluid-text p span {
+      @apply my-3 text-xs;
+    }
+  }
+}
