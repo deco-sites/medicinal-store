@@ -33,52 +33,49 @@ function CartItem({ item, index, locale, currency }: Props) {
     <fieldset
       // deno-lint-ignore no-explicit-any
       data-item-id={(item as any).item_id}
-      class="grid grid-rows-1 gap-2"
+      class="flex items-center gap-4"
       style={{ gridTemplateColumns: "auto 1fr" }}
     >
       <Image
         alt={name}
         src={image}
-        style={{ aspectRatio: "108 / 150" }}
-        width={108}
-        height={150}
-        class="h-full object-contain"
+        style={{ aspectRatio: "1 / 1" }}
+        width={100}
+        height={100}
+        class="h-full object-contain rounded-xl"
       />
-
-      {/* Info */}
-      <div class="flex flex-col gap-2">
-        {/* Name and Remove button */}
-        <div class="flex justify-between items-center">
-          <legend>{name}</legend>
+      <div class="flex flex-col gap-4 w-full">
+        <div class="flex justify-between items-start">
+          <legend class="text-sm text-ellipsis font-bold line-clamp-2 h-10">{name}</legend>
           <button
             class={clx(
               isGift && "hidden",
-              "btn btn-ghost btn-square no-animation",
+              "btn btn-sm btn-ghost btn-circle",
             )}
             hx-on:click={useScript(removeItemHandler)}
           >
-            <Icon id="trash" size={24} />
+            <Icon id="trash" size={20} />
           </button>
         </div>
-
-        {/* Price Block */}
-        <div class="flex items-center gap-2">
-          <span class="line-through text-sm">
-            {formatPrice(listPrice, currency, locale)}
-          </span>
-          <span class="text-sm text-secondary">
-            {isGift ? "Grátis" : formatPrice(price, currency, locale)}
-          </span>
-        </div>
-
-        {/* Quantity Selector */}
-        <div class={clx(isGift && "hidden")}>
-          <QuantitySelector
-            min={0}
-            max={QUANTITY_MAX_VALUE}
-            value={quantity}
-            name={`item::${index}`}
-          />
+        <div class="flex justify-between gap-4">
+          <div class={clx(isGift && "hidden")}>
+            <QuantitySelector
+              min={0}
+              max={QUANTITY_MAX_VALUE}
+              value={quantity}
+              name={`item::${index}`}
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            {price > listPrice && (
+              <span class="line-through text-sm">
+                {formatPrice(listPrice, currency, locale)}
+              </span>
+            )}
+            <span class="text-sm text-primary font-bold">
+              {isGift ? "Grátis" : formatPrice(price, currency, locale)}
+            </span>
+          </div>
         </div>
       </div>
     </fieldset>
