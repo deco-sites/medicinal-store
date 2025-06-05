@@ -56,7 +56,7 @@ export default function Benefits({
                 {benefits.map(({ icon, text }, index) => (
                     <li
                         data-item={index}
-                        class='w-60 sm:w-80 h-auto flex flex-none items-center gap-6 bg-ice px-4 py-3 rounded-lg text-sm lg:text-base first:ml-4 sm:first:ml-0 last:ml-4 sm:last:ml-0'
+                        class='w-60 sm:w-80 h-auto flex flex-none items-center gap-6 bg-ice px-4 py-3 rounded-lg text-sm lg:text-base first:ml-4 sm:first:ml-0 last:mr-4 sm:last:mr-0'
                     >
                         <Image
                             alt='Icon'

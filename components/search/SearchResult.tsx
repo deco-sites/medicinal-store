@@ -12,8 +12,10 @@ import Filters from "../../components/search/Filters.tsx";
 import Breadcrumb from "../ui/Breadcrumb.tsx";
 import ProductCard from "../../components/product/ProductCard.tsx";
 
+import type { Section } from '@deco/deco/blocks';
 import type { SectionProps } from "@deco/deco";
 import type { ProductListingPage } from "apps/commerce/types.ts";
+import { renderSection } from "apps/website/pages/Page.tsx";
 
 export interface Layout {
   /**
@@ -21,6 +23,17 @@ export interface Layout {
    * @description Format of the pagination
    */
   pagination?: "show-more" | "pagination";
+}
+
+/**
+ * @titleBy matcher
+ */
+interface DescriptionSections {
+  /**
+   * @description Ex: /produtos
+   */
+  matcher: string;
+  sections: Section[];
 }
 
 export interface Props {
@@ -31,6 +44,8 @@ export interface Props {
   startingPage?: 0 | 1;
   /** @hidden */
   partial?: "hideMore" | "hideLess";
+  /** @hidden */
+  sections?: DescriptionSections[];
 }
 
 function NotFound() {
@@ -204,9 +219,9 @@ function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
   const device = useDevice();
-  const { startingPage = 0, url, partial } = props;
+  const { startingPage = 0, url, partial, descriptionSections } = props;
   const page = props.page!;
-  const { products, filters, breadcrumb, pageInfo, sortOptions, seo = {} } = page;
+  const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
   const offset = zeroIndexedOffsetPage * perPage;
@@ -305,8 +320,12 @@ function Result(props: SectionProps<typeof loader>) {
 
                 <PageResult {...props} />
               </div>
+
             </div>
           )}
+        <div>
+          {descriptionSections?.sections?.map(renderSection)}
+        </div>
       </div>
 
       <script
@@ -336,9 +355,22 @@ function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
 }
 
 export const loader = (props: Props, req: Request) => {
+  const {
+    sections
+  } = props;
+
+  const descriptionSections = sections?.find((section) => {
+    const url = new URLPattern({ pathname: section.matcher });
+    if (url.test(req.url)) {
+      return section.sections;
+    }
+    return [];
+  });
+
   return {
     ...props,
     url: req.url,
+    descriptionSections
   };
 };
 

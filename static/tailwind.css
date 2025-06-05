@@ -5606,10 +5606,6 @@ details.collapse summary::-webkit-details-marker {
   padding-left: 1rem;
 }
 
-.last\:ml-4:last-child {
-  margin-left: 1rem;
-}
-
 .last\:mr-4:last-child {
   margin-right: 1rem;
 }
@@ -6088,8 +6084,8 @@ details.collapse summary::-webkit-details-marker {
     padding-left: 0px;
   }
 
-  .sm\:last\:ml-0:last-child {
-    margin-left: 0px;
+  .sm\:last\:mr-0:last-child {
+    margin-right: 0px;
   }
 
   .last\:sm\:pr-0:last-child {

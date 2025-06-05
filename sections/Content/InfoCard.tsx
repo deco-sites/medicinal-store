@@ -34,7 +34,7 @@ export default function InfoCardHorizontal({
         alt: 'imagem de teste'
     },
     textAlign = 'left',
-    backgroundColor = '#F0F0EE',
+    backgroundColor = '#F0E9E9',
     description =
     'Os suplementos ajudam a melhorar a resistência física, auxiliam no ganho de massa magra e também na recuperação muscular, além de diversos outros benefícios para você que busca hipertrofia ou definição muscular.\n\nProduzidos com substâncias naturais, nossos produtos são desenvolvidos por especialistas de peso e formulados com produtos altamente eficientes e, claro, muito saborosos. Para te ajudar a alcançar seus objetivos de treino, a True Source dispõe de tudo o que você precisa em proteínas, aminoácidos, termogênicos e vitaminas e minerais. Venha com a gente e conheça um pouco mais de nossos suplementos!',
 }: Props) {

@@ -23,44 +23,39 @@
           "variant": "aside",
           "pagination": "show-more"
         },
-        "startingPage": 1
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Content/OnlyText.tsx",
-        "title": "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span><strong><span>Nullam ac</span></strong><span> urna eu felis</span></p>",
-        "titleIsH1": false,
-        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non tristique justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed porttitor dolor sed suscipit tincidunt. Sed condimentum lacus a justo condimentum, suscipit gravida sem ultricies. Sed sed tortor non quam malesuada auctor. Quisque lacinia volutpat vehicula. Ut mattis iaculis justo, et imperdiet justo convallis ut. Praesent pretium sodales diam sed rutrum.</p>",
-        "columns": "1",
-        "cta": {
-          "label": "Clique aqui",
-          "link": "#"
-        }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Content/InfoCard.tsx",
-        "type": "full",
-        "image": {
-          "alt": "teste",
-          "mobile": "http://placehold.co/640x400",
-          "desktop": "http://placehold.co/650x600"
-        },
-        "title": "<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing elit.</p>",
-        "description": "<p>Curabitur non tristique justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed porttitor dolor sed suscipit tincidunt. Sed condimentum lacus a justo condimentum, suscipit gravida sem ultricies. Sed sed tortor non quam malesuada auctor. <strong>Quisque</strong> lacinia volutpat vehicula. Ut mattis iaculis justo, et imperdiet justo convallis ut. Praesent pretium sodales diam sed rutrum.</p>",
-        "textAlign": "right",
-        "backgroundColor": "#f0e9e9"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Content/Benefits.tsx",
-        "title": "<p>Lorem <strong>Ipsum</strong></p>"
+        "startingPage": 1,
+        "sections": [
+          {
+            "sections": [
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/OnlyText.tsx"
+                }
+              },
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/Benefits.tsx"
+                }
+              },
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/InfoCard.tsx"
+                }
+              },
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/InfoCard.tsx",
+                  "textAlign": "right"
+                }
+              }
+            ],
+            "matcher": "/bags"
+          }
+        ]
       }
     },
     {
