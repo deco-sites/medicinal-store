@@ -12,6 +12,9 @@ export default function Price({
     product
 }: Props) {
     const { offers } = product;
+
+    if (!offers) return null;
+
     const {
         pix,
         price = 0,

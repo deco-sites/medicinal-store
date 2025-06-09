@@ -3647,6 +3647,9 @@ details.collapse summary::-webkit-details-marker {
 .top-4 {
   top: 1rem;
 }
+.top-\[25px\] {
+  top: 25px;
+}
 .top-\[41px\] {
   top: 41px;
 }
@@ -3668,11 +3671,17 @@ details.collapse summary::-webkit-details-marker {
 .z-\[-2\] {
   z-index: -2;
 }
+.z-\[1\] {
+  z-index: 1;
+}
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
 .col-span-2 {
   grid-column: span 2 / span 2;
+}
+.col-span-3 {
+  grid-column: span 3 / span 3;
 }
 .col-span-full {
   grid-column: 1 / -1;
@@ -3837,6 +3846,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .grid {
   display: grid;
+}
+.inline-grid {
+  display: inline-grid;
 }
 .contents {
   display: contents;
@@ -4034,9 +4046,6 @@ details.collapse summary::-webkit-details-marker {
 .min-w-\[160px\] {
   min-width: 160px;
 }
-.min-w-\[200px\] {
-  min-width: 200px;
-}
 .min-w-\[400px\] {
   min-width: 400px;
 }
@@ -4069,9 +4078,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-w-\[139px\] {
   max-width: 139px;
-}
-.max-w-\[200px\] {
-  max-width: 200px;
 }
 .max-w-\[2px\] {
   max-width: 2px;
@@ -4210,6 +4216,9 @@ details.collapse summary::-webkit-details-marker {
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -4330,14 +4339,8 @@ details.collapse summary::-webkit-details-marker {
 .overflow-y-auto {
   overflow-y: auto;
 }
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
 .overflow-y-hidden {
   overflow-y: hidden;
-}
-.overflow-y-scroll {
-  overflow-y: scroll;
 }
 .truncate {
   overflow: hidden;
@@ -4403,6 +4406,10 @@ details.collapse summary::-webkit-details-marker {
 }
 .rounded-xl {
   border-radius: 0.75rem;
+}
+.rounded-b-2xl {
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 .rounded-b-3xl {
   border-bottom-right-radius: 1.5rem;
@@ -4685,11 +4692,17 @@ details.collapse summary::-webkit-details-marker {
 .pb-10 {
   padding-bottom: 2.5rem;
 }
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
 .pb-4 {
   padding-bottom: 1rem;
 }
 .pb-5 {
   padding-bottom: 1.25rem;
+}
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 .pb-\[15px\] {
   padding-bottom: 15px;
@@ -4721,6 +4734,9 @@ details.collapse summary::-webkit-details-marker {
 .pr-4 {
   padding-right: 1rem;
 }
+.pt-10 {
+  padding-top: 2.5rem;
+}
 .pt-16 {
   padding-top: 4rem;
 }
@@ -4738,9 +4754,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .pt-5 {
   padding-top: 1.25rem;
-}
-.pt-6 {
-  padding-top: 1.5rem;
 }
 .text-left {
   text-align: left;
@@ -4826,6 +4839,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .font-bold {
   font-weight: 700;
+}
+.font-extrabold {
+  font-weight: 800;
 }
 .font-light {
   font-weight: 300;
@@ -5762,6 +5778,10 @@ details.collapse summary::-webkit-details-marker {
     margin-right: auto;
   }
 
+  .sm\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .sm\:mb-6 {
     margin-bottom: 1.5rem;
   }
@@ -5846,10 +5866,6 @@ details.collapse summary::-webkit-details-marker {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .sm\:grid-cols-\[150px_1fr\] {
-    grid-template-columns: 150px 1fr;
-  }
-
   .sm\:grid-cols-\[350px_1fr\] {
     grid-template-columns: 350px 1fr;
   }
@@ -5860,10 +5876,6 @@ details.collapse summary::-webkit-details-marker {
 
   .sm\:grid-cols-\[auto_1fr\] {
     grid-template-columns: auto 1fr;
-  }
-
-  .sm\:grid-rows-1 {
-    grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
   .sm\:flex-row {
@@ -6090,10 +6102,6 @@ details.collapse summary::-webkit-details-marker {
     padding-left: 0px;
   }
 
-  .md\:pt-0 {
-    padding-top: 0px;
-  }
-
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -6130,8 +6138,20 @@ details.collapse summary::-webkit-details-marker {
     margin-right: auto;
   }
 
+  .lg\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:grid {
     display: grid;
+  }
+
+  .lg\:inline-grid {
+    display: inline-grid;
   }
 
   .lg\:max-h-\[600px\] {
@@ -6225,6 +6245,10 @@ details.collapse summary::-webkit-details-marker {
   .lg\:py-36 {
     padding-top: 9rem;
     padding-bottom: 9rem;
+  }
+
+  .lg\:pb-0 {
+    padding-bottom: 0px;
   }
 
   .lg\:text-left {

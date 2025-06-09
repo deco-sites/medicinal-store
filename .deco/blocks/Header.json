@@ -4,7 +4,10 @@
     "placeholder": "O que você procura?",
     "loader": {
       "__resolveType": "resolved",
-      "data": null
+      "data": {
+        "__resolveType": "vtex/loaders/legacy/suggestions.ts",
+        "count": 4
+      }
     }
   },
   "alerts": [

@@ -41,7 +41,7 @@ export default function ProductTitle({ page }: Props) {
     })?.value;
 
     return (
-        <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-2 mb-4 sm:mb-0">
             <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
             <div class="flex items-center justify-between">
                 <h1 class="text-xl lg:text-3xl font-semibold">

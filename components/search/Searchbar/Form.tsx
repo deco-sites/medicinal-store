@@ -46,7 +46,6 @@ const script = (formId: string, name: string, popupId: string) => {
       });
     }
   });
-  // Keyboard event listeners
   addEventListener("keydown", (e: KeyboardEvent) => {
     const isK = e.key === "k" || e.key === "K" || e.keyCode === 75;
     // Open Searchbar on meta+k
@@ -65,7 +64,7 @@ export default function Searchbar(
 ) {
   const slot = useId();
   return (
-    <div class="w-full flex flex-col">
+    <div class="group w-full flex flex-col relative">
       <form
         id={SEARCHBAR_INPUT_FORM_ID}
         class="relative z-20 flex flex-grow flex-1 items-center bg-white pl-6 pr-0 border border-light-gray-200 rounded-full h-full max-h-10 sm:max-h-12 overflow-visible"
@@ -97,11 +96,7 @@ export default function Searchbar(
           <Icon id="search" class="inline [.htmx-request_&]:hidden text-primary" />
         </button>
       </form>
-
-      {/* Suggestions slot */}
-      <div id={slot} />
-
-      {/* Send search events as the user types */}
+      <div class="hidden group-hover:block absolute right-0 bg-white px-5 pt-10 pb-6 z-[1] top-[25px] rounded-b-2xl shadow-sm" id={slot} />
       <script
         type="module"
         dangerouslySetInnerHTML={{
