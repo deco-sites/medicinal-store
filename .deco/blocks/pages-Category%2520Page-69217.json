@@ -13,7 +13,13 @@
       "section": {
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
-          "__resolveType": "PLP Loader"
+          "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
+          "sort": "OrderByPriceDESC",
+          "filters": "dynamic",
+          "advancedConfigs": {
+            "includeOriginalAttributes": []
+          },
+          "count": 16
         },
         "layout": {
           "columns": {

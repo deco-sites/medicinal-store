@@ -2,6 +2,7 @@ import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
+import { renderSection } from "apps/website/pages/Page.tsx";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import { useDevice, useScript, useSection } from "@deco/deco/hooks";
 
@@ -15,7 +16,6 @@ import ProductCard from "../../components/product/ProductCard.tsx";
 import type { Section } from '@deco/deco/blocks';
 import type { SectionProps } from "@deco/deco";
 import type { ProductListingPage } from "apps/commerce/types.ts";
-import { renderSection } from "apps/website/pages/Page.tsx";
 
 export interface Layout {
   /**
@@ -44,7 +44,6 @@ export interface Props {
   startingPage?: 0 | 1;
   /** @hidden */
   partial?: "hideMore" | "hideLess";
-  /** @hidden */
   sections?: DescriptionSections[];
 }
 
@@ -101,21 +100,20 @@ function PageResult(props: SectionProps<typeof loader>) {
   });
   const infinite = layout?.pagination !== "pagination";
   return (
-    <div class="grid grid-flow-row grid-cols-1 place-items-center">
+    <div class="grid grid-flow-row grid-cols-1 place-items-center gap-6">
       <div
         class={clx(
-          "pb-2 sm:pb-10",
           (!prevPageUrl || partial === "hideLess") && "hidden",
         )}
       >
         <a
           rel="prev"
-          class="btn btn-ghost"
+          class="btn btn-primary"
           hx-swap="outerHTML show:parent:top"
           hx-get={partialPrev}
         >
           <span class="inline [.htmx-request_&]:hidden">
-            Show Less
+            Mostrar anteriores
           </span>
           <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
         </a>
@@ -141,21 +139,21 @@ function PageResult(props: SectionProps<typeof loader>) {
         ))}
       </div>
 
-      <div class={clx("pt-2 sm:pt-10 w-full", "")}>
+      <div>
         {infinite
           ? (
             <div class="flex justify-center [&_section]:contents">
               <a
                 rel="next"
                 class={clx(
-                  "btn btn-ghost",
+                  "btn btn-primary",
                   (!nextPageUrl || partial === "hideMore") && "hidden",
                 )}
                 hx-swap="outerHTML show:parent:top"
                 hx-get={partialNext}
               >
                 <span class="inline [.htmx-request_&]:hidden">
-                  Show More
+                  Mostrar mais
                 </span>
                 <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
               </a>
@@ -355,17 +353,11 @@ function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
 }
 
 export const loader = (props: Props, req: Request) => {
-  const {
-    sections
-  } = props;
-
-  const descriptionSections = sections?.find((section) => {
-    const url = new URLPattern({ pathname: section.matcher });
-    if (url.test(req.url)) {
+  const descriptionSections = props.sections?.find((section) => {
+    if (req.url.indexOf(section.matcher) !== -1) {
       return section.sections;
     }
-    return [];
-  });
+  })?.sections || [];
 
   return {
     ...props,

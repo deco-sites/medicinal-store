@@ -1,19 +1,68 @@
-import { ProductDetailsPage } from "apps/commerce/types.ts";
-import ImageGallerySlider from "../../components/product/Gallery.tsx";
-import ProductInfo from "../../components/product/ProductInfo.tsx";
-import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import Section from "../../components/ui/Section.tsx";
-import { clx } from "../../sdk/clx.ts";
+import ProductInfo from "../../components/product/ProductInfo.tsx";
+import ProductTitle from "../../components/product/ProductTitle.tsx";
+import ImageGallerySlider from "../../components/product/Gallery.tsx";
+
+import { useDevice } from "@deco/deco/hooks";
+import { ProductDetailsPage } from "apps/commerce/types.ts";
+
+import type { Section as SectionComponent } from '@deco/deco/blocks';
+import { renderSection } from "apps/website/pages/Page.tsx";
+import { SectionProps } from "@deco/deco";
+
+/**
+ * @titleBy matcher
+ */
+interface DescriptionSections {
+  /**
+   * @description Ex: /produtos
+   */
+  matcher: string;
+  sections: SectionComponent[];
+}
 
 export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
+  sections?: DescriptionSections[];
 }
 
-export default function ProductDetails({ page }: Props) {
-  /**
-   * Rendered when a not found is returned by any of the loaders run on this page
-   */
+const Desktop = ({ page }: Props) => {
+  return (
+    <div class="grid grid-cols-[1fr_600px] gap-8">
+      <div>
+        <ImageGallerySlider page={page} />
+      </div>
+      <div>
+        <ProductTitle page={page} />
+        <ProductInfo page={page} />
+      </div>
+    </div>
+  );
+};
+
+const Mobile = ({ page }: Props) => {
+  return (
+    <div class="flex flex-col w-full">
+      <ProductTitle page={page} />
+      <ImageGallerySlider page={page} />
+      <ProductInfo page={page} />
+    </div>
+  );
+};
+
+function ProductDetails(props: SectionProps<typeof loader>) {
+  const { page, descriptionSections } = props;
+
+  if (page === null) {
+    throw new Error("Missing Product Details Page Info");
+  }
+
+  const { product } = page;
+  const { description } = product;
+
+  const device = useDevice();
+
   if (!page) {
     return (
       <div class="w-full flex justify-center items-center py-28">
@@ -28,25 +77,42 @@ export default function ProductDetails({ page }: Props) {
   }
 
   return (
-    <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 sm:px-0">
-      <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
-
-      <div
-        class={clx(
-          "container grid",
-          "grid-cols-1 gap-2 py-0",
-          "sm:grid-cols-5 sm:gap-6",
-        )}
-      >
-        <div class="sm:col-span-3">
-          <ImageGallerySlider page={page} />
-        </div>
-        <div class="sm:col-span-2">
-          <ProductInfo page={page} />
-        </div>
-      </div>
+    <div class="container mx-auto w-full px-4 py-6 sm:py-10 flex flex-col gap-8">
+      {device === "desktop"
+        ? <Desktop {...props} />
+        : <Mobile {...props} />}
+      {descriptionSections.length > 0 ? (
+        <>
+          {descriptionSections.map(renderSection)}
+        </>
+      ) : (
+        <details class="collapse collapse-arrow" open>
+          <summary class="collapse-title font-semibold px-0 after:!right-1">Descrição</summary>
+          <div
+            class="collapse-content fluid-text text-sm !p-0"
+            dangerouslySetInnerHTML={{
+              __html: description || ""
+            }}
+          />
+        </details>
+      )}
     </div>
   );
 }
 
 export const LoadingFallback = () => <Section.Placeholder height="635px" />;
+
+export const loader = (props: Props, req: Request) => {
+  const descriptionSections = props.sections?.find((section) => {
+    if (req.url.indexOf(section.matcher) !== -1) {
+      return section.sections;
+    }
+  })?.sections || [];
+
+  return {
+    ...props,
+    descriptionSections,
+  };
+};
+
+export default ProductDetails;

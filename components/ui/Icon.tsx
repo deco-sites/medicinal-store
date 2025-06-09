@@ -21,6 +21,7 @@ export type AvailableIcons =
   | "check-circle"
   | "error"
   | "trash"
+  | "check"
   | "check-error"
   | "check-success";
 

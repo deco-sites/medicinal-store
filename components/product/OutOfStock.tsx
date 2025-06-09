@@ -13,11 +13,12 @@ export const action = async (props: Props, req: Request, ctx: AppContext) => {
   const email = `${form.get("email") ?? ""}`;
 
   // deno-lint-ignore no-explicit-any
-  await (ctx as any).invoke("vtex/actions/notifyme.ts", {
-    skuId: props.productID,
-    name,
-    email,
-  });
+  const response = await (ctx as any)
+    .invoke("vtex/actions/notifyme.ts", {
+      skuId: props.productID,
+      name,
+      email,
+    });
 
   return props;
 };
@@ -31,11 +32,13 @@ export default function Notify({ productID }: Props) {
       hx-swap="none"
       hx-post={useComponent<Props>(import.meta.url, { productID })}
     >
-      <span class="text-base">Este produto está indisponivel no momento</span>
-      <span class="text-sm">Avise-me quando estiver disponivel</span>
+      <div>
+        <p class="text-base text-gray-400 font-bold">Indisponível no momento</p>
+        <p class="text-sm text-gray-400">Avise-me quando estiver disponivel</p>
+      </div>
 
-      <input placeholder="Nome" class="input input-bordered" name="name" />
-      <input placeholder="Email" class="input input-bordered" name="email" />
+      <input placeholder="Nome" class="input input-bordered text-sm" name="name" />
+      <input placeholder="Email" class="input input-bordered text-sm" name="email" />
 
       <button class="btn btn-primary no-animation">
         <span class="[.htmx-request_&]:hidden inline">Enviar</span>

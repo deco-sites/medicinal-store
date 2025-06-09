@@ -1,6 +1,5 @@
 import { type JSX } from "preact";
 import { clx } from "../../sdk/clx.ts";
-import { useId } from "../../sdk/useId.ts";
 import { useScript } from "@deco/deco/hooks";
 const onClick = (delta: number) => {
   // doidera!
@@ -14,13 +13,13 @@ const onClick = (delta: number) => {
   input.dispatchEvent(new Event("change", { bubbles: true }));
 };
 function QuantitySelector(
-  { id = useId(), disabled, ...props }: JSX.IntrinsicElements["input"],
+  { id, disabled, ...props }: JSX.IntrinsicElements["input"],
 ) {
   return (
-    <div class="join border rounded-full w-full">
+    <div class="join items-center border rounded-full">
       <button
         type="button"
-        class="btn btn-sm btn-circle btn-ghost no-animation"
+        class="btn btn-sm btn-circle btn-ghost no-animation z-10"
         hx-on:click={useScript(onClick, -1)}
         disabled={disabled}
       >
@@ -37,8 +36,8 @@ function QuantitySelector(
         <input
           id={id}
           class={clx(
-            "input input-sm text-center w-full [appearance:textfield]",
-            "invalid:input-error",
+            "input input-sm text-center [appearance:textfield] text-sm w-8 p-0",
+            "invalid:input-error disabled:bg-transparent disabled:border-transparent",
           )}
           disabled={disabled}
           inputMode="numeric"
@@ -48,7 +47,7 @@ function QuantitySelector(
       </div>
       <button
         type="button"
-        class="btn btn-sm btn-circle btn-ghost no-animation"
+        class="btn btn-sm btn-circle btn-ghost no-animation z-10"
         hx-on:click={useScript(onClick, 1)}
         disabled={disabled}
       >

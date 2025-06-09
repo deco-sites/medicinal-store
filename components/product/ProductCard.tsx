@@ -8,6 +8,7 @@ import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import WishlistButton from "../wishlist/WishlistButton.tsx";
 import AddToCartButton from "./AddToCartButton.tsx";
+import Price from "../../sections/Product/Price.tsx";
 
 interface Props {
   product: Product;
@@ -38,11 +39,11 @@ function ProductCard({
   const title = isVariantOf?.name ?? product.name;
   const [front, back] = images ?? [];
 
-  const { listPrice, price, seller = "1", availability, installment } = useOffer(offers);
+  const { listPrice, price, seller = "1", availability } = useOffer(offers);
   const inStock = availability === "https://schema.org/InStock";
   const relativeUrl = relative(url);
   const percent = listPrice && price
-    ? Math.round(((price - listPrice) / listPrice) * 100)
+    ? Math.round(((listPrice - price) / listPrice) * 100)
     : 0;
 
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
@@ -121,7 +122,7 @@ function ProductCard({
           <span
             class={clx(
               "text-xs font-bold text-white bg-primary text-center rounded-badge px-3 py-1 m-3 uppercase",
-              (percent <= 0 || !inStock) && "opacity-0",
+              (percent <= 0) && "opacity-0",
             )}
           >
             {percent}% off
@@ -138,16 +139,10 @@ function ProductCard({
           {title}
         </span>
 
-        <div class="flex gap-2 my-2">
-          {listPrice && (
-            <span class="line-through font-normal text-gray-400">
-              {formatPrice(listPrice, offers?.priceCurrency)}
-            </span>
-          )}
-          <span class="font-bold text-primary">
-            {formatPrice(price, offers?.priceCurrency)}
-          </span>
-        </div>
+        <Price
+          type="shelf"
+          product={product}
+        />
       </a>
 
       <div class="flex-grow" />

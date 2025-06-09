@@ -1,6 +1,6 @@
 {
   "name": "Product Page",
-  "path": "/products/:slug",
+  "path": "/:slug/p",
   "default": {
     "possiblePaths": []
   },
@@ -16,29 +16,44 @@
       "section": {
         "__resolveType": "site/sections/Product/ProductDetails.tsx",
         "page": {
-          "__resolveType": "PDP Loader"
-        }
+          "__resolveType": "vtex/loaders/legacy/productDetailsPage.ts",
+          "advancedConfigs": {
+            "includeOriginalAttributes": []
+          },
+          "slug": {
+            "__resolveType": "website/functions/requestToParam.ts",
+            "param": "slug"
+          }
+        },
+        "sections": [
+          {
+            "sections": [
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/OnlyText.tsx"
+                }
+              }
+            ],
+            "matcher": "/glucomannan-500mg-60-doses"
+          }
+        ]
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "You may also like",
         "products": {
-          "__resolveType": "shopify/loaders/ProductList.ts",
-          "props": {
-            "sort": "",
-            "query": "a",
-            "count": 9
-          },
-          "filters": {
-            "tags": [],
-            "productTypes": [],
-            "productVendors": [],
-            "variantOptions": []
+          "__resolveType": "vtex/loaders/legacy/relatedProductsLoader.ts",
+          "crossSelling": "whosawalsosaw",
+          "count": 10,
+          "slug": {
+            "__resolveType": "website/functions/requestToParam.ts",
+            "param": "slug"
           }
-        }
+        },
+        "title": "Quem viu, viu também"
       }
     },
     {

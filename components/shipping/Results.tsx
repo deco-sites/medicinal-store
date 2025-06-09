@@ -41,34 +41,35 @@ export default function Results({ result }: ComponentProps<typeof action>) {
   ) ?? [];
 
   if (!methods.length) {
-    return (
-      <div class="p-2">
-        <span>CEP inválido</span>
-      </div>
-    );
+    return <span class="text-red-700 text-sm font-semibold">CEP inválido</span>;
   }
 
   return (
-    <ul class="flex flex-col gap-4 p-4 border border-base-400 rounded">
-      {methods.map((method) => (
-        <li class="flex justify-between items-center border-base-200 not-first-child:border-t">
-          <span class="text-button text-center">
-            Entrega {method.name}
-          </span>
-          <span class="text-button">
-            até {formatShippingEstimate(method.shippingEstimate)}
-          </span>
-          <span class="text-base font-semibold text-right">
-            {method.price === 0 ? "Grátis" : (
-              formatPrice(method.price / 100, "BRL", "pt-BR")
-            )}
-          </span>
-        </li>
-      ))}
+    <ul class="flex flex-col gap-4">
+      {methods
+        .sort((a, b) => (a.price === 0 ? -1 : b.price === 0 ? 1 : 0))
+        .map((method) => (
+          <li class="flex items-center">
+            <div class="text-xs text-dark-gray font-semibold flex-1 text-left">
+              Entrega {method.name}
+            </div>
+            <div class="text-xs text-dark-gray font-semibold flex-1 text-center">
+              até {formatShippingEstimate(method.shippingEstimate)}
+            </div>
+            <div
+              class={`text-xs font-semibold flex-1 text-right ${method.price === 0 ? "text-green-500" : "text-dark-gray"
+                }`}
+            >
+              {method.price === 0
+                ? "Grátis"
+                : formatPrice(method.price / 100, "BRL", "pt-BR")}
+            </div>
+          </li>
+        ))}
       <span class="text-xs font-thin">
         Os prazos de entrega começam a contar a partir da confirmação do
-        pagamento e podem variar de acordo com a quantidade de produtos na
-        sacola.
+        pagamento e podem variar de acordo com a quantidade de produtos no
+        carrinho.
       </span>
     </ul>
   );
