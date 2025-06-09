@@ -4,7 +4,7 @@ import ProductTitle from "../../components/product/ProductTitle.tsx";
 import ImageGallerySlider from "../../components/product/Gallery.tsx";
 
 import { useDevice } from "@deco/deco/hooks";
-import { ProductDetailsPage } from "apps/commerce/types.ts";
+import { ProductDetailsPage, PropertyValue } from "apps/commerce/types.ts";
 
 import type { Section as SectionComponent } from '@deco/deco/blocks';
 import { renderSection } from "apps/website/pages/Page.tsx";
@@ -59,6 +59,10 @@ function ProductDetails(props: SectionProps<typeof loader>) {
   }
 
   const { product } = page;
+  const { isVariantOf } = product;
+  // @ts-ignore additionalProperty exists
+  const { additionalProperty } = isVariantOf;
+  console.log('additionalProperty:', additionalProperty);
   const { description } = product;
 
   const device = useDevice();
@@ -86,15 +90,36 @@ function ProductDetails(props: SectionProps<typeof loader>) {
           {descriptionSections.map(renderSection)}
         </>
       ) : (
-        <details class="collapse collapse-arrow" open>
-          <summary class="collapse-title font-semibold px-0 after:!right-1">Descrição</summary>
-          <div
-            class="collapse-content fluid-text text-sm !p-0"
-            dangerouslySetInnerHTML={{
-              __html: description || ""
-            }}
-          />
-        </details>
+        <div class="divide-y divide-base-200">
+          <details class="collapse collapse-arrow rounded-none" open>
+            <summary class="collapse-title font-semibold px-0 after:!right-1">Descrição</summary>
+            <div
+              class="collapse-content fluid-text text-sm !p-0"
+              dangerouslySetInnerHTML={{
+                __html: description || ""
+              }}
+            />
+          </details>
+          {additionalProperty.map((p: PropertyValue) => {
+            if ([
+              "composição",
+              "advertências",
+              "modo de usar",
+            ].includes(p.propertyID?.toLowerCase() || '')) {
+              return (
+                <details class="collapse collapse-arrow rounded-none">
+                  <summary class="collapse-title font-semibold px-0 after:!right-1">{p.name}</summary>
+                  <div
+                    class="collapse-content fluid-text text-sm !p-0"
+                    dangerouslySetInnerHTML={{
+                      __html: p.value || ""
+                    }}
+                  />
+                </details>
+              )
+            }
+          })}
+        </div>
       )}
     </div>
   );
