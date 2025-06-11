@@ -1,0 +1,50 @@
+{
+  "name": "Compra Segura",
+  "path": "/compra-segura",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TitleWithBackground.tsx",
+        "title": "é seguro comprar?",
+        "background": {
+          "image": "https://assets.decocache.com/medicinal-store/23d9140c-86f1-45f8-a476-b69dbd39541d/image-1.png",
+          "position": "center"
+        },
+        "subTitle": "<p></p>",
+        "textAlign": "center",
+        "textUppercase": true,
+        "isFullWidth": false
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "text": "<p><strong>Comprar em nosso site é 100% seguro. </strong><br><br>O site<span style=\"color: rgb(0, 0, 0)\"> </span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://www.medicinalnaweb.com.br\"><strong><span style=\"color: rgb(0, 0, 0)\">www.medicinalnaweb.com.br</span></strong></a><strong> </strong>segue rígidos padrões de segurança e confidencialidade a fim de proteger as informações dos seus usuários. Durante a sua navegação, você estará em um ambiente virtual completamente seguro. <br><br>A política de segurança no tráfego de dados cobre todas as transações que envolvam pagamentos, por quaisquer meios: boletos bancários ou cartões de crédito, pois todas as informações são criptografadas, utilizando a tecnologia SSL. Somente a <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://www.medicinalnaweb.com.br\"><span style=\"color: rgb(0, 0, 0)\">www.medicinalnaweb.com.br</span></a> tem acesso aos dados, garantindo a segurança e confidencialidade dos dados do cliente. <br><br>Sempre enviaremos e-mails a você durante seu processo de compra e, caso tenha escolhido, enviaremos também ofertas, novidades e promoções. Possuímos a qualificação da&nbsp;medalha Prata&nbsp;junto ao Ebit, que é um selo de certificação dado às lojas que são avaliadas de forma positiva em quesitos como facilidade de compra, preço, manuseio dos produtos, cumprimento do prazo de entrega, informações dos produtos, entre outros. <br><br>Nosso site possui um certificado de segurança digital e está registrado pela Digicert como um site autêntico.  <br><br><strong>A certificação PCI CERTIFIED VTEX garante que nosso site:</strong><br><br>• Atende aos critérios internacionais de segurança da American Express, Visa,<br>• Mastercard e outros;<br>• Realiza testes constantes para evitar ataques de invasores.<br>• Foi aprovado em mais de 200 requisitos de segurança.<br></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Category Banner - 01"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

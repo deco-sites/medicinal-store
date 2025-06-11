@@ -1,0 +1,92 @@
+{
+  "__resolveType": "website/pages/Page.tsx",
+  "name": "Politica de Troca",
+  "path": "/politica-de-troca",
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TitleWithBackground.tsx",
+        "title": "POLÍTICA DE TROCA",
+        "background": {
+          "image": "https://assets.decocache.com/medicinal-store/23d9140c-86f1-45f8-a476-b69dbd39541d/image-1.png",
+          "position": "center"
+        },
+        "subTitle": "<p></p>",
+        "textAlign": "center",
+        "textUppercase": true,
+        "isFullWidth": false
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "text": "<p><strong><span>TROCAS E DEVOLUÇÕES DE PRODUTOS</span></strong><br><br><span>Visando a sua total satisfação, a </span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://medicinalnaweb.com.br\"><span>medicinalnaweb.com.br</span></a><span> possui uma Política de Troca e Devolução alinhada às mais recentes normas do Código de Defesa do Consumidor.</span><br><br><span>Nosso objetivo é fornecer um atendimento personalizado, que atenda a sua solicitação com excelência e rapidez. O atendimento para este tema é realizado de segunda a sexta-feira (exceto feriados), das 9h às 18h.</span><br><br><span>A Medicinal oferece aos seus clientes produtos de qualidade, primando pela perfeição e total adequação às condições climáticas brasileiras.</span><br><br><span>Conheça abaixo algumas informações importantes a respeito deste assunto:</span></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "text": "<p><strong><span>1. SOLICITAÇÃO DE TROCA OU DEVOLUÇÃO</span></strong><br><br><span>A Medicinal mantém um relacionamento próximo a você e facilita ao máximo a sua solicitação. Por isso, todas as ocorrências que envolvam troca e devolução devem ser comunicadas através do e-mail&nbsp;</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"mailto:vendas@atendimentomedicinal.net\"><span>vendas@atendimentomedicinal.net</span></a><span>&nbsp;ou pelo Telefone&nbsp;(44) 3225-2600.  </span><br><br><span>Se ocorrer qualquer das hipóteses abaixo, recuse o recebimento do produto:<br></span>•<span> Embalagem aberta ou avariada; <br></span>• <span>Produto avariado, vazado;<br></span>•<span> Produto em desacordo com o pedido;<br></span>•<span> Quantidade em desacordo com a compra.</span></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "text": "<p><strong><span>2. CONDIÇÕES GERAIS</span></strong><br><br><span>Para devolver um produto por arrependimento, as seguintes condições deverão ser observadas:<br></span>• <span>O prazo para desistir da compra do produto é de até sete dias corridos, a contar da data do seu recebimento.<br><br></span><strong><span>O produto deverá ser encaminhado, cumprindo os seguintes requisitos: </span></strong><br><span><br></span>• <span>O produto deve ser encaminhado na embalagem original e completa;<br></span>• <span>O produto não deve ter qualquer indício de uso;<br></span>• <span>O produto não deve apresentar violação do lacre original do fabricante, quando disponível.</span></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "text": "<p><strong><span>4. DEVOLUÇÃO POR DEFEITO NO PRODUTO</span></strong><br><br><br><br><span>A solicitação de troca deverá ser comunicada à nossa Central de Atendimento ao Cliente em até trinta dias corridos, a contar da data do recebimento do produto.  </span><br><br><strong><span>O produto deverá ser encaminhado, cumprindo os seguintes requisitos:</span></strong><span><br><br></span>• <span>O produto deve ser encaminhado na embalagem original e completa;<br></span>• <span>O produto não deve apresentar&nbsp;sinais de má utilização;<br></span>• <span>O produto não deve apresentar desgaste em função de uso.<br><br>Todos os produtos serão analisados pela Medicinal, no prazo de até 30 (trinta) dias corridos. O setor de atendimento ao cliente entrará em contato com você informando sobre as possibilidades de troca, se for constatado o defeito reclamado.</span></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "text": "<p><strong><span>5. DEVOLUÇÃO POR DEFEITO NO PRODUTO</span></strong><br><br><span>A Medicinal fará a restituição dos valores pagos utilizando a mesma forma de pagamento escolhida no processo de compras:  </span><br><span><br></span>• <strong><span>Cartão de crédito: </span></strong><span>Se a compra foi feita através de cartão de crédito, a Medicinal solicitará o cancelamento do seu pedido para a administradora financeira.<br><br></span>• <strong><span>Boleto Bancário:</span></strong><span> Através de pagamento de boleto bancário, você deverá fornecer os dados bancários para o depósito e a devolução de valores pagos ocorrerá por meio de reembolso na conta corrente do titular da compra em até 10 (dez) dias úteis após o recebimento.&nbsp; Caso o titular da compra, não possua conta corrente, o cliente receberá um vale compras no valor do produto. Não serão efetuados depósitos em contas de terceiros.</span><br><span><br>Somente após o recebimento e análise das condições dos produtos por parte da </span><strong><span>Medicinal</span></strong><span> é que a restituição dos valores será realizada.  </span><br><br><strong><span>A Medicinal </span></strong><span>isenta-se da obrigação de cancelar ou consertar qualquer produto que apresente desgastes ou indícios de mau uso.</span></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "text": "<p><strong><span>6. PROMOÇÃO</span></strong><br><br><span>Para produtos adquiridos em promoção, caso seja necessária a troca e / ou devolução, o valor considerado será o pago pelo produto e não o seu valor original.  </span><br><br><strong><span>Exemplo:</span></strong><span> Se você adquiriu um item em promoção por R$ 50,00 mas seu valor original era de R$ 100,00, o valor considerado será o de R$50,00.</span></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "text": "<p><span>7</span><strong><span>. CONHEÇA O CÓDIGO DE DEFESA DO CONSUMIDOR</span></strong><br><br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://www.planalto.gov.br/ccivil_03/Leis/L8078compilado.htm\"><span>http://www.planalto.gov.br/ccivil_03/Leis/L8078compilado.htm</span></a></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Category Banner - 01"
+      }
+    }
+  ]
+}
