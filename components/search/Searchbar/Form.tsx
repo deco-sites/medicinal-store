@@ -93,10 +93,16 @@ export default function Searchbar(
           tabIndex={-1}
         >
           <span class="loading loading-spinner loading-xs hidden [.htmx-request_&]:inline" />
-          <Icon id="search" class="inline [.htmx-request_&]:hidden text-primary" />
+          <Icon
+            id="search"
+            class="inline [.htmx-request_&]:hidden text-primary"
+          />
         </button>
       </form>
-      <div class="hidden group-hover:block absolute right-0 bg-white px-5 pt-10 pb-6 z-[1] top-[25px] rounded-b-2xl shadow-sm" id={slot} />
+      <div
+        class="hidden group-hover:block absolute right-0 bg-white px-5 pt-10 pb-6 z-[1] top-[25px] rounded-b-2xl shadow-sm"
+        id={slot}
+      />
       <script
         type="module"
         dangerouslySetInnerHTML={{

@@ -8,7 +8,7 @@ import CartProvider, { type Minicart } from "./minicart/Minicart.tsx";
 import Drawer from "./ui/Drawer.tsx";
 import UserProvider from "./user/Provider.tsx";
 import WishlistProvider, { type Wishlist } from "./wishlist/Provider.tsx";
-import { useScript, useDevice } from "@deco/deco/hooks";
+import { useDevice, useScript } from "@deco/deco/hooks";
 declare global {
   interface Window {
     STOREFRONT: SDK;

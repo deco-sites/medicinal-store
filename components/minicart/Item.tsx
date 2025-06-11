@@ -46,7 +46,9 @@ function CartItem({ item, index, locale, currency }: Props) {
       />
       <div class="flex flex-col gap-4 w-full">
         <div class="flex justify-between items-start">
-          <legend class="text-sm text-ellipsis font-bold line-clamp-2 h-10">{name}</legend>
+          <legend class="text-sm text-ellipsis font-bold line-clamp-2 h-10">
+            {name}
+          </legend>
           <button
             class={clx(
               isGift && "hidden",

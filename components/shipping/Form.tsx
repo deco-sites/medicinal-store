@@ -54,7 +54,9 @@ export default function Form({ items }: Props) {
             maxLength={9}
           />
           <button type="submit" class="btn btn-primary no-animation -ml-10">
-            <span class="[.htmx-request_&]:hidden inline text-sm">Calcular</span>
+            <span class="[.htmx-request_&]:hidden inline text-sm">
+              Calcular
+            </span>
             <span class="[.htmx-request_&]:inline hidden loading loading-spinner loading-xs" />
           </button>
         </form>

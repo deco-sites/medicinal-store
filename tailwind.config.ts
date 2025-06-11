@@ -11,7 +11,7 @@ export default {
         sliding: "sliding 30s linear infinite",
       },
       colors: {
-        ice: '#F0E9E9'
+        ice: "#F0E9E9",
       },
       keyframes: {
         sliding: {

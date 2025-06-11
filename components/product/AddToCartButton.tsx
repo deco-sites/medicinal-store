@@ -34,10 +34,11 @@ const onChange = (containerId: string, selectorId: string) => {
     decodeURIComponent(container.getAttribute("data-cart-item")!),
   );
   platformProps.orderItems[0].quantity = quantity;
-  container.setAttribute("data-cart-item", 
+  container.setAttribute(
+    "data-cart-item",
     encodeURIComponent(
-      JSON.stringify({ item, platformProps })
-    )
+      JSON.stringify({ item, platformProps }),
+    ),
   );
 };
 
@@ -157,12 +158,12 @@ function AddToCartButton(props: Props) {
         class={clx("flex items-center gap-2 flex-grow", _class?.toString())}
         hx-on:click={useScript(onClick)}
       >
-          <Icon id="shopping_bag" width={24} height={21} />
+        <Icon id="shopping_bag" width={24} height={21} />
         Comprar
       </button>
       <script
         type="module"
-        dangerouslySetInnerHTML={{ __html: useScript(onLoad, id, type)}}
+        dangerouslySetInnerHTML={{ __html: useScript(onLoad, id, type) }}
       />
     </div>
   );

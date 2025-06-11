@@ -60,10 +60,16 @@ function VariantSelector({ product }: Props) {
                           "flex items-center justify-center gap-1",
                           "text-sm text-center py-1 px-3",
                           "rounded-full border-2 border-base-200 text-base-200",
-                          checked && "border-primary bg-primary text-white"
+                          checked && "border-primary bg-primary text-white",
                         )}
                       >
-                        {checked && <Icon id="check" size={16} class="text-white -mt-[1px]" />}
+                        {checked && (
+                          <Icon
+                            id="check"
+                            size={16}
+                            class="text-white -mt-[1px]"
+                          />
+                        )}
                         <span>{value}</span>
                       </div>
                     </label>

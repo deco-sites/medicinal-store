@@ -168,6 +168,26 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
+        "products": {
+          "__resolveType": "vtex/loaders/legacy/productList.ts",
+          "props": {
+            "sort": "OrderByPriceDESC",
+            "count": 10,
+            "term": "minoxidil"
+          }
+        },
+        "banner": {
+          "alt": "Teste",
+          "href": "#",
+          "desktop": "https://placehold.co/450x500",
+          "mobile": "https://placehold.co/640x400"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Images/Banner.tsx",
         "title": "Register and Save Big!",
         "cta": {

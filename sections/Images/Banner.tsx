@@ -50,7 +50,11 @@ function Banner({
               width={1320}
               height={480}
             />
-            <img src={desktop} alt={alt} class="w-full object-cover rounded-2xl" />
+            <img
+              src={desktop}
+              alt={alt}
+              class="w-full object-cover rounded-2xl"
+            />
           </Picture>
         </a>
       </div>

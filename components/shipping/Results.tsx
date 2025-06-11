@@ -57,8 +57,9 @@ export default function Results({ result }: ComponentProps<typeof action>) {
               até {formatShippingEstimate(method.shippingEstimate)}
             </div>
             <div
-              class={`text-xs font-semibold flex-1 text-right ${method.price === 0 ? "text-green-500" : "text-dark-gray"
-                }`}
+              class={`text-xs font-semibold flex-1 text-right ${
+                method.price === 0 ? "text-green-500" : "text-dark-gray"
+              }`}
             >
               {method.price === 0
                 ? "Grátis"

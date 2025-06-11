@@ -158,8 +158,12 @@ export default function Cart(
                   class="text-base-200"
                 />
                 <div>
-                  <p class="text-base text-center font-bold">Seu carrinho está vazio</p>
-                  <p class="text-sm text-center">Volte e explore mais produtos na loja</p>
+                  <p class="text-base text-center font-bold">
+                    Seu carrinho está vazio
+                  </p>
+                  <p class="text-sm text-center">
+                    Volte e explore mais produtos na loja
+                  </p>
                 </div>
                 <label
                   for={MINICART_DRAWER_ID}
@@ -194,11 +198,13 @@ export default function Cart(
                     <button
                       class="btn btn-outline btn-accent w-full uppercase"
                       hx-on:click={useScript((id) => {
-                        const closeIcon = document.querySelector(`label[for=${id}]`);
+                        const closeIcon = document.querySelector(
+                          `label[for=${id}]`,
+                        );
                         if (closeIcon) closeIcon.click();
                       }, MINICART_DRAWER_ID)}
-                      >
-                        Adicione mais itens
+                    >
+                      Adicione mais itens
                     </button>
                     <a
                       class="btn btn-primary w-full no-animation"
@@ -206,7 +212,8 @@ export default function Cart(
                       hx-on:click={useScript(sendBeginCheckoutEvent)}
                     >
                       <span class="[.htmx-request_&]:hidden uppercase">
-                        Finalizar Compra - {formatPrice(total, currency, locale)}
+                        Finalizar Compra -{" "}
+                        {formatPrice(total, currency, locale)}
                       </span>
                       <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
                     </a>

@@ -1,0 +1,199 @@
+{
+  "name": "Institucional Teste",
+  "path": "/teste",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TitleWithBackground.tsx",
+        "title": "Teste de Políticas",
+        "background": {
+          "image": "https://assets.decocache.com/medicinal-store/23d9140c-86f1-45f8-a476-b69dbd39541d/image-1.png",
+          "position": "center"
+        },
+        "subTitle": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper justo sit amet lacus congue tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce non lorem nisi. Quisque accumsan id lacus eget elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Morbi ut ornare ante. Aliquam eros nibh, malesuada sit amet nisi at, cursus gravida metus. Maecenas viverra sem quis bibendum vulputate. Donec et nunc eget magna sagittis tincidunt. Etiam nunc orci, posuere a nisi nec, malesuada maximus tortor. Aliquam venenatis, turpis ac varius tempor, libero tortor viverra magna, molestie porttitor ligula justo eu lorem. Etiam consectetur gravida pharetra. Maecenas sit amet velit non dolor pharetra suscipit mattis vitae massa. Integer vitae dictum neque.</p>",
+        "textAlign": "left",
+        "textUppercase": false,
+        "supTitle": "Quem Somos",
+        "isFullWidth": true
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "text": "<p>Comprando em nosso site, você receberá os produtos de maneira rápida, eficiente e segura, antes de fazer a sua compra, calcule a estimativa do prazo de entrega, informada na página do produto.</p><p>O prazo para entrega dos produtos varia de com acordo com o local de entrega e tipo de envio - que será através dos Correios e o cliente poderá escolher entre Sedex ou PAC.</p><p>O recebimento do pedido pode ser realizado por terceiros, como porteiros de condomínios e familiares, desde que assinem o comprovante de recebimento da mercadoria.</p><p>Os produtos serão entregues de segunda-feira a sábado, em horário comercial. São realizadas três tentativas de entrega, em dias úteis consecutivos. Ocorrendo três tentativas de entrega sem sucesso o produto será devolvido ao Centro de Distribuição da loja online.</p><p><strong>IMPORTANTE:</strong> O prazo para entrega do pedido passa a ser considerado a partir da aprovação do pedido pela instituição financeira, este retorno de aprovação pode levar até 48h.</p>",
+        "title": {
+          "text": "Cartão de crédito",
+          "icon": "https://assets.decocache.com/medicinal-store/2ddb9ab3-9fa5-439b-97ed-02fbe079b675/CreditCard.svg"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "text": "<p>Comprando em nosso site, você receberá os produtos de maneira rápida, eficiente e segura, antes de fazer a sua compra, calcule a estimativa do prazo de entrega, informada na página do produto.</p><p>O prazo para entrega dos produtos varia de com acordo com o local de entrega e tipo de envio - que será através dos Correios e o cliente poderá escolher entre Sedex ou PAC.</p><p>O recebimento do pedido pode ser realizado por terceiros, como porteiros de condomínios e familiares, desde que assinem o comprovante de recebimento da mercadoria.</p><p>Os produtos serão entregues de segunda-feira a sábado, em horário comercial. São realizadas três tentativas de entrega, em dias úteis consecutivos. Ocorrendo três tentativas de entrega sem sucesso o produto será devolvido ao Centro de Distribuição da loja online.</p><p><strong>IMPORTANTE:</strong> O prazo para entrega do pedido passa a ser considerado a partir da aprovação do pedido pela instituição financeira, este retorno de aprovação pode levar até 48h.</p>",
+        "title": {
+          "text": "Cartão de crédito",
+          "icon": "https://assets.decocache.com/medicinal-store/2ddb9ab3-9fa5-439b-97ed-02fbe079b675/CreditCard.svg"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "padding": "default",
+        "backgroundColor": "#f2f2f2",
+        "textAlign": "left",
+        "button": {
+          "href": "#",
+          "text": "Chame no WhatsApp",
+          "icon": "https://assets.decocache.com/medicinal-store/4dee388b-9967-495d-9c6c-bb14803012e1/ic_baseline-whatsapp.svg"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/Cards.tsx",
+        "cards": [
+          {
+            "imageType": "rounded",
+            "image": "https://placehold.co/220x120",
+            "text": "<p>Atualmente a&nbsp;<strong>Medicinal&nbsp;</strong>conta com um corpo técnico de 8 farmacêuticos distribuidos em várias etapas do processo de produção, assegurando que as normas legais sejam cumpridas em cada etapa.</p>"
+          },
+          {
+            "imageType": "rounded",
+            "image": "https://placehold.co/220x120",
+            "text": "<p>Atualmente a&nbsp;<strong>Medicinal&nbsp;</strong>conta com um corpo técnico de 8 farmacêuticos distribuidos em várias etapas do processo de produção, assegurando que as normas legais sejam cumpridas em cada etapa.</p>"
+          },
+          {
+            "imageType": "rounded",
+            "image": "https://placehold.co/220x120",
+            "text": "<p>Atualmente a&nbsp;<strong>Medicinal&nbsp;</strong>conta com um corpo técnico de 8 farmacêuticos distribuidos em várias etapas do processo de produção, assegurando que as normas legais sejam cumpridas em cada etapa.</p>"
+          },
+          {
+            "imageType": "rounded",
+            "image": "https://placehold.co/220x120",
+            "text": "<p>Atualmente a&nbsp;<strong>Medicinal&nbsp;</strong>conta com um corpo técnico de 8 farmacêuticos distribuidos em várias etapas do processo de produção, assegurando que as normas legais sejam cumpridas em cada etapa.</p>"
+          },
+          {
+            "imageType": "rounded",
+            "image": "https://placehold.co/220x120",
+            "text": "<p>Atualmente a&nbsp;<strong>Medicinal&nbsp;</strong>conta com um corpo técnico de 8 farmacêuticos distribuidos em várias etapas do processo de produção, assegurando que as normas legais sejam cumpridas em cada etapa.</p>"
+          },
+          {
+            "imageType": "rounded",
+            "image": "https://placehold.co/220x120",
+            "text": "<p>Atualmente a&nbsp;<strong>Medicinal&nbsp;</strong>conta com um corpo técnico de 8 farmacêuticos distribuidos em várias etapas do processo de produção, assegurando que as normas legais sejam cumpridas em cada etapa.</p>"
+          },
+          {
+            "imageType": "rounded",
+            "image": "https://placehold.co/220x120",
+            "text": "<p>Atualmente a&nbsp;<strong>Medicinal&nbsp;</strong>conta com um corpo técnico de 8 farmacêuticos distribuidos em várias etapas do processo de produção, assegurando que as normas legais sejam cumpridas em cada etapa.</p>"
+          },
+          {
+            "imageType": "rounded",
+            "image": "https://placehold.co/220x120",
+            "text": "<p>Atualmente a&nbsp;<strong>Medicinal&nbsp;</strong>conta com um corpo técnico de 8 farmacêuticos distribuidos em várias etapas do processo de produção, assegurando que as normas legais sejam cumpridas em cada etapa.</p>"
+          }
+        ],
+        "imageType": "rounded-full",
+        "alignCards": "center",
+        "title": "<p>O que nossos clientes falam</p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/Iframe.tsx",
+        "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.5232903588053!2d-46.564065022879!3d-23.077932344013547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cec199e54ed2a1%3A0x646aee115c21e90d!2sResidencial%20Portofino%20Atibaia!5e0!3m2!1spt-BR!2sbr!4v1749582047296!5m2!1spt-BR!2sbr",
+        "height": 600,
+        "isFullWidth": false,
+        "mobileHeight": 300,
+        "title": "Teste"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/Brands.tsx",
+        "brands": [
+          {
+            "alt": "teste",
+            "image": "https://assets.decocache.com/medicinal-store/c0160458-7875-4b90-91e1-7c99dec701fc/image-15.png"
+          },
+          {
+            "alt": "teste",
+            "image": "https://assets.decocache.com/medicinal-store/9a545eaa-f3c8-433b-88eb-8361f998dbcb/image-2.png"
+          },
+          {
+            "alt": "teste",
+            "image": "https://assets.decocache.com/medicinal-store/2be3f605-30e2-415c-b977-110c0e0a5921/image.png"
+          },
+          {
+            "alt": "teste",
+            "image": "https://assets.decocache.com/medicinal-store/c0160458-7875-4b90-91e1-7c99dec701fc/image-15.png"
+          },
+          {
+            "alt": "teste",
+            "image": "https://assets.decocache.com/medicinal-store/9a545eaa-f3c8-433b-88eb-8361f998dbcb/image-2.png"
+          },
+          {
+            "alt": "teste",
+            "image": "https://assets.decocache.com/medicinal-store/2be3f605-30e2-415c-b977-110c0e0a5921/image.png"
+          },
+          {
+            "alt": "teste",
+            "image": "https://assets.decocache.com/medicinal-store/c0160458-7875-4b90-91e1-7c99dec701fc/image-15.png"
+          },
+          {
+            "alt": "teste",
+            "image": "https://assets.decocache.com/medicinal-store/9a545eaa-f3c8-433b-88eb-8361f998dbcb/image-2.png"
+          },
+          {
+            "alt": "teste",
+            "image": "https://assets.decocache.com/medicinal-store/2be3f605-30e2-415c-b977-110c0e0a5921/image.png"
+          },
+          {
+            "alt": "teste",
+            "image": "https://assets.decocache.com/medicinal-store/c0160458-7875-4b90-91e1-7c99dec701fc/image-15.png"
+          },
+          {
+            "alt": "teste",
+            "image": "https://assets.decocache.com/medicinal-store/9a545eaa-f3c8-433b-88eb-8361f998dbcb/image-2.png"
+          },
+          {
+            "alt": "teste",
+            "image": "https://assets.decocache.com/medicinal-store/2be3f605-30e2-415c-b977-110c0e0a5921/image.png"
+          }
+        ],
+        "title": "Alguns dos nossos fornecedores"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Category Banner - 01"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

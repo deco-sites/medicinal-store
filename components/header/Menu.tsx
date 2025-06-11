@@ -17,8 +17,10 @@ function MenuItem({ item }: { item: INavItem }) {
   const itemClass = clx(
     "text-sm border-2 border-transparent",
     isBold && "text-primary font-bold",
-    isHighlighted && "px-4 rounded-full bg-primary text-white !border-primary active:!bg-white active:!text-primary focus-visible:!bg-white focus-visible:!text-primary font-bold group-open:!text-primary group-open:!bg-white",
-    !isHighlighted && "active:!bg-transparent active:!text-primary focus-visible:!bg-transparent focus-visible:!text-primary"
+    isHighlighted &&
+      "px-4 rounded-full bg-primary text-white !border-primary active:!bg-white active:!text-primary focus-visible:!bg-white focus-visible:!text-primary font-bold group-open:!text-primary group-open:!bg-white",
+    !isHighlighted &&
+      "active:!bg-transparent active:!text-primary focus-visible:!bg-transparent focus-visible:!text-primary",
   );
 
   if (!children || children.length === 0) {
@@ -27,7 +29,9 @@ function MenuItem({ item }: { item: INavItem }) {
         <a
           href={item.href}
           class={itemClass}
-        >{item.name}</a>
+        >
+          {item.name}
+        </a>
       </li>
     );
   }
@@ -48,25 +52,27 @@ function MenuItem({ item }: { item: INavItem }) {
                 <li class="!bg-transparent text-base-300">
                   <a href={item.href}>{item.name}</a>
                 </li>
-              )
+              );
             }
 
             return (
               <li>
                 <details>
-                  <summary class="!bg-transparent text-base-300">{sub.name}</summary>
+                  <summary class="!bg-transparent text-base-300">
+                    {sub.name}
+                  </summary>
                   <ul class="before:w-[0] p-0">
                     {sub.children.map((leaf) => {
                       return (
                         <li class="!bg-transparent text-base-300">
                           <a href={leaf.href}>{leaf.name}</a>
                         </li>
-                      )
+                      );
                     })}
                   </ul>
                 </details>
               </li>
-            )
+            );
           })}
         </ul>
       </details>
@@ -87,9 +93,7 @@ function Menu({ navItems = [] }: Props) {
         </li>
       </ul>
       <ul class="menu rounded-box py-0 px-4">
-        {navItems.map((item) => (
-          <MenuItem item={item} />
-        ))}
+        {navItems.map((item) => <MenuItem item={item} />)}
       </ul>
     </div>
   );

@@ -10,7 +10,7 @@ export interface Props {
 
 const Card = ({
   icon = "",
-  text = ""
+  text = "",
 }) => (
   <div class="flex items-center gap-2">
     <Image
@@ -31,26 +31,26 @@ function Alert({ alerts = [] }: Props) {
 
   return (
     <div class="border-b border-base-400">
-      {device === "mobile" ? (
-        <Slider class="carousel carousel-center gap-4 sm:gap-6 w-full">
-          {alerts.map((alert, index) => (
-            <Slider.Item
-              index={index}
-              class="carousel-item w-screen flex justify-center text-center"
-            >
-              <Card {...alert} />
-            </Slider.Item>
-          ))}
-        </Slider>
-      ) : (
-        <div class="w-full container px-4 mx-auto">
-          <div class="flex items-center justify-between gap-4">
-            {alerts.map((alert) => (
-              <Card {...alert} />
+      {device === "mobile"
+        ? (
+          <Slider class="carousel carousel-center gap-4 sm:gap-6 w-full">
+            {alerts.map((alert, index) => (
+              <Slider.Item
+                index={index}
+                class="carousel-item w-screen flex justify-center text-center"
+              >
+                <Card {...alert} />
+              </Slider.Item>
             ))}
+          </Slider>
+        )
+        : (
+          <div class="w-full container px-4 mx-auto">
+            <div class="flex items-center justify-between gap-4">
+              {alerts.map((alert) => <Card {...alert} />)}
+            </div>
           </div>
-        </div>
-      )}
+        )}
     </div>
   );
 }

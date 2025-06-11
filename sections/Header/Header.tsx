@@ -1,5 +1,5 @@
 import type { INavItem } from "../../components/header/NavItem.tsx";
-import type { RichText, ImageWidget } from "apps/admin/widgets.ts";
+import type { ImageWidget, RichText } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import Alert from "../../components/header/Alert.tsx";
 import Bag from "../../components/header/Bag.tsx";
@@ -77,7 +77,7 @@ const onLoad = () => {
     } else {
       header.classList.remove("fixed");
     }
-  }
+  };
 
   handleScroll();
 
@@ -105,8 +105,8 @@ const Desktop = ({ navItems, logo, searchbar, loading, links }: Props) => (
   <>
     <div class="relative bg-white px-2 xl:px-0 w-full shadow-sm rounded-b-xl">
       <div class="md:flex items-center gap-8 hidden mx-auto pt-4 w-full container px-4">
-        <div class='flex-none'>
-          <a href='/' aria-label='Store logo' class='block'>
+        <div class="flex-none">
+          <a href="/" aria-label="Store logo" class="block">
             <Image
               src={logo.src}
               alt={logo.alt}
@@ -126,12 +126,10 @@ const Desktop = ({ navItems, logo, searchbar, loading, links }: Props) => (
             : <Searchbar {...searchbar} />}
         </div>
 
-        <div class='flex flex-none justify-end items-center gap-6 col-span-1'>
+        <div class="flex flex-none justify-end items-center gap-6 col-span-1">
           <SignIn />
-          {links?.map(link => (
-            <Link {...link} />
-          ))}
-          <div class='flex items-center font-thin text-xs'>
+          {links?.map((link) => <Link {...link} />)}
+          <div class="flex items-center font-thin text-xs">
             <Bag />
           </div>
         </div>
@@ -140,7 +138,9 @@ const Desktop = ({ navItems, logo, searchbar, loading, links }: Props) => (
       <div class="mx-auto py-4 w-full container px-4">
         <div class="w-full">
           <ul class="flex justify-between items-center">
-            {navItems?.slice(0, 10).map((item, index) => <NavItem item={item} key={index} />)}
+            {navItems?.slice(0, 10).map((item, index) => (
+              <NavItem item={item} key={index} />
+            ))}
           </ul>
         </div>
       </div>
@@ -194,12 +194,9 @@ const Mobile = ({ logo, searchbar, navItems, loading, links }: Props) => (
           </a>
         )}
 
-
-        <div class='flex flex-none justify-end items-center gap-4'>
+        <div class="flex flex-none justify-end items-center gap-4">
           {/* <SignIn /> */}
-          {links?.map(link => (
-            <Link {...link} />
-          ))}
+          {links?.map((link) => <Link {...link} />)}
           <Bag />
           <label
             for={SIDEMENU_DRAWER_ID}

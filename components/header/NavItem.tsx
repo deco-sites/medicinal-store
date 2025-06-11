@@ -51,8 +51,9 @@ function NavItem({ item }: Props) {
           class={clx(
             "py-2 text-sm flex items-center justify-between gap-4 border-2 cursor-pointer",
             isBold && "text-primary font-bold",
-            isHighlighted && "px-4 rounded-full bg-primary text-white border-primary group-hover:bg-white group-hover:text-primary font-bold",
-            !isHighlighted && "border-transparent"
+            isHighlighted &&
+              "px-4 rounded-full bg-primary text-white border-primary group-hover:bg-white group-hover:text-primary font-bold",
+            !isHighlighted && "border-transparent",
           )}
         >
           {name}
@@ -78,7 +79,10 @@ function NavItem({ item }: Props) {
                   {children.map((node) => (
                     <>
                       <li class="group/leaf hover:bg-base-200 rounded-full px-4 py-2 text-sm cursor-pointer min-w-60 max-w-60">
-                        <a href={node.href} class="flex items-center justify-between w-full">
+                        <a
+                          href={node.href}
+                          class="flex items-center justify-between w-full"
+                        >
                           {node.name}
                           {node.children && node.children?.length > 0 && (
                             <Icon

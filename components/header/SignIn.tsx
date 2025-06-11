@@ -28,12 +28,15 @@ function SignIn() {
         aria-label="Login"
       >
         <Icon id="account_circle" size={24} />
-        <p class="text-sm m-0 leading-4">Faça seu <b>login</b><br />ou <b>cadastre-se</b></p>
+        <p class="text-sm m-0 leading-4">
+          Faça seu <b>login</b>
+          <br />ou <b>cadastre-se</b>
+        </p>
       </a>
       <a
         class={clx(
           "hidden",
-          "flex items-center gap-2"
+          "flex items-center gap-2",
         )}
         href="/account"
         aria-label="Account"

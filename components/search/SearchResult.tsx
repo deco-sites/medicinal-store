@@ -13,7 +13,7 @@ import Filters from "../../components/search/Filters.tsx";
 import Breadcrumb from "../ui/Breadcrumb.tsx";
 import ProductCard from "../../components/product/ProductCard.tsx";
 
-import type { Section } from '@deco/deco/blocks';
+import type { Section } from "@deco/deco/blocks";
 import type { SectionProps } from "@deco/deco";
 import type { ProductListingPage } from "apps/commerce/types.ts";
 
@@ -50,9 +50,15 @@ export interface Props {
 function NotFound() {
   return (
     <div class="w-full py-10 flex flex-col gap-6 items-center">
-      <p class="text-2xl text-base-200 text-center px-4 font-bold">Página Indisponível</p>
-      <h1 class="text-lg text-center px-4 font-bold">A página que você tentou acessar está indisponível.</h1>
-      <p class="text-primary text-center px-4 font-bold">Que tal fazer uma nova busca?</p>
+      <p class="text-2xl text-base-200 text-center px-4 font-bold">
+        Página Indisponível
+      </p>
+      <h1 class="text-lg text-center px-4 font-bold">
+        A página que você tentou acessar está indisponível.
+      </h1>
+      <p class="text-primary text-center px-4 font-bold">
+        Que tal fazer uma nova busca?
+      </p>
     </div>
   );
 }
@@ -61,8 +67,12 @@ function EmptySearch() {
   return (
     <div class="w-full py-10 flex flex-col gap-6 items-center">
       <Icon id="search" size={100} class="text-base-200" />
-      <h1 class="text-2xl text-center px-4 font-bold">Não encontramos a sua pesquisa.</h1>
-      <p class="text-primary text-center px-4 font-bold">Que tal fazer uma nova busca?</p>
+      <h1 class="text-2xl text-center px-4 font-bold">
+        Não encontramos a sua pesquisa.
+      </h1>
+      <p class="text-primary text-center px-4 font-bold">
+        Que tal fazer uma nova busca?
+      </p>
     </div>
   );
 }
@@ -246,9 +256,9 @@ function Result(props: SectionProps<typeof loader>) {
   const {
     itemListElement: [
       {
-        name: title
-      }
-    ]
+        name: title,
+      },
+    ],
   } = breadcrumb;
 
   const sortBy = sortOptions.length > 0 && (
@@ -266,7 +276,9 @@ function Result(props: SectionProps<typeof loader>) {
 
               <div class="flex justify-between items-center">
                 <div class="flex items-center gap-2">
-                  <h1 class="text-2xl font-semibold uppercase leading-none">{title}</h1>
+                  <h1 class="text-2xl font-semibold uppercase leading-none">
+                    {title}
+                  </h1>
                   {`(${pageInfo?.records ?? pageInfo?.recordPerPage})`}
                 </div>
                 {device !== "mobile" && (
@@ -276,14 +288,14 @@ function Result(props: SectionProps<typeof loader>) {
                 )}
               </div>
 
-              {device === 'mobile' && (
+              {device === "mobile" && (
                 <Drawer
                   id={controls}
                   aside={
                     <div
                       class="bg-base-100 flex flex-col h-full rounded-r-2xl w-full"
                       style={{
-                        maxWidth: '90vw'
+                        maxWidth: "90vw",
                       }}
                     >
                       <div class="flex justify-between items-center">
@@ -298,8 +310,16 @@ function Result(props: SectionProps<typeof loader>) {
                   }
                 >
                   <div class="flex items-center justify-between">
-                    <label class="btn btn-ghost btn-sm bg-ice flex items-center gap-1" for={controls}>
-                      <Icon id="menu" width={20} height={19} class="-mt-[1px]" />
+                    <label
+                      class="btn btn-ghost btn-sm bg-ice flex items-center gap-1"
+                      for={controls}
+                    >
+                      <Icon
+                        id="menu"
+                        width={20}
+                        height={19}
+                        class="-mt-[1px]"
+                      />
                       Filters
                     </label>
                     <div class="w-full max-w-32">
@@ -318,7 +338,6 @@ function Result(props: SectionProps<typeof loader>) {
 
                 <PageResult {...props} />
               </div>
-
             </div>
           )}
         <div>
@@ -362,7 +381,7 @@ export const loader = (props: Props, req: Request) => {
   return {
     ...props,
     url: req.url,
-    descriptionSections
+    descriptionSections,
   };
 };
 

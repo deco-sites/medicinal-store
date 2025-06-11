@@ -37,8 +37,16 @@ export default function Notify({ productID }: Props) {
         <p class="text-sm text-gray-400">Avise-me quando estiver disponivel</p>
       </div>
 
-      <input placeholder="Nome" class="input input-bordered text-sm" name="name" />
-      <input placeholder="Email" class="input input-bordered text-sm" name="email" />
+      <input
+        placeholder="Nome"
+        class="input input-bordered text-sm"
+        name="name"
+      />
+      <input
+        placeholder="Email"
+        class="input input-bordered text-sm"
+        name="email"
+      />
 
       <button class="btn btn-primary no-animation">
         <span class="[.htmx-request_&]:hidden inline">Enviar</span>

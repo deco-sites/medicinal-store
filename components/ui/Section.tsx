@@ -18,7 +18,9 @@ function Header({ title }: Props) {
         "px-5 sm:px-0",
       )}
     >
-      <span class="text-lg sm:text-xl uppercase font-semibold text-center">{title}</span>
+      <span class="text-lg sm:text-xl uppercase font-semibold text-center">
+        {title}
+      </span>
     </div>
   );
 }
@@ -68,7 +70,7 @@ function Placeholder(
   );
 }
 
-function Section() { }
+function Section() {}
 
 Section.Container = Container;
 Section.Header = Header;

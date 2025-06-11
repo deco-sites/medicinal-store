@@ -21,7 +21,10 @@ function ValueItem(
 ) {
   return (
     <a href={url} rel="nofollow" class="flex items-center gap-2">
-      <div aria-checked={selected} class="checkbox checkbox-primary w-5 h-5 border-accent" />
+      <div
+        aria-checked={selected}
+        class="checkbox checkbox-primary w-5 h-5 border-accent"
+      />
       <span class="text-sm">{label}</span>
       {quantity > 0 && <span class="text-sm text-base-400">({quantity})</span>}
     </a>

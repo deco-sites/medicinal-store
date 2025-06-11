@@ -4,7 +4,13 @@ export type Possibilities = Record<string, Record<string, string | undefined>>;
 
 const hash = ({ name, value }: PropertyValue) => `${name}::${value}`;
 
-const omit = new Set(["category", "cluster", "RefId", "descriptionHtml", "Estimated Date Arrival"]);
+const omit = new Set([
+  "category",
+  "cluster",
+  "RefId",
+  "descriptionHtml",
+  "Estimated Date Arrival",
+]);
 
 export const useVariantPossibilities = (
   variants: ProductLeaf[],
@@ -35,8 +41,8 @@ export const useVariantPossibilities = (
       possibilities[name][value] = isSelected
         ? url
         : isSelectable
-          ? possibilities[name][value] || url
-          : possibilities[name][value];
+        ? possibilities[name][value] || url
+        : possibilities[name][value];
     }
   }
 

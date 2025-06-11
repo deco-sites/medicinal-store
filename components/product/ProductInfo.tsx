@@ -30,7 +30,7 @@ function ProductInfo({ page }: Props) {
     listPrice,
     seller = "1",
     availability,
-    installments
+    installments,
   } = useOffer(offers);
 
   const breadcrumb = {
