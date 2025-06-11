@@ -1,18 +1,9 @@
 {
   "__resolveType": "site/apps/deco/vtex.ts",
+  "salesChannel": 1,
   "defaultSegment": {
     "channelPrivacy": "public"
   },
   "platform": "vtex",
-  "appToken": {
-    "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "b4847cb9acc02701945f5752abdfe790ddc3ba7eb79ccc6778a70f7173ab5b38d2870a2d648543c017638af38deb072227f46c426edd8647ee9be1e1e1b699774fc80f3798ee2f270ce17167d56063f214b3b9142d0540e01237bdc4df7a4d8b5f645196f7925ca07146b1cf8ecffc700ad9cc6a873fbe9319fc576f28f24699eca1ab16559287c262cf4aab3ad63242"
-  },
-  "appKey": {
-    "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "2cf5a426601de7935cb1a7c534214f71ca9b3265a3ac4e117bb6128f69badcfe0afae92c97c845444b522ccf22402a69"
-  },
-  "account": "medicinalnaweb",
-  "publicUrl": "www.medicinalnaweb.com.br",
-  "salesChannel": "1"
+  "account": "medicinalnaweb"
 }
