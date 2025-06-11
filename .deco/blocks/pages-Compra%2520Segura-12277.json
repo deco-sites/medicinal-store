@@ -1,6 +1,6 @@
 {
-  "name": "Compra Segura",
-  "path": "/compra-segura",
+  "name": "Site Seguro",
+  "path": "/site-seguro",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

@@ -5,30 +5,30 @@
       "children": [
         {
           "href": "/quem-somos",
-          "title": "Quem Somos"
+          "title": "Quem somos"
         },
         {
           "href": "/site-seguro",
-          "title": "Site Seguro"
+          "title": "Site seguro"
         },
         {
           "title": "Termos de uso",
           "href": "/termos-de-uso"
         },
         {
-          "title": "Formas de Pagamento",
-          "href": "/formas-de-pagamento"
+          "title": "Política de pagamento",
+          "href": "/politica-de-pagamento"
         }
       ],
-      "title": "Formas de pagamento",
-      "href": "/formas-de-pagamento"
+      "title": "Institucional",
+      "href": "#"
     },
     {
       "title": "Dúvidas",
       "href": "#",
       "children": [
         {
-          "href": "/Como-comprar",
+          "href": "/como-comprar",
           "title": "Como comprar"
         },
         {
@@ -40,7 +40,7 @@
           "href": "/politica-de-entrega"
         },
         {
-          "href": "Política de troca",
+          "href": "politica-de-troca",
           "title": "Politica de troca"
         },
         {
@@ -49,7 +49,7 @@
         },
         {
           "href": "/fale-conosco",
-          "title": "Fale Conosco"
+          "title": "Fale conosco"
         }
       ]
     },
