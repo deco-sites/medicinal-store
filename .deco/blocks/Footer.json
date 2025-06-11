@@ -2,65 +2,75 @@
   "__resolveType": "site/sections/Footer/Footer.tsx",
   "links": [
     {
-      "title": "Our Company",
       "children": [
         {
-          "title": "About us",
-          "href": "#"
+          "href": "/quem-somos",
+          "title": "Quem Somos"
         },
         {
-          "title": "Our blog",
-          "href": "#"
+          "href": "/site-seguro",
+          "title": "Site Seguro"
         },
         {
-          "title": "Stores",
-          "href": "#"
+          "title": "Termos de uso",
+          "href": "/termos-de-uso"
         },
         {
-          "title": "Work with us",
-          "href": "#"
+          "title": "Formas de Pagamento",
+          "href": "/formas-de-pagamento"
         }
       ],
-      "href": "#"
+      "title": "Formas de pagamento",
+      "href": "/formas-de-pagamento"
     },
     {
-      "title": "Orders & Purchases",
+      "title": "Dúvidas",
       "href": "#",
       "children": [
         {
-          "title": "Check order status",
-          "href": "#"
+          "href": "/Como-comprar",
+          "title": "Como comprar"
         },
         {
-          "title": "Return and exchanges",
-          "href": "#"
+          "title": "Política de compra",
+          "href": "/politica-de-compra"
         },
         {
-          "title": "Product retail",
-          "href": "#"
+          "title": "Política de entrega",
+          "href": "/politica-de-entrega"
         },
         {
-          "title": "Gift cards",
-          "href": "#"
+          "href": "Política de troca",
+          "title": "Politica de troca"
+        },
+        {
+          "href": "/politica-de-privacidade",
+          "title": "Política de privacidade"
+        },
+        {
+          "href": "/fale-conosco",
+          "title": "Fale Conosco"
         }
       ]
     },
     {
-      "title": "Support & Services",
+      "title": "Atendimento",
       "href": "#",
       "children": [
         {
-          "title": "Contact us",
-          "href": "#",
+          "title": "Chamar no WhatsApp",
+          "href": "https://api.whatsapp.com/send?phone=5544984012303&text=Solicito%20atendimento%20personalizado%20pelo%20Canal%20do%20Site",
           "icon": "https://assets.decocache.com/medicinal-store/5bf3295c-e45b-4d8a-ab9c-048dcdbb600a/ic_baseline-whatsapp.svg"
         },
         {
-          "title": "Support Center",
-          "href": "#"
+          "href": "tel:(44) 3225-2600",
+          "title": "(44) 3225-2600",
+          "icon": "https://assets.decocache.com/medicinal-store/03e83db8-788d-4042-8acb-03f42bf473cd/Phone.svg"
         },
         {
-          "title": "Schedule a service",
-          "href": "#"
+          "title": "vendas@atendimentomedicinal.net",
+          "icon": "https://assets.decocache.com/medicinal-store/d24a526b-7ae5-4983-ab55-d20b401f7442/Envelope.svg",
+          "href": "mailto:vendas@atendimentomedicinal.net"
         }
       ]
     }
@@ -74,54 +84,65 @@
     {
       "alt": "Youtube",
       "href": "#",
-      "image": "https://assets.decocache.com/medicinal-store/072b4fea-0a35-49e7-a8ad-79a1a2772d20/youtube.svg"
+      "image": "https://assets.decocache.com/medicinal-store/0aeefda5-e973-4995-b797-8d07c9c1fd2e/youtube-(1).svg"
     }
   ],
   "paymentMethods": [
     {
-      "alt": "Paypal",
+      "alt": "Visa",
       "href": "#",
-      "image": "https://assets.decocache.com/storefront/1429addc-152d-4ef6-83b3-11908d70bee4/1742560241202-7d858621-469e-4528-91b5-8c79fc413162"
+      "image": "https://assets.decocache.com/medicinal-store/5535d5e0-1452-4760-b888-002b5ad7292e/visa.svg"
     },
     {
       "alt": "Mastercard",
-      "image": "https://assets.decocache.com/storefront/51d88757-a9e5-4cce-9c1b-c9b303646aba/1742560242494-88ab870c-4256-44b4-8da3-3cefe0436e87"
-    },
-    {
-      "alt": "Maestro",
-      "href": "#",
-      "image": "https://assets.decocache.com/storefront/9141b2d0-cef9-4229-aed3-73efd535a6e7/1742560243691-e94aaf80-25f5-4e23-8708-14d78ffdebbb"
-    },
-    {
-      "alt": "Google Pay",
-      "image": "https://assets.decocache.com/storefront/4cb84926-ccd8-4ea7-9f0e-1598ecefd0e8/1742560245001-ccddc66e-baa8-4b44-a52c-ea48d8e111b5"
+      "image": "https://assets.decocache.com/medicinal-store/f87fdd32-2596-405b-b21e-8d79016f9c50/master-card.svg"
     },
     {
       "alt": "Elo",
       "href": "#",
-      "image": "https://assets.decocache.com/storefront/b96a6dbf-316a-42f0-a521-ef3022375506/1742560246527-11f90dd4-91b5-4b60-9304-f8a7a9be84eb"
+      "image": "https://assets.decocache.com/medicinal-store/61ef77b6-2015-4fdf-a6d8-7834b218f0bc/elo.svg"
     },
     {
-      "alt": "Diners",
+      "alt": "Hipercard",
+      "image": "https://assets.decocache.com/medicinal-store/b4521245-1f43-47e3-8520-3f065e697884/hipercard.svg",
+      "href": "#"
+    },
+    {
+      "alt": "Santander",
       "href": "#",
-      "image": "https://assets.decocache.com/storefront/cc7cbcf8-8bc1-479a-82e2-786b170cec6e/1742560247885-20bb8e66-5495-4f92-a6d0-4967a66f3a44"
+      "image": "https://assets.decocache.com/medicinal-store/9af49dc0-3408-491c-a0e5-263e769624e0/santander.svg"
     },
     {
-      "alt": "Apple Pay",
+      "alt": "Banrisul",
       "href": "#",
-      "image": "https://assets.decocache.com/storefront/9cb1b1cd-3545-4875-8b3e-121eb555b9ce/1742560249131-d4227ed7-333d-49b8-b3e2-35719f606640"
+      "image": "https://assets.decocache.com/medicinal-store/d87bb4f3-7ae4-4939-aec1-da31eba6335d/banrisul.svg"
     },
     {
-      "alt": "Amex",
-      "href": "#",
-      "image": "https://assets.decocache.com/storefront/2cea1d1e-3c52-4cfa-8600-02c7fbe1702e/1742560250503-023472cf-782d-4a22-82d9-ecdf18466d96"
+      "alt": "Bradesco",
+      "image": "https://assets.decocache.com/medicinal-store/5d930c2a-5f67-41cb-82a9-4313ff9f087e/bradesco.svg"
     },
     {
-      "alt": "Visa",
-      "image": "https://assets.decocache.com/storefront/62408e42-e1e9-45d2-99ed-e0a161271bca/1742560251996-2d213fd6-2754-4e92-a6f1-03825f71c7af"
+      "alt": "Itau",
+      "image": "https://assets.decocache.com/medicinal-store/26a7a0b6-558d-4a12-b573-51d5fb9f5084/itau.svg"
+    },
+    {
+      "image": "https://assets.decocache.com/medicinal-store/b5074fd1-b906-4d5a-90f5-e7ea92a5d295/hiper.svg",
+      "alt": "Hiper"
+    },
+    {
+      "image": "https://assets.decocache.com/medicinal-store/eabe1a14-575d-4fdb-aeab-353e45dd8a32/dinners.svg",
+      "alt": "Dinners"
+    },
+    {
+      "image": "https://assets.decocache.com/medicinal-store/ae391f62-26fa-4968-bce8-815f7df56805/boleto.svg",
+      "alt": "Boleto"
+    },
+    {
+      "alt": "Pix",
+      "image": "https://assets.decocache.com/medicinal-store/31ff6f1e-ab7d-4c32-b020-155e51c6a511/PIX.svg"
     }
   ],
-  "policies": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper facilisis dignissim. Vivamus gravida enim vitae tristique suscipit. Curabitur sed magna leo. Vestibulum eu varius velit. Nam ullamcorper, diam ac efficitur tempor, augue tellus ornare urna, vitae venenatis urna mauris non arcu. Fusce malesuada pellentesque ex, et lacinia nibh tempus eu. Nulla interdum condimentum orci, vel fermentum felis congue sed. Ut nec nisl ex.",
+  "policies": "Medicinal © 2021. Medicinal Farmácia de Manipulação Ltda EPP • Rua Luiz Gama, 335 • Centro • CEP: 87014-110 • Maringá/PR • CNPJ: 04.380.004/0001-01 • AE 1.35.655.6 • AFE 7.22.759.9 • Licença Sanitária 1974/2017 • Certidão de Regularidade 13248 • Farm. Responsável: Meizze Valéria Rocha - CRF/PR 20.450. Horário de funcionamento: segundas às sextas-feiras das 08:00h as 18:30h e sábados das 08:00h às 12:30h. Telefone de contato com o Farmacêutico = 44 3225 2600. PARA MEDICAMENTOS SUJEITOS À PRESCRIÇÃO MÉDICA E FORMULAÇÕES MAGISTRAIS, SERÁ SEMPRE REALIZADA AVALIAÇÃO PELO FARMACÊUTICO ANTES DA MANIPULAÇÃO E DISPENSAÇÃO. As informações contidas neste site são exclusivas para profissionais habilitados da Área de saúde e não devem ser usadas para automedicação e não substituem, em hipótese alguma a medicação prescrita pelo profissional da área médica. Somente um profissional habilitado está em condições de diagnosticar qualquer problema de saúde e prescrever o tratamento adequado. Qualquer dúvida sobre os produtos divulgados em nosso site, entre em contato com um de nossos farmacêuticos através do atendimento ao cliente pelo WhatsApp através do contato 44 98401 4719 ou pelo telefone 44 3225 2600 (Vendas/SAC) e se preferir poderá dirigir-se a nossa loja na Rua Luiz Gama, n.335, Maringá, Paraná, pois contamos com um profissional farmacêutico habilitado para mais esclarecimentos. Os medicamentos sob prescrição só serão dispensados mediante apresentação da receita ou envio por imagens ou e-mail. É proibido comercializar medicamentos controlados por meio remoto. Medicamentos podem causar efeitos indesejados. Evite a automedicação: informe-se com o médico ou farmacêutico. Todos os direitos reservados.Todas as marcas e suas imagens são de propriedade de seus respectivos donos. É vedada a reprodução, total ou parcial, de qualquer conteúdo sem expressa autorização.",
   "logo": {
     "0": "h",
     "1": "t",

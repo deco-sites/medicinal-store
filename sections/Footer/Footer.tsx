@@ -185,12 +185,12 @@ function Footer({
         <div class="flex flex-col gap-5 sm:flex-row sm:gap-12 justify-between items-start sm:items-center pb-5 sm:pb-0">
           <ul class="flex flex-wrap gap-3 sm:gap-4 justify-center sm:justify-start w-full sm:w-auto">
             {paymentMethods.map(({ image, alt }) => (
-              <li class="h-6 w-12 border border-accent rounded flex justify-center items-center">
+              <li class="h-6 w-12 flex justify-center items-center">
                 <Image
                   src={image}
                   alt={alt}
-                  width={20}
-                  height={20}
+                  width={49}
+                  height={32}
                   loading="lazy"
                 />
               </li>
@@ -239,7 +239,7 @@ function Footer({
             width={logo?.width}
             height={logo?.height}
           />
-          <p class="text-sm">{policies}</p>
+          <p class="text-xs">{policies}</p>
           <div class="flex flex-nowrap items-center justify-center sm:justify-end gap-4 col-span-2">
             <a href="#">
               <img width={97} height={17} src={asset("/wave.png")} />
