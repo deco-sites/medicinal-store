@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+
   /* Allow changing font family via CMS */
   html {
     font-family: var(--font-family);
@@ -44,7 +45,7 @@
   }
 
   .fluid-text a {
-    @apply underline text-primary;
+    @apply underline text-neutral;
   }
 
   .fluid-text h1 {
@@ -105,7 +106,7 @@
   }
 }
 
-.collapse-content > *:first-child {
+.collapse-content>*:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }

@@ -1,0 +1,73 @@
+{
+  "name": "Fale Conosco",
+  "path": "/fale-conosco",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/TitleWithBackground.tsx",
+        "title": "Fale Conosco",
+        "background": {
+          "image": "https://assets.decocache.com/medicinal-store/23d9140c-86f1-45f8-a476-b69dbd39541d/image-1.png",
+          "position": "center"
+        },
+        "textAlign": "center",
+        "textUppercase": true
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/TextCard.tsx",
+        "text": "<p><span>Para qualquer dúvida, sugestão ou crítica, entre em contato:</span></p>",
+        "padding": "none"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/IconCards.tsx",
+        "cards": [
+          {
+            "icon": "https://assets.decocache.com/medicinal-store/108156f1-a4fd-4394-9616-6b219a1759fe/ic_baseline-whatsapp.svg",
+            "title": "<p>Entre em contato via Whatsapp</p>",
+            "text": "<p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"#\">(44) 3225-2600</a></p>"
+          },
+          {
+            "icon": "https://assets.decocache.com/medicinal-store/108156f1-a4fd-4394-9616-6b219a1759fe/ic_baseline-whatsapp.svg",
+            "title": "<p>Entre em contato via Whatsapp</p>",
+            "text": "<p><span>(44) 3225-2600</span></p>"
+          },
+          {
+            "icon": "https://assets.decocache.com/medicinal-store/108156f1-a4fd-4394-9616-6b219a1759fe/ic_baseline-whatsapp.svg",
+            "title": "<p>Entre em contato via Whatsapp</p>",
+            "text": "<p><span>(44) 3225-2600</span></p>"
+          }
+        ],
+        "title": "Atendimento por telefone"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Form/ContactUs.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

@@ -9,9 +9,9 @@ interface Props {
     };
     supTitle?: string;
     title: string;
-    subTitle: RichText;
-    textAlign: 'center' | 'left';
-    textUppercase: boolean;
+    subTitle?: RichText;
+    textAlign?: 'center' | 'left';
+    textUppercase?: boolean;
 }
 
 export default function ({
