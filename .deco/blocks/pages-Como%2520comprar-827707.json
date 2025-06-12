@@ -1,0 +1,50 @@
+{
+  "__resolveType": "website/pages/Page.tsx",
+  "name": "Como Comprar",
+  "path": "/como-comprar",
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TitleWithBackground.tsx",
+        "title": "como comprar?",
+        "background": {
+          "image": "https://assets.decocache.com/medicinal-store/23d9140c-86f1-45f8-a476-b69dbd39541d/image-1.png",
+          "position": "center"
+        },
+        "subTitle": "<p></p>",
+        "textAlign": "center",
+        "textUppercase": true,
+        "isFullWidth": false
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "text": "<p><strong>PASSO A PASSO</strong><br><br><strong>1º </strong>- Escolha o(s) produto(s) que deseja. Para isso, utilize a busca do site; as categorias do menu superior; ou pelas vitrines espalhadas pela loja;<br><br><strong>2º</strong> - Clique sobre o produto que deseja, escolha a quantidade de cápsulas se necessário e clique no botão verde \"Comprar\";<br><br><strong><span>3º </span></strong><span>- Você agora está no carrinho de compras. Altere a quantidade caso queira mais de uma unidade do produto escolhido, coloque seu cep no campo </span><strong><span>\"Entrega\"</span></strong><span> para calcular automaticamente o tempo e valor do frete. Caso possua, adicione um cupom desconto no link azul </span><strong><span>\"Adicionar cupom de desconto\".</span></strong><span> Nesta etapa você pode retornar para o site e colocar mais produtos em seu carrinho selecionando o link azul </span><strong><span>\"Escolher mais produtos\"</span></strong><span>. Para finalizar seu pedido clique no botão verde </span><strong><span>\"Fechar Pedido\";</span></strong><br><br><strong><span>4º</span></strong><span> - Adicione seus dados pessoais (Nome, CPF e e-mail) para iniciar o cadastro para compra;</span><br><br><strong><span>5º</span></strong><span> - Adicione seus dados de endereço, o nome do Destinatário e o tipo da entrega - PAC ou Sedex;</span><br><br><strong><span>6º </span></strong><span>- Escolha a forma de pagamento de sua preferência – boleto, cartão de crédito, depósito/transferência ou PayPal;</span><br><br><strong><span>7º</span></strong><span> - Confira sua compra, veja se os valores e produtos estão corretos;</span><br><br><strong><span>8º</span></strong><span> - Pronto! Sua compra foi feita. Anote o número do pedido para acompanhá-lo, um e-mail com uma cópia do pedido e todas as informações pertinentes será enviado para você!</span><br><br></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Category Banner - 01"
+      }
+    }
+  ]
+}
