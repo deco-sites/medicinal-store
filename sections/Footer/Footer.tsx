@@ -59,7 +59,7 @@ function Footer({
   seals = [],
   social = [],
   policies =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper facilisis dignissim. Vivamus gravida enim vitae tristique suscipit. Curabitur sed magna leo. Vestibulum eu varius velit. Nam ullamcorper, diam ac efficitur tempor, augue tellus ornare urna, vitae venenatis urna mauris non arcu. Fusce malesuada pellentesque ex, et lacinia nibh tempus eu. Nulla interdum condimentum orci, vel fermentum felis congue sed. Ut nec nisl ex.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper facilisis dignissim. Vivamus gravida enim vitae tristique suscipit. Curabitur sed magna leo. Vestibulum eu varius velit. Nam ullamcorper, diam ac efficitur tempor, augue tellus ornare urna, vitae venenatis urna mauris non arcu. Fusce malesuada pellentesque ex, et lacinia nibh tempus eu. Nulla interdum condimentum orci, vel fermentum felis congue sed. Ut nec nisl ex.",
   paymentMethods = [],
   logo,
 }: Props) {
@@ -82,7 +82,7 @@ function Footer({
                 <div class="text-lg sm:text-2xl font-bold w-full max-w-80">
                   Receba promoções e novidades exclusivas por e-mail!
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-2 items-center w-full">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2 items-center w-full max-w-80 md:max-w-full">
                   <input
                     name="name"
                     class="input input-bordered w-full text-sm max-w-80"

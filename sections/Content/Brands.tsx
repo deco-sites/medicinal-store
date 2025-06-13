@@ -23,7 +23,7 @@ export default function Brands({
   return (
     <div class="container p-4 mx-auto w-full">
       {title && title !== "" && <Section.Header title={title} />}
-      <div class="flex flex-wrap justify-center gap-4 w-full">
+      <div class="flex flex-wrap justify-center gap-6 w-full">
         {brands.map((item) => (
           <div class="min-w-20 h-20">
             <a href={item.link}>

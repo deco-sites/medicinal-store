@@ -25,7 +25,7 @@ export default function ({
           "rounded-2xl border border-base-200 px-8 py-4 lg:p-10 w-full",
         )}
       >
-        <div class="flex flex-col items-center order-2 md:order-1">
+        <div class="flex flex-col items-center order-2 md:order-1 gap-2">
           <Image
             src={image}
             width={200}

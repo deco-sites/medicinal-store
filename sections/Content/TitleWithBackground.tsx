@@ -65,7 +65,7 @@ export default function ({
               {supTitle && supTitle !== "" && (
                 <div
                   class={clx(
-                    "my-3 text-sm lg:text-base text-white",
+                    "text-sm lg:text-base text-white",
                     textAlign === "center" && "text-center",
                     textAlign === "left" && "text-start",
                     textUppercase && "uppercase",
@@ -77,7 +77,7 @@ export default function ({
               )}
               <h1
                 class={clx(
-                  "text-2xl lg:text-4xl font-bold text-white",
+                  "my-4 text-2xl lg:text-4xl font-bold text-white",
                   textAlign === "center" && "text-center",
                   textAlign === "left" && "text-start",
                   textUppercase && "uppercase",

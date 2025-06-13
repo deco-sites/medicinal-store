@@ -22,7 +22,7 @@ export default function OnlyText({
           "flex flex-col",
           "rounded-[35px] px-8 py-4 md:px-12",
           columns === "1"
-            ? "items-center gap-8"
+            ? "items-center gap-4"
             : "md:flex-row items-stretch gap-6 md:gap-10",
         )}
       >
@@ -30,7 +30,7 @@ export default function OnlyText({
           class={clx(
             "w-full",
             columns === "1"
-              ? "text-center w-full max-w-2xl flex flex-col items-center gap-8"
+              ? "text-center w-full max-w-2xl flex flex-col items-center gap-4"
               : "text-left w-full md:w-2/5",
           )}
         >
@@ -43,7 +43,7 @@ export default function OnlyText({
             <div class="w-20 h-[3px] bg-primary" />
           </div>
           <div
-            class="custom-category-title static md:sticky md:top-28 mb-0"
+            class="font-bold text-lg md:text-2xl text-center uppercase max-w-72 mx-auto static md:sticky md:top-28 mb-0"
             dangerouslySetInnerHTML={{ __html: title }}
           />
         </div>

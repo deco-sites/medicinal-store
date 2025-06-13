@@ -28,8 +28,9 @@ const onLoad = () => {
     const fileNameDisplay = document.getElementById("selected-file-name");
     if (fileNameDisplay) {
       if (e.target.files.length > 0) {
-        fileNameDisplay.textContent = `Arquivo selecionado: ${e.target.files[0].name
-          }`;
+        fileNameDisplay.textContent = `Arquivo selecionado: ${
+          e.target.files[0].name
+        }`;
         fileNameDisplay.classList.remove("hidden");
       } else {
         fileNameDisplay.textContent = "";

@@ -226,7 +226,7 @@ function Header({
   return (
     <>
       {alerts.length > 0 && <Alert alerts={alerts} />}
-      <div class="pb-2">
+      <div class="pb-2 bg-transparent">
         <header
           style={{
             height: device === "desktop"

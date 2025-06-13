@@ -126,7 +126,8 @@
           "mobile": "https://assets.decocache.com/medicinal-store/55d7514b-d7e6-4f88-ac71-14994a43828a/assinaturas-3-(1).png",
           "alt": "testar medicinal",
           "desktop": "https://assets.decocache.com/medicinal-store/2bd228c9-1d2d-4128-a512-ce8d4253c0c7/assinaturas-3-(2).png"
-        }
+        },
+        "padding": "none"
       }
     },
     {

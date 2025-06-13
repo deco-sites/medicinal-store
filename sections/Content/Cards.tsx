@@ -94,36 +94,54 @@ export default function ({
           </div>
         )
         : (
-          <div id={id}>
-            <div class="relative">
-              <Slider class="carousel carousel-center gap-6 w-full">
-                {cards.map((card, index) => (
-                  <Slider.Item
-                    index={index}
-                    class="carousel-item w-72"
-                  >
-                    <Card
-                      {...card}
-                      imageType={imageType}
-                      alignCards={alignCards}
-                    />
-                  </Slider.Item>
-                ))}
-              </Slider>
-              <div class="hidden sm:flex items-center justify-center z-10 absolute top-1/2 -translate-y-1/2 left-0 mx-4">
-                <Slider.PrevButton class="hidden sm:flex disabled:invisible btn btn-outline text-black hover:text-black btn-circle no-animation border-0 bg-white hover:bg-white shadow-lg">
-                  <Icon id="chevron-right" size={24} class="rotate-180" />
-                </Slider.PrevButton>
-              </div>
+          <>
+            {cards.length <= 5
+              ? (
+                <div class="flex justify-center gap-4">
+                  {cards.map((card) => (
+                    <div class="w-full max-w-72">
+                      <Card
+                        {...card}
+                        imageType={imageType}
+                        alignCards={alignCards}
+                      />
+                    </div>
+                  ))}
+                </div>
+              )
+              : (
+                <div id={id}>
+                  <div class="relative">
+                    <Slider class="carousel carousel-center gap-6 w-full">
+                      {cards.map((card, index) => (
+                        <Slider.Item
+                          index={index}
+                          class="carousel-item w-72"
+                        >
+                          <Card
+                            {...card}
+                            imageType={imageType}
+                            alignCards={alignCards}
+                          />
+                        </Slider.Item>
+                      ))}
+                    </Slider>
+                    <div class="hidden sm:flex items-center justify-center z-10 absolute top-1/2 -translate-y-1/2 left-0 mx-4">
+                      <Slider.PrevButton class="hidden sm:flex disabled:invisible btn btn-outline text-black hover:text-black btn-circle no-animation border-0 bg-white hover:bg-white shadow-lg">
+                        <Icon id="chevron-right" size={24} class="rotate-180" />
+                      </Slider.PrevButton>
+                    </div>
 
-              <div class="hidden sm:flex items-center justify-center z-10 absolute top-1/2 -translate-y-1/2 right-0 mx-4">
-                <Slider.NextButton class="hidden sm:flex disabled:invisible btn btn-outline text-black hover:text-black btn-circle no-animation border-0 bg-white hover:bg-white shadow-lg">
-                  <Icon id="chevron-right" size={24} />
-                </Slider.NextButton>
-              </div>
-            </div>
-            <Slider.JS rootId={id} />
-          </div>
+                    <div class="hidden sm:flex items-center justify-center z-10 absolute top-1/2 -translate-y-1/2 right-0 mx-4">
+                      <Slider.NextButton class="hidden sm:flex disabled:invisible btn btn-outline text-black hover:text-black btn-circle no-animation border-0 bg-white hover:bg-white shadow-lg">
+                        <Icon id="chevron-right" size={24} />
+                      </Slider.NextButton>
+                    </div>
+                  </div>
+                  <Slider.JS rootId={id} />
+                </div>
+              )}
+          </>
         )}
     </div>
   );
