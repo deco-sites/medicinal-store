@@ -416,91 +416,271 @@
         }
       ],
       "@type": "SiteNavigationElement",
-      "url": "/deals",
       "name": "Todas as Categorias",
       "href": "#",
       "isHighlighted": true
     },
     {
-      "@type": "SiteNavigationElement",
-      "url": "/valentines-day",
-      "name": "Valentine's Day",
       "children": [
         {
-          "name": "Teste 1",
-          "href": "#",
-          "children": []
+          "name": "Ansiedade e Estresse",
+          "href": "ansiedade-e-estresse"
         },
         {
-          "name": "Teste 2",
-          "href": "#",
-          "children": []
+          "name": "Aumentar Metabolismo",
+          "href": "/aumentar-metabolismo"
         },
         {
-          "name": "Teste 3",
-          "href": "#",
-          "children": []
+          "name": "Aumentar Saciedade",
+          "href": "aumentar-saciedade"
         },
         {
-          "name": "Teste 4",
-          "href": "#",
-          "children": []
+          "name": "Bloqueador Carboidrato",
+          "href": "/bloqueador-carboidrato"
         },
         {
-          "name": "Teste 5",
-          "href": "#",
-          "children": []
+          "name": "Bloqueador Gordura",
+          "href": "/bloqueador-gordura"
         },
         {
-          "name": "Teste 6",
-          "href": "#",
-          "children": []
+          "name": "Compulsão Alimentar",
+          "href": "compulsao-alimentar"
         },
         {
-          "name": "Teste 7",
-          "href": "#",
-          "children": []
+          "name": "Detox",
+          "href": "/detox"
+        },
+        {
+          "name": "Diuréticos Naturais",
+          "href": "/diureticos-naturais"
+        },
+        {
+          "name": "Fibras",
+          "href": "/fibras"
+        },
+        {
+          "name": "Gordura Abdominal",
+          "href": "gordura Abdominal"
+        },
+        {
+          "name": "Inibidor Natural da Fome",
+          "href": "/inibidor-natural-da-fome"
+        },
+        {
+          "name": "Vontade de Doces",
+          "href": "/vontade-de-doces"
         }
       ],
-      "href": "#",
+      "@type": "SiteNavigationElement",
+      "href": "/gerenciamento-de-peso",
+      "name": "Gerenciamento de Peso"
+    },
+    {
+      "children": [
+        {
+          "name": "Articulações e Ossos",
+          "href": "/articulacoes-e-ossos"
+        },
+        {
+          "name": "Cérebro",
+          "href": "/cerebro"
+        },
+        {
+          "name": "Circulação",
+          "href": "/circulacao"
+        },
+        {
+          "name": "Colesterol",
+          "href": "/colesterol"
+        },
+        {
+          "name": "Digestão e Estômago",
+          "href": "/digestao-e-estomago"
+        },
+        {
+          "name": "Estresse e Ansiedade",
+          "href": "/estresse-e-ansiedade"
+        },
+        {
+          "name": "Fígado",
+          "href": "/figado"
+        },
+        {
+          "name": "Imunidade",
+          "href": "/imunidade"
+        },
+        {
+          "name": "Insônia",
+          "href": "/insonia"
+        },
+        {
+          "name": "intestino",
+          "href": "/intestino"
+        },
+        {
+          "name": "Saúde da Mulher",
+          "href": "/saude-da-mulher"
+        },
+        {
+          "name": "Saúde Sexual",
+          "href": "/saude-sexual"
+        }
+      ],
+      "name": "Saúde e Bem Estar",
+      "href": "/saude-e-bem-estar"
+    },
+    {
+      "children": [
+        {
+          "name": "Antioxidantes",
+          "href": "/antioxidantes"
+        },
+        {
+          "name": "Minerais",
+          "href": "/minerais"
+        },
+        {
+          "name": "Polifenóis e Flavonóides",
+          "href": "/polifenois-e-flavonoides"
+        },
+        {
+          "name": "Prevenção",
+          "href": "/prevencao"
+        },
+        {
+          "name": "Probióticos",
+          "href": "/probioticos"
+        },
+        {
+          "name": "Supra Ômegas",
+          "href": "/supra-omegas"
+        },
+        {
+          "name": "Vitaminas",
+          "href": "/vitaminas"
+        },
+        {
+          "name": "Superóxido Dismutase (SOD)",
+          "href": "/superoxido-dismutase"
+        }
+      ],
+      "name": "Longevidade",
+      "href": "/longevidade"
+    },
+    {
+      "children": [
+        {
+          "name": "Calmantes",
+          "href": "/calmantes"
+        },
+        {
+          "name": "Circulação",
+          "href": "/circulacao"
+        },
+        {
+          "name": "Diuréticos Naturais",
+          "href": "/diureticos-naturais"
+        },
+        {
+          "name": "Estômago",
+          "href": "/estomago"
+        },
+        {
+          "name": "Fígado",
+          "href": "/figado"
+        },
+        {
+          "name": "Inflamação",
+          "href": "/inflamacao"
+        },
+        {
+          "name": "Intestino",
+          "href": "/intestino"
+        },
+        {
+          "name": "Nutrição",
+          "href": "/Nutricao"
+        },
+        {
+          "name": "Tinturas",
+          "href": "/tinturas"
+        }
+      ],
+      "name": "Fitoterápicos",
+      "href": "/fitoterapicos"
+    },
+    {
+      "children": [
+        {
+          "name": "Aminoàcidos",
+          "href": "/aminoacidos"
+        },
+        {
+          "name": "Anticatabólico",
+          "href": "/anticatabolico"
+        },
+        {
+          "name": "Aumento de Massa",
+          "href": "/aumento-de-massa"
+        },
+        {
+          "name": "Carboidratos",
+          "href": "/carboidratos"
+        },
+        {
+          "name": "Energia e Disposição",
+          "href": "/energia-e-disposicao"
+        },
+        {
+          "name": "Fadiga Muscular",
+          "href": "/fadiga-muscular"
+        },
+        {
+          "name": "Mais Testo",
+          "href": "/mais-testo"
+        },
+        {
+          "name": "Proteínas",
+          "href": "/proteinas"
+        },
+        {
+          "name": "Suplementos",
+          "href": "/suplementos"
+        },
+        {
+          "name": "Termogênico",
+          "href": "/termogenico"
+        },
+        {
+          "name": "Vasodilatação",
+          "href": "/vasodilatacao"
+        }
+      ],
+      "name": "Desempenho Físico",
+      "href": "/desempenho-fisico"
+    },
+    {
+      "children": [
+        {
+          "name": "Morosil",
+          "href": "/morosil"
+        },
+        {
+          "name": "Minoxidil",
+          "href": "/minoxidil"
+        },
+        {
+          "name": "Maca Peruana",
+          "href": "/maca-peruana"
+        },
+        {
+          "name": "Reallagen",
+          "href": "/reallagen"
+        }
+      ],
+      "name": "Destaques",
+      "href": "/destaques",
       "isBold": true
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "/women",
-      "name": "Women",
-      "children": [],
-      "href": "#"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "/men",
-      "name": "Men",
-      "children": [],
-      "href": "#"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "/clearance",
-      "name": "Clearance",
-      "children": [],
-      "href": "#"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "/activities",
-      "name": "Activities",
-      "children": [],
-      "href": "#"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "#",
-      "name": "Minha Receita",
-      "children": [],
-      "href": "#",
-      "isBold": true,
-      "mobileOnly": true
     }
   ],
   "loading": "eager",

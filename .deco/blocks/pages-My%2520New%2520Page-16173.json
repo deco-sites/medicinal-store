@@ -67,7 +67,8 @@
         "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.5232903588053!2d-46.564065022879!3d-23.077932344013547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cec199e54ed2a1%3A0x646aee115c21e90d!2sResidencial%20Portofino%20Atibaia!5e0!3m2!1spt-BR!2sbr!4v1749582047296!5m2!1spt-BR!2sbr",
         "height": 600,
         "isFullWidth": false,
-        "mobileHeight": 300
+        "mobileHeight": 300,
+        "text": "<p>teste</p>"
       }
     },
     {
@@ -140,13 +141,33 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "Footer"
+        "__resolveType": "site/sections/Content/Alerts.tsx",
+        "alerts": [
+          {
+            "icon": "https://assets.decocache.com/medicinal-store/e027b6e1-ba47-4d64-b7ed-95807af9af4d/Scroll.svg",
+            "text": "<p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"#\">Envie sua receita</a></p>"
+          },
+          {
+            "icon": "https://assets.decocache.com/medicinal-store/3348a0d0-ead4-422b-9e7e-3deef9fa010f/Package.svg",
+            "text": "<p><span>Frete grátis a partir de </span><strong><span>R$ 250,00</span></strong></p>"
+          },
+          {
+            "icon": "https://assets.decocache.com/medicinal-store/f9b14a9f-87d5-4c7f-a9fc-5a5ba5fc9cd6/Tag.svg",
+            "text": "<p><span>10% OFF na sua </span><strong><span>PRIMEIRACOMPRA</span></strong></p>"
+          },
+          {
+            "icon": "https://assets.decocache.com/medicinal-store/7d599bd8-da2f-42c2-813c-fb34fe4487b0/CreditCard.svg",
+            "text": "<p><span>Até </span><strong><span>12x sem juros</span></strong><span> no cartão.</span></p>"
+          }
+        ],
+        "text": "<p><span>Tenha vantagens junto com a&nbsp;qualidade </span><strong><span>Medicinal</span></strong><span>.</span></p>",
+        "title": "<p><span>Benefícios do cliente medicinal</span></p>"
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "Category Banner - 01"
+        "__resolveType": "Footer"
       }
     }
   ],

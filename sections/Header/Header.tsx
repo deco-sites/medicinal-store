@@ -31,7 +31,7 @@ export interface Logo {
 /** @titleBy text */
 export interface AlertProps {
   /**
-   * @description Icone 16x16
+   * @description 16x16
    */
   icon?: ImageWidget;
   text?: RichText;

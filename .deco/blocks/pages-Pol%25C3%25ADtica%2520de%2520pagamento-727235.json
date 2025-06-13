@@ -15,7 +15,7 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Institucional/TitleWithBackground.tsx",
+        "__resolveType": "site/sections/Content/TitleWithBackground.tsx",
         "title": "política de pagamento",
         "background": {
           "image": "https://assets.decocache.com/medicinal-store/23d9140c-86f1-45f8-a476-b69dbd39541d/image-1.png",
@@ -30,14 +30,14 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "__resolveType": "site/sections/Content/TextCard.tsx",
         "text": "<p><strong><span>FORMAS DE PAGAMENTO</span></strong><br><br><span>O pagamento de suas compras poderá ser efetuado em até dois cartões de crédito e boleto bancário. A política de parcelamento pode alterar, consulte-a no momento da compra para saber a quantidade de parcelas e o valor da parcela mínima. Toda a operação é feita em ambiente totalmente seguro. Para maiores informações, consulte o item \"É seguro comprar?\".</span></p>"
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "__resolveType": "site/sections/Content/TextCard.tsx",
         "text": "<p>Aceitamos os cartões de crédito Visa, MasterCard, Diners, Elo, Diners e American Express. As compras podem ser divididas em até dois cartões de crédito e parceladas na quantidade de parcelas que respeite o valor mínimo da parcela, sem juros.  <br><br>Para garantir a sua segurança, contamos com o suporte de empresas especializadas na conferência de dados. O prazo para análise de crédito é de até 05 (cinco) dias úteis.<br><br>No caso de pagamento com cartão de crédito, a liberação pode ocorrer em até 72 horas após o fechamento do pedido. <br><br>Caso haja a recusa pela operadora de cartão da solicitação de compra, o pedido será cancelado automaticamente e lhe enviaremos a informação por e-mail, portanto, é importante deixá-lo sempre atualizado. Caso isto ocorra, verifique o motivo junto à administradora de seu cartão de crédito. <br><br> OBS.:&nbsp;Após a finalização de sua compra, as opções de pagamento e parcelamento não poderão ser alteradas.</p>",
         "title": {
           "text": "CARTÃO DE CRÉDITO",
@@ -48,7 +48,7 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "__resolveType": "site/sections/Content/TextCard.tsx",
         "text": "<p><span>Esta forma de pagamento não oferece parcelamento, e tem valor único para pagamento à vista. O boleto tem prazo de validade de 07 (sete) dias úteis após a confirmação do pedido. Caso não haja pagamento do boleto, o pedido será automaticamente cancelado. </span><br><br><span> Para realizar o pagamento através de boleto bancário, selecione a opção Boleto Bancário e clique em Confirmar Pagamento, em seguida clique em Gerar Boleto. Imprima o boleto bancário e realize o pagamento até a data de vencimento em qualquer agência bancária, pela Internet ou casa lotérica.</span><br><br><span>O prazo para confirmação do pagamento é de até 03 (três) dias úteis. O prazo de entrega inicia-se após a confirmação do pagamento pela instituição financeira.<br>CARTÕES DE CRÉDITO:</span></p>",
         "title": {
           "text": "BOLETO BANCÁRIO",
@@ -60,12 +60,6 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "Footer"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Category Banner - 01"
       }
     }
   ]

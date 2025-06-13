@@ -1,11 +1,6 @@
 import Icon from "../ui/Icon.tsx";
 import { clx } from "../../sdk/clx.ts";
 
-import {
-  HEADER_HEIGHT_DESKTOP,
-  NAVBAR_HEIGHT_DESKTOP,
-} from "../../constants.ts";
-
 /** @titleBy name */
 interface Leaf {
   name: string;
@@ -52,7 +47,7 @@ function NavItem({ item }: Props) {
             "py-2 text-sm flex items-center justify-between gap-4 border-2 cursor-pointer",
             isBold && "text-primary font-bold",
             isHighlighted &&
-              "px-4 rounded-full bg-primary text-white border-primary group-hover:bg-white group-hover:text-primary font-bold",
+            "px-4 rounded-full bg-primary text-white border-primary group-hover:bg-white group-hover:text-primary font-bold",
             !isHighlighted && "border-transparent",
           )}
         >
@@ -68,7 +63,7 @@ function NavItem({ item }: Props) {
 
         {children && children.length > 0 &&
           (
-            <div class="absolute top-0 left-0 pt-16">
+            <div class="absolute top-0 left-0 pt-16 group-last:left-[unset] group-last:right-0">
               <div class="hidden group-hover:block z-40 gap-6 bg-white rounded-2xl shadow-lg w-full p-4 relative min-h-80">
                 <ul class="p-0">
                   {href && (

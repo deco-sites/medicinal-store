@@ -15,7 +15,7 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Institucional/TitleWithBackground.tsx",
+        "__resolveType": "site/sections/Content/TitleWithBackground.tsx",
         "title": "política de compra",
         "background": {
           "image": "https://assets.decocache.com/medicinal-store/23d9140c-86f1-45f8-a476-b69dbd39541d/image-1.png",
@@ -30,7 +30,7 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "__resolveType": "site/sections/Content/TextCard.tsx",
         "text": "<p><strong><span>POLÍTICA DE COMPRA</span></strong><br><br><span>Esta Política de Privacidade Digital da MEDICINAL NA WEB (“Política de Privacidade”) descreve como coletamos e utilizamos as suas informações através de diversos meios digitais. Ao acessar ou utilizar este website, o aplicativo de celular ou outro produto ou serviço MEDICINAL em qualquer computador, celular, tablet, console ou outro dispositivo (denominados coletivamente “Dispositivo”), você concorda com a nossa Política de Privacidade. A MEDICINAL pode modificar esta Política de Privacidade a qualquer momento, mediante a sua publicação. O seu uso contínuo dos nossos produtos e serviços será considerado como o seu consentimento em relação a esta Política de Privacidade e quaisquer atualizações. Esta Política de Privacidade está incorporada e sujeita aos Termos de Uso.<br><br>Embora esta Política de Privacidade seja criada para descrever de forma geral as nossas práticas de privacidade, o nosso objetivo também é fornecer informações mais detalhadas em momentos que forem mais significativos para você. Procure estes avisos dentro dos nossos serviços MEDICINAL.</span></p>"
       }
     },
@@ -38,12 +38,6 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "Footer"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Category Banner - 01"
       }
     }
   ]

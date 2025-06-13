@@ -17,24 +17,24 @@ import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Category/CategoryBanner.tsx";
 import * as $$$$$$2 from "./sections/Category/CategoryGrid.tsx";
 import * as $$$$$$3 from "./sections/Component.tsx";
-import * as $$$$$$4 from "./sections/Content/Benefits.tsx";
-import * as $$$$$$5 from "./sections/Content/Brands.tsx";
-import * as $$$$$$6 from "./sections/Content/Cards.tsx";
-import * as $$$$$$7 from "./sections/Content/Citation.tsx";
-import * as $$$$$$8 from "./sections/Content/Faq.tsx";
-import * as $$$$$$9 from "./sections/Content/Hero.tsx";
-import * as $$$$$$10 from "./sections/Content/IconCards.tsx";
-import * as $$$$$$11 from "./sections/Content/Iframe.tsx";
-import * as $$$$$$12 from "./sections/Content/InfoCard.tsx";
-import * as $$$$$$13 from "./sections/Content/Intro.tsx";
-import * as $$$$$$14 from "./sections/Content/Logos.tsx";
-import * as $$$$$$15 from "./sections/Content/OnlyText.tsx";
-import * as $$$$$$16 from "./sections/Content/TextCard.tsx";
-import * as $$$$$$17 from "./sections/Content/TitleWithBackground.tsx";
-import * as $$$$$$18 from "./sections/Footer/Footer.tsx";
-import * as $$$$$$19 from "./sections/Footer/Result.tsx";
-import * as $$$$$$20 from "./sections/Form/ContactUs.tsx";
-import * as $$$$$$21 from "./sections/Form/DownloadMaterial.tsx";
+import * as $$$$$$4 from "./sections/Content/Alerts.tsx";
+import * as $$$$$$5 from "./sections/Content/Benefits.tsx";
+import * as $$$$$$6 from "./sections/Content/Brands.tsx";
+import * as $$$$$$7 from "./sections/Content/Cards.tsx";
+import * as $$$$$$8 from "./sections/Content/Citation.tsx";
+import * as $$$$$$9 from "./sections/Content/Faq.tsx";
+import * as $$$$$$10 from "./sections/Content/Hero.tsx";
+import * as $$$$$$11 from "./sections/Content/IconCards.tsx";
+import * as $$$$$$12 from "./sections/Content/Iframe.tsx";
+import * as $$$$$$13 from "./sections/Content/InfoCard.tsx";
+import * as $$$$$$14 from "./sections/Content/Intro.tsx";
+import * as $$$$$$15 from "./sections/Content/Logos.tsx";
+import * as $$$$$$16 from "./sections/Content/OnlyText.tsx";
+import * as $$$$$$17 from "./sections/Content/TextCard.tsx";
+import * as $$$$$$18 from "./sections/Content/TitleWithBackground.tsx";
+import * as $$$$$$19 from "./sections/Footer/Footer.tsx";
+import * as $$$$$$20 from "./sections/Footer/Result.tsx";
+import * as $$$$$$21 from "./sections/Form/ContactUs.tsx";
 import * as $$$$$$22 from "./sections/Form/SendYourRecipe.tsx";
 import * as $$$$$$23 from "./sections/Header/Header.tsx";
 import * as $$$$$$24 from "./sections/Images/Banner.tsx";
@@ -70,24 +70,24 @@ const manifest = {
     "site/sections/Category/CategoryBanner.tsx": $$$$$$1,
     "site/sections/Category/CategoryGrid.tsx": $$$$$$2,
     "site/sections/Component.tsx": $$$$$$3,
-    "site/sections/Content/Benefits.tsx": $$$$$$4,
-    "site/sections/Content/Brands.tsx": $$$$$$5,
-    "site/sections/Content/Cards.tsx": $$$$$$6,
-    "site/sections/Content/Citation.tsx": $$$$$$7,
-    "site/sections/Content/Faq.tsx": $$$$$$8,
-    "site/sections/Content/Hero.tsx": $$$$$$9,
-    "site/sections/Content/IconCards.tsx": $$$$$$10,
-    "site/sections/Content/Iframe.tsx": $$$$$$11,
-    "site/sections/Content/InfoCard.tsx": $$$$$$12,
-    "site/sections/Content/Intro.tsx": $$$$$$13,
-    "site/sections/Content/Logos.tsx": $$$$$$14,
-    "site/sections/Content/OnlyText.tsx": $$$$$$15,
-    "site/sections/Content/TextCard.tsx": $$$$$$16,
-    "site/sections/Content/TitleWithBackground.tsx": $$$$$$17,
-    "site/sections/Footer/Footer.tsx": $$$$$$18,
-    "site/sections/Footer/Result.tsx": $$$$$$19,
-    "site/sections/Form/ContactUs.tsx": $$$$$$20,
-    "site/sections/Form/DownloadMaterial.tsx": $$$$$$21,
+    "site/sections/Content/Alerts.tsx": $$$$$$4,
+    "site/sections/Content/Benefits.tsx": $$$$$$5,
+    "site/sections/Content/Brands.tsx": $$$$$$6,
+    "site/sections/Content/Cards.tsx": $$$$$$7,
+    "site/sections/Content/Citation.tsx": $$$$$$8,
+    "site/sections/Content/Faq.tsx": $$$$$$9,
+    "site/sections/Content/Hero.tsx": $$$$$$10,
+    "site/sections/Content/IconCards.tsx": $$$$$$11,
+    "site/sections/Content/Iframe.tsx": $$$$$$12,
+    "site/sections/Content/InfoCard.tsx": $$$$$$13,
+    "site/sections/Content/Intro.tsx": $$$$$$14,
+    "site/sections/Content/Logos.tsx": $$$$$$15,
+    "site/sections/Content/OnlyText.tsx": $$$$$$16,
+    "site/sections/Content/TextCard.tsx": $$$$$$17,
+    "site/sections/Content/TitleWithBackground.tsx": $$$$$$18,
+    "site/sections/Footer/Footer.tsx": $$$$$$19,
+    "site/sections/Footer/Result.tsx": $$$$$$20,
+    "site/sections/Form/ContactUs.tsx": $$$$$$21,
     "site/sections/Form/SendYourRecipe.tsx": $$$$$$22,
     "site/sections/Header/Header.tsx": $$$$$$23,
     "site/sections/Images/Banner.tsx": $$$$$$24,

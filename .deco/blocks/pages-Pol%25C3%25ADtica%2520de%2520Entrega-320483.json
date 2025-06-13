@@ -15,7 +15,7 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Institucional/TitleWithBackground.tsx",
+        "__resolveType": "site/sections/Content/TitleWithBackground.tsx",
         "title": "POLÍTICA DE ENTREGA",
         "background": {
           "image": "https://assets.decocache.com/medicinal-store/23d9140c-86f1-45f8-a476-b69dbd39541d/image-1.png",
@@ -30,28 +30,28 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "__resolveType": "site/sections/Content/TextCard.tsx",
         "text": "<p><strong><span>POLÍTICA DE ENTREGA</span></strong><br><br><span>Comprando em nosso site, você receberá os produtos de maneira rápida, eficiente e segura, antes de fazer a sua compra, calcule a estimativa do prazo de entrega, informada na página do produto.  </span><br><br><span>O prazo para entrega dos produtos varia de com acordo com o local de entrega e tipo de envio - que será através dos Correios e o cliente poderá escolher entre Sedex ou PAC.  </span><br><br><span>O recebimento do pedido pode ser realizado por terceiros, como porteiros de condomínios e familiares, desde que assinem o comprovante de recebimento da mercadoria. </span><br><br><span>Os produtos serão entregues de segunda-feira a sábado, em horário comercial. São realizadas três tentativas de entrega, em dias úteis consecutivos. Ocorrendo três tentativas de entrega sem sucesso o produto será devolvido ao Centro de Distribuição da loja online.  </span><br><br><strong><span>IMPORTANTE</span></strong><span>:&nbsp;O prazo para entrega do pedido passa a ser considerado a partir da aprovação do pedido pela instituição financeira, este retorno de aprovação pode levar até 48h.</span></p>"
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "__resolveType": "site/sections/Content/TextCard.tsx",
         "text": "<p><strong><span>AINDA NÃO RECEBI MEU PEDIDO, O QUE FAZER?</span></strong><br><br><span>a. Assim que o produto é enviado, você recebe um e-mail com o código de rastreamento da encomenda para que você possa acompanhar o andamento da entrega. Acesse o site dos Correios (</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://www.correios.com.br\"><span style=\"color: #000000\">www.correios.com.br</span></a><span>) e informe este código no campo Rastreamento de Objetos para verificar qual é a situação informada.  </span><br><br><span>b. Data de entrega: verifique o prazo previsto, para entrega do seu pedido;  </span><br><br><span>c. Dados do endereço: confirme os dados informados para entrega;  </span><br><br><span>d. Pagamento: confirme se o seu pedido já teve o pagamento confirmado;  </span><br><br><span>e. Ausência de recebedor: são feitas 3 tentativas de entrega. Após as tentativas de entrega, se não houver alguém para receber, o produto(s) retornará à nossa central de faturamento e você receberá uma notificação. No caso de apartamento, verifique com a portaria se o produto foi entregue;  </span><br><br><span>f. Recusa do pedido: certifique-se de que as pessoas encarregadas de receber o pedido, como porteiros ou empregados, não se recusaram a recebê-lo;  </span><br><br><span>g. Fatores Naturais e Adversos: certifique-se de que, nos dias agendados para a entrega, não ocorreram chuvas fortes, acidentes ou greves na região onde o produto deveria ser entregue, impossibilitando a chegada do transportador.</span></p>"
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "__resolveType": "site/sections/Content/TextCard.tsx",
         "text": "<p><strong><span>FRETE GRÁTIS</span></strong><br><br><span>Para nossos clientes o FRETE poderá ser GRÁTIS dentro do território nacional para as compras com valor igual ou superior à campanha vigente no momento da compra. Fretes via SEDEX são calculados de acordo com a localidade de entrega.</span></p>"
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Institucional/TextCard.tsx",
+        "__resolveType": "site/sections/Content/TextCard.tsx",
         "text": "<p><strong><span>COBERTURA</span></strong><br><br><span>Cobrimos todo território nacional.</span></p>"
       }
     },
@@ -59,12 +59,6 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "Footer"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Category Banner - 01"
       }
     }
   ]

@@ -45,7 +45,7 @@
   }
 
   .fluid-text a {
-    @apply underline text-neutral;
+    @apply underline text-primary font-bold;
   }
 
   .fluid-text h1 {
