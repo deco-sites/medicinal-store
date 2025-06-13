@@ -2,6 +2,7 @@ import { useScript } from "@deco/deco/hooks";
 import { useComponent } from "../Component.tsx";
 import type { AppContext } from "../../apps/site.ts";
 import Icon from "../../components/ui/Icon.tsx";
+import { usePlatform } from "../../sdk/usePlatform.tsx";
 
 const onLoad = () => {
     (document.querySelector("input[name='whatsapp']") as HTMLInputElement).oninput = (e) => {
@@ -145,19 +146,47 @@ export const action = async (
     ctx: AppContext,
 ) => {
     try {
+        const platform = usePlatform();
         const formData = await req.formData() as FormData;
-        console.log('formData', formData);
-
-        // deno-lint-ignore no-explicit-any
-        const response = await (ctx as any).invoke(
-            "vtex.actions.masterdata.createDocument",
-            {
+        if (platform === "vtex") {
+            // deno-lint-ignore no-explicit-any
+            await (ctx as any).invoke("vtex/actions/masterdata/createDocument.ts", {
+                data: formData,
                 acronym: "RM",
-                data: formData
-            },
-        );
-        console.log('response', response);
+                isPrivateEntity: true
+            });
 
+            // import { FreshContext, Handlers } from '$fresh/server.ts'
+
+            // export const handler: Handlers = {
+            //     async POST(_req: Request, _ctx: FreshContext) {
+            //         const params = new URLSearchParams(_req.url.split('?')[1])
+
+            //         const acronym = params.get('acronym')
+            //         const field = params.get('field')
+            //         const id = params.get('id')
+
+            //         const r = await fetch(
+            //             `https://tfcucl.vtexcommercestable.com.br/api/dataentities/${acronym}/documents/${id}/${field}/attachments`,
+            //             {
+            //                 method: 'POST',
+            //                 body: await _req.formData(),
+            //             },
+            //         )
+
+            //         if (!r.ok) {
+            //             return new Response(
+            //                 JSON.stringify({
+            //                     error: `${r.status} ${await r.text()}`,
+            //                 }),
+            //                 { status: 400 },
+            //             )
+            //         }
+
+            //         return new Response(null, { status: 204 })
+            //     },
+            // }
+        }
         return {
             toast: "success",
             message: "Menssagem enviada com sucesso!",

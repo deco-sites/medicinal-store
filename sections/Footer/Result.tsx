@@ -13,19 +13,31 @@ const onLoad = (id) => {
 };
 
 export async function action(_props: unknown, req: Request, ctx: AppContext) {
-  const platform = usePlatform();
-  const form = await req.formData();
-  const name = `${form.get("name") ?? ""}`;
-  const email = `${form.get("email") ?? ""}`;
-  if (platform === "vtex") {
-    // deno-lint-ignore no-explicit-any
-    await (ctx as any).invoke("vtex/actions/newsletter/subscribe.ts", {
-      name,
-      email,
-    });
+  try {
+    const platform = usePlatform();
+    const form = await req.formData();
+
+    const name = `${form.get("name") ?? ""}`;
+    const email = `${form.get("email") ?? ""}`;
+
+    const lastName = name.split(' ')[1] || '';
+    const firstName = name.split(' ')[0] || '';
+
+    if (platform === "vtex") {
+      // deno-lint-ignore no-explicit-any
+      await (ctx as any).invoke("vtex/actions/masterdata/createDocument.ts", {
+        acronym: "CL",
+        data: JSON.stringify({
+          firstName, lastName, email, isNewsletterOptIn: true
+        }),
+        isPrivateEntity: true
+      });
+    }
+
     return { status: "success" };
+  } catch {
+    return { status: "failed" };
   }
-  return { status: "failed" };
 }
 
 export default function Results({ status }: SectionProps<typeof action>) {

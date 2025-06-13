@@ -1,6 +1,7 @@
 import { useScript } from "@deco/deco/hooks";
 import { useComponent } from "../Component.tsx";
 import type { AppContext } from "../../apps/site.ts";
+import { usePlatform } from "../../sdk/usePlatform.tsx";
 
 const onLoad = () => {
     (document.querySelector("input[name='phone']") as HTMLInputElement).oninput = (e) => {
@@ -129,16 +130,19 @@ export const action = async (
     ctx: AppContext,
 ) => {
     try {
+        const platform = usePlatform();
         const formData = await req.formData() as FormData;
-        // deno-lint-ignore no-explicit-any
-        await (ctx as any).invoke(
-            "vtex.actions.masterdata.createDocument",
-            {
+        // @ts-ignore .
+        const data = Object.fromEntries(formData);
+        data.emailNews = data.emailNews === 'on';
+        data.whatsAppNews = data.whatsAppNews === 'on';
+        if (platform === "vtex") {
+            // deno-lint-ignore no-explicit-any
+            await (ctx as any).invoke("vtex/actions/masterdata/createDocument.ts", {
                 acronym: "CO",
-                data: formData
-            },
-        );
-
+                data: JSON.stringify(data)
+            });
+        }
         return {
             toast: "success",
             message: "Menssagem enviada com sucesso!",
