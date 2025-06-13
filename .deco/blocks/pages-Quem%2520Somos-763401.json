@@ -1,0 +1,222 @@
+{
+  "name": "Quem Somos",
+  "path": "/quem-somos",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/TitleWithBackground.tsx",
+        "background": {
+          "image": "https://assets.decocache.com/medicinal-store/f4f15441-f643-42c1-bcc5-30b73d8f7437/assinaturas-3.png",
+          "position": "left"
+        },
+        "supTitle": "QUEM SOMOS",
+        "title": "Conheça a Medicinal sua Farmácia de Manipulação",
+        "subTitle": "<p><span>A&nbsp;estratégia&nbsp;de transformar&nbsp;nossos serviços&nbsp;em uma experiência única e cada vez&nbsp;mais prática&nbsp;é um desafio que a&nbsp;Medicinal&nbsp;busca sempre alcançar.<br>Nosso&nbsp;clientes&nbsp;são exigentes e querem&nbsp;mais comodidade. Gostamos muito disso. Faz a&nbsp;Medicinal&nbsp;ser melhor a cada dia!!!<br>Experimente&nbsp;nosso canal&nbsp;online.<br>Você&nbsp;pode&nbsp;tudo, sem sair de onde está.</span></p>",
+        "textAlign": "left",
+        "isFullWidth": true
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/OnlyText.tsx",
+        "title": "<p><span>A Medicinal</span></p>",
+        "description": "<p><span>A&nbsp;estratégia&nbsp;de transformar&nbsp;nossos serviços&nbsp;em uma experiência única e cada vez&nbsp;mais prática&nbsp;é um desafio que a&nbsp;Medicinal&nbsp;busca sempre alcançar.<br> Nosso&nbsp;clientes&nbsp;são exigentes e querem&nbsp;mais comodidade. Gostamos muito disso. Faz a&nbsp;Medicinal&nbsp;ser melhor a cada dia!!!<br>Experimente&nbsp;nosso canal&nbsp;online.<br><br>Você&nbsp;pode&nbsp;tudo, sem sair de onde está.</span></p>",
+        "columns": "1"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/Cards.tsx",
+        "title": "<p>O que nossos clientes falam</p>",
+        "cards": [
+          {
+            "imageType": "rounded",
+            "image": "https://assets.decocache.com/medicinal-store/d6691a80-265e-4176-81dc-39c6d0b4517e/img-medicinal-01-1.png",
+            "text": "<p><span>A&nbsp;Medicinal&nbsp;é uma das maiores farmácias do Sul do Brasil e uma das maiores em âmbito nacional.</span></p>"
+          },
+          {
+            "imageType": "rounded",
+            "image": "https://assets.decocache.com/medicinal-store/e860a6c9-c0e5-41e3-9156-d6d9594384be/img-medicinal-01-1-(1).png",
+            "text": "<p><span>Atualmente a&nbsp;Medicinal&nbsp;conta com um corpo técnico de 8 farmacêuticos distribuidos em várias etapas do processo de produção, assegurando que as normas legais sejam cumpridas em cada etapa.</span></p>"
+          },
+          {
+            "imageType": "rounded",
+            "image": "https://assets.decocache.com/medicinal-store/4319cc4e-c925-44e0-bd7c-9e9612262895/image-(12).png",
+            "text": "<p><span>Com mais de 90 colaboradores, a&nbsp;Medicinal&nbsp;tem uma equipe treinada para preparar seu produto de forma a garantir a qualidade que você espera.</span></p>"
+          },
+          {
+            "imageType": "rounded",
+            "image": "https://assets.decocache.com/medicinal-store/ce26588f-b535-48db-a0e3-f61f321e896d/image-(13).png",
+            "text": "<p><span>Nossos insumos cosméticos e ativos farmacêuticos são adquiridos de&nbsp;fornecedores qualificados, garantindo a qualidade da matéria prima utilizada no processo de manipulação. Confira abaixo uma lista de nossos principais fornecedores.</span></p>"
+          },
+          {
+            "imageType": "rounded",
+            "image": "https://placehold.co/220x120",
+            "text": "<p><span>Nossa estrutura física contempla todos os pormenores&nbsp;exigidos pela legislação sanitária, com ambientes limpos, climatizados e organizados. Laboratórios dedicados para produção de cada classe terapêutica.</span></p>"
+          }
+        ],
+        "imageType": "rounded",
+        "alignCards": "center"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/Iframe.tsx",
+        "title": "Teste",
+        "src": "https://www.google.com/maps/embed?pb=!4v1749836205198!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDRscHJNVHc.!2m2!1d-23.42445998967894!2d-51.94893401184201!3f80!4f0!5f0.7820865974627469",
+        "isFullWidth": false,
+        "mobileHeight": 196,
+        "height": 706
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/Cards.tsx",
+        "title": "<p>O que nossos clientes falam</p>",
+        "cards": [
+          {
+            "imageType": "rounded",
+            "image": "https://assets.decocache.com/medicinal-store/b3cfa646-4974-4b7d-868a-bc279405da24/cliente-carlos-1.png",
+            "text": "<p><strong><span>Carlos Eduardo Sapata</span></strong><span><br><br>Sou cliente da Medicinal desde sua inauguração e continuo devido ao atendimento e o comprometimento dos atendentes. De 0 a 10 daria nota 9.</span></p>"
+          },
+          {
+            "imageType": "rounded",
+            "image": "https://assets.decocache.com/medicinal-store/f7e667f7-296a-4238-a1d2-dbb72f852072/cliente-carlos-1-(1).png",
+            "text": "<p><strong><span>Nayara Watanabe</span></strong><span><br><br>Sou cliente medicinal pelo ótimo atendimento feito online e offline. Além deste maravilhoso atendimento a qualidade dos produtos faz com que eu não tenha dúvidas na hora de comprar. Perfeito desde a hora que me atendem até a entrega.</span></p>"
+          },
+          {
+            "imageType": "rounded",
+            "image": "https://assets.decocache.com/medicinal-store/b3cfa646-4974-4b7d-868a-bc279405da24/cliente-carlos-1.png",
+            "text": "<p><strong><span>Carlos Eduardo Sapata</span></strong><span><br><br>Sou cliente da Medicinal desde sua inauguração e continuo devido ao atendimento e o comprometimento dos atendentes. De 0 a 10 daria nota 9.</span></p>"
+          },
+          {
+            "imageType": "rounded",
+            "image": "https://assets.decocache.com/medicinal-store/f7e667f7-296a-4238-a1d2-dbb72f852072/cliente-carlos-1-(1).png",
+            "text": "<p><strong><span>Nayara Watanabe</span></strong><span><br><br>Sou cliente medicinal pelo ótimo atendimento feito online e offline. Além deste maravilhoso atendimento a qualidade dos produtos faz com que eu não tenha dúvidas na hora de comprar. Perfeito desde a hora que me atendem até a entrega.</span></p>"
+          }
+        ],
+        "imageType": "rounded-full",
+        "alignCards": "center"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "title": "<p><span>DESEJA TESTAR A MEDICINAL?</span></p>",
+        "backgroundColor": "#ffffff",
+        "button": {
+          "icon": "https://assets.decocache.com/medicinal-store/4dee388b-9967-495d-9c6c-bb14803012e1/ic_baseline-whatsapp.svg",
+          "text": "Entre em contato conosco",
+          "href": "https://api.whatsapp.com/send?phone=5544984012303&text=Solicito%20atendimento%20personalizado%20pelo%20Canal%20do%20Site"
+        },
+        "description": "<p><span>Entre em contato conosco e seguiremos atendimento!</span></p>",
+        "image": {
+          "mobile": "https://assets.decocache.com/medicinal-store/55d7514b-d7e6-4f88-ac71-14994a43828a/assinaturas-3-(1).png",
+          "alt": "testar medicinal",
+          "desktop": "https://assets.decocache.com/medicinal-store/2bd228c9-1d2d-4128-a512-ce8d4253c0c7/assinaturas-3-(2).png"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/Citation.tsx",
+        "image": "https://assets.decocache.com/medicinal-store/564d83fe-d005-4bd7-9cd1-29493de3c587/c3fe3509328f93f541837adafa16806415d756bf.png",
+        "title": "Nossa diretora técnica",
+        "cardText": "<p><strong><span>Dra Meizze Valéria Rocha</span></strong><span><br>Farmacêutica<br>CRF-PR 20450</span></p>",
+        "text": "<p><span>\"Minha grande missão dentro da Medicinal é garantir a&nbsp;qualidade&nbsp;de nossos produtos.<br>Para tanto, seguimos à risca todas as regras sanitárias vigentes para o nosso setor.<br><br>Acompanho&nbsp;muito nosso cliente para entender se sua&nbsp;satisfação&nbsp;foi atendida. Não medimos&nbsp;esforços&nbsp;para conseguir esse&nbsp;objetivo.\"<br><br>Se&nbsp;você&nbsp;escolher a&nbsp;Medicinal&nbsp;como&nbsp;sua farmácia de manipulação, você estara escolhendo a mim como&nbsp;sua farmacêutica&nbsp;de confiança. Então conte comigo para o que precisar...\"</span></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/Brands.tsx",
+        "title": "Alguns dos nossos fornecedores",
+        "brands": [
+          {
+            "alt": "galena",
+            "image": "https://assets.decocache.com/medicinal-store/116e39e4-e84f-466a-b15d-6a5cda5d2dd8/logo-galena-1.png"
+          },
+          {
+            "alt": "infinity",
+            "image": "https://assets.decocache.com/medicinal-store/12522a52-28ee-47eb-855d-1d6d2609bcef/infinity-1.png"
+          },
+          {
+            "alt": "via farma",
+            "image": "https://assets.decocache.com/medicinal-store/8faf5190-328c-4ba0-9fbe-96940453b82e/image-14.png"
+          },
+          {
+            "alt": "biotec",
+            "image": "https://assets.decocache.com/medicinal-store/8e656a6b-e6ac-439d-b48d-88b71629c983/image-(15).png"
+          },
+          {
+            "alt": "teste",
+            "image": "https://assets.decocache.com/medicinal-store/2be3f605-30e2-415c-b977-110c0e0a5921/image.png"
+          },
+          {
+            "alt": "fagron",
+            "image": "https://assets.decocache.com/medicinal-store/c0160458-7875-4b90-91e1-7c99dec701fc/image-15.png"
+          },
+          {
+            "alt": "lemma",
+            "image": "https://assets.decocache.com/medicinal-store/f958f9fb-d7f5-4645-b176-0b62f564b8cc/image-(17).png"
+          },
+          {
+            "alt": "nutrifarm",
+            "image": "https://assets.decocache.com/medicinal-store/ed7af2a2-ed5e-4f82-9dcd-efc706bf3826/image-(18).png"
+          },
+          {
+            "alt": "florien",
+            "image": "https://assets.decocache.com/medicinal-store/b21981c5-f44d-48db-8d30-129b2f92bab1/image-(19).png"
+          },
+          {
+            "alt": "purifarma",
+            "image": "https://assets.decocache.com/medicinal-store/6b5fc0e8-9017-4bf6-9d81-e4a9aa811680/image-(20).png"
+          },
+          {
+            "image": "https://assets.decocache.com/medicinal-store/caf37194-a6e9-49c1-a659-c6f1c35b4911/image-(21).png",
+            "alt": "attivos"
+          },
+          {
+            "alt": "valdequimica",
+            "image": "https://assets.decocache.com/medicinal-store/a2a64882-f49e-4486-b746-c39d3be904f3/image-(22).png"
+          },
+          {
+            "image": "https://assets.decocache.com/medicinal-store/10d1b201-a8c5-4254-8d9c-278d5285d234/image-(23).png",
+            "alt": "pharma speed"
+          },
+          {
+            "image": "https://assets.decocache.com/medicinal-store/9a1ec967-03bc-4d61-95d8-0dab9739275a/image-(24).png",
+            "alt": "ideal farma"
+          },
+          {
+            "image": "https://assets.decocache.com/medicinal-store/f9baf2f0-4c85-4b67-8774-76c9a72945d7/image-(25).png",
+            "alt": "iberoquimica"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
