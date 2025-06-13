@@ -47,7 +47,7 @@ function NavItem({ item }: Props) {
             "py-2 text-sm flex items-center justify-between gap-4 border-2 cursor-pointer",
             isBold && "text-primary font-bold",
             isHighlighted &&
-            "px-4 rounded-full bg-primary text-white border-primary group-hover:bg-white group-hover:text-primary font-bold",
+              "px-4 rounded-full bg-primary text-white border-primary group-hover:bg-white group-hover:text-primary font-bold",
             !isHighlighted && "border-transparent",
           )}
         >

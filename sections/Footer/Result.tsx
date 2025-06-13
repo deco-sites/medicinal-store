@@ -20,17 +20,20 @@ export async function action(_props: unknown, req: Request, ctx: AppContext) {
     const name = `${form.get("name") ?? ""}`;
     const email = `${form.get("email") ?? ""}`;
 
-    const lastName = name.split(' ')[1] || '';
-    const firstName = name.split(' ')[0] || '';
+    const lastName = name.split(" ")[1] || "";
+    const firstName = name.split(" ")[0] || "";
 
     if (platform === "vtex") {
       // deno-lint-ignore no-explicit-any
       await (ctx as any).invoke("vtex/actions/masterdata/createDocument.ts", {
         acronym: "CL",
         data: JSON.stringify({
-          firstName, lastName, email, isNewsletterOptIn: true
+          firstName,
+          lastName,
+          email,
+          isNewsletterOptIn: true,
         }),
-        isPrivateEntity: true
+        isPrivateEntity: true,
       });
     }
 
