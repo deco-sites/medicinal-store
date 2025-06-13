@@ -226,19 +226,21 @@ function Header({
   return (
     <>
       {alerts.length > 0 && <Alert alerts={alerts} />}
-      <header
-        style={{
-          height: device === "desktop"
-            ? HEADER_HEIGHT_DESKTOP
-            : HEADER_HEIGHT_MOBILE,
-        }}
-      >
-        <div id="header" class="bg-base-100 top-0 w-full z-40">
-          {device === "desktop"
-            ? <Desktop logo={logo} {...props} />
-            : <Mobile logo={logo} {...props} />}
-        </div>
-      </header>
+      <div class="pb-2">
+        <header
+          style={{
+            height: device === "desktop"
+              ? HEADER_HEIGHT_DESKTOP
+              : HEADER_HEIGHT_MOBILE,
+          }}
+        >
+          <div id="header" class="bg-base-100 top-0 w-full z-40">
+            {device === "desktop"
+              ? <Desktop logo={logo} {...props} />
+              : <Mobile logo={logo} {...props} />}
+          </div>
+        </header>
+      </div>
       <script
         type="module"
         dangerouslySetInnerHTML={{

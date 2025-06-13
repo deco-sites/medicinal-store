@@ -40,10 +40,10 @@ export default function Alerts({ title, text, alerts = [] }: Props) {
   return (
     <div class="w-full container p-4 mx-auto">
       {title && title !== "" && (
-        <div class="flex flex-col items-center w-full gap-4">
+        <div class="flex flex-col items-center w-full gap-4 mb-4">
           <div class="w-20 h-[3px] bg-primary" />
           <div
-            class="font-bold text-lg md:text-2xl mb-4 text-center uppercase max-w-72 mx-auto"
+            class="font-bold text-lg md:text-2xl text-center uppercase max-w-72 mx-auto"
             dangerouslySetInnerHTML={{ __html: title }}
           />
         </div>

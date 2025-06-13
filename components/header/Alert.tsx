@@ -33,7 +33,7 @@ function Alert({ alerts = [] }: Props) {
     <div class="border-b border-base-400">
       {device === "mobile"
         ? (
-          <Slider class="carousel carousel-center gap-4 sm:gap-6 w-full">
+          <Slider class="carousel carousel-center gap-4 sm:gap-6 w-full py-2">
             {alerts.map((alert, index) => (
               <Slider.Item
                 index={index}

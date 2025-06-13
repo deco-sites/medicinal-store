@@ -32,8 +32,9 @@ export default function ({
     return (
       <div
         class={clx(
-          "mb-4 w-full",
-          isFullWidth === false && "mt-6 container px-4 mx-auto",
+          "w-full",
+          isFullWidth === true && "-mt-2 mb-4",
+          isFullWidth === false && "container my-4 px-4 mx-auto",
         )}
       >
         <div
