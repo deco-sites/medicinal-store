@@ -2,6 +2,7 @@ import { clx } from "../../sdk/clx.ts";
 import { useDevice } from "@deco/deco/hooks";
 
 import Section from "../../components/ui/Section.tsx";
+import { RichText } from "apps/admin/widgets.ts";
 
 interface Props {
     title?: string;
@@ -9,10 +10,12 @@ interface Props {
     height: number;
     mobileHeight: number;
     isFullWidth?: boolean;
+    text?: RichText;
 }
 
 export default function ({
     src,
+    text,
     title,
     height,
     isFullWidth = false,
@@ -39,6 +42,14 @@ export default function ({
                 loading="lazy"
                 allowFullScreen
             />
+            {text && text !== '' && (
+                <div
+                    class="fluid-text text-center mt-4"
+                    dangerouslySetInnerHTML={{
+                        __html: text
+                    }}
+                />
+            )}
         </div>
     );
 }
