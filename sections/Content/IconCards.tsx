@@ -18,7 +18,6 @@ export default function ({
     title,
     cards = [],
 }: Props) {
-    console.log("cards", cards);
 
     return (
         <div class="container mx-auto p-4 w-full">

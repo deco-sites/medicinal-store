@@ -62,7 +62,6 @@ function ProductDetails(props: SectionProps<typeof loader>) {
   const { isVariantOf } = product;
   // @ts-ignore additionalProperty exists
   const { additionalProperty } = isVariantOf;
-  console.log("additionalProperty:", additionalProperty);
   const { description } = product;
 
   const device = useDevice();
