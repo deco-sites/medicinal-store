@@ -59,7 +59,7 @@ function Footer({
   seals = [],
   social = [],
   policies =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper facilisis dignissim. Vivamus gravida enim vitae tristique suscipit. Curabitur sed magna leo. Vestibulum eu varius velit. Nam ullamcorper, diam ac efficitur tempor, augue tellus ornare urna, vitae venenatis urna mauris non arcu. Fusce malesuada pellentesque ex, et lacinia nibh tempus eu. Nulla interdum condimentum orci, vel fermentum felis congue sed. Ut nec nisl ex.",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper facilisis dignissim. Vivamus gravida enim vitae tristique suscipit. Curabitur sed magna leo. Vestibulum eu varius velit. Nam ullamcorper, diam ac efficitur tempor, augue tellus ornare urna, vitae venenatis urna mauris non arcu. Fusce malesuada pellentesque ex, et lacinia nibh tempus eu. Nulla interdum condimentum orci, vel fermentum felis congue sed. Ut nec nisl ex.",
   paymentMethods = [],
   logo,
 }: Props) {
@@ -70,38 +70,40 @@ function Footer({
     <footer class="mt-6 rounded-t-3xl bg-ice">
       <div class="container mx-auto px-4 flex flex-col gap-5 sm:gap-10 py-10">
         <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pb-10 border-b border-base-200">
-          <div>
+          <div class="w-full">
             <form
               hx-swap="innerHTML"
               hx-sync="this:replace"
               hx-post={useComponent(import.meta.resolve("./Result.tsx"))}
               hx-target={`#${id}`}
-              class="flex flex-col sm:flex-row gap-2 w-full max-w-6xl items-center"
+              class="flex flex-col sm:flex-row gap-4 w-full max-w-6xl items-center"
             >
-              <div class="text-lg sm:text-2xl font-bold w-full max-w-80 sm:max-w-96">
+              <div class="text-lg sm:text-2xl font-bold w-full max-w-80">
                 Receba promoções e novidades exclusivas por e-mail!
               </div>
-              <input
-                name="name"
-                class="input input-bordered flex-grow text-sm w-full max-w-80"
-                type="text"
-                placeholder="Seu nome"
-              />
-              <input
-                name="email"
-                class="input input-bordered flex-grow text-sm w-full max-w-80"
-                type="text"
-                placeholder="seu@email.com.br"
-              />
-              <button
-                class="btn btn-primary px-8 w-full sm:w-auto max-w-80"
-                type="submit"
-              >
-                <span class="[.htmx-request_&]:hidden inline">
-                  Assinar
-                </span>
-                <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
-              </button>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-2 items-center w-full">
+                <input
+                  name="name"
+                  class="input input-bordered w-full text-sm max-w-80"
+                  type="text"
+                  placeholder="Seu nome"
+                />
+                <input
+                  name="email"
+                  class="input input-bordered w-full text-sm max-w-80"
+                  type="text"
+                  placeholder="seu@email.com.br"
+                />
+                <button
+                  class="btn btn-primary px-8 w-full sm:w-auto max-w-80"
+                  type="submit"
+                >
+                  <span class="[.htmx-request_&]:hidden inline">
+                    Assinar
+                  </span>
+                  <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
+                </button>
+              </div>
             </form>
             <div id={id} />
           </div>
