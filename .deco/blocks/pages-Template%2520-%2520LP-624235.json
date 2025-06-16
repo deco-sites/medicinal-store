@@ -38,14 +38,14 @@
           },
           {
             "text": "Conferência farmacèutica",
-            "icon": "https://assets.decocache.com/medicinal-store/d62b2d5d-3ef9-4c11-b7bb-f0b5e0caa80b/Stethoscope.png"
+            "icon": "https://assets.decocache.com/medicinal-store/81cdbf4c-f6ad-496a-9cb6-6f2dc82b8e46/Vector-(4).svg"
           },
           {
             "icon": "https://assets.decocache.com/medicinal-store/b10cb942-793d-483d-9587-62ce41f3982f/Star.svg",
             "text": "Fornecedores Qualificados"
           },
           {
-            "icon": "https://assets.decocache.com/medicinal-store/d62b2d5d-3ef9-4c11-b7bb-f0b5e0caa80b/Stethoscope.png",
+            "icon": "https://assets.decocache.com/medicinal-store/3f74cb9a-931b-48d6-8402-51d67256bc47/Vector-(4).svg",
             "text": "Conferência farmacèutica"
           },
           {
@@ -68,7 +68,7 @@
         },
         "title": "<p><span>LOREM IPSUM DOLLOR SIT AMET</span></p>",
         "description": "<p><span>Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&nbsp;</span></p>",
-        "textAlign": "left",
+        "textAlign": "right",
         "padding": "default"
       }
     },
@@ -83,15 +83,21 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Content/InfoCard.tsx"
+        "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "textAlign": "right",
+        "image": {
+          "mobile": "https://placehold.co/297x339",
+          "desktop": "https://placehold.co/650x403",
+          "alt": "infocard image"
+        }
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Images/Banner.tsx",
-        "desktop": "https://assets.decocache.com/medicinal-store/5eb351b2-3f76-47f9-85ad-1f53c9fae434/BannersHome.png",
-        "mobile": "https://assets.decocache.com/medicinal-store/34fef799-e819-4a38-a448-2860350aded4/Card-Produto.png",
+        "desktop": "https://placehold.co/1440x240",
+        "mobile": "https://placehold.co/358x260",
         "alt": "banner",
         "href": "#"
       }
@@ -107,15 +113,20 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Content/InfoCard.tsx"
+        "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "image": {
+          "desktop": "https://placehold.co/650x403",
+          "mobile": "https://placehold.co/297x339",
+          "alt": "imagem infocard"
+        }
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Images/Banner.tsx",
-        "desktop": "https://assets.decocache.com/medicinal-store/5eb351b2-3f76-47f9-85ad-1f53c9fae434/BannersHome.png",
-        "mobile": "https://assets.decocache.com/medicinal-store/34fef799-e819-4a38-a448-2860350aded4/Card-Produto.png",
+        "desktop": "https://placehold.co/1440x240",
+        "mobile": "https://placehold.co/358x260",
         "alt": "banner",
         "href": "#"
       }
@@ -149,8 +160,8 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Images/Banner.tsx",
-        "desktop": "https://assets.decocache.com/medicinal-store/5eb351b2-3f76-47f9-85ad-1f53c9fae434/BannersHome.png",
-        "mobile": "https://assets.decocache.com/medicinal-store/34fef799-e819-4a38-a448-2860350aded4/Card-Produto.png",
+        "desktop": "https://placehold.co/1440x240",
+        "mobile": "https://placehold.co/358x260",
         "alt": "banner",
         "href": "#"
       }
