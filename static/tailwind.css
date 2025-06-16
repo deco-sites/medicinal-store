@@ -456,7 +456,6 @@ video {
 html {
   -webkit-tap-highlight-color: transparent;
 }
-
   /* Allow changing font family via CMS */
   html {
     font-family: var(--font-family);
@@ -5361,10 +5360,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-text-opacity: 1;
   color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
 }
-.fluid-text>*:first-child {
+.fluid-text > *:first-child {
   margin-top: 0px !important;
 }
-.fluid-text>*:last-child {
+.fluid-text > *:last-child {
   margin-bottom: 0px !important;
 }
 .\[appearance\:textfield\] {
@@ -5387,7 +5386,7 @@ details.collapse summary::-webkit-details-marker {
   }
 }
 
-.collapse-content>*:first-child {
+.collapse-content > *:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
