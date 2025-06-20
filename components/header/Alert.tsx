@@ -45,9 +45,9 @@ function Alert({ alerts = [] }: Props) {
           </Slider>
         )
         : (
-          <div class="w-full container px-4 mx-auto">
+          <div class="w-full container py-2 px-4 mx-auto">
             <div class="flex items-center justify-between gap-4">
-              {alerts.map((alert) => <Card {...alert} />)}
+              {alerts.map((alert, index) => <Card key={index} {...alert} />)}
             </div>
           </div>
         )}
