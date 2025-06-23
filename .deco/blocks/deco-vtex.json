@@ -6,5 +6,13 @@
   },
   "platform": "vtex",
   "account": "medicinalnaweb",
-  "publicUrl": "www.medicinalnaweb.com.br"
+  "publicUrl": "www.medicinalnaweb.com.br",
+  "appKey": {
+    "__resolveType": "website/loaders/secret.ts",
+    "encrypted": "78d2e7c3548605308ec36761ac979aefc8675807d18d37423ffebdc65fec052c7d7478f13ca734c1a8c05ab50c510050"
+  },
+  "appToken": {
+    "__resolveType": "website/loaders/secret.ts",
+    "encrypted": "86e06a86154178c41ac52c4778f77c57b76fb324d9eaffa60e13baa68d22ac568d088a1b35d3f54bf49b9f0e9a16a2f5292cdb6f0759a1bcf3a4b8150670299eaa73883394c297b62553b766f8de8bc3fd7d384eeaae56a83830fd62715f84566d5bad40432fbfe4d621b18bc9b5ca02d8daad682d5508aae7f5f17542b1ba1f82ae332ef4451236ab53f280cae795b2"
+  }
 }
