@@ -11,8 +11,8 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://placehold.co/1440x600",
-          "mobile": "https://placehold.co/640x600",
+          "desktop": "https://assets.decocache.com/medicinal-store/5af137c0-999a-4d06-9a0d-83f67e06dcd1/banner-moro.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/77095474-5863-4430-9618-d0b57a209632/morosil-figado.png",
           "alt": "Shoes",
           "action": {
             "title": "Skate into Adventure!",
@@ -23,8 +23,8 @@
           "href": "#"
         },
         {
-          "desktop": "https://placehold.co/1440x600",
-          "mobile": "https://placehold.co/640x600",
+          "desktop": "https://assets.decocache.com/medicinal-store/d464d9fb-5565-4de6-b6e2-2787a0925aec/banner-moro.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/dd4ca99f-0e2b-4e54-b9ba-7b6611f3ec55/morosil-peso.png",
           "alt": "Men",
           "action": {
             "title": "Discover Fresh Looks",
@@ -35,8 +35,8 @@
           "href": "#"
         },
         {
-          "desktop": "https://placehold.co/1440x600",
-          "mobile": "https://placehold.co/640x600",
+          "desktop": "https://assets.decocache.com/medicinal-store/d464d9fb-5565-4de6-b6e2-2787a0925aec/banner-moro.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/dd4ca99f-0e2b-4e54-b9ba-7b6611f3ec55/morosil-peso.png",
           "action": {
             "label": "Shop Now!",
             "href": "/women",
@@ -125,8 +125,8 @@
         },
         "alt": "Banner Teste",
         "href": "#",
-        "mobile": "https://placehold.co/640x400",
-        "desktop": "https://placehold.co/1440x400"
+        "mobile": "https://assets.decocache.com/medicinal-store/dd4ca99f-0e2b-4e54-b9ba-7b6611f3ec55/morosil-peso.png",
+        "desktop": "https://assets.decocache.com/medicinal-store/d464d9fb-5565-4de6-b6e2-2787a0925aec/banner-moro.png"
       }
     },
     {
@@ -161,8 +161,8 @@
         },
         "alt": "Banner Teste",
         "href": "#",
-        "mobile": "https://placehold.co/640x400",
-        "desktop": "https://placehold.co/1440x400"
+        "mobile": "https://assets.decocache.com/medicinal-store/dd4ca99f-0e2b-4e54-b9ba-7b6611f3ec55/morosil-peso.png",
+        "desktop": "https://assets.decocache.com/medicinal-store/d464d9fb-5565-4de6-b6e2-2787a0925aec/banner-moro.png"
       }
     },
     {
@@ -180,7 +180,7 @@
         "banner": {
           "alt": "Teste",
           "href": "#",
-          "desktop": "https://placehold.co/450x500",
+          "desktop": "https://assets.decocache.com/medicinal-store/dfba6f2f-cf3c-4957-baac-a06c4bcba154/Banner-MOROSIL---MEDIDA-CERTA-mobile.png",
           "mobile": "https://placehold.co/640x400"
         }
       }
@@ -202,7 +202,7 @@
         "alt": "Banner Teste",
         "href": "#",
         "mobile": "https://placehold.co/640x400",
-        "desktop": "https://placehold.co/1440x400"
+        "desktop": "https://assets.decocache.com/medicinal-store/d464d9fb-5565-4de6-b6e2-2787a0925aec/banner-moro.png"
       }
     },
     {
@@ -211,14 +211,14 @@
         "__resolveType": "site/sections/Images/ImageGallery.tsx",
         "banners": [
           {
-            "mobile": "https://placehold.co/640x400",
-            "desktop": "https://placehold.co/720x400",
+            "mobile": "https://assets.decocache.com/medicinal-store/77095474-5863-4430-9618-d0b57a209632/morosil-figado.png",
+            "desktop": "https://assets.decocache.com/medicinal-store/77095474-5863-4430-9618-d0b57a209632/morosil-figado.png",
             "alt": "Banner Gallery 1",
             "href": "#"
           },
           {
-            "mobile": "https://placehold.co/640x400",
-            "desktop": "https://placehold.co/720x400",
+            "mobile": "https://assets.decocache.com/medicinal-store/1ebbe688-e43a-46ab-ad35-7b5f83db8e30/mulher-morosil-mobile.png",
+            "desktop": "https://assets.decocache.com/medicinal-store/1ebbe688-e43a-46ab-ad35-7b5f83db8e30/mulher-morosil-mobile.png",
             "alt": "Banner Gallery 2",
             "href": "#"
           }

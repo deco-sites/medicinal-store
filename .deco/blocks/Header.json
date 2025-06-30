@@ -44,23 +44,23 @@
           "children": [
             {
               "name": "Ansiedade e Estresse",
-              "href": "ansiedade-e-estresse"
+              "href": "#"
             },
             {
               "name": "Aumentar Metabolismo",
-              "href": "/aumentar-metabolismo"
+              "href": "/gerenciamento-de-peso/aumentar-metabolismo"
             },
             {
               "name": "Aumentar Saciedade",
-              "href": "aumentar-saciedade"
+              "href": "/gerenciamento-de-peso/aumentar-saciedade"
             },
             {
               "name": "Bloqueador Carboidrato",
-              "href": "/bloqueador-carboidrato"
+              "href": "/gerenciamento-de-peso/bloqueador-carboidrato"
             },
             {
               "name": "Bloqueador Gordura",
-              "href": "/bloqueador-gordura"
+              "href": "/gerenciamento-de-peso/bloqueador-gordura"
             },
             {
               "name": "Compulsão Alimentar",
@@ -424,51 +424,63 @@
       "children": [
         {
           "name": "Ansiedade e Estresse",
-          "href": "ansiedade-e-estresse"
+          "href": "ansiedade-e-estresse",
+          "children": []
         },
         {
           "name": "Aumentar Metabolismo",
-          "href": "/aumentar-metabolismo"
+          "href": "/aumentar-metabolismo",
+          "children": []
         },
         {
           "name": "Aumentar Saciedade",
-          "href": "aumentar-saciedade"
+          "href": "aumentar-saciedade",
+          "children": []
         },
         {
           "name": "Bloqueador Carboidrato",
-          "href": "/bloqueador-carboidrato"
+          "href": "/bloqueador-carboidrato",
+          "children": []
         },
         {
           "name": "Bloqueador Gordura",
-          "href": "/bloqueador-gordura"
+          "href": "/bloqueador-gordura",
+          "children": []
         },
         {
           "name": "Compulsão Alimentar",
-          "href": "compulsao-alimentar"
+          "href": "compulsao-alimentar",
+          "children": []
         },
         {
           "name": "Detox",
-          "href": "/detox"
+          "href": "/detox",
+          "children": []
         },
         {
           "name": "Diuréticos Naturais",
-          "href": "/diureticos-naturais"
+          "href": "/diureticos-naturais",
+          "children": []
         },
         {
           "name": "Fibras",
-          "href": "/fibras"
+          "href": "/fibras",
+          "children": []
         },
         {
           "name": "Gordura Abdominal",
-          "href": "gordura Abdominal"
+          "href": "gordura Abdominal",
+          "children": []
         },
         {
           "name": "Inibidor Natural da Fome",
-          "href": "/inibidor-natural-da-fome"
+          "href": "/inibidor-natural-da-fome",
+          "children": []
         },
         {
           "name": "Vontade de Doces",
-          "href": "/vontade-de-doces"
+          "href": "/vontade-de-doces",
+          "children": []
         }
       ],
       "@type": "SiteNavigationElement",
@@ -479,51 +491,63 @@
       "children": [
         {
           "name": "Articulações e Ossos",
-          "href": "/articulacoes-e-ossos"
+          "href": "/articulacoes-e-ossos",
+          "children": []
         },
         {
           "name": "Cérebro",
-          "href": "/cerebro"
+          "href": "/cerebro",
+          "children": []
         },
         {
           "name": "Circulação",
-          "href": "/circulacao"
+          "href": "/circulacao",
+          "children": []
         },
         {
           "name": "Colesterol",
-          "href": "/colesterol"
+          "href": "/colesterol",
+          "children": []
         },
         {
           "name": "Digestão e Estômago",
-          "href": "/digestao-e-estomago"
+          "href": "/digestao-e-estomago",
+          "children": []
         },
         {
           "name": "Estresse e Ansiedade",
-          "href": "/estresse-e-ansiedade"
+          "href": "/estresse-e-ansiedade",
+          "children": []
         },
         {
           "name": "Fígado",
-          "href": "/figado"
+          "href": "/figado",
+          "children": []
         },
         {
           "name": "Imunidade",
-          "href": "/imunidade"
+          "href": "/imunidade",
+          "children": []
         },
         {
           "name": "Insônia",
-          "href": "/insonia"
+          "href": "/insonia",
+          "children": []
         },
         {
           "name": "intestino",
-          "href": "/intestino"
+          "href": "/intestino",
+          "children": []
         },
         {
           "name": "Saúde da Mulher",
-          "href": "/saude-da-mulher"
+          "href": "/saude-da-mulher",
+          "children": []
         },
         {
           "name": "Saúde Sexual",
-          "href": "/saude-sexual"
+          "href": "/saude-sexual",
+          "children": []
         }
       ],
       "name": "Saúde e Bem Estar",
@@ -533,35 +557,43 @@
       "children": [
         {
           "name": "Antioxidantes",
-          "href": "/antioxidantes"
+          "href": "/antioxidantes",
+          "children": []
         },
         {
           "name": "Minerais",
-          "href": "/minerais"
+          "href": "/minerais",
+          "children": []
         },
         {
           "name": "Polifenóis e Flavonóides",
-          "href": "/polifenois-e-flavonoides"
+          "href": "/polifenois-e-flavonoides",
+          "children": []
         },
         {
           "name": "Prevenção",
-          "href": "/prevencao"
+          "href": "/prevencao",
+          "children": []
         },
         {
           "name": "Probióticos",
-          "href": "/probioticos"
+          "href": "/probioticos",
+          "children": []
         },
         {
           "name": "Supra Ômegas",
-          "href": "/supra-omegas"
+          "href": "/supra-omegas",
+          "children": []
         },
         {
           "name": "Vitaminas",
-          "href": "/vitaminas"
+          "href": "/vitaminas",
+          "children": []
         },
         {
           "name": "Superóxido Dismutase (SOD)",
-          "href": "/superoxido-dismutase"
+          "href": "/superoxido-dismutase",
+          "children": []
         }
       ],
       "name": "Longevidade",
@@ -571,39 +603,48 @@
       "children": [
         {
           "name": "Calmantes",
-          "href": "/calmantes"
+          "href": "/calmantes",
+          "children": []
         },
         {
           "name": "Circulação",
-          "href": "/circulacao"
+          "href": "/circulacao",
+          "children": []
         },
         {
           "name": "Diuréticos Naturais",
-          "href": "/diureticos-naturais"
+          "href": "/diureticos-naturais",
+          "children": []
         },
         {
           "name": "Estômago",
-          "href": "/estomago"
+          "href": "/estomago",
+          "children": []
         },
         {
           "name": "Fígado",
-          "href": "/figado"
+          "href": "/figado",
+          "children": []
         },
         {
           "name": "Inflamação",
-          "href": "/inflamacao"
+          "href": "/inflamacao",
+          "children": []
         },
         {
           "name": "Intestino",
-          "href": "/intestino"
+          "href": "/intestino",
+          "children": []
         },
         {
           "name": "Nutrição",
-          "href": "/Nutricao"
+          "href": "/Nutricao",
+          "children": []
         },
         {
           "name": "Tinturas",
-          "href": "/tinturas"
+          "href": "/tinturas",
+          "children": []
         }
       ],
       "name": "Fitoterápicos",
@@ -613,47 +654,58 @@
       "children": [
         {
           "name": "Aminoàcidos",
-          "href": "/aminoacidos"
+          "href": "/aminoacidos",
+          "children": []
         },
         {
           "name": "Anticatabólico",
-          "href": "/anticatabolico"
+          "href": "/anticatabolico",
+          "children": []
         },
         {
           "name": "Aumento de Massa",
-          "href": "/aumento-de-massa"
+          "href": "/aumento-de-massa",
+          "children": []
         },
         {
           "name": "Carboidratos",
-          "href": "/carboidratos"
+          "href": "/carboidratos",
+          "children": []
         },
         {
           "name": "Energia e Disposição",
-          "href": "/energia-e-disposicao"
+          "href": "/energia-e-disposicao",
+          "children": []
         },
         {
           "name": "Fadiga Muscular",
-          "href": "/fadiga-muscular"
+          "href": "/fadiga-muscular",
+          "children": []
         },
         {
           "name": "Mais Testo",
-          "href": "/mais-testo"
+          "href": "/mais-testo",
+          "children": []
         },
         {
           "name": "Proteínas",
-          "href": "/proteinas"
+          "href": "/proteinas",
+          "children": []
         },
         {
           "name": "Suplementos",
-          "href": "/suplementos"
+          "href": "/suplementos",
+          "children": []
         },
         {
           "name": "Termogênico",
-          "href": "/termogenico"
+          "href": "/termogenico",
+          "children": []
         },
         {
           "name": "Vasodilatação",
-          "href": "/vasodilatacao"
+          "href": "/vasodilatacao",
+          "children": []
         }
       ],
       "name": "Desempenho Físico",
@@ -663,19 +715,23 @@
       "children": [
         {
           "name": "Morosil",
-          "href": "/morosil"
+          "href": "/morosil",
+          "children": []
         },
         {
           "name": "Minoxidil",
-          "href": "/minoxidil"
+          "href": "/minoxidil",
+          "children": []
         },
         {
           "name": "Maca Peruana",
-          "href": "/maca-peruana"
+          "href": "/maca-peruana",
+          "children": []
         },
         {
           "name": "Reallagen",
-          "href": "/reallagen"
+          "href": "/reallagen",
+          "children": []
         }
       ],
       "name": "Destaques",

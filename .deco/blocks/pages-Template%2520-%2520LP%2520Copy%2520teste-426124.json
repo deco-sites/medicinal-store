@@ -1,0 +1,194 @@
+{
+  "name": "Template - LP Copy teste",
+  "path": "/example-path",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/TitleWithBackground.tsx",
+        "background": {
+          "image": "https://assets.decocache.com/medicinal-store/246174de-28ef-4d06-8746-d6510f69ccba/assinaturas-3.svg",
+          "position": "left"
+        },
+        "subTitle": "<p><span>&nbsp;Esta laranja é cultivada exclusivamente na área em torno do vulcão Etna no leste da Sicília (Itália). A&nbsp;laranja Moro&nbsp;se destaca por sua aparência e coloração vermelha, que é a principal fonte dos pigmentos de&nbsp;antocianidina, um excelente antioxidante.&nbsp;</span></p>",
+        "supTitle": "Morosil",
+        "title": "Primeira e única laranja aprovada no Brasil.",
+        "textAlign": "left",
+        "isFullWidth": true
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/Benefits.tsx",
+        "benefits": [
+          {
+            "icon": "https://assets.decocache.com/medicinal-store/17c74eb0-abc2-4fb1-a6ce-f51b0fa15c51/ShieldCheck.png",
+            "text": "Segurança dos Produtos"
+          },
+          {
+            "text": "Fornecedores Qualificados",
+            "icon": "https://assets.decocache.com/medicinal-store/b10cb942-793d-483d-9587-62ce41f3982f/Star.svg"
+          },
+          {
+            "text": "Conferência farmacèutica",
+            "icon": "https://assets.decocache.com/medicinal-store/81cdbf4c-f6ad-496a-9cb6-6f2dc82b8e46/Vector-(4).svg"
+          },
+          {
+            "icon": "https://assets.decocache.com/medicinal-store/b10cb942-793d-483d-9587-62ce41f3982f/Star.svg",
+            "text": "Fornecedores Qualificados"
+          },
+          {
+            "icon": "https://assets.decocache.com/medicinal-store/3f74cb9a-931b-48d6-8402-51d67256bc47/Vector-(4).svg",
+            "text": "Conferência farmacèutica"
+          },
+          {
+            "text": "Matérias Primas Originais",
+            "icon": "https://assets.decocache.com/medicinal-store/c6ef5bbe-03e7-4809-809e-6f24f286a0fe/Vector-(3).svg"
+          }
+        ],
+        "title": "<p><span>LOREM IPSUM</span></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "backgroundColor": "#ffffff",
+        "image": {
+          "desktop": "https://assets.decocache.com/medicinal-store/da064dbd-c6f6-47ae-ace3-4b7ddad7a8b5/Rectangle-6.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/3a23cd1d-a4b1-4d64-aa2e-d624e10f815a/image-8.png",
+          "alt": "Morosil imagem"
+        },
+        "title": "<p><span>LOREM IPSUM DOLLOR SIT AMET</span></p>",
+        "description": "<p><span>Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&nbsp;</span></p>",
+        "textAlign": "right",
+        "padding": "default"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/OnlyText.tsx",
+        "title": "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac urna eu felis</span></p>",
+        "description": "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl</span></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "textAlign": "right",
+        "image": {
+          "mobile": "https://placehold.co/297x339",
+          "desktop": "https://placehold.co/650x403",
+          "alt": "infocard image"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/Banner.tsx",
+        "desktop": "https://placehold.co/1440x240",
+        "mobile": "https://placehold.co/358x260",
+        "alt": "banner",
+        "href": "#"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/OnlyText.tsx",
+        "title": "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac urna eu felis</span></p>",
+        "description": "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl</span></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "image": {
+          "desktop": "https://placehold.co/650x403",
+          "mobile": "https://placehold.co/297x339",
+          "alt": "imagem infocard"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/Banner.tsx",
+        "desktop": "https://placehold.co/1440x240",
+        "mobile": "https://placehold.co/358x260",
+        "alt": "banner",
+        "href": "#"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/Faq.tsx",
+        "contact": {},
+        "questions": [
+          {
+            "question": "Descrição",
+            "answer": "<p><strong>SAFFRIN</strong><br><br>Estimula a sensação de saciedade, inibe a recaptação de serotonina e controla a compulsão por doces de forma natural. Saffrin é o extrato verdadeiro do açafrão, também conhecido como o \"ouro vermelho\", extraí- do e obtido por secagem dos três estigmas vermelhos da flor de Crocus sativus L.<br>Saffrin é seguro e eficaz no controle do apetite e aumento da sensação de saciedade e redução da necessidade de “beliscar” entre as refeições em indivíduos com sobrepeso.<br><br><strong>PROPRIEDADES</strong><br>Saffrin reduz o apetite e a ansiedade, estudos clínicos tem demonstrado que pode ajudar a aumentar os níveis cerebrais de serotonina (uma substância química conhecida por regular o humor) e, por sua vez, ajuda a evitar o desejo compulsivo por alimentos e o ganho de peso associado.<br>Em relação ao estresse e a ansiedade, o comportamento alimentar sofre influência levando geralmente à hiperfagia, distúrbio alimentar que provoca fome excessiva e consumo compulsivo de sólidos, em que o indivíduo encontra conforto na ingestão de certos alimentos, resultando, assim, no ganho de peso. Isso ocorre principalmente devido a baixos níveis de serotonina, um neurotransmissor que influencia na saciedade, apetite, humor, compulsão e ansiedade.<br>Os resultados indicam que o consumo de Saffrin produz uma redução de refeições e cria um efeito de saciedade que pode contribuir para a perda de peso corporal.</p>"
+          },
+          {
+            "question": "Composição",
+            "answer": "<p>DETALHES DA FORMULAÇÃO <br><br>1. Nunca compre medicamento sem orientação de um profissional habilitado.<br>2. Imagens meramente ilustrativas.<br>3. É necessário uma dieta e exercícios físicos para auxiliar a redução de peso.<br>4. Pessoas com hipersensibilidade à substância não devem ingerir o produto.<br>5. Em caso de hipersensibilidade ao produto, recomenda-se descontinuar o uso e consultar o médico.<br>6. Não use o medicamento com o prazo de validade vencido. Qualquer dúvida, entre em contato com a Medicinal.<br>7. Manter em temperatura ambiente (15 a 30ºC). Proteger da luz, do calor e da umidade.<br>8. Todo medicamento deve ser mantido fora do alcance das crianças.<br>9. Este medicamento não deve ser utilizado por mulheres grávidas sem orientação médica.<br>10. Este medicamento não deve ser utilizado durante o período de amamentação.<br>11. Este medicamento não pode ser partido ou mastigado.<br>12. Este medicamento não deve ser utilizado por menores de 18 anos sem orientação médica.<br>13. Se persistirem os sintomas, o médico deverá ser consultado.</p>"
+          },
+          {
+            "question": "Advertências",
+            "answer": "<p>1. Nunca compre medicamento sem orientação de um profissional habilitado.<br>2. Imagens meramente ilustrativas.<br>3. É necessário uma dieta e exercícios físicos para auxiliar a redução de peso.<br>4. Pessoas com hipersensibilidade à substância não devem ingerir o produto.<br>5. Em caso de hipersensibilidade ao produto, recomenda-se descontinuar o uso e consultar o médico.<br>6. Não use o medicamento com o prazo de validade vencido. Qualquer dúvida, entre em contato com a Medicinal.<br>7. Manter em temperatura ambiente (15 a 30ºC). Proteger da luz, do calor e da umidade.<br>8. Todo medicamento deve ser mantido fora do alcance das crianças.<br>9. Este medicamento não deve ser utilizado por mulheres grávidas sem orientação médica.<br>10. Este medicamento não deve ser utilizado durante o período de amamentação.<br>11. Este medicamento não pode ser partido ou mastigado.<br>12. Este medicamento não deve ser utilizado por menores de 18 anos sem orientação médica.<br>13. Se persistirem os sintomas, o médico deverá ser consultado.</p>"
+          },
+          {
+            "question": "Modo de Usar",
+            "answer": "<p><strong><span>Sugestão de uso:</span></strong><br><span><br>Tomar 2 cápsulas ao dia, sendo 1 caps 30 min. antes do almoço e 1 caps 30 min. antes do jantar. Siga sempre a prescrição do profissional habilitado. Leia com atenção as orientações do rótulo. Informações importantes sobre a forma de uso, acondicionamento, restrições de uso podem estar impressas no rótulo do seu produto.</span></p>"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/Banner.tsx",
+        "desktop": "https://placehold.co/1440x240",
+        "mobile": "https://placehold.co/358x260",
+        "alt": "banner",
+        "href": "#"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "products": {
+          "__resolveType": "vtex/loaders/legacy/productList.ts",
+          "props": {
+            "sort": "OrderByPriceDESC",
+            "term": "MOROSIL"
+          }
+        },
+        "title": "QUEM VIU, VIU TAMBÉM"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
