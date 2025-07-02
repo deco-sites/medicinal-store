@@ -12,6 +12,7 @@ export default {
       },
       colors: {
         ice: "#F0E9E9",
+        black: "#2D2D2D",
       },
       keyframes: {
         sliding: {

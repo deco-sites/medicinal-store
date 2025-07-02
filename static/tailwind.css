@@ -4089,6 +4089,9 @@ details.collapse summary::-webkit-details-marker {
 .w-20 {
   width: 5rem;
 }
+.w-40 {
+  width: 10rem;
+}
 .w-44 {
   width: 11rem;
 }
@@ -4687,7 +4690,7 @@ details.collapse summary::-webkit-details-marker {
 }
 .bg-black {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(45 45 45 / var(--tw-bg-opacity));
 }
 .bg-ice {
   --tw-bg-opacity: 1;
@@ -5126,7 +5129,7 @@ details.collapse summary::-webkit-details-marker {
 }
 .text-black {
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(45 45 45 / var(--tw-text-opacity));
 }
 .text-gray-400 {
   --tw-text-opacity: 1;
@@ -5839,6 +5842,11 @@ details.collapse summary::-webkit-details-marker {
   background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
 }
 
+.hover\:bg-primary:hover {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
+}
+
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
@@ -5859,7 +5867,12 @@ details.collapse summary::-webkit-details-marker {
 
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(45 45 45 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus {
@@ -5945,7 +5958,7 @@ details.collapse summary::-webkit-details-marker {
 
 .group[open] .group-open\:border-black {
   --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  border-color: rgb(45 45 45 / var(--tw-border-opacity));
 }
 
 .group[open] .group-open\:\!bg-white {
