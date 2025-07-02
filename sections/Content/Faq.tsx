@@ -25,7 +25,7 @@ export interface Props extends SectionHeaderProps {
 
 function Question({ question, answer }: Question) {
   return (
-    <details class="collapse collapse-arrow border-t border-base-200">
+    <details class="collapse collapse-arrow border-t border-base-200 rounded-none">
       <summary class="collapse-title text-lg font-medium">
         {question}
       </summary>
@@ -80,8 +80,8 @@ export default function FAQ({
   },
 }: Props) {
   return (
-    <Section.Container>
-      <Section.Header title={title} cta={cta} />
+    <div class="container p-4 mx-auto w-full">
+      <Section.Header title={title} />
 
       <ul class="w-full">
         <li>
@@ -90,6 +90,6 @@ export default function FAQ({
       </ul>
 
       <Contact {...contact} />
-    </Section.Container>
+    </div>
   );
 }
