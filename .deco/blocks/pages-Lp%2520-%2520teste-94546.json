@@ -1,6 +1,5 @@
 {
   "name": "Lp - teste Morosil",
-  "path": "/example-path",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -21,7 +20,7 @@
         "isFullWidth": true,
         "textAlign": "center",
         "textUppercase": false,
-        "title": "Morosil - indicações e benefícios"
+        "title": "Morosil"
       }
     },
     {
@@ -106,13 +105,13 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "title": "<p style=\"text-align: justify\"><strong><span style=\"color: #962239; font-size: 25pt\">Morosil funciona?</span></strong></p>",
         "textAlign": "right",
         "image": {
           "mobile": "https://assets.decocache.com/medicinal-store/1c862ac1-3dfb-482e-872b-af6e04a84f0a/morosil-atuacao.png",
           "desktop": "https://assets.decocache.com/medicinal-store/aca1f2e5-7776-4737-b9f9-d53ce85dea59/AN-Morosil-03.jpg",
           "alt": "infocard image"
         },
-        "title": "<p style=\"text-align: justify\"><strong><span style=\"color: #962239; font-size: 25pt\">Morosil funciona?</span></strong></p>",
         "description": "<p><span style=\"color: #000000; font-size: 15pt\">Morosil é um produto com ação comprovada no metabolismo do tecido adiposo. Sabe-se que a hipertrofia das células de gordura (adipócitos) é um importante fator para a obesidade. Esse aumento do adipócitos causa a hipóxia tecidual, que a esta associada com o desenvolvimento de inflamação e resistência à insulina sistemica. Os compostos bioativos do Morosil, especialmente a antocianidida C3G são capazes de atuar nesse mecanismo, melhorando o metabolismo do tecido adiposo. Os polifenóis tem alto poder antioxidante e atuam na redução dos eventos relacionados à inflamação e estresse oxidativo. A antocianidina C3G também contribui para reduzir o transporte de ácidos graxos e a sua captação pelos adipócitos. Os polifenóis presentes no Morosil contribuem para diminuir a enzima HMG-CoA, que tem papel importante na síntese do coleterol. Desta forma, o uso do Morosil reduz os o colesterol tecidual e aumenta a expressão dos receptores de LDL.</span></p>",
         "backgroundColor": "#ffffff",
         "padding": "none"
@@ -154,9 +153,9 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/OnlyText.tsx",
-        "columns": "2",
         "title": "<p style=\"text-align: center\"><span style=\"color: #892c3e; font-size: 16pt\">Morosil é aprovado pela ANVISA!</span><br><img src=\"https://assets.decocache.com/medicinal-store/ec32e7c0-ca09-4fd9-afe6-a26fa75ed580/laranja.png\"></p>",
-        "description": "<p><strong><span style=\"color: #303030; font-size: 17pt\">Conforme a</span><span style=\"color: #9a2c41; font-size: 17pt\"> farmacêutica Francieli Pagliari</span><span style=\"color: #303030; font-size: 17pt\">, após a aprovação pela </span><span style=\"color: #892c3e; font-size: 17pt\">ANVISA</span><span style=\"color: #303030; font-size: 17pt\">, o </span><span style=\"color: #9a2c41; font-size: 17pt\">Morosil </span><span style=\"color: #303030; font-size: 17pt\">se tornou um produto </span><span style=\"color: #892c3e; font-size: 17pt\">cientificamente comprovado e tecnincamente seguro.</span></strong><br><br><span style=\"color: #000000; font-size: 14pt\">O Morosil é um produto que tem diversos estudos que comprovam sua eficácia. É importante reforçar que o Morosil também foi aprovado pela ANVISA para uso em suplementos alimentares, dando a ele a credibilidade e a segurança que todos queremos. Tomar Morosil significa cuidar da nossa saúde. Mais que apenas o apelo estético, Morosil tem ação benéfica para nossa saúde.</span><em><span style=\"color: #000000; font-size: 12pt\"> Francieli Pagliari; Farmacêutica pela Universidade Regional de Blumenau (FURB-SC) 2005; Pós Graduada em Análises Clínicas (CBES-PR); Pós Graduada em PD em Cosméticos (RACINE-SC);</span></em></p>"
+        "description": "<p><strong><span style=\"color: #303030; font-size: 17pt\">Conforme a</span><span style=\"color: #9a2c41; font-size: 17pt\"> farmacêutica Francieli Pagliari</span><span style=\"color: #303030; font-size: 17pt\">, após a aprovação pela </span><span style=\"color: #892c3e; font-size: 17pt\">ANVISA</span><span style=\"color: #303030; font-size: 17pt\">, o </span><span style=\"color: #9a2c41; font-size: 17pt\">Morosil </span><span style=\"color: #303030; font-size: 17pt\">se tornou um produto </span><span style=\"color: #892c3e; font-size: 17pt\">cientificamente comprovado e tecnincamente seguro.</span></strong><br><br><span style=\"color: #000000; font-size: 14pt\">O Morosil é um produto que tem diversos estudos que comprovam sua eficácia. É importante reforçar que o Morosil também foi aprovado pela ANVISA para uso em suplementos alimentares, dando a ele a credibilidade e a segurança que todos queremos. Tomar Morosil significa cuidar da nossa saúde. Mais que apenas o apelo estético, Morosil tem ação benéfica para nossa saúde.</span><em><span style=\"color: #000000; font-size: 12pt\"> Francieli Pagliari; Farmacêutica pela Universidade Regional de Blumenau (FURB-SC) 2005; Pós Graduada em Análises Clínicas (CBES-PR); Pós Graduada em PD em Cosméticos (RACINE-SC);</span></em></p>",
+        "columns": "2"
       }
     },
     {
@@ -210,5 +209,6 @@
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
-  "__resolveType": "website/pages/Page.tsx"
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/campanhas-morosil"
 }

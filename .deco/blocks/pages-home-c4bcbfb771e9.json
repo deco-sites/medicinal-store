@@ -11,28 +11,28 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://assets.decocache.com/medicinal-store/5af137c0-999a-4d06-9a0d-83f67e06dcd1/banner-moro.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/77095474-5863-4430-9618-d0b57a209632/morosil-figado.png",
-          "alt": "Shoes",
+          "desktop": "https://assets.decocache.com/medicinal-store/ff2646e6-c4e5-48e8-8996-f4746511d1b7/banner-cupom.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/fcf1ebe3-eadb-4104-9e43-10ea5975fd8f/maca-em-po-em-tigela-de-madeira-na-mesa-substancia-nutricional-peru.jpg",
           "action": {
             "title": "Skate into Adventure!",
             "subTitle": "Top-quality roller skate shoes for all levels. ",
             "href": "/s?q=shoes&page=0",
             "label": "Grab Yours Now!"
           },
-          "href": "#"
+          "href": "#",
+          "alt": "Banner 1"
         },
         {
-          "desktop": "https://assets.decocache.com/medicinal-store/d464d9fb-5565-4de6-b6e2-2787a0925aec/banner-moro.png",
+          "desktop": "https://assets.decocache.com/medicinal-store/5a3156a6-efe7-46d7-b640-1c7eb979bcb5/banner-akkermat.png",
           "mobile": "https://assets.decocache.com/medicinal-store/dd4ca99f-0e2b-4e54-b9ba-7b6611f3ec55/morosil-peso.png",
-          "alt": "Men",
           "action": {
             "title": "Discover Fresh Looks",
             "subTitle": "Modern men's clothing and accessories.",
             "href": "/men",
             "label": "Shop the Collection"
           },
-          "href": "#"
+          "href": "#",
+          "alt": "Banner 2"
         },
         {
           "desktop": "https://assets.decocache.com/medicinal-store/d464d9fb-5565-4de6-b6e2-2787a0925aec/banner-moro.png",
@@ -43,8 +43,14 @@
             "title": "Embrace New Trends",
             "subTitle": "Stylish clothes and accessories."
           },
-          "alt": "Woman",
-          "href": "#"
+          "href": "#",
+          "alt": "Banner 3"
+        },
+        {
+          "desktop": "https://assets.decocache.com/medicinal-store/853daf50-b02b-4575-8fea-518ae9b29025/banner-maca-peruana.png",
+          "alt": "Banner 4",
+          "href": "#",
+          "mobile": "https://assets.decocache.com/medicinal-store/baf50a27-899a-4222-80c4-b00c68d8ef5c/maca-peruana-aliado-mobile.png"
         }
       ],
       "preload": true,
@@ -59,7 +65,7 @@
           {
             "label": "Men",
             "href": "/men",
-            "image": "https://assets.decocache.com/storefront/a1e905ee-e680-41f1-93aa-7e2525214e40/1742560225714-38c33c9f-14a1-4048-973b-dc2a75caf1fa"
+            "image": "https://assets.decocache.com/medicinal-store/ec32e7c0-ca09-4fd9-afe6-a26fa75ed580/laranja.png"
           },
           {
             "href": "/women",
