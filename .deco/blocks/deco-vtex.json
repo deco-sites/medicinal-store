@@ -6,7 +6,7 @@
   },
   "platform": "vtex",
   "account": "medicinalnaweb",
-  "publicUrl": "www.medicinalnaweb.com.br",
+  "publicUrl": "https://secure.medicinalnaweb.com.br/",
   "appKey": {
     "__resolveType": "website/loaders/secret.ts",
     "encrypted": "78d2e7c3548605308ec36761ac979aefc8675807d18d37423ffebdc65fec052c7d7478f13ca734c1a8c05ab50c510050"
