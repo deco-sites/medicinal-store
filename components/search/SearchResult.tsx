@@ -253,14 +253,6 @@ function Result(props: SectionProps<typeof loader>) {
     },
   });
 
-  const {
-    itemListElement: [
-      {
-        name: title,
-      },
-    ],
-  } = breadcrumb;
-
   const sortBy = sortOptions.length > 0 && (
     <Sort sortOptions={sortOptions} url={url} />
   );
@@ -272,12 +264,16 @@ function Result(props: SectionProps<typeof loader>) {
           ? <PageResult {...props} />
           : (
             <div class="container flex flex-col gap-4 sm:gap-8 w-full px-4 py-6 sm:py-10">
-              <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+              {breadcrumb?.itemListElement?.length > 0 && (
+                <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+              )}
 
               <div class="flex justify-between items-center">
                 <div class="flex items-center gap-2">
                   <h1 class="text-2xl font-semibold uppercase leading-none">
-                    {title}
+                    {breadcrumb?.itemListElement?.length > 0
+                      ? breadcrumb.itemListElement[0].name
+                      : "Resultado da busca"}
                   </h1>
                   {`(${pageInfo?.records ?? pageInfo?.recordPerPage})`}
                 </div>
