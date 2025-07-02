@@ -56,6 +56,7 @@ import * as $$$$$$39 from "./sections/Product/Wishlist.tsx";
 import * as $$$$$$40 from "./sections/Session.tsx";
 import * as $$$$$$41 from "./sections/Social/InstagramPosts.tsx";
 import * as $$$$$$42 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$44 from "./sections/temp.tsx";
 import * as $$$$$$43 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
@@ -110,6 +111,7 @@ const manifest = {
     "site/sections/Session.tsx": $$$$$$40,
     "site/sections/Social/InstagramPosts.tsx": $$$$$$41,
     "site/sections/Social/WhatsApp.tsx": $$$$$$42,
+    "site/sections/temp.tsx": $$$$$$44,
     "site/sections/Theme/Theme.tsx": $$$$$$43,
   },
   "actions": {
