@@ -1,6 +1,6 @@
 import { useId } from "../../sdk/useId.ts";
+import { Cluster } from "../../apps/site.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
-import { formatPrice } from "../../sdk/format.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
@@ -10,12 +10,15 @@ import AddToCartButton from "./AddToCartButton.tsx";
 import ProductSelector from "./ProductVariantSelector.tsx";
 import ShippingSimulationForm from "../shipping/Form.tsx";
 import Price from "../../sections/Product/Price.tsx";
+import Highlights from "./Highlights.tsx";
+import PurchaseOptions from "./PurchaseOptions.tsx";
 
 interface Props {
   page: ProductDetailsPage | null;
+  clusterDiscount: Cluster[];
 }
 
-function ProductInfo({ page }: Props) {
+function ProductInfo({ page, clusterDiscount }: Props) {
   const id = useId();
 
   if (page === null) {
@@ -30,7 +33,6 @@ function ProductInfo({ page }: Props) {
     listPrice,
     seller = "1",
     availability,
-    installments,
   } = useOffer(offers);
 
   const breadcrumb = {
@@ -58,7 +60,6 @@ function ProductInfo({ page }: Props) {
     },
   });
 
-  //Checks if the variant name is "title"/"default title" and if so, the SKU Selector div doesn't render
   const hasValidVariants = isVariantOf?.hasVariant?.some(
     (variant) =>
       variant?.name?.toLowerCase() !== "title" &&
@@ -71,6 +72,7 @@ function ProductInfo({ page }: Props) {
       {availability === "https://schema.org/InStock"
         ? (
           <>
+            <Highlights product={product} />
             <Price
               type="details"
               product={product}
@@ -82,6 +84,10 @@ function ProductInfo({ page }: Props) {
               product={product}
               class="btn btn-primary no-animation max-w-md"
               disabled={false}
+            />
+            <PurchaseOptions
+              page={page}
+              clusterDiscount={clusterDiscount}
             />
             <ShippingSimulationForm
               items={[{ id: Number(product.sku), quantity: 1, seller: seller }]}

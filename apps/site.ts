@@ -10,7 +10,22 @@ import { rgb24 } from "std/fmt/colors.ts";
 import manifest, { Manifest } from "../manifest.gen.ts";
 import { type Section } from "@deco/deco/blocks";
 import { type App as A, type AppContext as AC } from "@deco/deco";
+
+/** @titleBy clusterId */
+export interface Cluster {
+  clusterId: string;
+  discounts: ClusterDiscount[];
+}
+
+/** @titleBy discount */
+export interface ClusterDiscount {
+  quantity: number;
+  /** @description in percentage */
+  discount: number;
+}
+
 export interface Props extends WebsiteProps {
+  clusterDiscount?: Cluster[];
   /**
    * @title Active Commerce Platform
    * @description Choose the active ecommerce platform

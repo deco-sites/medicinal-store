@@ -64,5 +64,20 @@
     "framework": "htmx"
   },
   "whilelistURLs": [],
-  "whitelistPatterns": []
+  "whitelistPatterns": [],
+  "clusterDiscount": [
+    {
+      "discounts": [
+        {
+          "quantity": 2,
+          "discount": 20
+        },
+        {
+          "quantity": 3,
+          "discount": 30
+        }
+      ],
+      "clusterId": "178"
+    }
+  ]
 }

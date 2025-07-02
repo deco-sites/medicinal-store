@@ -4,11 +4,12 @@ import ProductTitle from "../../components/product/ProductTitle.tsx";
 import ImageGallerySlider from "../../components/product/Gallery.tsx";
 
 import { useDevice } from "@deco/deco/hooks";
+import { SectionProps } from "@deco/deco";
+import { renderSection } from "apps/website/pages/Page.tsx";
 import { ProductDetailsPage, PropertyValue } from "apps/commerce/types.ts";
 
+import type { AppContext, ClusterDiscount } from "../../apps/site.ts";
 import type { Section as SectionComponent } from "@deco/deco/blocks";
-import { renderSection } from "apps/website/pages/Page.tsx";
-import { SectionProps } from "@deco/deco";
 
 /**
  * @titleBy matcher
@@ -25,9 +26,10 @@ export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
   sections?: DescriptionSections[];
+  clusterDiscount: ClusterDiscount[];
 }
 
-const Desktop = ({ page }: Props) => {
+const Desktop = ({ page, clusterDiscount }: Props) => {
   return (
     <div class="grid grid-cols-[1fr_600px] gap-8">
       <div>
@@ -35,18 +37,18 @@ const Desktop = ({ page }: Props) => {
       </div>
       <div>
         <ProductTitle page={page} />
-        <ProductInfo page={page} />
+        <ProductInfo page={page} clusterDiscount={clusterDiscount} />
       </div>
     </div>
   );
 };
 
-const Mobile = ({ page }: Props) => {
+const Mobile = ({ page, clusterDiscount }: Props) => {
   return (
     <div class="flex flex-col w-full">
       <ProductTitle page={page} />
       <ImageGallerySlider page={page} />
-      <ProductInfo page={page} />
+      <ProductInfo page={page} clusterDiscount={clusterDiscount} />
     </div>
   );
 };
@@ -132,7 +134,7 @@ function ProductDetails(props: SectionProps<typeof loader>) {
 
 export const LoadingFallback = () => <Section.Placeholder height="635px" />;
 
-export const loader = (props: Props, req: Request) => {
+export const loader = (props: Props, req: Request, ctx: AppContext) => {
   const descriptionSections = props.sections?.find((section) => {
     if (req.url.indexOf(section.matcher) !== -1) {
       return section.sections;
@@ -141,6 +143,7 @@ export const loader = (props: Props, req: Request) => {
 
   return {
     ...props,
+    clusterDiscount: ctx.clusterDiscount || [],
     descriptionSections,
   };
 };

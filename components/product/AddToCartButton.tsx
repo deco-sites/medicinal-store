@@ -9,6 +9,9 @@ import Icon from "../ui/Icon.tsx";
 import QuantitySelector from "../ui/QuantitySelector.tsx";
 
 export interface Props extends JSX.HTMLAttributes<HTMLButtonElement> {
+  buttonText?: string;
+  hideIcon?: boolean;
+  quantity?: number;
   product: Product;
   seller: string;
   item: AnalyticsItem;
@@ -82,14 +85,14 @@ const onLoad = (id: string, type: string) => {
     }
   });
 };
-const useAddToCart = ({ product, seller }: Props) => {
+const useAddToCart = ({ product, seller, quantity = 1 }: Props) => {
   const platform = usePlatform();
   const { additionalProperty = [], isVariantOf, productID } = product;
   const productGroupID = isVariantOf?.productGroupID;
   if (platform === "vtex") {
     return {
       allowedOutdatedData: ["paymentData"],
-      orderItems: [{ quantity: 1, seller: seller, id: productID }],
+      orderItems: [{ quantity, seller: seller, id: productID }],
     };
   }
   if (platform === "shopify") {
@@ -97,7 +100,7 @@ const useAddToCart = ({ product, seller }: Props) => {
   }
   if (platform === "vnda") {
     return {
-      quantity: 1,
+      quantity,
       itemId: productID,
       attributes: Object.fromEntries(
         additionalProperty.map(({ name, value }) => [name, value]),
@@ -107,12 +110,12 @@ const useAddToCart = ({ product, seller }: Props) => {
   if (platform === "wake") {
     return {
       productVariantId: Number(productID),
-      quantity: 1,
+      quantity,
     };
   }
   if (platform === "nuvemshop") {
     return {
-      quantity: 1,
+      quantity,
       itemId: Number(productGroupID),
       add_to_cart_enhanced: "1",
       attributes: Object.fromEntries(
@@ -124,13 +127,20 @@ const useAddToCart = ({ product, seller }: Props) => {
     return {
       ProductID: productGroupID,
       SkuID: productID,
-      Quantity: 1,
+      Quantity: quantity,
     };
   }
   return null;
 };
 function AddToCartButton(props: Props) {
-  const { product, item, type = "shelf", class: _class } = props;
+  const {
+    product,
+    item,
+    type = "shelf",
+    class: _class,
+    buttonText = "Comprar",
+    hideIcon = false,
+  } = props;
   const platformProps = useAddToCart(props);
   const id = useId();
   const qtdId = useId();
@@ -158,8 +168,8 @@ function AddToCartButton(props: Props) {
         class={clx("flex items-center gap-2 flex-grow", _class?.toString())}
         hx-on:click={useScript(onClick)}
       >
-        <Icon id="shopping_bag" width={24} height={21} />
-        Comprar
+        {!hideIcon && <Icon id="shopping_bag" width={24} height={21} />}
+        {buttonText}
       </button>
       <script
         type="module"
