@@ -140,6 +140,37 @@
       }
     },
     {
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
+        {
+          "value": {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
+              "title": "Teste",
+              "products": {
+                "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+                "props": {
+                  "sort": "price:desc",
+                  "collection": "178",
+                  "count": 3
+                }
+              },
+              "banner": {
+                "mobile": "https://assets.decocache.com/medicinal-store/2aa31bbc-7300-427f-bf33-fd5426d77365/morosil-medida-certa-mobile.png",
+                "desktop": "https://assets.decocache.com/medicinal-store/2aa31bbc-7300-427f-bf33-fd5426d77365/morosil-medida-certa-mobile.png",
+                "alt": "Teste",
+                "href": "Teste 2"
+              }
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/never.ts"
+          }
+        }
+      ]
+    },
+    {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Images/Banner.tsx",
@@ -157,27 +188,6 @@
         "href": "#",
         "mobile": "https://assets.decocache.com/medicinal-store/d43aa10c-164e-4185-a5d7-493171756280/maca-peruana-aliado-mobile2.png",
         "desktop": "https://assets.decocache.com/medicinal-store/853daf50-b02b-4575-8fea-518ae9b29025/banner-maca-peruana.png"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
-        "title": "Teste",
-        "products": {
-          "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
-          "props": {
-            "sort": "price:desc",
-            "collection": "150",
-            "count": 3
-          }
-        },
-        "banner": {
-          "mobile": "https://assets.decocache.com/medicinal-store/2aa31bbc-7300-427f-bf33-fd5426d77365/morosil-medida-certa-mobile.png",
-          "desktop": "https://assets.decocache.com/medicinal-store/2aa31bbc-7300-427f-bf33-fd5426d77365/morosil-medida-certa-mobile.png",
-          "alt": "Teste",
-          "href": "Teste 2"
-        }
       }
     },
     {
