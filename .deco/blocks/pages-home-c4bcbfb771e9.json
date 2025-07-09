@@ -180,15 +180,54 @@
       }
     },
     {
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
+        {
+          "value": {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
+              "products": {
+                "__resolveType": "commerce/loaders/product/extensions/list.ts",
+                "extensions": [
+                  {
+                    "__resolveType": "vtex/loaders/product/extensions/list.ts",
+                    "similars": false
+                  }
+                ],
+                "data": {
+                  "__resolveType": "vtex/loaders/legacy/productList.ts",
+                  "props": {
+                    "sort": "OrderByPriceDESC",
+                    "collection": "156",
+                    "count": 3
+                  }
+                }
+              },
+              "banner": {
+                "mobile": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
+                "desktop": "https://assets.decocache.com/medicinal-store/e797baee-b6a4-4468-8ed1-d866ab8f0ad6/UC-II.jpg",
+                "alt": "Teste",
+                "href": "Teste 2"
+              }
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/never.ts"
+          }
+        }
+      ]
+    },
+    {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
-        "title": "Teste",
         "products": {
           "__resolveType": "commerce/loaders/product/extensions/list.ts",
           "extensions": [
             {
-              "__resolveType": "vtex/loaders/product/extensions/list.ts"
+              "__resolveType": "vtex/loaders/product/extensions/list.ts",
+              "similars": false
             }
           ],
           "data": {
@@ -196,13 +235,14 @@
             "props": {
               "sort": "OrderByPriceDESC",
               "collection": "156",
-              "count": 5
+              "count": 5,
+              "similars": true
             }
           }
         },
         "banner": {
-          "mobile": "https://assets.decocache.com/medicinal-store/2aa31bbc-7300-427f-bf33-fd5426d77365/morosil-medida-certa-mobile.png",
-          "desktop": "https://assets.decocache.com/medicinal-store/2aa31bbc-7300-427f-bf33-fd5426d77365/morosil-medida-certa-mobile.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/e797baee-b6a4-4468-8ed1-d866ab8f0ad6/UC-II.jpg",
           "alt": "Teste",
           "href": "Teste 2"
         }
@@ -214,8 +254,8 @@
         "__resolveType": "site/sections/Images/ImageGallery.tsx",
         "banners": [
           {
-            "mobile": "https://assets.decocache.com/medicinal-store/e797baee-b6a4-4468-8ed1-d866ab8f0ad6/UC-II.jpg",
-            "desktop": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
+            "mobile": "https://assets.decocache.com/medicinal-store/709259d0-4181-4f8c-be06-4aa6595f6e67/morosil-selo.png",
+            "desktop": "https://assets.decocache.com/medicinal-store/15722357-b8a1-4625-a3a7-0f00a94b81b0/morosil-selo-mobile.png",
             "alt": "Banner Gallery 1",
             "href": "#"
           },
