@@ -61,12 +61,12 @@ const onLoad = (id: string, type: string) => {
       }
       input.value = quantity.toString();
       checkbox.checked = quantity > 0;
-      container?.querySelectorAll<HTMLButtonElement>("button").forEach((node) =>
-        node.disabled = false
-      );
-      container?.querySelectorAll<HTMLButtonElement>("input").forEach((node) =>
-        node.disabled = false
-      );
+      // container?.querySelectorAll<HTMLButtonElement>("button").forEach((node) =>
+      //   node.disabled = false
+      // );
+      // container?.querySelectorAll<HTMLButtonElement>("input").forEach((node) =>
+      //   node.disabled = false
+      // );
     }
 
     if (type === "shelf") {
@@ -157,14 +157,14 @@ function AddToCartButton(props: Props) {
       {type === "productPage" && (
         <QuantitySelector
           id={qtdId}
-          disabled
+          // disabled
           min={0}
           max={100}
           hx-on:change={useScript(onChange, id, qtdId)}
         />
       )}
       <button
-        disabled
+        // disabled
         class={clx("flex items-center gap-2 flex-grow", _class?.toString())}
         hx-on:click={useScript(onClick)}
       >

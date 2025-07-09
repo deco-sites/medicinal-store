@@ -6,7 +6,6 @@ import { ProductDetailsPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 
 import OutOfStock from "./OutOfStock.tsx";
-import AddToCartButton from "./AddToCartButton.tsx";
 import ProductSelector from "./ProductVariantSelector.tsx";
 import ShippingSimulationForm from "../shipping/Form.tsx";
 import Price from "../../sections/Product/Price.tsx";
@@ -76,14 +75,6 @@ function ProductInfo({ page, clusterDiscount }: Props) {
             <Price
               type="details"
               product={product}
-            />
-            <AddToCartButton
-              type="productPage"
-              item={item}
-              seller={seller}
-              product={product}
-              class="btn btn-primary no-animation max-w-md"
-              disabled={false}
             />
             <PurchaseOptions
               page={page}

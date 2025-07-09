@@ -4,14 +4,17 @@ import { formatPrice } from "../../sdk/format.ts";
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import AddToCartButton from "./AddToCartButton.tsx";
+import { useSection } from "@deco/deco/hooks";
 
 interface Props {
   page: ProductDetailsPage;
+  quantity?: number;
   clusterDiscount: Cluster[];
 }
 
 export default function ({
   page,
+  quantity = 1,
   clusterDiscount,
 }: Props) {
   const { product, breadcrumbList } = page;
@@ -31,10 +34,6 @@ export default function ({
       )
     )[0]?.discounts || [];
 
-  if (discountsOnCluster.length === 0) {
-    return null;
-  }
-
   const item = mapProductToAnalyticsItem({
     product,
     breadcrumbList: breadcrumb,
@@ -42,38 +41,68 @@ export default function ({
     listPrice,
   });
 
+  if (discountsOnCluster.length === 0) {
+    return (
+      <AddToCartButton
+        type="productPage"
+        item={item}
+        seller={seller}
+        product={product}
+        class="btn btn-primary no-animation max-w-md"
+        disabled={false}
+      />
+    );
+  }
+
   return (
-    <div class="flex gap-2 flex-wrap">
-      {discountsOnCluster.map((discount, index) => (
-        <div
-          key={index}
-          class="card w-40 bg-white border border-primary text-primary p-4 flex flex-col gap-2"
-        >
-          <span class="badge border-primary bg-primary text-white">
-            {`${discount.discount}%`}
-          </span>
-          <div>
-            <h2 class="text-xl font-bold text-black">
-              {`${discount.quantity} ${
-                discount.quantity > 1 ? "unidades" : "unidade"
-              }`}
-            </h2>
-            <span class="text-base text-black">
-              {formatPrice(price * (1 - discount.discount / 100))} / cada
+    <div id="purchase-options" class="max-w-md">
+      <div
+        class="flex flex-col gap-2"
+        style={{ margin: 0 }}
+      >
+        {discountsOnCluster.map((discount, index) => (
+          <button
+            key={index}
+            class="w-full rounded-full bg-white border border-primary text-primary p-2 flex gap-2 cursor-pointer"
+            hx-post={useSection({
+              props: {
+                only_purchase_options: true,
+                quantity: discount.quantity,
+              }
+            })}
+            hx-swap="outerHTML"
+            hx-target="#purchase-options"
+            disabled={quantity === discount.quantity}
+          >
+            <input
+              type="radio"
+              name="quantity"
+              value={discount.quantity}
+              class="radio radio-primary pointer-events-none"
+              checked={quantity === discount.quantity}
+            />
+            <span>
+              <span>{discount.quantity} {discount.quantity > 1 ? "unidades" : "unidade"}</span>
+              <b>por {formatPrice(price * (1 - discount.discount / 100))}</b>
+              {discount.quantity > 1 && <span> / cada</span>}
+              {discount.discount > 0 && (
+                <span class="ml-1">
+                  ({discount.discount}% OFF)
+                </span>
+              )}
             </span>
-          </div>
-          <AddToCartButton
-            type="shelf"
-            item={item}
-            class="btn bg-white border-primary text-primary hover:bg-primary hover:text-white hover:border-primary"
-            seller={seller}
-            product={product}
-            quantity={discount.quantity}
-            hideIcon={true}
-            disabled={false}
-          />
-        </div>
-      ))}
-    </div>
+          </button>
+        ))}
+      </div>
+      <AddToCartButton
+        type="shelf"
+        item={item}
+        class="btn btn-primary no-animation w-full mt-2"
+        seller={seller}
+        product={product}
+        quantity={quantity}
+        disabled={false}
+      />
+    </div >
   );
 }

@@ -28,9 +28,8 @@ const onLoad = () => {
     const fileNameDisplay = document.getElementById("selected-file-name");
     if (fileNameDisplay) {
       if (e.target.files.length > 0) {
-        fileNameDisplay.textContent = `Arquivo selecionado: ${
-          e.target.files[0].name
-        }`;
+        fileNameDisplay.textContent = `Arquivo selecionado: ${e.target.files[0].name
+          }`;
         fileNameDisplay.classList.remove("hidden");
       } else {
         fileNameDisplay.textContent = "";
@@ -120,6 +119,7 @@ export default function Form({
         hx-swap="outerHTML"
         hx-post={useComponent(import.meta.url)}
         hx-target="closest section"
+        hx-encoding='multipart/form-data'
       >
         <div class="uppercase font-bold text-sm md:text-base">
           Envie sua receita
@@ -176,7 +176,7 @@ export default function Form({
           </p>
         </div>
         <select
-          name="type"
+          name="channel"
           class="select select-bordered flex-grow text-sm w-full"
           required
         >
@@ -217,50 +217,46 @@ export const action = async (
   ctx: AppContext,
 ) => {
   try {
+    const acronym = "RM";
     const platform = usePlatform();
     const formData = await req.formData() as FormData;
+
+    // Create a new FormData object to hold the data
+    const data = {
+      name: formData.get("name") as string || "",
+      email: formData.get("email") as string || "",
+      notes: formData.get("notes") as string || "",
+      channel: formData.get("channel") as string || "",
+      // lastName: formData.get("lastName") as string || "",
+      whatsapp: formData.get("whatsapp") as string || "",
+    };
+
     if (platform === "vtex") {
       // deno-lint-ignore no-explicit-any
-      await (ctx as any).invoke("vtex/actions/masterdata/createDocument.ts", {
-        data: formData,
-        acronym: "RM",
-        isPrivateEntity: true,
+      const response = await (ctx as any).invoke("vtex/actions/masterdata/createDocument.ts", {
+        data,
+        acronym,
       });
 
-      // import { FreshContext, Handlers } from '$fresh/server.ts'
+      const responseAttachment = await fetch(
+        `https://medicinalnaweb.vtexcommercestable.com.br/api/dataentities/${acronym}/documents/${response.DocumentId}/prescription/attachments`,
+        {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/vnd.vtex.ds.v10+json',
+          },
+          body: formData,
+        },
+      );
 
-      // export const handler: Handlers = {
-      //     async POST(_req: Request, _ctx: FreshContext) {
-      //         const params = new URLSearchParams(_req.url.split('?')[1])
-
-      //         const acronym = params.get('acronym')
-      //         const field = params.get('field')
-      //         const id = params.get('id')
-
-      //         const r = await fetch(
-      //             `https://tfcucl.vtexcommercestable.com.br/api/dataentities/${acronym}/documents/${id}/${field}/attachments`,
-      //             {
-      //                 method: 'POST',
-      //                 body: await _req.formData(),
-      //             },
-      //         )
-
-      //         if (!r.ok) {
-      //             return new Response(
-      //                 JSON.stringify({
-      //                     error: `${r.status} ${await r.text()}`,
-      //                 }),
-      //                 { status: 400 },
-      //             )
-      //         }
-
-      //         return new Response(null, { status: 204 })
-      //     },
-      // }
+      if (!responseAttachment.ok) {
+        const text = await responseAttachment.text();
+        throw new Error(text);
+      }
     }
-
-    return { status: "success" };
-  } catch {
+  } catch (error) {
+    console.error(error);
     return { status: "failed" };
   }
+  return { status: "success" };
 };

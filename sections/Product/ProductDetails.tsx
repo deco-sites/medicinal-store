@@ -1,6 +1,7 @@
 import Section from "../../components/ui/Section.tsx";
 import ProductInfo from "../../components/product/ProductInfo.tsx";
 import ProductTitle from "../../components/product/ProductTitle.tsx";
+import PurchaseOptions from "../../components/product/PurchaseOptions.tsx";
 import ImageGallerySlider from "../../components/product/Gallery.tsx";
 
 import { useDevice } from "@deco/deco/hooks";
@@ -27,6 +28,10 @@ export interface Props {
   page: ProductDetailsPage | null;
   sections?: DescriptionSections[];
   clusterDiscount: ClusterDiscount[];
+  /** @hidden */
+  only_purchase_options?: boolean;
+  /** @hidden */
+  quantity?: number;
 }
 
 const Desktop = ({ page, clusterDiscount }: Props) => {
@@ -67,6 +72,16 @@ function ProductDetails(props: SectionProps<typeof loader>) {
   const { description } = product;
 
   const device = useDevice();
+
+  if (props.only_purchase_options) {
+    return (
+      <PurchaseOptions
+        page={page}
+        quantity={props.quantity || 1}
+        clusterDiscount={props.clusterDiscount}
+      />
+    );
+  }
 
   if (!page) {
     return (
