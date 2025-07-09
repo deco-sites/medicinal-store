@@ -748,12 +748,12 @@
     {
       "icon": "https://assets.decocache.com/medicinal-store/e292ff37-8fa7-4ce3-83bd-a546187e8ef0/Info.svg",
       "text": "<p>Atendimento</p>",
-      "href": "#"
+      "href": "/fale-conosco"
     },
     {
       "icon": "https://assets.decocache.com/medicinal-store/b98f4eec-9e07-411c-8836-fd55a6e81bc4/At.svg",
       "text": "<p>Blog</p>",
-      "href": "#"
+      "href": "https://blog.medicinalnaweb.com.br/"
     }
   ]
 }
