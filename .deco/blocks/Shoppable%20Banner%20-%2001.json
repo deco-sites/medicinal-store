@@ -23,8 +23,8 @@
       "link": "/feminino",
       "label": "Bag",
       "mobile": {
-        "x": 30,
-        "y": 30
+        "y": 30,
+        "x": 30
       },
       "desktop": {
         "x": 30,
@@ -36,12 +36,12 @@
     "layout": {
       "position": "text-center"
     },
-    "content": "Your description"
+    "content": "aaaaaaaaaaaaaaaaa"
   },
   "image": {
-    "mobile": "https://assets.decocache.com/medicinal-store/b504e1f5-7b6a-4244-8fc1-2bc2bc461b3d/morosil-figado-desktop.png",
-    "altText": "a",
-    "desktop": "https://assets.decocache.com/medicinal-store/dfba6f2f-cf3c-4957-baac-a06c4bcba154/Banner-MOROSIL---MEDIDA-CERTA-mobile.png"
+    "mobile": "https://assets.decocache.com/medicinal-store/e797baee-b6a4-4468-8ed1-d866ab8f0ad6/UC-II.jpg",
+    "altText": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "desktop": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg"
   },
   "title": {
     "layout": {
