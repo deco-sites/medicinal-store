@@ -45,83 +45,103 @@
       "interval": 5
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Category/CategoryGrid.tsx",
-        "cta": "/all",
-        "items": [
-          {
-            "label": "Men",
-            "href": "/men",
-            "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
+        {
+          "value": {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Category/CategoryGrid.tsx",
+              "cta": "/all",
+              "items": [
+                {
+                  "label": "Men",
+                  "href": "/men",
+                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+                },
+                {
+                  "href": "/women",
+                  "label": "Women",
+                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+                },
+                {
+                  "href": "/kids",
+                  "label": "Kids",
+                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+                },
+                {
+                  "href": "/accessories",
+                  "label": "Accessories",
+                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+                },
+                {
+                  "href": "/home-and-living",
+                  "label": "Home & Living",
+                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+                },
+                {
+                  "href": "/men",
+                  "label": "Men",
+                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+                },
+                {
+                  "label": "Women",
+                  "href": "/women",
+                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+                },
+                {
+                  "href": "/kids",
+                  "label": "Kids",
+                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+                },
+                {
+                  "href": "/accessories",
+                  "label": "Accessories",
+                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+                },
+                {
+                  "href": "/home-and-living",
+                  "label": "Home & Living",
+                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+                }
+              ]
+            }
           },
-          {
-            "href": "/women",
-            "label": "Women",
-            "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-          },
-          {
-            "href": "/kids",
-            "label": "Kids",
-            "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-          },
-          {
-            "href": "/accessories",
-            "label": "Accessories",
-            "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-          },
-          {
-            "href": "/home-and-living",
-            "label": "Home & Living",
-            "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-          },
-          {
-            "href": "/men",
-            "label": "Men",
-            "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-          },
-          {
-            "label": "Women",
-            "href": "/women",
-            "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-          },
-          {
-            "href": "/kids",
-            "label": "Kids",
-            "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-          },
-          {
-            "href": "/accessories",
-            "label": "Accessories",
-            "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-          },
-          {
-            "href": "/home-and-living",
-            "label": "Home & Living",
-            "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+          "rule": {
+            "__resolveType": "website/matchers/never.ts"
           }
-        ]
-      }
+        }
+      ]
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Images/Banner.tsx",
-        "cta": {
-          "label": "Sign Up",
-          "href": "#"
-        },
-        "title": "Register and Save Big!",
-        "description": "<p><span style=\"color: rgb(45, 194, 107);\" data-mce-style=\"color: rgb(45, 194, 107);\">Sign up now to get up to 50% off on your first order. Limited time offer!</span></p>",
-        "images": {
-          "desktop": "https://assets.decocache.com/storefront/d4ba070d-c3ba-4a9c-b75f-e01f859063f1/1742560233015-cf96d47f-564f-40da-ad94-7acac5f39327",
-          "mobile": "https://assets.decocache.com/storefront/c023f1c2-74b9-4b3a-a947-ff5de9d02347/1742560234608-4d5c3212-3f75-4d50-89f3-970815748b43"
-        },
-        "alt": "Banner Teste",
-        "href": "#",
-        "mobile": "https://assets.decocache.com/medicinal-store/dd4ca99f-0e2b-4e54-b9ba-7b6611f3ec55/morosil-peso.png",
-        "desktop": "https://assets.decocache.com/medicinal-store/d464d9fb-5565-4de6-b6e2-2787a0925aec/banner-moro.png"
-      }
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
+        {
+          "value": {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Images/Banner.tsx",
+              "cta": {
+                "label": "Sign Up",
+                "href": "#"
+              },
+              "title": "Register and Save Big!",
+              "description": "<p><span style=\"color: rgb(45, 194, 107);\" data-mce-style=\"color: rgb(45, 194, 107);\">Sign up now to get up to 50% off on your first order. Limited time offer!</span></p>",
+              "images": {
+                "desktop": "https://assets.decocache.com/storefront/d4ba070d-c3ba-4a9c-b75f-e01f859063f1/1742560233015-cf96d47f-564f-40da-ad94-7acac5f39327",
+                "mobile": "https://assets.decocache.com/storefront/c023f1c2-74b9-4b3a-a947-ff5de9d02347/1742560234608-4d5c3212-3f75-4d50-89f3-970815748b43"
+              },
+              "alt": "Banner Teste",
+              "href": "#",
+              "mobile": "https://assets.decocache.com/medicinal-store/dd4ca99f-0e2b-4e54-b9ba-7b6611f3ec55/morosil-peso.png",
+              "desktop": "https://assets.decocache.com/medicinal-store/d464d9fb-5565-4de6-b6e2-2787a0925aec/banner-moro.png"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/never.ts"
+          }
+        }
+      ]
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -140,35 +160,25 @@
       }
     },
     {
-      "__resolveType": "website/flags/multivariate/section.ts",
-      "variants": [
-        {
-          "value": {
-            "__resolveType": "website/sections/Rendering/Lazy.tsx",
-            "section": {
-              "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
-              "title": "Teste",
-              "products": {
-                "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
-                "props": {
-                  "sort": "price:desc",
-                  "collection": "178",
-                  "count": 3
-                }
-              },
-              "banner": {
-                "mobile": "https://assets.decocache.com/medicinal-store/2aa31bbc-7300-427f-bf33-fd5426d77365/morosil-medida-certa-mobile.png",
-                "desktop": "https://assets.decocache.com/medicinal-store/2aa31bbc-7300-427f-bf33-fd5426d77365/morosil-medida-certa-mobile.png",
-                "alt": "Teste",
-                "href": "Teste 2"
-              }
-            }
-          },
-          "rule": {
-            "__resolveType": "website/matchers/never.ts"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
+        "title": "Teste",
+        "products": {
+          "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+          "props": {
+            "sort": "price:desc",
+            "collection": "158",
+            "count": 3
           }
+        },
+        "banner": {
+          "mobile": "https://assets.decocache.com/medicinal-store/2aa31bbc-7300-427f-bf33-fd5426d77365/morosil-medida-certa-mobile.png",
+          "desktop": "https://assets.decocache.com/medicinal-store/2aa31bbc-7300-427f-bf33-fd5426d77365/morosil-medida-certa-mobile.png",
+          "alt": "Teste",
+          "href": "Teste 2"
         }
-      ]
+      }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -196,14 +206,14 @@
         "__resolveType": "site/sections/Images/ImageGallery.tsx",
         "banners": [
           {
-            "mobile": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
-            "desktop": "https://assets.decocache.com/medicinal-store/77095474-5863-4430-9618-d0b57a209632/morosil-figado.png",
+            "mobile": "https://assets.decocache.com/medicinal-store/e797baee-b6a4-4468-8ed1-d866ab8f0ad6/UC-II.jpg",
+            "desktop": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
             "alt": "Banner Gallery 1",
             "href": "#"
           },
           {
-            "mobile": "https://assets.decocache.com/medicinal-store/1ebbe688-e43a-46ab-ad35-7b5f83db8e30/mulher-morosil-mobile.png",
-            "desktop": "https://assets.decocache.com/medicinal-store/1ebbe688-e43a-46ab-ad35-7b5f83db8e30/mulher-morosil-mobile.png",
+            "mobile": "https://assets.decocache.com/medicinal-store/2272675a-e846-4f1f-b69a-85220c3fd932/CANTIN.jpg",
+            "desktop": "https://assets.decocache.com/medicinal-store/53b4f631-aa3d-4265-8d9d-fa5cd8678982/CANTIN-mobile.jpg",
             "alt": "Banner Gallery 2",
             "href": "#"
           }
