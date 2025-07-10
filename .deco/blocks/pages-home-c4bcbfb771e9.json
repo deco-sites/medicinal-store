@@ -37,7 +37,7 @@
         {
           "desktop": "https://assets.decocache.com/medicinal-store/534bbf6b-7359-41f8-816a-60bf79d7de15/morosil-medida-certa.png",
           "mobile": "https://assets.decocache.com/medicinal-store/2aa31bbc-7300-427f-bf33-fd5426d77365/morosil-medida-certa-mobile.png",
-          "href": "#",
+          "href": "/morosil-500mg-60-doses/p?skuId=1015",
           "alt": "Banner 3"
         }
       ],
@@ -147,16 +147,18 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "Teste VTEX",
         "products": {
           "__resolveType": "vtex/loaders/legacy/productList.ts",
           "props": {
             "query": "a",
             "sort": "OrderByPriceDESC",
             "count": 10,
-            "fuzzy": "automatic"
+            "fuzzy": "automatic",
+            "similars": true,
+            "collection": "156"
           }
-        }
+        },
+        "title": "Destaques"
       }
     },
     {
@@ -244,7 +246,7 @@
           "mobile": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
           "desktop": "https://assets.decocache.com/medicinal-store/e797baee-b6a4-4468-8ed1-d866ab8f0ad6/UC-II.jpg",
           "alt": "Teste",
-          "href": "Teste 2"
+          "href": "/uc-ii-40mg-30-doses/p?skuId=1069"
         }
       }
     },
@@ -257,13 +259,13 @@
             "mobile": "https://assets.decocache.com/medicinal-store/709259d0-4181-4f8c-be06-4aa6595f6e67/morosil-selo.png",
             "desktop": "https://assets.decocache.com/medicinal-store/15722357-b8a1-4625-a3a7-0f00a94b81b0/morosil-selo-mobile.png",
             "alt": "Banner Gallery 1",
-            "href": "#"
+            "href": "/morosil-500mg-60-doses/p?skuId=1015"
           },
           {
             "mobile": "https://assets.decocache.com/medicinal-store/2272675a-e846-4f1f-b69a-85220c3fd932/CANTIN.jpg",
             "desktop": "https://assets.decocache.com/medicinal-store/53b4f631-aa3d-4265-8d9d-fa5cd8678982/CANTIN-mobile.jpg",
             "alt": "Banner Gallery 2",
-            "href": "#"
+            "href": "/cactin-500mg-60-doses/p?skuId=1016"
           }
         ]
       }
