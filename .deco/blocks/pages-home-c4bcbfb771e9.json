@@ -216,7 +216,7 @@
             "__resolveType": "vtex/loaders/legacy/productList.ts",
             "props": {
               "sort": "OrderByPriceDESC",
-              "collection": "156",
+              "collection": "179",
               "count": 5,
               "similars": true
             }
@@ -224,9 +224,39 @@
         },
         "banner": {
           "mobile": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
-          "desktop": "https://assets.decocache.com/medicinal-store/e797baee-b6a4-4468-8ed1-d866ab8f0ad6/UC-II.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/f9a326c9-42a0-4e76-8a68-036d7fdc0411/banner.jpg",
           "alt": "Teste",
-          "href": "/uc-ii-40mg-30-doses/p?skuId=1069"
+          "href": "#"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
+        "products": {
+          "__resolveType": "commerce/loaders/product/extensions/list.ts",
+          "extensions": [
+            {
+              "__resolveType": "vtex/loaders/product/extensions/list.ts",
+              "similars": false
+            }
+          ],
+          "data": {
+            "__resolveType": "vtex/loaders/legacy/productList.ts",
+            "props": {
+              "sort": "OrderByPriceDESC",
+              "collection": "180",
+              "count": 5,
+              "similars": true
+            }
+          }
+        },
+        "banner": {
+          "mobile": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/3050f23f-8be8-4bf3-9f10-186d0276b081/Diureticos-naturais.jpg",
+          "alt": "Teste",
+          "href": "#"
         }
       }
     },
@@ -236,8 +266,8 @@
         "__resolveType": "site/sections/Images/ImageGallery.tsx",
         "banners": [
           {
-            "mobile": "https://assets.decocache.com/medicinal-store/54b854eb-528b-408c-bd41-7bdb27d15e2e/PROSLEEP-MOBILE.jpg",
-            "desktop": "https://assets.decocache.com/medicinal-store/47be8129-875a-44da-a253-2a4b7302e54e/PROSLEEP.jpg",
+            "mobile": "https://assets.decocache.com/medicinal-store/e797baee-b6a4-4468-8ed1-d866ab8f0ad6/UC-II.jpg",
+            "desktop": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
             "alt": "Banner Gallery 1",
             "href": "#"
           },
