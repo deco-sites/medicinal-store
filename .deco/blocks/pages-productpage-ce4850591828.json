@@ -1,6 +1,5 @@
 {
   "name": "Product Page",
-  "path": "/:slug/p",
   "default": {
     "possiblePaths": []
   },
@@ -63,5 +62,6 @@
       }
     }
   ],
-  "__resolveType": "website/pages/Page.tsx"
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/old_teste-wave/p"
 }

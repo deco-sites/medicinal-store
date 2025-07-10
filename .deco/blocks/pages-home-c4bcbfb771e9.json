@@ -37,8 +37,8 @@
         {
           "desktop": "https://assets.decocache.com/medicinal-store/534bbf6b-7359-41f8-816a-60bf79d7de15/morosil-medida-certa.png",
           "mobile": "https://assets.decocache.com/medicinal-store/2aa31bbc-7300-427f-bf33-fd5426d77365/morosil-medida-certa-mobile.png",
-          "href": "/morosil-500mg-60-doses/p?skuId=1015",
-          "alt": "Banner 3"
+          "alt": "Banner 3",
+          "href": "#"
         }
       ],
       "preload": true,
@@ -239,7 +239,7 @@
             "mobile": "https://assets.decocache.com/medicinal-store/54b854eb-528b-408c-bd41-7bdb27d15e2e/PROSLEEP-MOBILE.jpg",
             "desktop": "https://assets.decocache.com/medicinal-store/47be8129-875a-44da-a253-2a4b7302e54e/PROSLEEP.jpg",
             "alt": "Banner Gallery 1",
-            "href": "/morosil-500mg-60-doses/p?skuId=1015"
+            "href": "#"
           },
           {
             "mobile": "https://assets.decocache.com/medicinal-store/2272675a-e846-4f1f-b69a-85220c3fd932/CANTIN.jpg",
