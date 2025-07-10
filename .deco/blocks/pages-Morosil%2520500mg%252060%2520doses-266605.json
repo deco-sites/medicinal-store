@@ -1,5 +1,6 @@
 {
-  "name": "Product Page",
+  "name": "Morosil 500mg 60 doses",
+  "path": "/morosil-500mg-60-doses/p",
   "default": {
     "possiblePaths": []
   },
@@ -62,6 +63,5 @@
       }
     }
   ],
-  "__resolveType": "website/pages/Page.tsx",
-  "path": "/old_teste-wave/p"
+  "__resolveType": "website/pages/Page.tsx"
 }

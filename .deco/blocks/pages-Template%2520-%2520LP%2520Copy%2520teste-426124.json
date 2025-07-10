@@ -1,5 +1,5 @@
 {
-  "path": "/campanhas-maca",
+  "path": "/maca-peruana",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -118,7 +118,8 @@
         "backgroundColor": "#ffffff",
         "image": {
           "desktop": "https://assets.decocache.com/medicinal-store/e58932e0-d3f6-4032-aab5-761cd0d88856/maca-peruana-aliado.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/baf50a27-899a-4222-80c4-b00c68d8ef5c/maca-peruana-aliado-mobile.png"
+          "mobile": "https://assets.decocache.com/medicinal-store/baf50a27-899a-4222-80c4-b00c68d8ef5c/maca-peruana-aliado-mobile.png",
+          "alt": "#"
         },
         "title": "<h2 style=\"text-align: right\"><strong><span style=\"color: #cb9952; font-size: 25pt\">Maca Peruana e seus benefícios</span></strong></h2>",
         "description": "<p style=\"text-align: right\"><span style=\"color: #000000; font-size: 15pt\">Além de seus efeitos afrodisíacos, a </span><strong><span style=\"color: #000000; font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: #000000; font-size: 15pt\"> é rica em carboidratos, proteínas, fibras e minerais. Estudos indicam que ela possui atividades espermatogênicas e de aumento da fertilidade. Além disso, a </span><strong><span style=\"color: #000000; font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: #000000; font-size: 15pt\"> é rica em metabólitos secundários, incluindo alcaloides, flavonoides e esteroides, que podem explicar seu uso como medicamento natural.</span><br><strong><span style=\"color: #cb9952; font-size: 20pt\">Maca Peruana benefícios feminino</span></strong></p><p style=\"text-align: right\"><span style=\"color: #000000; font-size: 15pt\">A </span><strong><span style=\"color: #000000; font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: #000000; font-size: 15pt\"> é amplamente reconhecida por seus benefícios à saúde, principalmente na melhora do desempenho sexual. Ela também é conhecida por aumentar a produção de espermatozoides e a fertilidade feminina.</span><br><strong><span style=\"color: #cb9952; font-size: 20pt\">Maca Peruana na menopausa</span></strong><br><span style=\"color: #000000; font-size: 15pt\">Mulheres na menopausa podem se beneficiar da </span><strong><span style=\"color: #000000; font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: #000000; font-size: 15pt\"> devido à sua capacidade de equilibrar os hormônios e aliviar sintomas como ondas de calor, insônia e mudanças de humor.</span><br><strong><span style=\"color: #cb9952; font-size: 20pt\">Maca Peruana e a Libido</span></strong><br><span style=\"color: #000000; font-size: 15pt\">A</span><strong><span style=\"color: #000000; font-size: 15pt\"> Maca Peruana</span></strong><span style=\"color: #000000; font-size: 15pt\"> é frequentemente associada ao aumento da libido em homens e mulheres. Estudos indicam que ela pode melhorar o desejo sexual e a função erétil, tornando-a uma opção natural para aqueles que buscam melhorar sua vida íntima.</span><br></p>"
@@ -147,16 +148,6 @@
             "answer": "<p><strong><span>Sugestão de uso:</span></strong><br><span><br>Tomar 2 cápsulas ao dia, sendo 1 caps 30 min. antes do almoço e 1 caps 30 min. antes do jantar. Siga sempre a prescrição do profissional habilitado. Leia com atenção as orientações do rótulo. Informações importantes sobre a forma de uso, acondicionamento, restrições de uso podem estar impressas no rótulo do seu produto.</span></p>"
           }
         ]
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Images/Banner.tsx",
-        "desktop": "https://placehold.co/1440x240",
-        "mobile": "https://placehold.co/358x260",
-        "alt": "banner",
-        "href": "#"
       }
     },
     {

@@ -37,8 +37,8 @@
         {
           "desktop": "https://assets.decocache.com/medicinal-store/534bbf6b-7359-41f8-816a-60bf79d7de15/morosil-medida-certa.png",
           "mobile": "https://assets.decocache.com/medicinal-store/2aa31bbc-7300-427f-bf33-fd5426d77365/morosil-medida-certa-mobile.png",
-          "href": "#",
-          "alt": "Banner 3"
+          "alt": "Banner 3",
+          "href": "#"
         }
       ],
       "preload": true,
@@ -147,36 +147,18 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "Teste VTEX",
         "products": {
           "__resolveType": "vtex/loaders/legacy/productList.ts",
           "props": {
             "query": "a",
             "sort": "OrderByPriceDESC",
             "count": 10,
-            "fuzzy": "automatic"
+            "fuzzy": "automatic",
+            "similars": true,
+            "collection": "156"
           }
-        }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Images/Banner.tsx",
-        "title": "Register and Save Big!",
-        "cta": {
-          "label": "Sign Up",
-          "href": "#"
         },
-        "description": "<p><span style=\"color: rgb(45, 194, 107);\" data-mce-style=\"color: rgb(45, 194, 107);\">Sign up now to get up to 50% off on your first order. Limited time offer!</span></p>",
-        "images": {
-          "desktop": "https://assets.decocache.com/storefront/d4ba070d-c3ba-4a9c-b75f-e01f859063f1/1742560233015-cf96d47f-564f-40da-ad94-7acac5f39327",
-          "mobile": "https://assets.decocache.com/storefront/c023f1c2-74b9-4b3a-a947-ff5de9d02347/1742560234608-4d5c3212-3f75-4d50-89f3-970815748b43"
-        },
-        "alt": "Banner Teste",
-        "href": "#",
-        "mobile": "https://assets.decocache.com/medicinal-store/d43aa10c-164e-4185-a5d7-493171756280/maca-peruana-aliado-mobile2.png",
-        "desktop": "https://assets.decocache.com/medicinal-store/853daf50-b02b-4575-8fea-518ae9b29025/banner-maca-peruana.png"
+        "title": "Destaques"
       }
     },
     {
@@ -234,7 +216,7 @@
             "__resolveType": "vtex/loaders/legacy/productList.ts",
             "props": {
               "sort": "OrderByPriceDESC",
-              "collection": "156",
+              "collection": "179",
               "count": 5,
               "similars": true
             }
@@ -242,9 +224,39 @@
         },
         "banner": {
           "mobile": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
-          "desktop": "https://assets.decocache.com/medicinal-store/e797baee-b6a4-4468-8ed1-d866ab8f0ad6/UC-II.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/f9a326c9-42a0-4e76-8a68-036d7fdc0411/banner.jpg",
           "alt": "Teste",
-          "href": "Teste 2"
+          "href": "#"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
+        "products": {
+          "__resolveType": "commerce/loaders/product/extensions/list.ts",
+          "extensions": [
+            {
+              "__resolveType": "vtex/loaders/product/extensions/list.ts",
+              "similars": false
+            }
+          ],
+          "data": {
+            "__resolveType": "vtex/loaders/legacy/productList.ts",
+            "props": {
+              "sort": "OrderByPriceDESC",
+              "collection": "180",
+              "count": 5,
+              "similars": true
+            }
+          }
+        },
+        "banner": {
+          "mobile": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/3050f23f-8be8-4bf3-9f10-186d0276b081/Diureticos-naturais.jpg",
+          "alt": "Teste",
+          "href": "#"
         }
       }
     },
@@ -254,8 +266,8 @@
         "__resolveType": "site/sections/Images/ImageGallery.tsx",
         "banners": [
           {
-            "mobile": "https://assets.decocache.com/medicinal-store/709259d0-4181-4f8c-be06-4aa6595f6e67/morosil-selo.png",
-            "desktop": "https://assets.decocache.com/medicinal-store/15722357-b8a1-4625-a3a7-0f00a94b81b0/morosil-selo-mobile.png",
+            "mobile": "https://assets.decocache.com/medicinal-store/e797baee-b6a4-4468-8ed1-d866ab8f0ad6/UC-II.jpg",
+            "desktop": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
             "alt": "Banner Gallery 1",
             "href": "#"
           },
@@ -263,7 +275,7 @@
             "mobile": "https://assets.decocache.com/medicinal-store/2272675a-e846-4f1f-b69a-85220c3fd932/CANTIN.jpg",
             "desktop": "https://assets.decocache.com/medicinal-store/53b4f631-aa3d-4265-8d9d-fa5cd8678982/CANTIN-mobile.jpg",
             "alt": "Banner Gallery 2",
-            "href": "#"
+            "href": "/cactin-500mg-60-doses/p?skuId=1016"
           }
         ]
       }
