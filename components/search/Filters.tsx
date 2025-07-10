@@ -51,7 +51,9 @@ function FilterValues({ key, values }: FilterToggle) {
           );
         }
 
-        if (key === "price") {
+        if (key === "PriceRanges") {
+          if (item.value.length === 0) return null;
+
           const range = parseRange(item.value);
 
           return range && (
@@ -68,6 +70,15 @@ function FilterValues({ key, values }: FilterToggle) {
   );
 }
 
+const labelMap: Record<string, string> = {
+  sellername: "Vendedores",
+  priceranges: "Preços",
+  departments: "Departamentos",
+  brands: "Marcas",
+  categories: "Categorias",
+  categoria: "Subcategoria",
+};
+
 function Filters({ filters }: Props) {
   return (
     <ul class="flex flex-col gap-6 p-4 sm:p-0">
@@ -75,7 +86,7 @@ function Filters({ filters }: Props) {
         .filter(isToggle)
         .map((filter) => (
           <li class="flex flex-col gap-4">
-            <span class="uppercase font-bold">{filter.label}</span>
+            <span class="uppercase font-bold">{labelMap[filter.label.toLowerCase()] ?? filter.label}</span>
             <FilterValues {...filter} />
           </li>
         ))}
