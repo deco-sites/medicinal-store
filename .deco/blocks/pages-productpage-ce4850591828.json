@@ -63,5 +63,5 @@
     }
   ],
   "__resolveType": "website/pages/Page.tsx",
-  "path": "/old_teste-wave/p"
+  "path": "/:slug/p"
 }
