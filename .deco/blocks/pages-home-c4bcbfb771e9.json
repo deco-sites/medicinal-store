@@ -12,33 +12,33 @@
       "images": [
         {
           "desktop": "https://assets.decocache.com/medicinal-store/ff2646e6-c4e5-48e8-8996-f4746511d1b7/banner-cupom.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/cb60ad3d-d571-401c-8cf2-893cf29c782c/banner-cupom-mobile.png",
-          "action": {
-            "title": "Skate into Adventure!",
-            "subTitle": "Top-quality roller skate shoes for all levels. ",
-            "href": "/s?q=shoes&page=0",
-            "label": "Grab Yours Now!"
-          },
+          "mobile": "https://assets.decocache.com/medicinal-store/24dc5f49-d10a-4634-972c-76ce47c1b788/cupom-mobile.jpg",
           "href": "#",
-          "alt": "Banner 1"
+          "alt": "Banner 3"
         },
         {
           "desktop": "https://assets.decocache.com/medicinal-store/5a3156a6-efe7-46d7-b640-1c7eb979bcb5/banner-akkermat.png",
           "mobile": "https://assets.decocache.com/medicinal-store/c4e25fa3-20b3-4762-a434-42cd9a3a27e4/banner-akkermat-mobile.png",
+          "href": "#",
+          "alt": "Banner 2",
           "action": {
             "title": "Discover Fresh Looks",
             "subTitle": "Modern men's clothing and accessories.",
             "href": "/men",
             "label": "Shop the Collection"
-          },
-          "href": "#",
-          "alt": "Banner 2"
+          }
         },
         {
-          "desktop": "https://assets.decocache.com/medicinal-store/534bbf6b-7359-41f8-816a-60bf79d7de15/morosil-medida-certa.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/2aa31bbc-7300-427f-bf33-fd5426d77365/morosil-medida-certa-mobile.png",
-          "alt": "Banner 3",
-          "href": "#"
+          "desktop": "https://assets.decocache.com/medicinal-store/853daf50-b02b-4575-8fea-518ae9b29025/banner-maca-peruana.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/d43aa10c-164e-4185-a5d7-493171756280/maca-peruana-aliado-mobile2.png",
+          "alt": "Banner 1",
+          "href": "#",
+          "action": {
+            "title": "Skate into Adventure!",
+            "subTitle": "Top-quality roller skate shoes for all levels. ",
+            "href": "/s?q=shoes&page=0",
+            "label": "Grab Yours Now!"
+          }
         }
       ],
       "preload": true,
@@ -223,11 +223,21 @@
           }
         },
         "banner": {
-          "mobile": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/fe554bd1-d2f5-424f-a4f0-dc04aa1d72b4/bloqueador-de-gordura-mobile.jpg",
           "desktop": "https://assets.decocache.com/medicinal-store/f9a326c9-42a0-4e76-8a68-036d7fdc0411/banner.jpg",
           "alt": "Teste",
           "href": "#"
         }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/Banner.tsx",
+        "mobile": "https://assets.decocache.com/medicinal-store/dd7044d2-768f-4af4-8e60-0876bb7da4f3/morosil-mobile.jpg",
+        "desktop": "https://assets.decocache.com/medicinal-store/5af137c0-999a-4d06-9a0d-83f67e06dcd1/banner-moro.png",
+        "alt": "#",
+        "href": "#"
       }
     },
     {
@@ -253,7 +263,7 @@
           }
         },
         "banner": {
-          "mobile": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/f691b7e6-0cad-4879-b062-22fac9f56dab/Diureticos-naturais-mobile.jpg",
           "desktop": "https://assets.decocache.com/medicinal-store/3050f23f-8be8-4bf3-9f10-186d0276b081/Diureticos-naturais.jpg",
           "alt": "Teste",
           "href": "#"
@@ -272,8 +282,8 @@
             "href": "#"
           },
           {
-            "mobile": "https://assets.decocache.com/medicinal-store/2272675a-e846-4f1f-b69a-85220c3fd932/CANTIN.jpg",
-            "desktop": "https://assets.decocache.com/medicinal-store/53b4f631-aa3d-4265-8d9d-fa5cd8678982/CANTIN-mobile.jpg",
+            "mobile": "https://assets.decocache.com/medicinal-store/4ac72e49-c26e-4eba-8ae5-cab948a9e13f/CANTIN.jpg",
+            "desktop": "https://assets.decocache.com/medicinal-store/f08c5a21-0c30-483f-9def-b389ff6c3033/CANTIN-mobile.jpg",
             "alt": "Banner Gallery 2",
             "href": "/cactin-500mg-60-doses/p?skuId=1016"
           }
