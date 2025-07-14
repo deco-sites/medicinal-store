@@ -299,12 +299,8 @@
         },
         "questions": [
           {
-            "answer": "<p>Você ganha 10% de desconto na sua primeira compra aqui na nossa loja! 🛒✨</p><p>Para aproveitar, é simples:</p><ol><li><p>Cadastre-se no nosso site.</p></li><li><p>Adicione seus produtos favoritos ao carrinho.</p></li><li><p>O desconto será aplicado automaticamente no checkout ou você pode inserir o cupom <strong>PRIMEIRA10</strong> (caso seja necessário).</p></li></ol><p>Essa oferta é válida somente para novos clientes e para a primeira compra realizada com o seu cadastro.</p>",
-            "question": "10% OFF na sua primeira compra"
-          },
-          {
-            "question": "Frete grátis a partir de R$ 250,00",
-            "answer": "<p>Oferecemos frete grátis para compras acima de R$ 250,00. Para garantir esse benefício, basta que o valor total dos produtos no seu carrinho seja igual ou superior a R$ 250,00 no momento do fechamento do pedido, sem incluir o valor do frete.</p><p>Caso você aplique cupons de desconto e o valor final fique abaixo de R$ 250,00, o frete grátis não será aplicado.</p><p>Essa condição é válida para entregas dentro do Brasil e pode ter exceções dependendo da sua região. Se houver alguma restrição, será informada no cálculo do frete na página de checkout.</p>"
+            "answer": "<p>Oferecemos frete grátis para compras acima de R$ 250,00. Para garantir esse benefício, basta que o valor total dos produtos no seu carrinho seja igual ou superior a R$ 250,00 no momento do fechamento do pedido, sem incluir o valor do frete.</p><p>Caso você aplique cupons de desconto e o valor final fique abaixo de R$ 250,00, o frete grátis não será aplicado.</p><p>Essa condição é válida para entregas dentro do Brasil e pode ter exceções dependendo da sua região. Se houver alguma restrição, será informada no cálculo do frete na página de checkout.</p>",
+            "question": "Frete grátis a partir de R$ 250,00"
           }
         ]
       }

@@ -21,7 +21,12 @@
     {
       "__resolveType": "website/sections/Analytics/Analytics.tsx",
       "dangerouslyRunOnMainThread": true,
-      "trackingIds": []
+      "trackingIds": [
+        "GTM-NCMNW89"
+      ],
+      "googleAnalyticsIds": [
+        "G-WSC80Z9G9K"
+      ]
     },
     {
       "__resolveType": "analytics/sections/Analytics/DecoAnalytics.tsx",
