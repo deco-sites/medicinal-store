@@ -11,7 +11,7 @@ import manifest, { Manifest } from "../manifest.gen.ts";
 import { type Section } from "@deco/deco/blocks";
 import { type App as A, type AppContext as AC } from "@deco/deco";
 
-/** @titleBy clusterId */
+/** @titleBy discounts */
 export interface Cluster {
   clusterId: string;
   discounts: ClusterDiscount[];

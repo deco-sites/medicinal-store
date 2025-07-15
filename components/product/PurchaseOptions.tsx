@@ -32,7 +32,7 @@ export default function ({
       additionalProperty.some(
         (prop) => prop.propertyID === cluster.clusterId,
       )
-    )[0]?.discounts || [];
+    )[0]?.discounts.filter((discount) => discount.quantity > 1) || [];
 
   const item = mapProductToAnalyticsItem({
     product,
@@ -60,39 +60,46 @@ export default function ({
         class="flex flex-col gap-2"
         style={{ margin: 0 }}
       >
-        {discountsOnCluster.map((discount, index) => (
-          <button
-            key={index}
-            class="w-full rounded-full bg-white border border-primary text-primary p-2 flex gap-2 cursor-pointer"
-            hx-post={useSection({
-              props: {
-                only_purchase_options: true,
-                quantity: discount.quantity,
-              }
-            })}
-            hx-swap="outerHTML"
-            hx-target="#purchase-options"
-            disabled={quantity === discount.quantity}
-          >
-            <input
-              type="radio"
-              name="quantity"
-              value={discount.quantity}
-              class="radio radio-primary pointer-events-none"
-              checked={quantity === discount.quantity}
-            />
-            <span>
-              <span>{discount.quantity} {discount.quantity > 1 ? "unidades" : "unidade"}</span>
-              <b>por {formatPrice(price * (1 - discount.discount / 100))}</b>
-              {discount.quantity > 1 && <span> / cada</span>}
-              {discount.discount > 0 && (
-                <span class="ml-1">
-                  ({discount.discount}% OFF)
+        {discountsOnCluster.map((discount, index) => {
+          const isSelected = quantity === discount.quantity;
+          return (
+            <button
+              key={index}
+              class="w-full rounded-full bg-white border border-primary text-primary p-2 flex gap-2 cursor-pointer"
+              hx-post={useSection({
+                props: {
+                  only_purchase_options: true,
+                  quantity: isSelected ? undefined : discount.quantity, // desmarca se já está selecionado
+                },
+              })}
+              hx-swap="outerHTML"
+              hx-target="#purchase-options"
+              type="button"
+            >
+              <input
+                type="checkbox"
+                name="quantity"
+                value={discount.quantity}
+                class="checkbox checkbox-primary pointer-events-none"
+                checked={isSelected}
+                readOnly
+              />
+              <span>
+                <span>
+                  {discount.quantity}{" "}
+                  {discount.quantity > 1 ? "unidades " : "unidade "}
                 </span>
-              )}
-            </span>
-          </button>
-        ))}
+                <b>por {formatPrice(price * (1 - discount.discount / 100))}</b>
+                {discount.quantity > 1 && <span>cada</span>}
+                {discount.discount > 0 && (
+                  <span class="ml-1">
+                    ({discount.discount}% OFF)
+                  </span>
+                )}
+              </span>
+            </button>
+          );
+        })}
       </div>
       <AddToCartButton
         type="shelf"
@@ -103,6 +110,6 @@ export default function ({
         quantity={quantity}
         disabled={false}
       />
-    </div >
+    </div>
   );
 }

@@ -86,7 +86,9 @@ function Filters({ filters }: Props) {
         .filter(isToggle)
         .map((filter) => (
           <li class="flex flex-col gap-4">
-            <span class="uppercase font-bold">{labelMap[filter.label.toLowerCase()] ?? filter.label}</span>
+            <span class="uppercase font-bold">
+              {labelMap[filter.label.toLowerCase()] ?? filter.label}
+            </span>
             <FilterValues {...filter} />
           </li>
         ))}

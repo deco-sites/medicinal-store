@@ -30,7 +30,7 @@ const onClick = (productID: string, productGroupID: string) => {
     button.classList.add("htmx-request");
     window.STOREFRONT.WISHLIST.toggle(productID, productGroupID);
   } else {
-    window.alert(`Please login to add the product to your wishlist`);
+    window.alert(`Faça login para adicionar o produto à sua lista de desejos`);
   }
 };
 function WishlistButton({ item, variant = "full" }: Props) {

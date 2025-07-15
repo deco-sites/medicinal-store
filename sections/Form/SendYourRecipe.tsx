@@ -28,8 +28,9 @@ const onLoad = () => {
     const fileNameDisplay = document.getElementById("selected-file-name");
     if (fileNameDisplay) {
       if (e.target.files.length > 0) {
-        fileNameDisplay.textContent = `Arquivo selecionado: ${e.target.files[0].name
-          }`;
+        fileNameDisplay.textContent = `Arquivo selecionado: ${
+          e.target.files[0].name
+        }`;
         fileNameDisplay.classList.remove("hidden");
       } else {
         fileNameDisplay.textContent = "";
@@ -119,7 +120,7 @@ export default function Form({
         hx-swap="outerHTML"
         hx-post={useComponent(import.meta.url)}
         hx-target="closest section"
-        hx-encoding='multipart/form-data'
+        hx-encoding="multipart/form-data"
       >
         <div class="uppercase font-bold text-sm md:text-base">
           Envie sua receita
@@ -233,17 +234,20 @@ export const action = async (
 
     if (platform === "vtex") {
       // deno-lint-ignore no-explicit-any
-      const response = await (ctx as any).invoke("vtex/actions/masterdata/createDocument.ts", {
-        data,
-        acronym,
-      });
+      const response = await (ctx as any).invoke(
+        "vtex/actions/masterdata/createDocument.ts",
+        {
+          data,
+          acronym,
+        },
+      );
 
       const responseAttachment = await fetch(
         `https://medicinalnaweb.vtexcommercestable.com.br/api/dataentities/${acronym}/documents/${response.DocumentId}/prescription/attachments`,
         {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Accept': 'application/vnd.vtex.ds.v10+json',
+            "Accept": "application/vnd.vtex.ds.v10+json",
           },
           body: formData,
         },

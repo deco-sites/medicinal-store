@@ -59,15 +59,16 @@ function ProductInfo({ page, clusterDiscount }: Props) {
     },
   });
 
-  const hasValidVariants = isVariantOf?.hasVariant?.some(
+  const hasValidVariants = (isVariantOf?.hasVariant?.filter(
     (variant) =>
       variant?.name?.toLowerCase() !== "title" &&
       variant?.name?.toLowerCase() !== "default title",
-  ) ?? false;
+  ).length ?? 0) > 1;
 
   return (
     <div {...viewItemEvent} class="flex flex-col gap-4 mt-4" id={id}>
-      {hasValidVariants && <ProductSelector product={product} />}
+      {hasValidVariants &&
+        <ProductSelector product={product} />}
       {availability === "https://schema.org/InStock"
         ? (
           <>
