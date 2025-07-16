@@ -1,5 +1,5 @@
 {
-  "name": "Lp - Campanha Morosil",
+  "name": "Lp - Campanha Morosil Copy",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -202,5 +202,5 @@
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
   "__resolveType": "website/pages/Page.tsx",
-  "path": "/campanhas/morosil"
+  "path": "/campanhas/teste-wave"
 }
