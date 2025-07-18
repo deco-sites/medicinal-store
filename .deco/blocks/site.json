@@ -88,8 +88,12 @@
     {
       "discounts": [
         {
+          "quantity": 1,
+          "discount": 5
+        },
+        {
           "quantity": 2,
-          "discount": 10
+          "discount": 15
         },
         {
           "quantity": 3,
@@ -100,7 +104,7 @@
           "discount": 30
         }
       ],
-      "clusterId": "178"
+      "clusterId": "183"
     }
   ]
 }
