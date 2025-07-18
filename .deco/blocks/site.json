@@ -88,10 +88,6 @@
     {
       "discounts": [
         {
-          "quantity": 1,
-          "discount": 5
-        },
-        {
           "quantity": 2,
           "discount": 15
         },
