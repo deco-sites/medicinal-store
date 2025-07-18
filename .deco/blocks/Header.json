@@ -151,64 +151,6 @@
         {
           "children": [
             {
-              "name": "Acne e Oleosidade",
-              "href": "/pele/acne-e-oleosidade"
-            },
-            {
-              "name": "Anti Idade",
-              "href": "/pele/anti-idade"
-            },
-            {
-              "name": "Área dos Olhos",
-              "href": "/pele/area-dos-olhos"
-            },
-            {
-              "name": "Celulite",
-              "href": "/pele/celulite"
-            },
-            {
-              "name": "Cílios e Sobrancelhas",
-              "href": "/pele/cilios-e-sobrancelhas"
-            },
-            {
-              "name": "Clareadores",
-              "href": "/pele/clareadores"
-            },
-            {
-              "name": "Flacidez",
-              "href": "/pele/flacidez"
-            },
-            {
-              "name": "Hidratação",
-              "href": "/pele/hidratacao"
-            },
-            {
-              "name": "Linhas Exclusivas",
-              "href": "/pele/linhas-exclusivas"
-            },
-            {
-              "name": "Peeling Homecare",
-              "href": "/pele/peeling-homecare"
-            },
-            {
-              "name": "Pés, Mãos e Cotovelos",
-              "href": "/pele/pes-maos-e-cotovelos"
-            },
-            {
-              "name": "Proteção Solar",
-              "href": "/pele/protecao-solar"
-            },
-            {
-              "name": "Unhas",
-              "href": "/pele/unhas"
-            }
-          ],
-          "name": "Pele",
-          "href": "/pele"
-        },
-        {
-          "children": [
-            {
               "name": "Minoxidil",
               "href": "/cabelo/minoxidil"
             },
@@ -719,26 +661,16 @@
       "children": [
         {
           "name": "Morosil",
-          "href": "/morosil",
-          "children": []
-        },
-        {
-          "name": "Minoxidil",
-          "href": "/minoxidil",
+          "href": "campanhas/morosil",
           "children": []
         },
         {
           "name": "Maca Peruana",
-          "href": "/maca-peruana",
-          "children": []
-        },
-        {
-          "name": "Reallagen",
-          "href": "/reallagen",
+          "href": "campanhas/maca-peruana",
           "children": []
         }
       ],
-      "name": "Destaques",
+      "name": "Campanhas",
       "href": "/destaques",
       "isBold": true
     }
