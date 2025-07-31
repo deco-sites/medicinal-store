@@ -13,10 +13,6 @@
   },
   "alerts": [
     {
-      "icon": "https://assets.decocache.com/medicinal-store/e027b6e1-ba47-4d64-b7ed-95807af9af4d/Scroll.svg",
-      "text": "<p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"#\">Envie sua receita</a></p>"
-    },
-    {
       "icon": "https://assets.decocache.com/medicinal-store/3348a0d0-ead4-422b-9e7e-3deef9fa010f/Package.svg",
       "text": "<p><span>Frete grátis a partir de </span><strong><span>R$ 250,00</span></strong></p>"
     },
@@ -393,11 +389,6 @@
       "icon": "https://assets.decocache.com/medicinal-store/e292ff37-8fa7-4ce3-83bd-a546187e8ef0/Info.svg",
       "text": "<p>Atendimento</p>",
       "href": "/fale-conosco"
-    },
-    {
-      "icon": "https://assets.decocache.com/medicinal-store/b98f4eec-9e07-411c-8836-fd55a6e81bc4/At.svg",
-      "text": "<p>Blog</p>",
-      "href": "https://blog.medicinalnaweb.com.br/"
     }
   ]
 }
