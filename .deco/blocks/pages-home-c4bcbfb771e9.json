@@ -11,28 +11,10 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://assets.decocache.com/medicinal-store/ff2646e6-c4e5-48e8-8996-f4746511d1b7/banner-cupom.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/24dc5f49-d10a-4634-972c-76ce47c1b788/cupom-mobile.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/aa7971c5-9619-46e6-bc34-c1b0fede428d/Peptistrong.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/479c3e04-d661-441e-bf4a-16a6a6e4308c/Peptistrong-mobile.jpg",
           "href": "#",
-          "alt": "Banner 3"
-        },
-        {
-          "desktop": "https://assets.decocache.com/medicinal-store/5a3156a6-efe7-46d7-b640-1c7eb979bcb5/banner-akkermat.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/c4e25fa3-20b3-4762-a434-42cd9a3a27e4/banner-akkermat-mobile.png",
-          "href": "#",
-          "alt": "Banner 2",
-          "action": {
-            "title": "Discover Fresh Looks",
-            "subTitle": "Modern men's clothing and accessories.",
-            "href": "/men",
-            "label": "Shop the Collection"
-          }
-        },
-        {
-          "desktop": "https://assets.decocache.com/medicinal-store/853daf50-b02b-4575-8fea-518ae9b29025/banner-maca-peruana.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/d43aa10c-164e-4185-a5d7-493171756280/maca-peruana-aliado-mobile2.png",
           "alt": "Banner 1",
-          "href": "#",
           "action": {
             "title": "Skate into Adventure!",
             "subTitle": "Top-quality roller skate shoes for all levels. ",
