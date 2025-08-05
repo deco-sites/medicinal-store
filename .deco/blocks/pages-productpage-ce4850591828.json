@@ -26,16 +26,12 @@
         },
         "sections": [
           {
-            "sections": [
-              {
-                "__resolveType": "website/sections/Rendering/Lazy.tsx",
-                "section": {
-                  "__resolveType": "site/sections/Content/OnlyText.tsx"
-                }
-              }
-            ],
-            "matcher": "/glucomannan-500mg-60-doses"
+            "sections": [],
+            "matcher": "/peptistrong-chocolate-belga/p"
           }
+        ],
+        "clusterDiscount": [
+          {}
         ]
       }
     },
