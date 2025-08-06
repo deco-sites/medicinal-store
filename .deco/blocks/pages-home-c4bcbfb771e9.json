@@ -302,7 +302,297 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "Footer"
+        "__resolveType": "site/sections/Footer/Footer.tsx",
+        "links": [
+          {
+            "children": [
+              {
+                "href": "/quem-somos",
+                "title": "Quem somos"
+              },
+              {
+                "href": "/site-seguro",
+                "title": "Site seguro"
+              },
+              {
+                "title": "Termos de uso",
+                "href": "/termos-de-uso"
+              },
+              {
+                "title": "Política de pagamento",
+                "href": "/politica-de-pagamento"
+              }
+            ],
+            "title": "Institucional",
+            "href": "#"
+          },
+          {
+            "title": "Dúvidas",
+            "href": "#",
+            "children": [
+              {
+                "href": "/como-comprar",
+                "title": "Como comprar"
+              },
+              {
+                "title": "Política de compra",
+                "href": "/politica-de-compra"
+              },
+              {
+                "title": "Política de entrega",
+                "href": "/politica-de-entrega"
+              },
+              {
+                "href": "politica-de-troca",
+                "title": "Politica de troca"
+              },
+              {
+                "href": "/politica-de-privacidade",
+                "title": "Política de privacidade"
+              },
+              {
+                "href": "/fale-conosco",
+                "title": "Fale conosco"
+              }
+            ]
+          },
+          {
+            "title": "Atendimento",
+            "href": "#",
+            "children": [
+              {
+                "title": "Chamar no WhatsApp",
+                "href": "https://api.whatsapp.com/send?phone=5544984012303&text=Solicito%20atendimento%20personalizado%20pelo%20Canal%20do%20Site",
+                "icon": "https://assets.decocache.com/medicinal-store/5bf3295c-e45b-4d8a-ab9c-048dcdbb600a/ic_baseline-whatsapp.svg"
+              },
+              {
+                "href": "tel:(44) 3225-2600",
+                "title": "(44) 3225-2600",
+                "icon": "https://assets.decocache.com/medicinal-store/03e83db8-788d-4042-8acb-03f42bf473cd/Phone.svg"
+              },
+              {
+                "title": "vendas@atendimentomedicinal.net",
+                "icon": "https://assets.decocache.com/medicinal-store/d24a526b-7ae5-4983-ab55-d20b401f7442/Envelope.svg",
+                "href": "mailto:vendas@atendimentomedicinal.net"
+              }
+            ]
+          }
+        ],
+        "social": [
+          {
+            "alt": "facebook",
+            "href": "https://www.facebook.com/medicinalfarmacia",
+            "image": "https://assets.decocache.com/medicinal-store/c9a6561a-ab31-44e6-a54e-c8e3d9401f3c/FacebookLogo.svg"
+          },
+          {
+            "href": "https://www.instagram.com/medicinalnaweb/",
+            "image": "https://assets.decocache.com/medicinal-store/de170972-fe79-4bff-8f19-52bf8ca7d794/InstagramLogo.svg",
+            "alt": "Instagram"
+          }
+        ],
+        "paymentMethods": [
+          {
+            "alt": "Visa",
+            "href": "#",
+            "image": "https://assets.decocache.com/medicinal-store/5535d5e0-1452-4760-b888-002b5ad7292e/visa.svg"
+          },
+          {
+            "alt": "Mastercard",
+            "image": "https://assets.decocache.com/medicinal-store/f87fdd32-2596-405b-b21e-8d79016f9c50/master-card.svg"
+          },
+          {
+            "alt": "Elo",
+            "href": "#",
+            "image": "https://assets.decocache.com/medicinal-store/61ef77b6-2015-4fdf-a6d8-7834b218f0bc/elo.svg"
+          },
+          {
+            "alt": "Hipercard",
+            "image": "https://assets.decocache.com/medicinal-store/b4521245-1f43-47e3-8520-3f065e697884/hipercard.svg",
+            "href": "#"
+          },
+          {
+            "alt": "Santander",
+            "href": "#",
+            "image": "https://assets.decocache.com/medicinal-store/9af49dc0-3408-491c-a0e5-263e769624e0/santander.svg"
+          },
+          {
+            "alt": "Banrisul",
+            "href": "#",
+            "image": "https://assets.decocache.com/medicinal-store/d87bb4f3-7ae4-4939-aec1-da31eba6335d/banrisul.svg"
+          },
+          {
+            "alt": "Bradesco",
+            "image": "https://assets.decocache.com/medicinal-store/5d930c2a-5f67-41cb-82a9-4313ff9f087e/bradesco.svg"
+          },
+          {
+            "alt": "Itau",
+            "image": "https://assets.decocache.com/medicinal-store/26a7a0b6-558d-4a12-b573-51d5fb9f5084/itau.svg"
+          },
+          {
+            "image": "https://assets.decocache.com/medicinal-store/b5074fd1-b906-4d5a-90f5-e7ea92a5d295/hiper.svg",
+            "alt": "Hiper"
+          },
+          {
+            "image": "https://assets.decocache.com/medicinal-store/eabe1a14-575d-4fdb-aeab-353e45dd8a32/dinners.svg",
+            "alt": "Dinners"
+          },
+          {
+            "image": "https://assets.decocache.com/medicinal-store/ae391f62-26fa-4968-bce8-815f7df56805/boleto.svg",
+            "alt": "Boleto"
+          },
+          {
+            "alt": "Pix",
+            "image": "https://assets.decocache.com/medicinal-store/31ff6f1e-ab7d-4c32-b020-155e51c6a511/PIX.svg"
+          }
+        ],
+        "policies": "Medicinal © 2021. Medicinal Farmácia de Manipulação Ltda EPP • Rua Luiz Gama, 335 • Centro • CEP: 87014-110 • Maringá/PR • CNPJ: 04.380.004/0001-01 • AE 1.35.655.6 • AFE 7.22.759.9 • Licença Sanitária 1974/2017 • Certidão de Regularidade 13248 • Farm. Responsável: Meizze Valéria Rocha - CRF/PR 20.450. Horário de funcionamento: segundas às sextas-feiras das 08:00h as 18:30h e sábados das 08:00h às 12:30h. Telefone de contato com o Farmacêutico = 44 3225 2600. PARA MEDICAMENTOS SUJEITOS À PRESCRIÇÃO MÉDICA E FORMULAÇÕES MAGISTRAIS, SERÁ SEMPRE REALIZADA AVALIAÇÃO PELO FARMACÊUTICO ANTES DA MANIPULAÇÃO E DISPENSAÇÃO. As informações contidas neste site são exclusivas para profissionais habilitados da Área de saúde e não devem ser usadas para automedicação e não substituem, em hipótese alguma a medicação prescrita pelo profissional da área médica. Somente um profissional habilitado está em condições de diagnosticar qualquer problema de saúde e prescrever o tratamento adequado. Qualquer dúvida sobre os produtos divulgados em nosso site, entre em contato com um de nossos farmacêuticos através do atendimento ao cliente pelo WhatsApp através do contato 44 98401 4719 ou pelo telefone 44 3225 2600 (Vendas/SAC) e se preferir poderá dirigir-se a nossa loja na Rua Luiz Gama, n.335, Maringá, Paraná, pois contamos com um profissional farmacêutico habilitado para mais esclarecimentos. Os medicamentos sob prescrição só serão dispensados mediante apresentação da receita ou envio por imagens ou e-mail. É proibido comercializar medicamentos controlados por meio remoto. Medicamentos podem causar efeitos indesejados. Evite a automedicação: informe-se com o médico ou farmacêutico. Todos os direitos reservados.Todas as marcas e suas imagens são de propriedade de seus respectivos donos. É vedada a reprodução, total ou parcial, de qualquer conteúdo sem expressa autorização.",
+        "logo": {
+          "0": "h",
+          "1": "t",
+          "2": "t",
+          "3": "p",
+          "4": "s",
+          "5": ":",
+          "6": "/",
+          "7": "/",
+          "8": "a",
+          "9": "s",
+          "10": "s",
+          "11": "e",
+          "12": "t",
+          "13": "s",
+          "14": ".",
+          "15": "d",
+          "16": "e",
+          "17": "c",
+          "18": "o",
+          "19": "c",
+          "20": "a",
+          "21": "c",
+          "22": "h",
+          "23": "e",
+          "24": ".",
+          "25": "c",
+          "26": "o",
+          "27": "m",
+          "28": "/",
+          "29": "s",
+          "30": "t",
+          "31": "o",
+          "32": "r",
+          "33": "e",
+          "34": "f",
+          "35": "r",
+          "36": "o",
+          "37": "n",
+          "38": "t",
+          "39": "/",
+          "40": "5",
+          "41": "4",
+          "42": "5",
+          "43": "3",
+          "44": "8",
+          "45": "3",
+          "46": "1",
+          "47": "b",
+          "48": "-",
+          "49": "a",
+          "50": "6",
+          "51": "0",
+          "52": "9",
+          "53": "-",
+          "54": "4",
+          "55": "2",
+          "56": "4",
+          "57": "9",
+          "58": "-",
+          "59": "a",
+          "60": "f",
+          "61": "3",
+          "62": "8",
+          "63": "-",
+          "64": "e",
+          "65": "3",
+          "66": "8",
+          "67": "5",
+          "68": "a",
+          "69": "2",
+          "70": "c",
+          "71": "b",
+          "72": "4",
+          "73": "e",
+          "74": "7",
+          "75": "f",
+          "76": "/",
+          "77": "1",
+          "78": "7",
+          "79": "4",
+          "80": "2",
+          "81": "5",
+          "82": "6",
+          "83": "0",
+          "84": "2",
+          "85": "6",
+          "86": "0",
+          "87": "7",
+          "88": "3",
+          "89": "8",
+          "90": "-",
+          "91": "f",
+          "92": "1",
+          "93": "f",
+          "94": "a",
+          "95": "a",
+          "96": "b",
+          "97": "7",
+          "98": "3",
+          "99": "-",
+          "100": "e",
+          "101": "4",
+          "102": "f",
+          "103": "f",
+          "104": "-",
+          "105": "4",
+          "106": "0",
+          "107": "3",
+          "108": "7",
+          "109": "-",
+          "110": "b",
+          "111": "7",
+          "112": "c",
+          "113": "4",
+          "114": "-",
+          "115": "5",
+          "116": "d",
+          "117": "0",
+          "118": "2",
+          "119": "b",
+          "120": "d",
+          "121": "0",
+          "122": "b",
+          "123": "1",
+          "124": "2",
+          "125": "0",
+          "126": "9",
+          "image": "https://assets.decocache.com/medicinal-store/24c1bc9f-7c9f-4611-ae2b-ba2df74ddfec/logo-medicinal-(1)-1.svg",
+          "width": 140,
+          "height": 27
+        },
+        "trademark": "TM & © 2023 Deco Storefront, Inc.",
+        "seals": [
+          {
+            "alt": "Let's Encrypt",
+            "image": "https://assets.decocache.com/medicinal-store/33f9f7e8-b68e-4806-b623-60cdc01a6e26/lets_encrypt.png",
+            "width": 95,
+            "height": 22
+          },
+          {
+            "image": "https://assets.decocache.com/medicinal-store/3de0ff0a-3c49-47e5-8607-6781c7362a5a/pci.png",
+            "alt": "PCI",
+            "width": 38,
+            "height": 35
+          }
+        ]
       }
     }
   ],

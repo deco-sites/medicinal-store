@@ -244,10 +244,10 @@ function Footer({
             />
             <p class="text-xs">{policies}</p>
             <div class="flex flex-nowrap items-center justify-center sm:justify-end gap-4 col-span-2">
-              <a href="#">
+              <a href="https://www.wavecommerce.com.br/?utm_source=rodape&utm_medium=site%20medicinal">
                 <img width={97} height={17} src={asset("/wave.png")} />
               </a>
-              <a href="#">
+              <a href="https://vtex.com/pt-br/?utm_source=rodape&utm_medium=site%20medicinal">
                 <img width={88} height={30} src={asset("/vtex.png")} />
               </a>
             </div>
