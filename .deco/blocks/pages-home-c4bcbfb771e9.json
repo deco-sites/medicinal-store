@@ -156,83 +156,34 @@
       }
     },
     {
-      "__resolveType": "website/flags/multivariate/section.ts",
-      "variants": [
-        {
-          "value": {
-            "__resolveType": "website/sections/Rendering/Lazy.tsx",
-            "section": {
-              "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
-              "products": {
-                "__resolveType": "commerce/loaders/product/extensions/list.ts",
-                "extensions": [
-                  {
-                    "__resolveType": "vtex/loaders/product/extensions/list.ts",
-                    "similars": false
-                  }
-                ],
-                "data": {
-                  "__resolveType": "vtex/loaders/legacy/productList.ts",
-                  "props": {
-                    "sort": "OrderByPriceDESC",
-                    "collection": "156",
-                    "count": 3
-                  }
-                }
-              },
-              "banner": {
-                "mobile": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
-                "desktop": "https://assets.decocache.com/medicinal-store/e797baee-b6a4-4468-8ed1-d866ab8f0ad6/UC-II.jpg",
-                "alt": "Teste",
-                "href": "Teste 2"
-              }
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
+        "products": {
+          "__resolveType": "commerce/loaders/product/extensions/list.ts",
+          "extensions": [
+            {
+              "__resolveType": "vtex/loaders/product/extensions/list.ts",
+              "similars": false
             }
-          },
-          "rule": {
-            "__resolveType": "website/matchers/never.ts"
-          }
-        }
-      ]
-    },
-    {
-      "__resolveType": "website/flags/multivariate/section.ts",
-      "variants": [
-        {
-          "value": {
-            "__resolveType": "website/sections/Rendering/Lazy.tsx",
-            "section": {
-              "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
-              "products": {
-                "__resolveType": "commerce/loaders/product/extensions/list.ts",
-                "extensions": [
-                  {
-                    "__resolveType": "vtex/loaders/product/extensions/list.ts",
-                    "similars": false
-                  }
-                ],
-                "data": {
-                  "__resolveType": "vtex/loaders/legacy/productList.ts",
-                  "props": {
-                    "sort": "OrderByPriceDESC",
-                    "collection": "185",
-                    "count": 5,
-                    "similars": true
-                  }
-                }
-              },
-              "banner": {
-                "mobile": "https://assets.decocache.com/medicinal-store/cf1d2975-440d-42c8-85ec-5bdeaa9436f3/mais-termogenicos-mobile.png",
-                "desktop": "https://assets.decocache.com/medicinal-store/a85b0a07-4e14-4992-854f-22a802fab2d2/mais-termogenicos-desktop.png",
-                "alt": "Teste",
-                "href": "#"
-              }
+          ],
+          "data": {
+            "__resolveType": "vtex/loaders/legacy/productList.ts",
+            "props": {
+              "sort": "OrderByPriceDESC",
+              "collection": "185",
+              "count": 5,
+              "similars": true
             }
-          },
-          "rule": {
-            "__resolveType": "website/matchers/never.ts"
           }
+        },
+        "banner": {
+          "mobile": "https://assets.decocache.com/medicinal-store/cf1d2975-440d-42c8-85ec-5bdeaa9436f3/mais-termogenicos-mobile.png",
+          "desktop": "https://assets.decocache.com/medicinal-store/a85b0a07-4e14-4992-854f-22a802fab2d2/mais-termogenicos-desktop.png",
+          "alt": "#",
+          "href": "#/gerenciamento-de-peso/aumentar-metabolismo?page=1"
         }
-      ]
+      }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
