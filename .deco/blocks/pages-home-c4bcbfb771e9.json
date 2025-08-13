@@ -11,28 +11,28 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
+          "desktop": "https://assets.decocache.com/medicinal-store/c5af6358-e23d-492a-b92d-589d2ca480fe/banner-derma-fusion.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/51e86496-6230-4971-b8d8-c92c147ed1f3/banner-derma-fusion-mobile.png",
+          "href": "/kit-dermafusion-ampola/p",
+          "alt": "banner 2"
+        },
+        {
+          "desktop": "https://assets.decocache.com/medicinal-store/8c4c7949-3b25-42ba-b0c9-ef7f49601d3d/Epicor-Banner-(1).png",
+          "mobile": "https://assets.decocache.com/medicinal-store/391c8afb-f8e3-44da-b996-83b7d7bc451f/epicor-Banner-Mobile-(2).png",
+          "href": "/epicor-500mg-30-doses/p",
+          "alt": "Banner 3"
+        },
+        {
           "desktop": "https://assets.decocache.com/medicinal-store/aa7971c5-9619-46e6-bc34-c1b0fede428d/Peptistrong.jpg",
           "mobile": "https://assets.decocache.com/medicinal-store/6f19f30f-6c28-41b0-9525-4022a347561a/Peptistrong-banner-mobile.jpg",
-          "href": "/peptistrong-chocolate-belga/p",
           "alt": "Banner 1",
+          "href": "/peptistrong-chocolate-belga/p",
           "action": {
             "title": "Skate into Adventure!",
             "subTitle": "Top-quality roller skate shoes for all levels. ",
             "href": "/s?q=shoes&page=0",
             "label": "Grab Yours Now!"
           }
-        },
-        {
-          "desktop": "https://assets.decocache.com/medicinal-store/b1015aa8-7eca-4028-bccd-1b498ecece0e/mitburn-banner-2-(1).png",
-          "mobile": "https://assets.decocache.com/medicinal-store/67545106-d0bf-4dc8-9cfa-3a9ec9e7fe0c/mitburn-banner-mobile-2-(1).png",
-          "href": "/mitburn-50mg-30-doses/p",
-          "alt": "banner 2"
-        },
-        {
-          "desktop": "https://assets.decocache.com/medicinal-store/8c4c7949-3b25-42ba-b0c9-ef7f49601d3d/Epicor-Banner-(1).png",
-          "mobile": "https://assets.decocache.com/medicinal-store/391c8afb-f8e3-44da-b996-83b7d7bc451f/epicor-Banner-Mobile-(2).png",
-          "alt": "Banner 3",
-          "href": "/epicor-500mg-30-doses/p"
         }
       ],
       "preload": true,
