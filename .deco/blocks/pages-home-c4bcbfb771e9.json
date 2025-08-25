@@ -13,7 +13,7 @@
         {
           "desktop": "https://assets.decocache.com/medicinal-store/c5af6358-e23d-492a-b92d-589d2ca480fe/banner-derma-fusion.png",
           "mobile": "https://assets.decocache.com/medicinal-store/51e86496-6230-4971-b8d8-c92c147ed1f3/banner-derma-fusion-mobile.png",
-          "href": "/kit-dermafusion-ampola/p",
+          "href": "/s?q=DermaFusion&page=1",
           "alt": "banner 2"
         },
         {
@@ -49,54 +49,19 @@
               "cta": "/all",
               "items": [
                 {
-                  "label": "Men",
-                  "href": "/men",
-                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+                  "href": "/peptistrong",
+                  "image": "https://assets.decocache.com/medicinal-store/4486c6e9-cfb3-435c-a488-54840bae858f/mockup-peptistrong-png.png",
+                  "label": "Peptistrong"
                 },
                 {
-                  "href": "/women",
-                  "label": "Women",
-                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+                  "href": "/mitburn",
+                  "label": "Mitburn",
+                  "image": "https://assets.decocache.com/medicinal-store/01da2497-b62b-41ec-bd1a-a8f3f8dd3e4f/mitiburn-(4).png"
                 },
                 {
-                  "href": "/kids",
-                  "label": "Kids",
-                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-                },
-                {
-                  "href": "/accessories",
-                  "label": "Accessories",
-                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-                },
-                {
-                  "href": "/home-and-living",
-                  "label": "Home & Living",
-                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-                },
-                {
-                  "href": "/men",
-                  "label": "Men",
-                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-                },
-                {
-                  "label": "Women",
-                  "href": "/women",
-                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-                },
-                {
-                  "href": "/kids",
-                  "label": "Kids",
-                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-                },
-                {
-                  "href": "/accessories",
-                  "label": "Accessories",
-                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
-                },
-                {
-                  "href": "/home-and-living",
-                  "label": "Home & Living",
-                  "image": "https://assets.decocache.com/medicinal-store/137c6384-bbf2-4212-bfcd-a2ca0fa530ae/medicinal-png-2.png"
+                  "label": "Epicor",
+                  "image": "https://assets.decocache.com/medicinal-store/f1cc00c5-ca2b-4ca6-b8cf-fe3e1b99d4fc/Epicor-(3).png",
+                  "href": "/epicor"
                 }
               ]
             }
@@ -181,7 +146,7 @@
           "mobile": "https://assets.decocache.com/medicinal-store/cf1d2975-440d-42c8-85ec-5bdeaa9436f3/mais-termogenicos-mobile.png",
           "desktop": "https://assets.decocache.com/medicinal-store/a85b0a07-4e14-4992-854f-22a802fab2d2/mais-termogenicos-desktop.png",
           "alt": "#",
-          "href": "#/gerenciamento-de-peso/aumentar-metabolismo?page=1"
+          "href": "/gerenciamento-de-peso/aumentar-metabolismo?"
         }
       }
     },
