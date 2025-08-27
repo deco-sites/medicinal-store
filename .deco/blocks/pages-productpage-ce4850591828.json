@@ -93,21 +93,31 @@
                 }
               },
               {
-                "__resolveType": "website/sections/Rendering/Lazy.tsx",
-                "section": {
-                  "__resolveType": "site/sections/Content/InfoCard.tsx",
-                  "image": {
-                    "mobile": "https://assets.decocache.com/medicinal-store/f276d28d-9970-43a8-a380-f28a951a120e/AKKERMAT-mobile.png",
-                    "desktop": "https://assets.decocache.com/medicinal-store/acb53e55-38d5-44ce-af54-6f69f1915ae4/AKKERMAT.png",
-                    "alt": "#"
-                  },
-                  "backgroundColor": "#ffffff",
-                  "textAlign": "right",
-                  "description": "<p>O <strong>Akkermat</strong> é um suplemento inovador que vem despertando bastante interesse quando o assunto é emagrecimento e saúde intestinal. Muitas pessoas buscam entender <strong>Akkermat para que serve</strong>, e a resposta é simples: ele atua como um <strong>inibidor natural da fome</strong>, ajudando a aumentar a saciedade, reduzir a vontade de comer fora de hora e equilibrar o metabolismo.<br></p><p>Mas será que o <strong>Akkermat funciona</strong>? Pesquisas mostram que sua fórmula, desenvolvida a partir de estudos com a bactéria <strong>Akkermansia muciniphila</strong>, contribui para melhorar a resposta do organismo ao acúmulo de gordura, favorecendo resultados mais consistentes na perda de peso e promovendo maior saúde intestinal.</p>",
-                  "title": "<p></p>",
-                  "padding": "none",
-                  "button": {}
-                }
+                "__resolveType": "website/flags/multivariate/section.ts",
+                "variants": [
+                  {
+                    "value": {
+                      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                      "section": {
+                        "__resolveType": "site/sections/Content/InfoCard.tsx",
+                        "image": {
+                          "mobile": "https://assets.decocache.com/medicinal-store/f276d28d-9970-43a8-a380-f28a951a120e/AKKERMAT-mobile.png",
+                          "desktop": "https://assets.decocache.com/medicinal-store/acb53e55-38d5-44ce-af54-6f69f1915ae4/AKKERMAT.png",
+                          "alt": "#"
+                        },
+                        "backgroundColor": "#ffffff",
+                        "textAlign": "right",
+                        "description": "<p>O <strong>Akkermat</strong> é um suplemento inovador que vem despertando bastante interesse quando o assunto é emagrecimento e saúde intestinal. Muitas pessoas buscam entender <strong>Akkermat para que serve</strong>, e a resposta é simples: ele atua como um <strong>inibidor natural da fome</strong>, ajudando a aumentar a saciedade, reduzir a vontade de comer fora de hora e equilibrar o metabolismo.<br></p><p>Mas será que o <strong>Akkermat funciona</strong>? Pesquisas mostram que sua fórmula, desenvolvida a partir de estudos com a bactéria <strong>Akkermansia muciniphila</strong>, contribui para melhorar a resposta do organismo ao acúmulo de gordura, favorecendo resultados mais consistentes na perda de peso e promovendo maior saúde intestinal.</p>",
+                        "title": "<p></p>",
+                        "padding": "none",
+                        "button": {}
+                      }
+                    },
+                    "rule": {
+                      "__resolveType": "website/matchers/never.ts"
+                    }
+                  }
+                ]
               }
             ],
             "matcher": "/akkermat-150mg-30-doses-capsula-gastrorresistente/p"
