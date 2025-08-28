@@ -32,39 +32,59 @@
           {
             "sections": [
               {
-                "__resolveType": "website/sections/Rendering/Lazy.tsx",
-                "section": {
-                  "__resolveType": "site/sections/Content/Benefits.tsx",
-                  "benefits": [
-                    {
-                      "text": "Reduz gordura abdominal",
-                      "icon": "https://assets.decocache.com/medicinal-store/c17145b2-9648-4cdc-b011-025e7edc366f/medical_13205765.png"
+                "__resolveType": "website/flags/multivariate/section.ts",
+                "variants": [
+                  {
+                    "value": {
+                      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                      "section": {
+                        "__resolveType": "site/sections/Content/Benefits.tsx",
+                        "benefits": [
+                          {
+                            "text": "Reduz gordura abdominal",
+                            "icon": "https://assets.decocache.com/medicinal-store/c17145b2-9648-4cdc-b011-025e7edc366f/medical_13205765.png"
+                          },
+                          {
+                            "text": "Equilíbrio no metabolismo",
+                            "icon": "https://assets.decocache.com/medicinal-store/ae5fefdd-05bc-4328-bec2-f8b914adb6dc/flash-sale_8866333.png"
+                          },
+                          {
+                            "icon": "https://assets.decocache.com/medicinal-store/22fa6108-91fe-45e0-9fa4-794d650f4e5b/liver_13297891.png",
+                            "text": "Auxilia no controle da gordura no fígado"
+                          }
+                        ],
+                        "title": "<p></p>"
+                      }
                     },
-                    {
-                      "text": "Equilíbrio no metabolismo",
-                      "icon": "https://assets.decocache.com/medicinal-store/ae5fefdd-05bc-4328-bec2-f8b914adb6dc/flash-sale_8866333.png"
-                    },
-                    {
-                      "icon": "https://assets.decocache.com/medicinal-store/22fa6108-91fe-45e0-9fa4-794d650f4e5b/liver_13297891.png",
-                      "text": "Auxilia no controle da gordura no fígado"
+                    "rule": {
+                      "__resolveType": "website/matchers/never.ts"
                     }
-                  ],
-                  "title": "<p></p>"
-                }
+                  }
+                ]
               },
               {
-                "__resolveType": "website/sections/Rendering/Lazy.tsx",
-                "section": {
-                  "__resolveType": "site/sections/Content/InfoCard.tsx",
-                  "image": {
-                    "mobile": "https://assets.decocache.com/medicinal-store/1c862ac1-3dfb-482e-872b-af6e04a84f0a/morosil-atuacao.png",
-                    "desktop": "https://assets.decocache.com/medicinal-store/aca1f2e5-7776-4737-b9f9-d53ce85dea59/AN-Morosil-03.jpg",
-                    "alt": "#"
-                  },
-                  "backgroundColor": "#ffffff",
-                  "description": "<p>O <strong>Morosil </strong> é um suplemento natural desenvolvido a partir do extrato da laranja moro, fruta rica em antocianinas e substâncias antioxidantes que auxiliam na redução da gordura localizada, especialmente na região abdominal. Muita gente procura saber <strong>morosil o que é</strong> e <strong>para que serve morosil</strong>, e a resposta é simples: trata-se de um aliado no controle de peso, ajudando a diminuir medidas de forma saudável quando associado a uma rotina de exercícios físicos e alimentação equilibrada.</p><p>Ao contrário do que algumas dúvidas levantam sobre se o <strong>morosil é enganação</strong>, estudos demonstram que seus ativos favorecem o metabolismo e contribuem para a quebra de gordura. Outro ponto bastante pesquisado é <strong>morosil por onde sai a gordura</strong>, e vale destacar que o processo ocorre naturalmente pelo organismo, já que o suplemento age reduzindo o acúmulo e favorecendo a eliminação.</p><p>Além do emagrecimento, o <strong>morosil </strong> auxilia na definição corporal e no equilíbrio metabólico, sendo uma opção bastante procurada por quem busca resultados mais visíveis. É importante estar atento a possíveis <strong>morosil efeitos colaterais</strong>, que são raros, mas podem ocorrer em pessoas sensíveis a algum de seus componentes.</p><p>Em resumo, o <strong>morosil emagrece</strong> sim, mas não faz milagres sozinho: ele potencializa os efeitos de uma rotina saudável, ajudando a conquistar resultados mais consistentes e duradouros. Se você procura qualidade, pode encontrar o suplemento em diversas farmácias e lojas confiáveis, sempre garantindo o <strong>morosil  com selo de autenticidade</strong> para ter segurança no consumo.</p>",
-                  "title": "<p></p>"
-                }
+                "__resolveType": "website/flags/multivariate/section.ts",
+                "variants": [
+                  {
+                    "value": {
+                      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                      "section": {
+                        "__resolveType": "site/sections/Content/InfoCard.tsx",
+                        "image": {
+                          "mobile": "https://assets.decocache.com/medicinal-store/1c862ac1-3dfb-482e-872b-af6e04a84f0a/morosil-atuacao.png",
+                          "desktop": "https://assets.decocache.com/medicinal-store/aca1f2e5-7776-4737-b9f9-d53ce85dea59/AN-Morosil-03.jpg",
+                          "alt": "#"
+                        },
+                        "backgroundColor": "#ffffff",
+                        "description": "<p>O <strong>Morosil </strong> é um suplemento natural desenvolvido a partir do extrato da laranja moro, fruta rica em antocianinas e substâncias antioxidantes que auxiliam na redução da gordura localizada, especialmente na região abdominal. Muita gente procura saber <strong>morosil o que é</strong> e <strong>para que serve morosil</strong>, e a resposta é simples: trata-se de um aliado no controle de peso, ajudando a diminuir medidas de forma saudável quando associado a uma rotina de exercícios físicos e alimentação equilibrada.</p><p>Ao contrário do que algumas dúvidas levantam sobre se o <strong>morosil é enganação</strong>, estudos demonstram que seus ativos favorecem o metabolismo e contribuem para a quebra de gordura. Outro ponto bastante pesquisado é <strong>morosil por onde sai a gordura</strong>, e vale destacar que o processo ocorre naturalmente pelo organismo, já que o suplemento age reduzindo o acúmulo e favorecendo a eliminação.</p><p>Além do emagrecimento, o <strong>morosil </strong> auxilia na definição corporal e no equilíbrio metabólico, sendo uma opção bastante procurada por quem busca resultados mais visíveis. É importante estar atento a possíveis <strong>morosil efeitos colaterais</strong>, que são raros, mas podem ocorrer em pessoas sensíveis a algum de seus componentes.</p><p>Em resumo, o <strong>morosil emagrece</strong> sim, mas não faz milagres sozinho: ele potencializa os efeitos de uma rotina saudável, ajudando a conquistar resultados mais consistentes e duradouros. Se você procura qualidade, pode encontrar o suplemento em diversas farmácias e lojas confiáveis, sempre garantindo o <strong>morosil  com selo de autenticidade</strong> para ter segurança no consumo.</p>",
+                        "title": "<p></p>"
+                      }
+                    },
+                    "rule": {
+                      "__resolveType": "website/matchers/never.ts"
+                    }
+                  }
+                ]
               }
             ],
             "matcher": "/morosil-500mg-60-doses/p"
@@ -72,25 +92,35 @@
           {
             "sections": [
               {
-                "__resolveType": "website/sections/Rendering/Lazy.tsx",
-                "section": {
-                  "__resolveType": "site/sections/Content/Benefits.tsx",
-                  "benefits": [
-                    {
-                      "text": "Controle natural do apetite",
-                      "icon": "https://assets.decocache.com/medicinal-store/ffd6d756-3b22-43b1-92d1-2cc47d08836f/cutlery_15731688.png"
+                "__resolveType": "website/flags/multivariate/section.ts",
+                "variants": [
+                  {
+                    "value": {
+                      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                      "section": {
+                        "__resolveType": "site/sections/Content/Benefits.tsx",
+                        "benefits": [
+                          {
+                            "text": "Controle natural do apetite",
+                            "icon": "https://assets.decocache.com/medicinal-store/ffd6d756-3b22-43b1-92d1-2cc47d08836f/cutlery_15731688.png"
+                          },
+                          {
+                            "text": "Melhora da saúde intestinal",
+                            "icon": "https://assets.decocache.com/medicinal-store/ecc79786-1a4d-4b0e-9c4a-69711f1789ed/small-intestine_18281849.png"
+                          },
+                          {
+                            "text": "Reduz gordura acumulada",
+                            "icon": "https://assets.decocache.com/medicinal-store/30f473ea-8ff6-418b-a4b8-0cb1514d3e9e/body-contouring_18081919.png"
+                          }
+                        ],
+                        "title": "<p></p>"
+                      }
                     },
-                    {
-                      "text": "Melhora da saúde intestinal",
-                      "icon": "https://assets.decocache.com/medicinal-store/ecc79786-1a4d-4b0e-9c4a-69711f1789ed/small-intestine_18281849.png"
-                    },
-                    {
-                      "text": "Reduz gordura acumulada",
-                      "icon": "https://assets.decocache.com/medicinal-store/30f473ea-8ff6-418b-a4b8-0cb1514d3e9e/body-contouring_18081919.png"
+                    "rule": {
+                      "__resolveType": "website/matchers/never.ts"
                     }
-                  ],
-                  "title": "<p></p>"
-                }
+                  }
+                ]
               },
               {
                 "__resolveType": "website/flags/multivariate/section.ts",
@@ -102,7 +132,7 @@
                         "__resolveType": "site/sections/Content/InfoCard.tsx",
                         "image": {
                           "mobile": "https://assets.decocache.com/medicinal-store/f276d28d-9970-43a8-a380-f28a951a120e/AKKERMAT-mobile.png",
-                          "desktop": "https://assets.decocache.com/medicinal-store/acb53e55-38d5-44ce-af54-6f69f1915ae4/AKKERMAT.png",
+                          "desktop": "https://assets.decocache.com/medicinal-store/25135f0c-92ce-40f9-9dcc-ce74cc61fc99/AKKERMAT-desktop.png",
                           "alt": "#"
                         },
                         "backgroundColor": "#ffffff",
