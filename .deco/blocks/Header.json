@@ -369,22 +369,27 @@
       "href": "/busca?O=OrderByTopSaleDESC",
       "isHighlighted": false,
       "mobileOnly": false,
-      "isBold": true
+      "isBold": false
     },
     {
       "children": [],
       "name": "Lançamentos",
       "isHighlighted": false,
       "href": "/busca?fq=H:188",
-      "isBold": true
+      "isBold": false
     },
     {
       "children": [],
       "href": "/busca?fq=H:189",
       "isHighlighted": false,
       "name": "Promoção",
-      "isBold": true,
+      "isBold": false,
       "mobileOnly": false
+    },
+    {
+      "children": [],
+      "name": "Assinatura",
+      "isBold": true
     }
   ],
   "loading": "eager",
