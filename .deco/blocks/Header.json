@@ -385,11 +385,6 @@
       "name": "Promoção",
       "isBold": false,
       "mobileOnly": false
-    },
-    {
-      "children": [],
-      "name": "Assinatura",
-      "isBold": true
     }
   ],
   "loading": "eager",
