@@ -115,7 +115,10 @@ function ProductDetails(props: SectionProps<typeof loader>) {
       <div class="divide-y divide-base-200">
         <div class="pb-4">
           <h3 class="font-semibold mb-2">Descrição</h3>
-          <DescriptionCollapse preview={previewDescription} rest={restDescription} />
+          <DescriptionCollapse
+            preview={previewDescription}
+            rest={restDescription}
+          />
         </div>
         {additionalProperty.map((p: PropertyValue) => {
           if (
