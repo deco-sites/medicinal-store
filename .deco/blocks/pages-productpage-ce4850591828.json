@@ -26,8 +26,22 @@
         },
         "sections": [
           {
-            "sections": [],
-            "matcher": "/peptistrong-chocolate-belga/p"
+            "sections": [
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/Benefits.tsx",
+                  "benefits": [
+                    {
+                      "text": "teste",
+                      "icon": "https://assets.decocache.com/medicinal-store/ecc79786-1a4d-4b0e-9c4a-69711f1789ed/small-intestine_18281849.png"
+                    }
+                  ],
+                  "title": "<p>teste</p>"
+                }
+              }
+            ],
+            "matcher": "/gelatina-500mg-90-doses/p"
           }
         ],
         "clusterDiscount": [

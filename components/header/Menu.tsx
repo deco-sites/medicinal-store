@@ -92,7 +92,7 @@ function Menu({ navItems = [] }: Props) {
           <Icon id="chevron-down" size={16} class="-rotate-90" />
         </li>
       </ul>
-      <ul class="menu rounded-box py-0 px-4">
+      <ul class="menu rounded-box py-0 px-4 flex flex-col gap-3">
         {navItems.map((item) => <MenuItem item={item} />)}
       </ul>
     </div>

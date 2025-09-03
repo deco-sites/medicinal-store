@@ -104,7 +104,7 @@ export default function ({
       <AddToCartButton
         type="shelf"
         item={item}
-        class="btn btn-primary no-animation w-full mt-2"
+        class="btn no-animation w-full mt-2 bg-white text-primary hover:text-white bg-primary border-primary"
         seller={seller}
         product={product}
         quantity={quantity}

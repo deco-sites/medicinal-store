@@ -365,22 +365,26 @@
     },
     {
       "children": [],
-      "name": "Peptistrong - mais Força muscular",
-      "href": "/peptistrong-chocolate-belga/p",
-      "isHighlighted": true,
+      "name": "Mais Vendidos",
+      "href": "/busca?O=OrderByTopSaleDESC",
+      "isHighlighted": false,
+      "mobileOnly": false,
+      "isBold": false
+    },
+    {
+      "children": [],
+      "name": "Lançamentos",
+      "isHighlighted": false,
+      "href": "/busca?fq=H:188",
+      "isBold": false
+    },
+    {
+      "children": [],
+      "href": "/busca?fq=H:189",
+      "isHighlighted": false,
+      "name": "Promoção",
+      "isBold": false,
       "mobileOnly": false
-    },
-    {
-      "children": [],
-      "name": "Mitburn - mais Termogênico",
-      "href": "/mitburn-50mg-30-doses/p",
-      "isHighlighted": true
-    },
-    {
-      "children": [],
-      "name": "Epicor - mais Imunidade",
-      "href": "/epicor-500mg-30-doses/p",
-      "isHighlighted": true
     }
   ],
   "loading": "eager",

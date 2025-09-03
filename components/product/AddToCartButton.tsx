@@ -165,10 +165,10 @@ function AddToCartButton(props: Props) {
       )}
       <button
         // disabled
-        class={clx("flex items-center gap-2 flex-grow", _class?.toString())}
+        class={clx("flex items-center gap-2 flex-grow group hover:bg-[#0F62AC] hover:text-white", _class?.toString())}
         hx-on:click={useScript(onClick)}
       >
-        {!hideIcon && <Icon id="shopping_bag" width={24} height={21} />}
+        {!hideIcon && <Icon class="hover:text-white" id="shopping_bag" width={24} height={21} />}
         {buttonText}
       </button>
       <script

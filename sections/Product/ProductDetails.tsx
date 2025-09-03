@@ -3,6 +3,7 @@ import ProductInfo from "../../components/product/ProductInfo.tsx";
 import ProductTitle from "../../components/product/ProductTitle.tsx";
 import PurchaseOptions from "../../components/product/PurchaseOptions.tsx";
 import ImageGallerySlider from "../../components/product/Gallery.tsx";
+import DescriptionCollapse from "../../islands/DescriptionCollapse.tsx";
 
 import { useDevice } from "@deco/deco/hooks";
 import { SectionProps } from "@deco/deco";
@@ -96,53 +97,50 @@ function ProductDetails(props: SectionProps<typeof loader>) {
     );
   }
 
+  // Lógica para exibir 30% da descrição e expandir
+  const descriptionText = description || "";
+  const descriptionLength = descriptionText.length;
+  const previewLength = Math.ceil(descriptionLength * 0.1);
+  const previewDescription = descriptionText.slice(0, previewLength);
+  const restDescription = descriptionText.slice(previewLength);
+
   return (
     <div class="container mx-auto w-full px-4 py-6 sm:py-10 flex flex-col gap-8">
       {device === "desktop" ? <Desktop {...props} /> : <Mobile {...props} />}
-      {descriptionSections.length > 0
-        ? (
-          <>
-            {descriptionSections.map(renderSection)}
-          </>
-        )
-        : (
-          <div class="divide-y divide-base-200">
-            <details class="collapse collapse-arrow rounded-none" open>
-              <summary class="collapse-title font-semibold px-0 after:!right-1">
-                Descrição
-              </summary>
-              <div
-                class="collapse-content fluid-text text-sm !p-0"
-                dangerouslySetInnerHTML={{
-                  __html: description || "",
-                }}
-              />
-            </details>
-            {additionalProperty.map((p: PropertyValue) => {
-              if (
-                [
-                  "composição",
-                  "advertências",
-                  "modo de usar",
-                ].includes(p.propertyID?.toLowerCase() || "")
-              ) {
-                return (
-                  <details class="collapse collapse-arrow rounded-none">
-                    <summary class="collapse-title font-semibold px-0 after:!right-1">
-                      {p.name}
-                    </summary>
-                    <div
-                      class="collapse-content fluid-text text-sm !p-0"
-                      dangerouslySetInnerHTML={{
-                        __html: p.value || "",
-                      }}
-                    />
-                  </details>
-                );
-              }
-            })}
-          </div>
-        )}
+      {descriptionSections.length > 0 && (
+        <>
+          {descriptionSections.map(renderSection)}
+        </>
+      )}
+      <div class="divide-y divide-base-200">
+        <div class="pb-4">
+          <h3 class="font-semibold mb-2">Descrição</h3>
+          <DescriptionCollapse preview={previewDescription} rest={restDescription} />
+        </div>
+        {additionalProperty.map((p: PropertyValue) => {
+          if (
+            [
+              "composição",
+              "advertências",
+              "modo de usar",
+            ].includes(p.propertyID?.toLowerCase() || "")
+          ) {
+            return (
+              <details class="collapse collapse-arrow rounded-none">
+                <summary class="collapse-title font-semibold px-0 after:!right-1">
+                  {p.name}
+                </summary>
+                <div
+                  class="collapse-content fluid-text text-sm !p-0"
+                  dangerouslySetInnerHTML={{
+                    __html: p.value || "",
+                  }}
+                />
+              </details>
+            );
+          }
+        })}
+      </div>
     </div>
   );
 }

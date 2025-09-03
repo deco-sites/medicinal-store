@@ -11,28 +11,28 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://assets.decocache.com/medicinal-store/c5af6358-e23d-492a-b92d-589d2ca480fe/banner-derma-fusion.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/51e86496-6230-4971-b8d8-c92c147ed1f3/banner-derma-fusion-mobile.png",
-          "href": "/s?q=DermaFusion&page=1",
-          "alt": "banner 2"
-        },
-        {
-          "desktop": "https://assets.decocache.com/medicinal-store/8c4c7949-3b25-42ba-b0c9-ef7f49601d3d/Epicor-Banner-(1).png",
-          "mobile": "https://assets.decocache.com/medicinal-store/391c8afb-f8e3-44da-b996-83b7d7bc451f/epicor-Banner-Mobile-(2).png",
-          "href": "/epicor-500mg-30-doses/p",
-          "alt": "Banner 3"
-        },
-        {
-          "desktop": "https://assets.decocache.com/medicinal-store/aa7971c5-9619-46e6-bc34-c1b0fede428d/Peptistrong.jpg",
-          "mobile": "https://assets.decocache.com/medicinal-store/6f19f30f-6c28-41b0-9525-4022a347561a/Peptistrong-banner-mobile.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/6129ccd4-75c2-4633-a9a1-b38ce76c6366/banner-morosil-desktop.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/216543fd-3bb4-4fb0-a71c-10db256c2fbc/banner-morosil-mobile.png",
+          "href": "/morosil-500mg-60-doses/p",
           "alt": "Banner 1",
-          "href": "/peptistrong-chocolate-belga/p",
           "action": {
             "title": "Skate into Adventure!",
             "subTitle": "Top-quality roller skate shoes for all levels. ",
             "href": "/s?q=shoes&page=0",
             "label": "Grab Yours Now!"
           }
+        },
+        {
+          "desktop": "https://assets.decocache.com/medicinal-store/908bf794-b5e9-4adf-83d3-655b0b049b8c/banner-akkermat2-desktop.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/ae60d631-7ae1-4cde-a631-4c34195a3cfa/banner-akkermat2-mobile.png",
+          "href": "/akkermat-150mg-30-doses-capsula-gastrorresistente/p",
+          "alt": "Banner 3"
+        },
+        {
+          "desktop": "https://assets.decocache.com/medicinal-store/c5af6358-e23d-492a-b92d-589d2ca480fe/banner-derma-fusion.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/51e86496-6230-4971-b8d8-c92c147ed1f3/banner-derma-fusion-mobile.png",
+          "alt": "banner 2",
+          "href": "/s?q=DermaFusion&page=1"
         }
       ],
       "preload": true,
