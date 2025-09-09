@@ -67,10 +67,15 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Content/OnlyText.tsx",
-        "description": "<p><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Morosil tem sido utilizado no cuidado e na prevenção da obesidade, resistência à insulina, esteatose hepática e doenças cardiovasculares. A ação terapêutica do Morosil ocorre porque a Laranja Moro é rica em compostos bioativos, especialmente antocianidinas, flavonoides, ácidos hidroxicinâmicos e ácido ascórbicos</span></p>",
-        "title": "<p><strong><span style=\"color: rgb(150, 34, 57); font-size: 22pt\">Pra que serve o Morosil?</span></strong></p>",
-        "columns": "1"
+        "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "title": "<p style=\"text-align: center\"><strong><span style=\"color: rgb(150, 34, 57); font-size: 22pt\">Pra que serve o Morosil?</span></strong></p>",
+        "description": "<p style=\"text-align: center\"><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Morosil tem sido utilizado no cuidado e na prevenção da obesidade, resistência à insulina, esteatose hepática e doenças cardiovasculares. A ação terapêutica do Morosil ocorre porque a Laranja Moro é rica em compostos bioativos, especialmente antocianidinas, flavonoides, ácidos hidroxicinâmicos e ácido ascórbicos</span></p>",
+        "backgroundColor": "#ffffff",
+        "image": {
+          "desktop": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png"
+        },
+        "padding": "none"
       }
     },
     {
@@ -79,14 +84,14 @@
         "__resolveType": "site/sections/Content/InfoCard.tsx",
         "title": "<p style=\"text-align: right\"><span style=\"color: rgb(150, 34, 57); font-size: 25pt\">Morosil Emagrece?</span></p>",
         "description": "<p style=\"text-align: right\"><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Os compostos bioativos do Morosil podem contribuir para reduzir a esteatose hepática através do aumento da expressão de genes lipolíticos e redução da expressão de genes lipogênicos no fígado como o LXR e a FAS. Desta forma, ocorre redução na síntese de triacilgliceróis e a oxidação de gordura no fígado. Acredita-se que o grande responsável por esses efeitos benéficos no fígado sejam as antocianididas C3G e seus metabólitos. Outros bioativos presentes no Morosil ampliam esse resutado terapêutico</span></p>",
-        "textAlign": "left",
         "image": {
           "mobile": "https://assets.decocache.com/medicinal-store/0c2ed82d-fee7-4a8d-9bc4-7bd3df86645e/mulher-morosil-mobile.png",
           "desktop": "https://assets.decocache.com/medicinal-store/e198e9e9-3790-45fe-91da-e15956109c20/mulher-morosil.png",
           "alt": "imagem infocard"
         },
         "backgroundColor": "#ffffff",
-        "padding": "none"
+        "padding": "none",
+        "textAlign": "left"
       }
     },
     {
@@ -115,37 +120,59 @@
       "section": {
         "__resolveType": "site/sections/Content/InfoCard.tsx",
         "title": "<p style=\"text-align: justify\"><strong><span style=\"color: rgb(150, 34, 57); font-size: 25pt\">Morosil funciona?</span></strong></p>",
-        "textAlign": "right",
-        "image": {
-          "mobile": "https://assets.decocache.com/medicinal-store/1c862ac1-3dfb-482e-872b-af6e04a84f0a/morosil-atuacao.png",
-          "desktop": "https://assets.decocache.com/medicinal-store/aca1f2e5-7776-4737-b9f9-d53ce85dea59/AN-Morosil-03.jpg",
-          "alt": "infocard image"
-        },
         "description": "<p><span style=\"color: #000000; font-size: 15pt\">Morosil é um produto com ação comprovada no metabolismo do tecido adiposo. Sabe-se que a hipertrofia das células de gordura (adipócitos) é um importante fator para a obesidade. Esse aumento do adipócitos causa a hipóxia tecidual, que a esta associada com o desenvolvimento de inflamação e resistência à insulina sistemica. Os compostos bioativos do Morosil, especialmente a antocianidida C3G são capazes de atuar nesse mecanismo, melhorando o metabolismo do tecido adiposo. Os polifenóis tem alto poder antioxidante e atuam na redução dos eventos relacionados à inflamação e estresse oxidativo. A antocianidina C3G também contribui para reduzir o transporte de ácidos graxos e a sua captação pelos adipócitos. Os polifenóis presentes no Morosil contribuem para diminuir a enzima HMG-CoA, que tem papel importante na síntese do coleterol. Desta forma, o uso do Morosil reduz os o colesterol tecidual e aumenta a expressão dos receptores de LDL.</span></p>",
         "backgroundColor": "#ffffff",
-        "padding": "none"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Content/OnlyText.tsx",
-        "description": "<p><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Morosil é um tratamento que auxilia na perda de medidas, especialmente na região abdominal. Seus bioativos atuam melhorando a hipóxia e a inflamação causadas pela hipertrofia dos adipócitos. A ação das antocianidinas, presentes no Morosil, promove a melhora do metabolismo do tecido adiposo, contribuindo por diversos mecanismos para a redução de medidas na região do abdômen. Resultados excelentes são obtidos quando associado a uma alimentação saudável e à prática regular de atividade física.</span></p>",
-        "title": "<p><strong><span style=\"color: rgb(150, 34, 57); font-size: 25pt\">Morosil faz perder barriga?</span></strong></p>"
+        "image": {
+          "desktop": "https://assets.decocache.com/medicinal-store/aca1f2e5-7776-4737-b9f9-d53ce85dea59/AN-Morosil-03.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/1c862ac1-3dfb-482e-872b-af6e04a84f0a/morosil-atuacao.png",
+          "alt": "infocard image"
+        },
+        "padding": "none",
+        "textAlign": "right"
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/InfoCard.tsx",
-        "title": "<h2 style=\"text-align: right\"><strong><span style=\"color: rgb(150, 34, 57); font-size: 22pt\">Outros Benefícios do Morosil</span></strong></h2>",
+        "title": "<p><strong><span style=\"color: rgb(150, 34, 57); font-size: 25pt\">Morosil faz perder barriga?</span></strong></p>",
+        "image": {
+          "mobile": "https://assets.decocache.com/medicinal-store/da064dbd-c6f6-47ae-ace3-4b7ddad7a8b5/Rectangle-6.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/da064dbd-c6f6-47ae-ace3-4b7ddad7a8b5/Rectangle-6.jpg",
+          "alt": "infocard image"
+        },
+        "description": "<p><span style=\"color: rgb(0, 0, 0); font-size: 20px\">Morosil é um tratamento que auxilia na perda de medidas, especialmente na região abdominal. Seus bioativos atuam melhorando a hipóxia e a inflamação causadas pela hipertrofia dos adipócitos. A ação das antocianidinas, presentes no Morosil, promove a melhora do metabolismo do tecido adiposo, contribuindo por diversos mecanismos para a redução de medidas na região do abdômen. Resultados excelentes são obtidos quando associado a uma alimentação saudável e à prática regular de atividade física.</span></p>",
+        "backgroundColor": "#ffffff",
+        "padding": "none",
+        "textAlign": "left"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "title": "<p><strong><span style=\"color: rgb(150, 34, 57); font-size: 25pt\">Outros Benefícios do Morosil</span></strong></p>",
         "description": "<p style=\"text-align: right\"><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Os compostos bioativos do Morosil podem contribuir para reduzir a esteatose hepática através do aumento da expressão de genes lipolíticos e redução da expressão de genes lipogênicos no fígado como o LXR e a FAS. Desta forma, ocorre redução na síntese de triacilgliceróis e a oxidação de gordura no fígado. Acredita-se que o grande responsável por esses efeitos benéficos no fígado sejam as antocianididas C3G e seus metabólitos. Outros bioativos presentes no Morosil ampliam esse resutado terapêutico</span></p>",
         "padding": "none",
-        "textAlign": "left",
         "image": {
           "desktop": "https://assets.decocache.com/medicinal-store/b504e1f5-7b6a-4244-8fc1-2bc2bc461b3d/morosil-figado-desktop.png",
           "mobile": "https://assets.decocache.com/medicinal-store/77095474-5863-4430-9618-d0b57a209632/morosil-figado.png",
           "alt": "morosil"
+        },
+        "backgroundColor": "#ffffff",
+        "textAlign": "right"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "title": "<p style=\"text-align: center\"><strong><span style=\"color: rgb(137, 44, 62); font-size: 21pt\">Morosil é aprovado pela ANVISA</span></strong></p>",
+        "description": "<p style=\"text-align: center\"><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">O Morosil é um produto que tem diversos estudos que comprovam sua eficácia. É importante reforçar que o Morosil também foi aprovado pela ANVISA para uso em suplementos alimentares, dando a ele a credibilidade e a segurança que todos queremos. Tomar Morosil significa cuidar da nossa saúde. Mais que apenas o apelo estético, Morosil tem ação benéfica para nossa saúde.</span><em><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> Francieli Pagliari; Farmacêutica pela Universidade Regional de Blumenau (FURB-SC) 2005; Pós Graduada em Análises Clínicas (CBES-PR); Pós Graduada em PD em Cosméticos (RACINE-SC);</span></em></p>",
+        "padding": "none",
+        "image": {
+          "desktop": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png"
         },
         "backgroundColor": "#ffffff"
       }
@@ -153,18 +180,9 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Content/OnlyText.tsx",
-        "title": "<p style=\"text-align: center\"><span style=\"color: rgb(137, 44, 62); font-size: 21pt\">Morosil é aprovado pela ANVISA</span></p>",
-        "description": "<p><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">O Morosil é um produto que tem diversos estudos que comprovam sua eficácia. É importante reforçar que o Morosil também foi aprovado pela ANVISA para uso em suplementos alimentares, dando a ele a credibilidade e a segurança que todos queremos. Tomar Morosil significa cuidar da nossa saúde. Mais que apenas o apelo estético, Morosil tem ação benéfica para nossa saúde.</span><em><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> Francieli Pagliari; Farmacêutica pela Universidade Regional de Blumenau (FURB-SC) 2005; Pós Graduada em Análises Clínicas (CBES-PR); Pós Graduada em PD em Cosméticos (RACINE-SC);</span></em></p>",
-        "columns": "1"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
         "__resolveType": "site/sections/Content/InfoCard.tsx",
-        "title": "<h2><strong><span style=\"color: rgb(156, 48, 68); font-size: 25pt\">Como tomar Morosil?</span></strong></h2>",
-        "textAlign": "right",
+        "title": "<p><strong><span style=\"color: rgb(150, 34, 57); font-size: 25pt\">Como tomar Morosil?</span></strong></p>",
+        "description": "<p><span style=\"color: #000000; font-size: 15pt\">O </span><strong><span style=\"color: #000000; font-size: 15pt\">Morosil</span></strong><span style=\"color: #000000; font-size: 15pt\"> é um extrato padronizado da Laranja Moro, 100% natural e sem adição de corantes. Pode ser ingerido em cápsulas de </span><strong><span style=\"color: #000000; font-size: 15pt\">500 mg</span></strong><span style=\"color: #000000; font-size: 15pt\">, na dose de </span><strong><span style=\"color: #000000; font-size: 15pt\">1 a 4 cápsulas por dia</span></strong><span style=\"color: #000000; font-size: 15pt\">, em qualquer horário, pois não contém cafeína nem substâncias que atrapalham o sono.</span></p><p><span style=\"color: #000000; font-size: 15pt\">A formulação pode ser feita em </span><strong><span style=\"color: #000000; font-size: 15pt\">cápsulas vegetais</span></strong><span style=\"color: #000000; font-size: 15pt\">, tornando o produto </span><strong><span style=\"color: #000000; font-size: 15pt\">vegano</span></strong><span style=\"color: #000000; font-size: 15pt\">, além de ser </span><strong><span style=\"color: #000000; font-size: 15pt\">livre de lactose e glúten</span></strong><span style=\"color: #000000; font-size: 15pt\">.</span></p>",
         "backgroundColor": "#ffffff",
         "image": {
           "desktop": "https://assets.decocache.com/medicinal-store/709259d0-4181-4f8c-be06-4aa6595f6e67/morosil-selo.png",
@@ -172,13 +190,14 @@
           "alt": "morosil"
         },
         "padding": "none",
-        "description": "<p><span style=\"color: #000000; font-size: 15pt\">O </span><strong><span style=\"color: #000000; font-size: 15pt\">Morosil</span></strong><span style=\"color: #000000; font-size: 15pt\"> é um extrato padronizado da Laranja Moro, 100% natural e sem adição de corantes. Pode ser ingerido em cápsulas de </span><strong><span style=\"color: #000000; font-size: 15pt\">500 mg</span></strong><span style=\"color: #000000; font-size: 15pt\">, na dose de </span><strong><span style=\"color: #000000; font-size: 15pt\">1 a 4 cápsulas por dia</span></strong><span style=\"color: #000000; font-size: 15pt\">, em qualquer horário, pois não contém cafeína nem substâncias que atrapalham o sono.</span></p><p><span style=\"color: #000000; font-size: 15pt\">A formulação pode ser feita em </span><strong><span style=\"color: #000000; font-size: 15pt\">cápsulas vegetais</span></strong><span style=\"color: #000000; font-size: 15pt\">, tornando o produto </span><strong><span style=\"color: #000000; font-size: 15pt\">vegano</span></strong><span style=\"color: #000000; font-size: 15pt\">, além de ser </span><strong><span style=\"color: #000000; font-size: 15pt\">livre de lactose e glúten</span></strong><span style=\"color: #000000; font-size: 15pt\">.</span></p>"
+        "textAlign": "right"
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "Adquira o seu:",
         "products": {
           "__resolveType": "vtex/loaders/legacy/productList.ts",
           "props": {
@@ -187,8 +206,7 @@
             "collection": "181",
             "similars": true
           }
-        },
-        "title": "Adquira o seu:"
+        }
       }
     },
     {
