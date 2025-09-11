@@ -10,26 +10,39 @@ import Icon from "../../components/ui/Icon.tsx";
 import { useId } from "../../sdk/useId.ts";
 /** @titleBy label */
 export interface Item {
+  /** @title Imagem */
   image: ImageWidget;
+  /** @title Link */
   href: string;
+  /** @title texto alternativo */
   label: string;
+  /** 
+   * @title Altura da imagem
+   * @description Define a altura da imagem em pixels. Se não for especificado, o valor padrão será 120px. 
+   * */
+  height?: number;
+  /** 
+  * @title Largura da imagem
+  * @description Define a largura da imagem em pixels. Se não for especificado, o valor padrão será 120px. 
+  * */
+  width?: number;
 }
 export interface Props extends SectionHeaderProps {
   items: Item[];
 }
-function Card({ image, href, label }: Item) {
+function Card({ image, href, label, height, width }: Item) {
   return (
-    <a href={href} class="flex flex-col items-center justify-center gap-4">
-      <div class="w-44 h-44 rounded-full bg-white flex justify-center items-center border border-base-200 hover:border-primary">
+    <a href={href} class="flex flex-col items-center justify-center gap-4 group transition-all">
+      <div class="p-5 rounded-full bg-white flex justify-center items-center border border-base-200 group-hover:border-primary">
         <Image
           src={image}
           alt={label}
-          width={100}
-          height={100}
+          height={height ?? 120}
+          width={width ?? 120}
           loading="lazy"
         />
       </div>
-      <span class="font-medium text-sm">{label}</span>
+      <span class="font-medium text-sm group-hover:text-primary">{label}</span>
     </a>
   );
 }

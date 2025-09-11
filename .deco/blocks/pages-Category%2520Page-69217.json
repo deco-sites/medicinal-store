@@ -38,6 +38,44 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Category/CategoryGrid.tsx",
+        "items": [
+          {
+            "image": "https://assets.decocache.com/medicinal-store/49a20f96-d289-47ce-9864-507f9e0284fc/speedometer_2508323.png",
+            "href": "#",
+            "label": "teste",
+            "height": 100,
+            "width": 100
+          },
+          {
+            "image": "https://assets.decocache.com/medicinal-store/49a20f96-d289-47ce-9864-507f9e0284fc/speedometer_2508323.png",
+            "href": "#",
+            "label": "teste",
+            "height": 100
+          },
+          {
+            "image": "https://assets.decocache.com/medicinal-store/49a20f96-d289-47ce-9864-507f9e0284fc/speedometer_2508323.png",
+            "href": "#",
+            "label": "teste"
+          },
+          {
+            "image": "https://assets.decocache.com/medicinal-store/49a20f96-d289-47ce-9864-507f9e0284fc/speedometer_2508323.png",
+            "href": "#",
+            "label": "teste",
+            "height": 100
+          },
+          {
+            "image": "https://assets.decocache.com/medicinal-store/49a20f96-d289-47ce-9864-507f9e0284fc/speedometer_2508323.png",
+            "href": "#",
+            "label": "teste",
+            "height": 100
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
           "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
