@@ -50,7 +50,7 @@ interface BannerMobileProps {
 
 const BannerPdp = ({ mobile, desktop, link }: BannerPdpProps) => {
     return (
-        <div class="flex justify-center my-4 container px-4 lg:px-0">
+        <div class="flex justify-center my-4 container lg:px-0">
             <a href={link}>
                 <picture>
                     <source
