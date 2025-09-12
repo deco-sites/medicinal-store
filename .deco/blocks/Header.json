@@ -365,25 +365,25 @@
     },
     {
       "children": [],
-      "name": "Mais Vendidos",
-      "href": "/busca?O=OrderByTopSaleDESC",
+      "name": "Promoção",
+      "href": "/busca?fq=H:189",
       "isHighlighted": false,
       "mobileOnly": false,
-      "isBold": false
+      "isBold": true
     },
     {
       "children": [],
       "name": "Lançamentos",
       "isHighlighted": false,
       "href": "/busca?fq=H:188",
-      "isBold": false
+      "isBold": true
     },
     {
       "children": [],
-      "href": "/busca?fq=H:189",
+      "href": "/busca?fq=H:190=OrderByTopSaleDESC",
       "isHighlighted": false,
-      "name": "Promoção",
-      "isBold": false,
+      "name": "Mais Vendidos",
+      "isBold": true,
       "mobileOnly": false
     }
   ],
