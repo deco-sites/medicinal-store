@@ -72,8 +72,8 @@
         "description": "<p style=\"text-align: center\"><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Morosil tem sido utilizado no cuidado e na prevenção da obesidade, resistência à insulina, esteatose hepática e doenças cardiovasculares. A ação terapêutica do Morosil ocorre porque a Laranja Moro é rica em compostos bioativos, especialmente antocianidinas, flavonoides, ácidos hidroxicinâmicos e ácido ascórbicos</span></p>",
         "backgroundColor": "#ffffff",
         "image": {
-          "desktop": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png"
+          "desktop": "https://assets.decocache.com/medicinal-store/44c0e6cc-51f7-48c5-b5de-9ae251b8e942/AN-Morosil-03.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/1c862ac1-3dfb-482e-872b-af6e04a84f0a/morosil-atuacao.png"
         },
         "padding": "none"
       }
@@ -137,8 +137,8 @@
         "__resolveType": "site/sections/Content/InfoCard.tsx",
         "title": "<p><strong><span style=\"color: rgb(150, 34, 57); font-size: 25pt\">Morosil faz perder barriga?</span></strong></p>",
         "image": {
-          "mobile": "https://assets.decocache.com/medicinal-store/da064dbd-c6f6-47ae-ace3-4b7ddad7a8b5/Rectangle-6.jpg",
-          "desktop": "https://assets.decocache.com/medicinal-store/da064dbd-c6f6-47ae-ace3-4b7ddad7a8b5/Rectangle-6.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/24ad19e6-d142-4614-872b-9ca92537cdda/AN-Morosil-04.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/24ad19e6-d142-4614-872b-9ca92537cdda/AN-Morosil-04.jpg",
           "alt": "infocard image"
         },
         "description": "<p><span style=\"color: rgb(0, 0, 0); font-size: 20px\">Morosil é um tratamento que auxilia na perda de medidas, especialmente na região abdominal. Seus bioativos atuam melhorando a hipóxia e a inflamação causadas pela hipertrofia dos adipócitos. A ação das antocianidinas, presentes no Morosil, promove a melhora do metabolismo do tecido adiposo, contribuindo por diversos mecanismos para a redução de medidas na região do abdômen. Resultados excelentes são obtidos quando associado a uma alimentação saudável e à prática regular de atividade física.</span></p>",
@@ -175,6 +175,23 @@
           "mobile": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png"
         },
         "backgroundColor": "#ffffff"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/BannerPdp.tsx",
+        "mobile": {
+          "height": 440,
+          "alt": "#",
+          "mobile": "https://assets.decocache.com/medicinal-store/90950b62-8518-4e56-b2b0-9187a82d3d54/Banner-morosil-mobile.png"
+        },
+        "desktop": {
+          "desktop": "https://assets.decocache.com/medicinal-store/b1020ea9-46fc-4d36-bb32-3f1e604a6041/Banner-morosil-447.png",
+          "height": 440,
+          "alt": "#"
+        },
+        "link": "/morosil-500mg-60-doses/p"
       }
     },
     {
