@@ -4,6 +4,7 @@ import { clx } from "../../sdk/clx.ts";
 import { formatPrice } from "../../sdk/format.ts";
 import { useComponent } from "../../sections/Component.tsx";
 import CartItem, { Item } from "./Item.tsx";
+import FreeShippingProgressBar from "./FreeShippingProgressBar.tsx";
 import { useScript } from "@deco/deco/hooks";
 import Icon from "../ui/Icon.tsx";
 export interface Minicart {
@@ -58,7 +59,7 @@ const onLoad = (formID: string) => {
 };
 const sendBeginCheckoutEvent = () => {
   window.DECO.events.dispatch({
-    name: "being_checkout",
+    name: "begin_checkout",
     params: window.STOREFRONT.CART.getCart(),
   });
 };
@@ -101,6 +102,7 @@ export default function Cart(
         currency,
         checkoutHref,
       },
+      freeShippingTarget = 250,
     },
   }: {
     cart: Minicart;
@@ -175,6 +177,16 @@ export default function Cart(
             )
             : (
               <>
+                      {/* Free Shipping Bar */}
+            <div class="px-2 py-4 w-full">
+              <FreeShippingProgressBar
+                total={total}
+                locale={locale}
+                currency={currency}
+                target={freeShippingTarget}
+              />
+            </div>
+
                 {/* Cart Items */}
                 <ul
                   role="list"

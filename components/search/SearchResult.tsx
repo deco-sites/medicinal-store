@@ -45,6 +45,8 @@ export interface Props {
   /** @hidden */
   partial?: "hideMore" | "hideLess";
   sections?: DescriptionSections[];
+  /** @title Exibir Filtros */
+  showFilters?: boolean;
 }
 
 function NotFound() {
@@ -227,7 +229,7 @@ function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
   const device = useDevice();
-  const { startingPage = 0, url, partial, descriptionSections } = props;
+  const { startingPage = 0, url, partial, descriptionSections, showFilters = true } = props;
   const page = props.page!;
   const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
@@ -284,7 +286,7 @@ function Result(props: SectionProps<typeof loader>) {
                 )}
               </div>
 
-              {device === "mobile" && (
+              {device === "mobile" && showFilters && (
                 <Drawer
                   id={controls}
                   aside={
@@ -325,8 +327,11 @@ function Result(props: SectionProps<typeof loader>) {
                 </Drawer>
               )}
 
-              <div class="grid grid-cols-1 sm:grid-cols-[350px_1fr]">
-                {device === "desktop" && (
+              <div class={clx(
+                "grid grid-cols-1",
+                showFilters && device === "desktop" && "sm:grid-cols-[350px_1fr]"
+              )}>
+                {device === "desktop" && showFilters && (
                   <aside>
                     <Filters filters={filters} />
                   </aside>

@@ -20,7 +20,7 @@ const Card = ({
       loading="lazy"
     />
     <div
-      class="fluid-text text-sm"
+      class="text-sm"
       dangerouslySetInnerHTML={{ __html: text }}
     />
   </div>

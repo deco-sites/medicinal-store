@@ -13,6 +13,33 @@ import { ProductDetailsPage, PropertyValue } from "apps/commerce/types.ts";
 import type { AppContext, ClusterDiscount } from "../../apps/site.ts";
 import type { Section as SectionComponent } from "@deco/deco/blocks";
 
+// Função para limpar CSS e atributos indesejados
+function sanitizeHTML(html: string): string {
+  // Remove style attributes
+  let clean = html.replace(/\s*style\s*=\s*["'][^"']*["']/gi, '');
+  
+  // Remove class attributes específicas que podem vir da plataforma
+  clean = clean.replace(/\s*class\s*=\s*["'][^"']*["']/gi, '');
+  
+  // Remove width, height, bgcolor e outros atributos visuais
+  clean = clean.replace(/\s*(width|height|bgcolor|color|align|valign|cellpadding|cellspacing|border)\s*=\s*["'][^"']*["']/gi, '');
+  
+  // Remove font tags
+  clean = clean.replace(/<\/?font[^>]*>/gi, '');
+  
+  // Remove elementos específicos que podem causar problemas
+  clean = clean.replace(/<\/?o:p[^>]*>/gi, '');
+  clean = clean.replace(/<\/?span[^>]*>/gi, '');
+  
+  // Remove múltiplos espaços em branco
+  clean = clean.replace(/\s+/g, ' ');
+  
+  // Remove espaços no início e fim
+  clean = clean.trim();
+  
+  return clean;
+}
+
 /**
  * @titleBy matcher
  */
@@ -136,7 +163,7 @@ function ProductDetails(props: SectionProps<typeof loader>) {
                 <div
                   class="collapse-content fluid-text text-sm !p-0"
                   dangerouslySetInnerHTML={{
-                    __html: p.value || "",
+                    __html: sanitizeHTML(p.value || ""),
                   }}
                 />
               </details>

@@ -96,7 +96,7 @@ const Link = ({
       loading="lazy"
     />
     <div
-      class="hidden sm:block fluid-text text-sm"
+      class="hidden sm:block text-sm"
       dangerouslySetInnerHTML={{ __html: text }}
     />
   </a>

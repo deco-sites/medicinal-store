@@ -4,6 +4,7 @@
 
 import * as $_app from "./routes/_app.tsx";
 import * as $DescriptionCollapse from "./islands/DescriptionCollapse.tsx";
+import * as $PriceRangeSlider from "./islands/PriceRangeSlider.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -12,6 +13,7 @@ const manifest = {
   },
   islands: {
     "./islands/DescriptionCollapse.tsx": $DescriptionCollapse,
+    "./islands/PriceRangeSlider.tsx": $PriceRangeSlider,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

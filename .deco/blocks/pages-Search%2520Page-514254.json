@@ -14,11 +14,12 @@
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
           "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
-          "sort": "OrderByPriceDESC",
-          "filters": "dynamic",
+          "sort": "",
           "advancedConfigs": {
             "includeOriginalAttributes": []
-          }
+          },
+          "count": 16,
+          "filters": "dynamic"
         },
         "layout": {
           "columns": {
@@ -28,7 +29,8 @@
           "variant": "aside",
           "pagination": "show-more"
         },
-        "startingPage": 1
+        "startingPage": 1,
+        "showFilters": false
       }
     },
     {
