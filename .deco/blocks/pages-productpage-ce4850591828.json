@@ -311,29 +311,6 @@
                   "alt": "banner morosil",
                   "link": "/"
                 }
-              },
-              {
-                "__resolveType": "website/sections/Rendering/Lazy.tsx",
-                "section": {
-                  "__resolveType": "site/sections/Product/ProductVideo.tsx",
-                  "title": "O que é Morosil?",
-                  "subtitle": "Morosil é um suplemento nutracêutico obtido a partir do extrato do suco da laranja moro (Citrus sinensis), fruta cultivada predominantemente na região da Sicília, Itália. A composição da laranja moro é rica em antocianinas, flavonoides, vitamina C e ácidos hidroxicinâmicos, com destaque para a cianidina-3-glicosídeo, um potente antioxidante natural",
-                  "videos": [
-                    {
-                      "video": "https://www.oficialfarma.com.br/media/wysiwyg/testo-feedback-videos/video-1.mp4",
-                      "client": "cliente fulana de tal"
-                    },
-                    {
-                      "video": "https://www.oficialfarma.com.br/media/wysiwyg/testo-feedback-videos/video-1.mp4",
-                      "client": "cliente xy"
-                    },
-                    {
-                      "video": "https://www.oficialfarma.com.br/media/wysiwyg/testo-feedback-videos/video-1.mp4",
-                      "client": "Cliente x"
-                    }
-                  ],
-                  "backgroundColor": "#f6eeee"
-                }
               }
             ],
             "matcher": "/morosil-500mg-60-doses/p"
