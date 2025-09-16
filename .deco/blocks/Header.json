@@ -380,7 +380,7 @@
     },
     {
       "children": [],
-      "href": "/busca?fq=H:190=OrderByTopSaleDESC",
+      "href": "/busca?fq=H:190",
       "isHighlighted": false,
       "name": "Mais Vendidos",
       "isBold": true,

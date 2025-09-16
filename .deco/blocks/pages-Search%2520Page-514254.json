@@ -30,7 +30,7 @@
           "pagination": "show-more"
         },
         "startingPage": 1,
-        "showFilters": false
+        "sections": []
       }
     },
     {
