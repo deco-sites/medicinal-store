@@ -84,16 +84,6 @@
               {
                 "__resolveType": "website/sections/Rendering/Lazy.tsx",
                 "section": {
-                  "__resolveType": "site/sections/Images/Banner.tsx",
-                  "mobile": "https://assets.decocache.com/medicinal-store/3087715c-4831-4cb6-b23d-6f4b5a3ded2e/AN-Morosil-04.jpg",
-                  "desktop": "https://assets.decocache.com/medicinal-store/5af137c0-999a-4d06-9a0d-83f67e06dcd1/banner-moro.png",
-                  "alt": "#",
-                  "href": "#"
-                }
-              },
-              {
-                "__resolveType": "website/sections/Rendering/Lazy.tsx",
-                "section": {
                   "__resolveType": "site/sections/Content/BannerPdp.tsx",
                   "mobile": {
                     "0": "h",
@@ -203,7 +193,7 @@
                     "104": "p",
                     "105": "n",
                     "106": "g",
-                    "mobile": "https://assets.decocache.com/medicinal-store/216543fd-3bb4-4fb0-a71c-10db256c2fbc/banner-morosil-mobile.png",
+                    "mobile": "https://assets.decocache.com/medicinal-store/90950b62-8518-4e56-b2b0-9187a82d3d54/Banner-morosil-mobile.png",
                     "alt": "imagem morosil"
                   },
                   "desktop": {
@@ -315,11 +305,11 @@
                     "105": "p",
                     "106": "n",
                     "107": "g",
-                    "desktop": "https://assets.decocache.com/medicinal-store/6129ccd4-75c2-4633-a9a1-b38ce76c6366/banner-morosil-desktop.png",
+                    "desktop": "https://assets.decocache.com/medicinal-store/b1020ea9-46fc-4d36-bb32-3f1e604a6041/Banner-morosil-447.png",
                     "alt": "imagem morosol"
                   },
-                  "link": "/",
-                  "alt": "banner morosil"
+                  "alt": "banner morosil",
+                  "link": "/"
                 }
               },
               {

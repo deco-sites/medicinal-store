@@ -206,6 +206,6 @@
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
   "__resolveType": "website/pages/Page.tsx",
-  "name": "Maca Peruana",
-  "path": "campanhas/maca-peruana"
+  "name": "Lp - Campanha Maca Peruana",
+  "path": "/campanhas/maca-peruana"
 }
