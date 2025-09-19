@@ -132,16 +132,18 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/Citation.tsx",
-        "image": "https://assets.decocache.com/medicinal-store/564d83fe-d005-4bd7-9cd1-29493de3c587/c3fe3509328f93f541837adafa16806415d756bf.png",
-        "cardText": "<p><strong><span>Dra Meizze Valéria Rocha</span></strong><span><br>Farmacêutica<br>CRF-PR 20450</span></p>",
         "title": "Nossa diretora técnica",
-        "text": "<p><span>\"Minha grande missão dentro da Medicinal é garantir a&nbsp;qualidade&nbsp;de nossos produtos.<br>Para tanto, seguimos à risca todas as regras sanitárias vigentes para o nosso setor.<br><br>Acompanho&nbsp;muito nosso cliente para entender se sua&nbsp;satisfação&nbsp;foi atendida. Não medimos&nbsp;esforços&nbsp;para conseguir esse&nbsp;objetivo.\"<br><br>Se&nbsp;você&nbsp;escolher a&nbsp;Medicinal&nbsp;como&nbsp;sua farmácia de manipulação, você estara escolhendo a mim como&nbsp;sua farmacêutica&nbsp;de confiança. Então conte comigo para o que precisar...\"</span></p>"
+        "text": "<p><span>\"Minha grande missão dentro da Medicinal é garantir a&nbsp;qualidade&nbsp;de nossos produtos.<br>Para tanto, seguimos à risca todas as regras sanitárias vigentes para o nosso setor.<br><br>Acompanho&nbsp;muito nosso cliente para entender se sua&nbsp;satisfação&nbsp;foi atendida. Não medimos&nbsp;esforços&nbsp;para conseguir esse&nbsp;objetivo.\"<br><br>Se&nbsp;você&nbsp;escolher a&nbsp;Medicinal&nbsp;como&nbsp;sua farmácia de manipulação, você estara escolhendo a mim como&nbsp;sua farmacêutica&nbsp;de confiança. Então conte comigo para o que precisar...\"</span></p>",
+        "image": "https://assets.decocache.com/medicinal-store/564d83fe-d005-4bd7-9cd1-29493de3c587/c3fe3509328f93f541837adafa16806415d756bf.png",
+        "cardText": "<p><strong><span>Dra Meizze Valéria Rocha</span></strong><span><br>Farmacêutica<br>CRF-PR 20450</span></p>"
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/Alerts.tsx",
+        "text": "<p><span>Tenha vantagens junto com a&nbsp;qualidade </span><strong><span>Medicinal</span></strong><span>.</span></p>",
+        "title": "<p><span>Benefícios do cliente medicinal</span></p>",
         "alerts": [
           {
             "icon": "https://assets.decocache.com/medicinal-store/e027b6e1-ba47-4d64-b7ed-95807af9af4d/Scroll.svg",
@@ -159,9 +161,7 @@
             "icon": "https://assets.decocache.com/medicinal-store/7d599bd8-da2f-42c2-813c-fb34fe4487b0/CreditCard.svg",
             "text": "<p><span>Até </span><strong><span>12x sem juros</span></strong><span> no cartão.</span></p>"
           }
-        ],
-        "text": "<p><span>Tenha vantagens junto com a&nbsp;qualidade </span><strong><span>Medicinal</span></strong><span>.</span></p>",
-        "title": "<p><span>Benefícios do cliente medicinal</span></p>"
+        ]
       }
     },
     {
