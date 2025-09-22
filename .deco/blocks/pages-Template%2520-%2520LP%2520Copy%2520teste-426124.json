@@ -71,8 +71,8 @@
         "title": "<p style=\"text-align: center\"><strong><span style=\"color: rgb(203, 153, 82); font-size: 18pt\">O Que é Maca Peruana?</span></strong></p>",
         "backgroundColor": "#ffffff",
         "image": {
-          "desktop": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png",
+          "desktop": "https://assets.decocache.com/medicinal-store/0680563d-dbf6-4190-9dab-9b4bb1821178/maca-mobile.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/3dcd64c5-0965-4faa-a165-a1218fd5e940/maca-desktop.jpg",
           "alt": "Morosil imagem"
         },
         "textAlign": "right",
@@ -83,9 +83,9 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/InfoCard.tsx",
-        "title": "<h2><strong><span style=\"color: #cb9952; font-size: 25pt\">Para Que Serve a Maca Peruana?</span></strong></h2>",
-        "description": "<p><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">A </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> é um suplemento natural amplamente reconhecido por sua capacidade de aumentar a disposição e o vigor. Originária dos Andes, no Peru, essa raiz tem sido usada há séculos para melhorar a energia de forma natural, sendo uma excelente escolha para quem busca enfrentar o dia a dia com mais vitalidade. Com uma composição rica em nutrientes, a </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> ajuda a combater o cansaço físico e mental, promovendo maior resistência e disposição. Além disso, suas propriedades adaptogênicas auxiliam o corpo a lidar melhor com o estresse, equilibrando as funções do organismo e favorecendo o bem-estar geral. Outro destaque da maca peruana é sua atuação no suporte ao sistema hormonal. Embora não seja um tratamento específico, ela contribui para o equilíbrio hormonal de forma natural, o que pode ajudar a manter uma sensação de vitalidade constante. O consumo da </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> também fortalece o sistema imunológico, tornando o corpo mais preparado para os desafios diários.</span></p>",
-        "textAlign": "right",
+        "title": "<h2 style=\"text-align: right\"><strong><span style=\"color: rgb(203, 153, 82); font-size: 25pt\">Para Que Serve a Maca Peruana?</span></strong></h2>",
+        "description": "<p style=\"text-align: right\"><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">A </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> é um suplemento natural amplamente reconhecido por sua capacidade de aumentar a disposição e o vigor. Originária dos Andes, no Peru, essa raiz tem sido usada há séculos para melhorar a energia de forma natural, sendo uma excelente escolha para quem busca enfrentar o dia a dia com mais vitalidade. Com uma composição rica em nutrientes, a </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> ajuda a combater o cansaço físico e mental, promovendo maior resistência e disposição. Além disso, suas propriedades adaptogênicas auxiliam o corpo a lidar melhor com o estresse, equilibrando as funções do organismo e favorecendo o bem-estar geral. Outro destaque da maca peruana é sua atuação no suporte ao sistema hormonal. Embora não seja um tratamento específico, ela contribui para o equilíbrio hormonal de forma natural, o que pode ajudar a manter uma sensação de vitalidade constante. O consumo da </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> também fortalece o sistema imunológico, tornando o corpo mais preparado para os desafios diários.</span></p>",
+        "textAlign": "left",
         "image": {
           "mobile": "https://assets.decocache.com/medicinal-store/8792ef89-fbf7-443a-8291-9aee72fa965e/maca-peruana-disposicao-mobile.png",
           "desktop": "https://assets.decocache.com/medicinal-store/d23ddcfd-9dac-493a-825f-48fb2e2b2916/maca-peruana-disposicao.png",
@@ -120,30 +120,31 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/InfoCard.tsx",
-        "title": "<h2 style=\"text-align: right\"><strong><span style=\"color: #cb9952; font-size: 25pt\">Maca Peruana e seus benefícios</span></strong></h2>",
-        "description": "<p style=\"text-align: right\"><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Além de seus efeitos afrodisíacos, a </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> é rica em carboidratos, proteínas, fibras e minerais. Estudos indicam que ela possui atividades espermatogênicas e de aumento da fertilidade. Além disso, a </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> é rica em metabólitos secundários, incluindo alcaloides, flavonoides e esteroides, que podem explicar seu uso como medicamento natural.</span><br></p>",
+        "title": "<h2><strong><span style=\"color: rgb(203, 153, 82); font-size: 25pt\">Maca Peruana e seus benefícios</span></strong></h2>",
+        "description": "<p><br><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Além de seus efeitos afrodisíacos, a </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> é rica em carboidratos, proteínas, fibras e minerais. Estudos indicam que ela possui atividades espermatogênicas e de aumento da fertilidade. Além disso, a </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> é rica em metabólitos secundários, incluindo alcaloides, flavonoides e esteroides, que podem explicar seu uso como medicamento natural.</span><br></p>",
         "padding": "none",
         "backgroundColor": "#ffffff",
         "image": {
           "desktop": "https://assets.decocache.com/medicinal-store/e58932e0-d3f6-4032-aab5-761cd0d88856/maca-peruana-aliado.png",
           "mobile": "https://assets.decocache.com/medicinal-store/baf50a27-899a-4222-80c4-b00c68d8ef5c/maca-peruana-aliado-mobile.png",
           "alt": "#"
-        }
+        },
+        "textAlign": "right"
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/InfoCard.tsx",
-        "title": "<p style=\"text-align: center\"><strong><span style=\"color: rgb(203, 153, 82); font-size: 20pt\">Maca Peruana emagrece?</span></strong></p>",
-        "description": "<p style=\"text-align: center\"><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">A </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> não é um alimento diretamente ligado ao emagrecimento, mas pode ser uma excelente aliada para quem busca perder peso de maneira saudável e sustentável. Essa raiz é conhecida por melhorar a disposição e promover o equilíbrio hormonal, aspectos que influenciam indiretamente no processo de perda de peso. Ao consumir </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">, muitas pessoas relatam um aumento significativo na energia e no vigor. Com mais energia, o corpo consegue realizar treinos mais intensos e consistentes, potencializando os resultados. Outro ponto relevante é o papel da </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> na regulação hormonal. Desequilíbrios nos hormônios podem dificultar o emagrecimento. Ao ajudar o corpo a equilibrar esses processos, a </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> pode contribuir para que o organismo funcione de forma mais eficiente, tornando o caminho para a perda de peso menos complicado. Embora a </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> não atue diretamente no metabolismo, ela favorece o uso mais eficiente da energia pelo organismo.</span></p>",
+        "title": "<p style=\"text-align: right\"><strong><span style=\"color: rgb(203, 153, 82); font-size: 25pt\">Maca Peruana emagrece?</span></strong></p>",
+        "description": "<p style=\"text-align: right\"><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">A </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> não é um alimento diretamente ligado ao emagrecimento, mas pode ser uma excelente aliada para quem busca perder peso de maneira saudável e sustentável. Essa raiz é conhecida por melhorar a disposição e promover o equilíbrio hormonal, aspectos que influenciam indiretamente no processo de perda de peso. Ao consumir </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">, muitas pessoas relatam um aumento significativo na energia e no vigor. Com mais energia, o corpo consegue realizar treinos mais intensos e consistentes, potencializando os resultados. Outro ponto relevante é o papel da </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> na regulação hormonal. Desequilíbrios nos hormônios podem dificultar o emagrecimento. Ao ajudar o corpo a equilibrar esses processos, a </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> pode contribuir para que o organismo funcione de forma mais eficiente, tornando o caminho para a perda de peso menos complicado. Embora a </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Maca Peruana</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> não atue diretamente no metabolismo, ela favorece o uso mais eficiente da energia pelo organismo.</span></p>",
         "backgroundColor": "#ffffff",
         "image": {
-          "desktop": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png",
+          "desktop": "https://assets.decocache.com/medicinal-store/141e4f92-7d22-4b22-9654-e222e2047a38/maca-casal-desktop.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/6eac6688-3812-457e-96cf-629c518709b3/maca-casal-mobile.jpg",
           "alt": "Morosil imagem"
         },
-        "textAlign": "right",
+        "textAlign": "left",
         "padding": "none"
       }
     },
@@ -167,12 +168,12 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/InfoCard.tsx",
-        "title": "<p style=\"text-align: center\"><strong><span style=\"color: rgb(203, 153, 82); font-size: 20pt\">Maca Peruana e a Libido</span></strong></p>",
-        "description": "<p style=\"text-align: center\"><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">A Maca Peruana é frequentemente associada ao aumento da libido em homens e mulheres. Estudos indicam que ela pode melhorar o desejo sexual e a função erétil, tornando-a uma opção natural para aqueles que buscam melhorar sua vida íntima.</span></p>",
+        "title": "<p><strong><span style=\"color: rgb(203, 153, 82); font-size: 25pt\">Maca Peruana e a Libido</span></strong></p>",
+        "description": "<p><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">A Maca Peruana é frequentemente associada ao aumento da libido em homens e mulheres. Estudos indicam que ela pode melhorar o desejo sexual e a função erétil, tornando-a uma opção natural para aqueles que buscam melhorar sua vida íntima.</span></p>",
         "backgroundColor": "#ffffff",
         "image": {
-          "desktop": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png",
+          "desktop": "https://assets.decocache.com/medicinal-store/141e4f92-7d22-4b22-9654-e222e2047a38/maca-casal-desktop.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/6eac6688-3812-457e-96cf-629c518709b3/maca-casal-mobile.jpg",
           "alt": "Morosil imagem"
         },
         "textAlign": "right",
@@ -183,15 +184,15 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/InfoCard.tsx",
-        "title": "<p style=\"text-align: center\"><strong><span style=\"color: rgb(203, 153, 82); font-size: 20pt\">Maca Peruana na menopausa</span></strong></p>",
-        "description": "<p style=\"text-align: center\"><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Mulheres na menopausa podem se beneficiar da Maca Peruana devido à sua capacidade de equilibrar os hormônios e aliviar sintomas como ondas de calor, insônia e mudanças de humor.</span></p>",
+        "title": "<p style=\"text-align: right\"><strong><span style=\"color: rgb(203, 153, 82); font-size: 25pt\">Maca Peruana na menopausa</span></strong></p>",
+        "description": "<p style=\"text-align: right\"><span style=\"color: #000000; font-size: 15pt\">A menopausa é uma fase natural da vida da mulher, marcada por transformações hormonais que podem trazer sintomas como ondas de calor, insônia, cansaço, queda da libido e mudanças de humor. Esses sinais muitas vezes afetam a qualidade de vida, tornando necessário buscar alternativas naturais que auxiliem nesse processo.</span></p><p style=\"text-align: right\"><span style=\"color: #000000; font-size: 15pt\">A Maca Peruana tem se destacado como uma opção poderosa e segura para o bem-estar feminino durante essa etapa. Rica em nutrientes essenciais, como vitaminas do complexo B, minerais (zinco, ferro, cálcio e magnésio) e compostos bioativos, a raiz ajuda a equilibrar a produção hormonal de forma natural, sem os efeitos colaterais comuns das terapias hormonais sintéticas.</span></p>",
         "backgroundColor": "#ffffff",
         "image": {
-          "desktop": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/7d5bc58b-e3db-4c4a-983a-03faf1619c77/branco.png",
+          "desktop": "https://assets.decocache.com/medicinal-store/4dec8397-85f5-4985-9e7e-db671befe47b/maca-menopausa-desktop.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/c773d95c-6ea5-4a96-bb8b-c451b5659a12/maca-menopausa-mobile.jpg",
           "alt": "Morosil imagem"
         },
-        "textAlign": "right",
+        "textAlign": "left",
         "padding": "none"
       }
     },
