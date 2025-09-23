@@ -199,6 +199,22 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "products": {
+          "__resolveType": "vtex/loaders/legacy/productList.ts",
+          "props": {
+            "sort": "OrderByPriceDESC",
+            "similars": true,
+            "collection": "191",
+            "count": 4
+          }
+        },
+        "title": "Adquira o seu:"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "Footer"
       }
     }
