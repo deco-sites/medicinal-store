@@ -1,0 +1,132 @@
+{
+  "name": "Lp - Campanha Peptistrog",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/TitleWithBackground.tsx",
+        "background": {
+          "image": "https://assets.decocache.com/medicinal-store/7b2148c6-753e-4ba3-b3d6-4e1ed2b62f1c/banner-LP-peptistrong.jpg",
+          "position": "left"
+        },
+        "subTitle": "<p>Peptídeos bioativos que auxiliam na força muscular e recuperação.</p>",
+        "isFullWidth": true,
+        "textAlign": "center",
+        "textUppercase": false,
+        "title": "Peptistrong Benefícios e Indicações",
+        "supTitle": "REVOLUÇÃO TECNOLÓGICA NA SAÚDE MUSCULAR"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/Benefits.tsx",
+        "title": "<p></p>",
+        "benefits": [
+          {
+            "icon": "https://assets.decocache.com/medicinal-store/cffd7895-7813-4084-9d89-2028ed9b2dc4/muscle-pain_3782533.png",
+            "text": "Reduz a fadiga muscular"
+          },
+          {
+            "text": "Auxilia na manutenção da massa magra",
+            "icon": "https://assets.decocache.com/medicinal-store/c4104a5b-ef56-4a7d-955e-6b54221ff46a/man_16424032.png"
+          },
+          {
+            "icon": "https://assets.decocache.com/medicinal-store/51a203ad-ee48-4224-928b-8878757eace5/gym_14858659.png",
+            "text": "Favorece a recuperação pós-treino"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "title": "<p><strong><span style=\"color: rgb(255, 187, 0); font-size: 25pt\">Peptistrong</span></strong></p>",
+        "backgroundColor": "#ffffff",
+        "image": {
+          "desktop": "https://assets.decocache.com/medicinal-store/e9316691-86b4-48a5-85b6-8027c6701ea8/peptistrong-lp-desktop.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/613438b5-16e0-43dc-9990-9430c7e19c54/peptistrong-lp.jpg",
+          "alt": "Morosil imagem"
+        },
+        "description": "<p><span style=\"color: #000000; font-size: 15pt\">O </span><strong><span style=\"color: #000000; font-size: 15pt\">Peptistrong</span></strong><span style=\"color: #000000; font-size: 15pt\"> é um ingrediente inovador desenvolvido a partir de peptídeos bioativos de origem vegetal que atua diretamente no fortalecimento e na manutenção da massa muscular. Diferente das proteínas comuns, ele foi criado com tecnologia avançada para oferecer benefícios específicos, ajudando na recuperação após os treinos, na preservação da força e no apoio à saúde metabólica. Estudos mostram que o Peptistrong contribui para reduzir a degradação muscular e estimular a síntese de proteínas, favorecendo o desempenho físico, a vitalidade e a qualidade de vida em diferentes fases da vida. Por ser uma alternativa vegana e cientificamente validada, tornou-se um aliado importante tanto para atletas e praticantes de atividades físicas que buscam melhor desempenho e recuperação, quanto para pessoas que desejam envelhecer de forma saudável, mantendo força e mobilidade.</span></p>",
+        "textAlign": "right",
+        "padding": "default"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "title": "<p style=\"text-align: right\"><strong><span style=\"color: #ffbb00; font-size: 25pt\">Peptistrong pra que serve</span></strong></p>",
+        "backgroundColor": "#ffffff",
+        "image": {
+          "desktop": "https://assets.decocache.com/medicinal-store/92a9394e-246d-43b1-ba82-b51365370ab4/peptistrong-aliado-desktop.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/ffb18983-1772-4ffc-98dd-e5eb070cbd8a/peptistrong-aliado-mobile.jpg",
+          "alt": "#"
+        },
+        "description": "<p style=\"text-align: right\"><span style=\"color: #000000; font-size: 15pt\">O </span><strong><span style=\"color: #000000; font-size: 15pt\">PeptiStrong</span></strong><span style=\"color: #000000; font-size: 15pt\"> serve para </span><strong><span style=\"color: #000000; font-size: 15pt\">cuidar da saúde muscular</span></strong><span style=\"color: #000000; font-size: 15pt\">, ajudando a </span><strong><span style=\"color: #000000; font-size: 15pt\">manter, recuperar e fortalecer os músculos</span></strong><span style=\"color: #000000; font-size: 15pt\">. Ele estimula a síntese de proteínas, reduz a perda de massa magra, acelera a recuperação após treinos e apoia a vitalidade no dia a dia. É indicado tanto para quem pratica atividades físicas e busca melhor desempenho, quanto para quem deseja preservar força e mobilidade ao longo da vida, sendo uma solução </span><strong><span style=\"color: #000000; font-size: 15pt\">natural, vegana e cientificamente comprovada</span></strong><span style=\"color: #000000; font-size: 15pt\">.</span></p>",
+        "textAlign": "left",
+        "padding": "none"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/InfoCard.tsx",
+        "title": "<p><strong><span style=\"color: #ffbb00; font-size: 25pt\">Peptistrong onde comprar?</span></strong></p>",
+        "description": "<p><span style=\"color: #000000; font-size: 15pt\">O </span><strong><span style=\"color: #000000; font-size: 15pt\">PeptiStrong</span></strong><span style=\"color: #000000; font-size: 15pt\"> é um suplemento inovador que combina ciência e tecnologia para promover a saúde muscular, auxiliando no ganho e na manutenção da massa magra, além de favorecer a recuperação após os treinos. Se você está em busca de um produto de qualidade e confiança, a melhor opção é adquirir diretamente na </span><strong><span style=\"color: #000000; font-size: 15pt\">Medicinal</span></strong><span style=\"color: #000000; font-size: 15pt\">, referência em suplementos e produtos para saúde e bem-estar.</span><br><br><span style=\"color: #000000; font-size: 15pt\">E aproveite uma condição exclusiva: use o cupom </span><strong><span style=\"color: #000000; font-size: 15pt\">PEPTOFF</span></strong><span style=\"color: #000000; font-size: 15pt\"> e receba </span><strong><span style=\"color: #000000; font-size: 15pt\">36% de desconto</span></strong><span style=\"color: #000000; font-size: 15pt\"> na sua compra. Não perca essa oportunidade de potencializar seus resultados!</span></p>",
+        "backgroundColor": "#ffffff",
+        "image": {
+          "desktop": "https://assets.decocache.com/medicinal-store/3732faed-01c3-447e-b029-35fb5a2b2850/peptistrong-cupom-desktop.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/7b96daa7-6a75-47c5-8187-d94126eabb2f/peptistrong-cupom-mobile.jpg",
+          "alt": "infocard image"
+        },
+        "textAlign": "right",
+        "button": {
+          "text": "Compre aqui",
+          "href": "https://www.medicinalnaweb.com.br/peptistrong-chocolate-belga/p"
+        },
+        "padding": "default"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductVideo.tsx",
+        "videos": [
+          {
+            "video": "https://www.youtube.com/shorts/2M-s7RyTqM0",
+            "thumbnail": "https://assets.decocache.com/medicinal-store/bfdc00a3-ab4d-4eda-bd80-8251721cd4da/PEPTISTRONG-NA-MENOPAUSA.png",
+            "client": "Client whey"
+          },
+          {
+            "thumbnail": "https://assets.decocache.com/medicinal-store/409fa690-b227-4a92-9393-596202977b58/PEPTISTRONG-SUBSTITUI-WHEY.png",
+            "client": "pept na menopausa",
+            "video": "https://www.youtube.com/shorts/Qxm32X8bsU4"
+          }
+        ],
+        "backgroundColor": "#fdd11a",
+        "backgroundImage": "https://assets.decocache.com/medicinal-store/a07a8351-8ff0-4035-a29a-ff1b9ec58c9c/banner-video.png",
+        "title": "<p></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/campanhas/peptistrong"
+}
