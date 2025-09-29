@@ -394,5 +394,8 @@
       "text": "<p>Atendimento</p>",
       "href": "/fale-conosco"
     }
-  ]
+  ],
+  "modal": {
+    "disabledModal": false
+  }
 }

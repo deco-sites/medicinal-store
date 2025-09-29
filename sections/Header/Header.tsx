@@ -20,6 +20,8 @@ import {
 } from "../../constants.ts";
 import { useDevice, useScript } from "@deco/deco/hooks";
 import { type LoadingFallbackProps } from "@deco/deco";
+import ModalCoupon from "../../islands/ModalCoupon.tsx"
+
 export interface Logo {
   src: ImageWidget;
   alt: string;
@@ -64,6 +66,34 @@ export interface SectionProps {
    * @description Usefull for lazy loading hidden elements, like hamburguer menus etc
    * @hide true */
   loading?: "eager" | "lazy";
+  /**
+   * @title Modal Cupom
+   * @description Configuração do Modal que aparece após 3 segundos na entrada do site
+   * */
+  modal?: Modal;
+}
+
+interface Modal {
+  /**
+   *  @title Desativar Modal
+   *  @description Marque esta opção para desativar o modal de cupom que aparece na entrada do site
+   */
+  disabledModal?: boolean;
+  /** 
+   * @title Imagem 
+   * @description Tamanho recomendado 313 x 326
+  */
+  image?: ImageWidget;
+  /**
+   *  @title Código do cupom 
+   * @description Ex: PRIMEIRACOMPRA10
+  */
+  coupom?: string;
+  /** 
+   * @title Link regulamento 
+   * @description Link para o regulamento do cupom
+   * */
+  regulation?: string;
 }
 type Props = Omit<SectionProps, "alert">;
 const onLoad = () => {
@@ -101,9 +131,16 @@ const Link = ({
     />
   </a>
 );
-const Desktop = ({ navItems, logo, searchbar, loading, links }: Props) => (
+const Desktop = ({ navItems, logo, searchbar, loading, links, modal }: Props) => (
   <>
     <div class="relative bg-white px-2 xl:px-0 w-full shadow-sm rounded-b-xl">
+      {
+        <>
+          {modal?.disabledModal ? null : (
+            <ModalCoupon image={modal?.image} coupom={modal?.coupom} regulation={modal?.regulation} />
+          )}
+        </>
+      }
       <div class="md:flex items-center gap-8 hidden mx-auto pt-4 w-full container px-4">
         <div class="flex-none">
           <a href="/" aria-label="Store logo" class="block">
@@ -147,8 +184,13 @@ const Desktop = ({ navItems, logo, searchbar, loading, links }: Props) => (
     </div>
   </>
 );
-const Mobile = ({ logo, searchbar, navItems, loading, links }: Props) => (
+const Mobile = ({ logo, searchbar, navItems, loading, links, modal }: Props) => (
   <>
+    <>
+      {modal?.disabledModal ? null : (
+        <ModalCoupon image={modal?.image} coupom={modal?.coupom} regulation={modal?.regulation} />
+      )}
+    </>
     <Drawer
       id={SIDEMENU_DRAWER_ID}
       class="drawer-end"
@@ -239,6 +281,7 @@ function Header({
               ? <Desktop logo={logo} {...props} />
               : <Mobile logo={logo} {...props} />}
           </div>
+
         </header>
       </div>
       <script

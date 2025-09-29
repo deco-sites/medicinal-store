@@ -3733,6 +3733,15 @@ details.collapse summary::-webkit-details-marker {
 .relative {
   position: relative;
 }
+.inset-0 {
+  inset: 0px;
+}
+.-right-2 {
+  right: -0.5rem;
+}
+.-top-2 {
+  top: -0.5rem;
+}
 .bottom-0 {
   bottom: 0px;
 }
@@ -4017,6 +4026,9 @@ details.collapse summary::-webkit-details-marker {
 .h-12 {
   height: 3rem;
 }
+.h-16 {
+  height: 4rem;
+}
 .h-2 {
   height: 0.5rem;
 }
@@ -4087,6 +4099,9 @@ details.collapse summary::-webkit-details-marker {
 .max-h-\[300px\] {
   max-height: 300px;
 }
+.max-h-\[326px\] {
+  max-height: 326px;
+}
 .max-h-\[55px\] {
   max-height: 55px;
 }
@@ -4116,6 +4131,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .w-12 {
   width: 3rem;
+}
+.w-16 {
+  width: 4rem;
 }
 .w-2 {
   width: 0.5rem;
@@ -4258,6 +4276,9 @@ details.collapse summary::-webkit-details-marker {
 .max-w-\[139px\] {
   max-width: 139px;
 }
+.max-w-\[290px\] {
+  max-width: 290px;
+}
 .max-w-\[2px\] {
   max-width: 2px;
 }
@@ -4266,6 +4287,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-w-\[310px\] {
   max-width: 310px;
+}
+.max-w-\[313px\] {
+  max-width: 313px;
 }
 .max-w-\[350px\] {
   max-width: 350px;
@@ -4570,6 +4594,9 @@ details.collapse summary::-webkit-details-marker {
 .rounded-\[16px\] {
   border-radius: 16px;
 }
+.rounded-\[20px\] {
+  border-radius: 20px;
+}
 .rounded-\[35px\] {
   border-radius: 35px;
 }
@@ -4771,6 +4798,12 @@ details.collapse summary::-webkit-details-marker {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-opacity-30 {
+  --tw-bg-opacity: 0.3;
+}
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
+}
 .bg-cover {
   background-size: cover;
 }
@@ -4863,6 +4896,10 @@ details.collapse summary::-webkit-details-marker {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.px-\[10px\] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .px-\[12px\] {
   padding-left: 12px;
   padding-right: 12px;
@@ -4902,6 +4939,10 @@ details.collapse summary::-webkit-details-marker {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 .py-6 {
   padding-top: 1.5rem;
@@ -5218,10 +5259,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-text-opacity: 1;
   color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
 }
-.text-red-600 {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
-}
 .text-red-700 {
   --tw-text-opacity: 1;
   color: rgb(185 28 28 / var(--tw-text-opacity));
@@ -5252,6 +5289,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .opacity-70 {
   opacity: 0.7;
+}
+.opacity-80 {
+  opacity: 0.8;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -6092,6 +6132,10 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.group:hover .group-hover\:bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+
 .group:hover .group-hover\:text-primary {
   --tw-text-opacity: 1;
   color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
@@ -6571,6 +6615,10 @@ details.collapse summary::-webkit-details-marker {
     max-width: 48rem;
   }
 
+  .lg\:max-w-\[700px\] {
+    max-width: 700px;
+  }
+
   .lg\:max-w-lg {
     max-width: 32rem;
   }
@@ -6646,6 +6694,11 @@ details.collapse summary::-webkit-details-marker {
     padding-right: 2rem;
   }
 
+  .lg\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
   .lg\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
@@ -6662,6 +6715,10 @@ details.collapse summary::-webkit-details-marker {
 
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:text-center {
+    text-align: center;
   }
 
   .lg\:text-2xl {

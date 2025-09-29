@@ -24,7 +24,10 @@ export type AvailableIcons =
   | "check"
   | "check-error"
   | "check-success"
-  | "file";
+  | "file"
+  | "document"
+  | "copy"
+  | "info"
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**

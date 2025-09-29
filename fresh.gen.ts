@@ -4,7 +4,9 @@
 
 import * as $_app from "./routes/_app.tsx";
 import * as $DescriptionCollapse from "./islands/DescriptionCollapse.tsx";
+import * as $ModalCoupon from "./islands/ModalCoupon.tsx";
 import * as $PriceRangeSlider from "./islands/PriceRangeSlider.tsx";
+import * as $ProductVideo from "./islands/ProductVideo.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -13,7 +15,9 @@ const manifest = {
   },
   islands: {
     "./islands/DescriptionCollapse.tsx": $DescriptionCollapse,
+    "./islands/ModalCoupon.tsx": $ModalCoupon,
     "./islands/PriceRangeSlider.tsx": $PriceRangeSlider,
+    "./islands/ProductVideo.tsx": $ProductVideo,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
