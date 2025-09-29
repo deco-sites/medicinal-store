@@ -228,6 +228,13 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Social/InstagramPosts.tsx",
+        "nposts": 5
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Footer/Footer.tsx",
         "links": [
           {

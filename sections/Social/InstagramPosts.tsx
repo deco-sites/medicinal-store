@@ -120,8 +120,8 @@ function InstagramPosts({
                     class="max-w-full max-h-full object-cover"
                     style={{ aspectRatio: "1 / 1" }}
                     src={item.media_url ?? ""}
-                    width={350}
-                    height={350}
+                    width={200}
+                    height={200}
                   />
                 )
                 : (
