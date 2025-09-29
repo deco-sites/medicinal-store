@@ -114,7 +114,7 @@ export default function ProductVideo({
 
             return (
               <div key={index} class="flex-1 max-w-sm mx-auto md:mx-0">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center">
+                <div class="bg-transparent rounded-lg shadow-md overflow-hidden flex flex-col items-center">
                   {embed?.url ? (
                     <div
                       class={
