@@ -11,6 +11,12 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
+          "desktop": "https://assets.decocache.com/medicinal-store/05bfac44-a900-48ab-a1bf-1ea6eedc1605/banner-pept-desktop.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/5b56968e-88e6-4f61-8f8c-e6363b88b70c/banner-pept-mobile.jpg",
+          "href": "https://www.medicinalnaweb.com.br/peptistrong-chocolate-belga/p",
+          "alt": "banner 2"
+        },
+        {
           "desktop": "https://assets.decocache.com/medicinal-store/6129ccd4-75c2-4633-a9a1-b38ce76c6366/banner-morosil-desktop.png",
           "mobile": "https://assets.decocache.com/medicinal-store/216543fd-3bb4-4fb0-a71c-10db256c2fbc/banner-morosil-mobile.png",
           "href": "/morosil-500mg-60-doses/p",
@@ -25,14 +31,8 @@
         {
           "desktop": "https://assets.decocache.com/medicinal-store/908bf794-b5e9-4adf-83d3-655b0b049b8c/banner-akkermat2-desktop.png",
           "mobile": "https://assets.decocache.com/medicinal-store/ae60d631-7ae1-4cde-a631-4c34195a3cfa/banner-akkermat2-mobile.png",
-          "href": "/akkermat-150mg-30-doses-capsula-gastrorresistente/p",
-          "alt": "Banner 3"
-        },
-        {
-          "desktop": "https://assets.decocache.com/medicinal-store/c5af6358-e23d-492a-b92d-589d2ca480fe/banner-derma-fusion.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/51e86496-6230-4971-b8d8-c92c147ed1f3/banner-derma-fusion-mobile.png",
-          "alt": "banner 2",
-          "href": "/s?q=DermaFusion&page=1"
+          "alt": "Banner 3",
+          "href": "/akkermat-150mg-30-doses-capsula-gastrorresistente/p"
         }
       ],
       "preload": true,
