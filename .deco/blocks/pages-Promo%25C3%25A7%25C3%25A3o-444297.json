@@ -1,0 +1,108 @@
+{
+  "name": "Promoção",
+  "path": "/promocao",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
+        {
+          "value": {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Category/CategoryBanner.tsx",
+              "banners": [
+                {
+                  "image": {
+                    "mobile": "https://assets.decocache.com/storefront/b79aa236-d06d-481f-adf7-2f1076ea6210/1742560270734-91102b71-4832-486a-b683-5f7b06f649af",
+                    "desktop": "https://assets.decocache.com/storefront/ca7dd51a-e5ae-491a-b72a-08c07aa4a70d/1742560272355-ec597b6a-dcf1-48ca-a99d-95b3c6304f96"
+                  },
+                  "title": "Gerenciamento de Peso",
+                  "matcher": "/gerenciamento-de-peso/",
+                  "subtitle": "Saiba Mais"
+                }
+              ]
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/never.ts"
+          }
+        }
+      ]
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/SearchResult.tsx",
+        "page": {
+          "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
+          "sort": "OrderByPriceDESC",
+          "filters": "dynamic",
+          "advancedConfigs": {
+            "includeOriginalAttributes": []
+          },
+          "count": 16
+        },
+        "layout": {
+          "columns": {
+            "mobile": 2,
+            "desktop": 4
+          },
+          "variant": "aside",
+          "pagination": "show-more"
+        },
+        "startingPage": 1,
+        "sections": [
+          {
+            "sections": [
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/OnlyText.tsx"
+                }
+              },
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/Benefits.tsx"
+                }
+              },
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/InfoCard.tsx"
+                }
+              },
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/InfoCard.tsx",
+                  "textAlign": "right"
+                }
+              }
+            ],
+            "matcher": "/bags"
+          },
+          {
+            "sections": []
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
