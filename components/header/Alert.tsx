@@ -1,6 +1,5 @@
 import Image from "apps/website/components/Image.tsx";
-import Slider from "../ui/Slider.tsx";
-import { useDevice } from "@deco/deco/hooks";
+import { useId } from "../../sdk/useId.ts";
 
 import type { AlertProps } from "../../sections/Header/Header.tsx";
 
@@ -27,30 +26,48 @@ const Card = ({
 );
 
 function Alert({ alerts = [] }: Props) {
-  const device = useDevice();
+  const id = useId();
+
+  if (!alerts.length) return null;
 
   return (
-    <div class="border-b border-base-400">
-      {device === "mobile"
-        ? (
-          <Slider class="carousel carousel-center gap-4 sm:gap-6 w-full py-2">
+    <div id={id} class="border-b border-base-400 h-10 flex overflow-hidden">
+      <div class="container px-4 overflow-hidden">
+        <div class="flex gap-10 animate-marquee">
+          {/* Primeiro conjunto de alertas */}
+          <div class="flex flex-row gap-10 items-center h-10 whitespace-nowrap">
             {alerts.map((alert, index) => (
-              <Slider.Item
-                index={index}
-                class="carousel-item w-screen flex justify-center text-center"
-              >
-                <Card {...alert} />
-              </Slider.Item>
+              <Card key={`first-${index}`} {...alert} />
             ))}
-          </Slider>
-        )
-        : (
-          <div class="w-full container py-2 px-4 mx-auto">
-            <div class="flex items-center justify-between gap-4">
-              {alerts.map((alert, index) => <Card key={index} {...alert} />)}
-            </div>
           </div>
-        )}
+          {/* Segundo conjunto (duplicado) para loop infinito */}
+          <div class="flex flex-row gap-10 items-center h-10 whitespace-nowrap">
+            {alerts.map((alert, index) => (
+              <Card key={`second-${index}`} {...alert} />
+            ))}
+          </div>
+          <div class="flex flex-row gap-10 items-center h-10 whitespace-nowrap">
+            {alerts.map((alert, index) => (
+              <Card key={`tertiary-${index}`} {...alert} />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        
+        .animate-marquee {
+          animation: marquee 25s linear infinite;
+        }
+      `}</style>
     </div>
   );
 }

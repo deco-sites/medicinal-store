@@ -1,4 +1,4 @@
-import { useState, useEffect } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { formatPrice } from "../../sdk/format.ts";
 
 interface PriceRangeSliderProps {
@@ -78,7 +78,8 @@ export default function PriceRangeSlider({
             min={minPrice}
             max={maxPrice}
             value={minValue}
-            onInput={(e) => handleMinChange(Number((e.target as HTMLInputElement).value))}
+            onInput={(e) =>
+              handleMinChange(Number((e.target as HTMLInputElement).value))}
             class="absolute w-full h-2 bg-transparent appearance-none cursor-pointer slider-thumb"
             style={{ zIndex: 1 }}
           />
@@ -87,7 +88,8 @@ export default function PriceRangeSlider({
             min={minPrice}
             max={maxPrice}
             value={maxValue}
-            onInput={(e) => handleMaxChange(Number((e.target as HTMLInputElement).value))}
+            onInput={(e) =>
+              handleMaxChange(Number((e.target as HTMLInputElement).value))}
             class="absolute w-full h-2 bg-transparent appearance-none cursor-pointer slider-thumb"
             style={{ zIndex: 2 }}
           />
@@ -103,7 +105,8 @@ export default function PriceRangeSlider({
             value={minValue}
             min={minPrice}
             max={maxValue - 1}
-            onInput={(e) => handleMinChange(Number((e.target as HTMLInputElement).value))}
+            onInput={(e) =>
+              handleMinChange(Number((e.target as HTMLInputElement).value))}
             class="input input-bordered input-sm w-full"
           />
         </div>
@@ -114,7 +117,8 @@ export default function PriceRangeSlider({
             value={maxValue}
             min={minValue + 1}
             max={maxPrice}
-            onInput={(e) => handleMaxChange(Number((e.target as HTMLInputElement).value))}
+            onInput={(e) =>
+              handleMaxChange(Number((e.target as HTMLInputElement).value))}
             class="input input-bordered input-sm w-full"
           />
         </div>
@@ -136,7 +140,8 @@ export default function PriceRangeSlider({
         </button>
       </div>
 
-      <style jsx>{`
+      <style jsx>
+        {`
         .slider-thumb::-webkit-slider-thumb {
           appearance: none;
           height: 20px;
@@ -157,7 +162,8 @@ export default function PriceRangeSlider({
           border: 2px solid white;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
-      `}</style>
+      `}
+      </style>
     </div>
   );
 }

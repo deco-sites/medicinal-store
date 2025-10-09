@@ -8,27 +8,30 @@ interface DescriptionCollapseProps {
 // Função para limpar CSS e atributos indesejados
 function sanitizeHTML(html: string): string {
   // Remove style attributes
-  let clean = html.replace(/\s*style\s*=\s*["'][^"']*["']/gi, '');
-  
+  let clean = html.replace(/\s*style\s*=\s*["'][^"']*["']/gi, "");
+
   // Remove class attributes específicas que podem vir da plataforma
-  clean = clean.replace(/\s*class\s*=\s*["'][^"']*["']/gi, '');
-  
+  clean = clean.replace(/\s*class\s*=\s*["'][^"']*["']/gi, "");
+
   // Remove width, height, bgcolor e outros atributos visuais
-  clean = clean.replace(/\s*(width|height|bgcolor|color|align|valign|cellpadding|cellspacing|border)\s*=\s*["'][^"']*["']/gi, '');
-  
+  clean = clean.replace(
+    /\s*(width|height|bgcolor|color|align|valign|cellpadding|cellspacing|border)\s*=\s*["'][^"']*["']/gi,
+    "",
+  );
+
   // Remove font tags
-  clean = clean.replace(/<\/?font[^>]*>/gi, '');
-  
+  clean = clean.replace(/<\/?font[^>]*>/gi, "");
+
   // Remove elementos específicos que podem causar problemas
-  clean = clean.replace(/<\/?o:p[^>]*>/gi, '');
-  clean = clean.replace(/<\/?span[^>]*>/gi, '');
-  
+  clean = clean.replace(/<\/?o:p[^>]*>/gi, "");
+  clean = clean.replace(/<\/?span[^>]*>/gi, "");
+
   // Remove múltiplos espaços em branco
-  clean = clean.replace(/\s+/g, ' ');
-  
+  clean = clean.replace(/\s+/g, " ");
+
   // Remove espaços no início e fim
   clean = clean.trim();
-  
+
   return clean;
 }
 
@@ -66,7 +69,10 @@ export default function DescriptionCollapse(
         )
         : (
           <>
-            <span class="text-sm" dangerouslySetInnerHTML={{ __html: cleanPreview + cleanRest }} />
+            <span
+              class="text-sm"
+              dangerouslySetInnerHTML={{ __html: cleanPreview + cleanRest }}
+            />
             <button
               class="link-btn ml-2"
               style={{

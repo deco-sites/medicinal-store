@@ -26,6 +26,29 @@ export interface Minicart {
 const onLoad = (formID: string) => {
   const form = document.getElementById(formID) as HTMLFormElement;
   window.STOREFRONT.CART.dispatch(form);
+
+  // Armazena o número inicial de itens
+  let previousItemCount = window.STOREFRONT.CART.getCart().items?.length || 0;
+
+  // Listener para abrir o minicart quando produto for adicionado
+  window.STOREFRONT.CART.subscribe((cart) => {
+    const currentItemCount = cart.items?.length || 0;
+
+    // Se o número de itens aumentou, abre o minicart
+    if (currentItemCount > previousItemCount) {
+      setTimeout(() => {
+        const drawer = document.getElementById(
+          MINICART_DRAWER_ID,
+        ) as HTMLInputElement;
+        if (drawer) {
+          drawer.checked = true;
+        }
+      }, 100);
+    }
+
+    // Atualiza o contador anterior
+    previousItemCount = currentItemCount;
+  });
   // view_cart event
   if (typeof IntersectionObserver !== "undefined") {
     new IntersectionObserver((items, observer) => {
@@ -101,14 +124,15 @@ export default function Cart(
         locale,
         currency,
         checkoutHref,
+        freeShippingTarget = 250,
       },
-      freeShippingTarget = 250,
     },
   }: {
     cart: Minicart;
   },
 ) {
   const count = items.length;
+
   return (
     <>
       <form
@@ -177,15 +201,15 @@ export default function Cart(
             )
             : (
               <>
-                      {/* Free Shipping Bar */}
-            <div class="px-2 py-4 w-full">
-              <FreeShippingProgressBar
-                total={total}
-                locale={locale}
-                currency={currency}
-                target={freeShippingTarget}
-              />
-            </div>
+                {/* Free Shipping Bar */}
+                <div class="px-2 py-4 w-full">
+                  <FreeShippingProgressBar
+                    total={total}
+                    locale={locale}
+                    currency={currency}
+                    target={freeShippingTarget}
+                  />
+                </div>
 
                 {/* Cart Items */}
                 <ul

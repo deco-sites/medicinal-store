@@ -25,7 +25,19 @@ const onClick = () => {
   const { item, platformProps } = JSON.parse(
     decodeURIComponent(container.getAttribute("data-cart-item")!),
   );
+
+  console.log("Adding to cart:", item, platformProps);
   window.STOREFRONT.CART.addToCart(item, platformProps);
+
+  // Abre o drawer do minicart
+  setTimeout(() => {
+    const drawer = document.querySelector(
+      'input[type="checkbox"][id*="minicart"]',
+    ) as HTMLInputElement;
+    if (drawer) {
+      drawer.checked = true;
+    }
+  }, 100);
 };
 
 const onChange = (containerId: string, selectorId: string) => {
@@ -138,7 +150,7 @@ function AddToCartButton(props: Props) {
     item,
     type = "shelf",
     class: _class,
-    buttonText = "Comprar",
+    buttonText = "Adicionar ao carrinho",
     hideIcon = false,
   } = props;
   const platformProps = useAddToCart(props);

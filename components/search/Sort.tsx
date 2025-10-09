@@ -12,10 +12,10 @@ const getUrl = (href: string, value: string) => {
   return url.href;
 };
 const labels: Record<string, string> = {
+  "orders:desc": "Mais vendidos",
   "relevance:desc": "Relevância",
   "price:desc": "Maior Preço",
   "price:asc": "Menor Preço",
-  "orders:desc": "Mais vendidos",
   "name:desc": "Nome - de Z a A",
   "name:asc": "Nome - de A a Z",
   "release:desc": "Lançamento",
@@ -24,7 +24,7 @@ const labels: Record<string, string> = {
 function Sort({ sortOptions, url }: Props) {
   const current = getUrl(
     url,
-    new URL(url).searchParams.get(SORT_QUERY_PARAM) ?? "",
+    new URL(url).searchParams.get(SORT_QUERY_PARAM) ?? "orders:desc",
   );
   const options = sortOptions?.map(({ value, label }) => ({
     value: getUrl(url, value),

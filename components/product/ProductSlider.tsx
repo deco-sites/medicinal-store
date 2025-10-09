@@ -33,6 +33,7 @@ function ProductSlider({ products, itemListName }: Props) {
                     product={product}
                     itemListName={itemListName}
                     class="w-[287px] sm:w-[300px]"
+                    isRecommended={index < 3}
                   />
                 </Slider.Item>
               ))}

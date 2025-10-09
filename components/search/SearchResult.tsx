@@ -47,6 +47,8 @@ export interface Props {
   sections?: DescriptionSections[];
   /** @title Exibir Filtros */
   showFilters?: boolean;
+  /** @title Filtros Permitidos */
+  allowedFilters?: string[];
 }
 
 function NotFound() {
@@ -147,6 +149,7 @@ function PageResult(props: SectionProps<typeof loader>) {
             preload={index === 0}
             index={offset + index}
             class="h-full min-w-[160px] max-w-[300px]"
+            isRecommended={index < 6}
           />
         ))}
       </div>
@@ -229,7 +232,8 @@ function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
   const device = useDevice();
-  const { startingPage = 0, url, partial, descriptionSections, showFilters = true } = props;
+  const { startingPage = 0, url, partial, descriptionSections, showFilters = true, allowedFilters } = props;
+  console.log("SearchResult allowedFilters:", allowedFilters);
   const page = props.page!;
   const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
@@ -302,7 +306,7 @@ function Result(props: SectionProps<typeof loader>) {
                         </label>
                       </div>
                       <div class="flex-grow overflow-auto">
-                        <Filters filters={filters} />
+                        <Filters filters={filters} allowedFilters={allowedFilters} />
                       </div>
                     </div>
                   }
@@ -333,7 +337,7 @@ function Result(props: SectionProps<typeof loader>) {
               )}>
                 {device === "desktop" && showFilters && (
                   <aside>
-                    <Filters filters={filters} />
+                    <Filters filters={filters} allowedFilters={allowedFilters} />
                   </aside>
                 )}
 
@@ -379,9 +383,15 @@ export const loader = (props: Props, req: Request) => {
     }
   })?.sections || [];
 
+  // Ensure default sort is "orders:desc" (mais vendidos) if not specified
+  const url = new URL(req.url);
+  if (!url.searchParams.has("sort")) {
+    url.searchParams.set("sort", "orders:desc");
+  }
+
   return {
     ...props,
-    url: req.url,
+    url: url.href,
     descriptionSections,
   };
 };

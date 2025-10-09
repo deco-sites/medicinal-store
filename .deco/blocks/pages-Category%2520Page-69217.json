@@ -41,12 +41,12 @@
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
           "__resolveType": "vtex/loaders/legacy/productListingPage.ts",
-          "sort": "OrderByPriceDESC",
-          "filters": "dynamic",
+          "sort": "OrderByTopSaleDESC",
           "advancedConfigs": {
             "includeOriginalAttributes": []
           },
-          "count": 16
+          "count": 16,
+          "filters": "dynamic"
         },
         "layout": {
           "columns": {
@@ -59,35 +59,12 @@
         "startingPage": 1,
         "sections": [
           {
-            "sections": [
-              {
-                "__resolveType": "website/sections/Rendering/Lazy.tsx",
-                "section": {
-                  "__resolveType": "site/sections/Content/OnlyText.tsx"
-                }
-              },
-              {
-                "__resolveType": "website/sections/Rendering/Lazy.tsx",
-                "section": {
-                  "__resolveType": "site/sections/Content/Benefits.tsx"
-                }
-              },
-              {
-                "__resolveType": "website/sections/Rendering/Lazy.tsx",
-                "section": {
-                  "__resolveType": "site/sections/Content/InfoCard.tsx"
-                }
-              },
-              {
-                "__resolveType": "website/sections/Rendering/Lazy.tsx",
-                "section": {
-                  "__resolveType": "site/sections/Content/InfoCard.tsx",
-                  "textAlign": "right"
-                }
-              }
-            ],
-            "matcher": "/bags"
+            "sections": [],
+            "matcher": "/gerenciamento-de-peso"
           }
+        ],
+        "allowedFilters": [
+          "categories"
         ]
       }
     },

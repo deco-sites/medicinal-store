@@ -38,7 +38,7 @@ export default function ProductShelf({ products, title }: Props) {
     >
       <Section.Header title={title} />
 
-      <ProductSlider products={products} itemListName={title} />
+      <ProductSlider  products={products} itemListName={title} />
     </div>
   );
 }

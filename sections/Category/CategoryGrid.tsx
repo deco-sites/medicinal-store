@@ -16,15 +16,15 @@ export interface Item {
   href: string;
   /** @title texto alternativo */
   label: string;
-  /** 
+  /**
    * @title Altura da imagem
-   * @description Define a altura da imagem em pixels. Se não for especificado, o valor padrão será 120px. 
-   * */
+   * @description Define a altura da imagem em pixels. Se não for especificado, o valor padrão será 120px.
+   */
   height?: number;
-  /** 
-  * @title Largura da imagem
-  * @description Define a largura da imagem em pixels. Se não for especificado, o valor padrão será 120px. 
-  * */
+  /**
+   * @title Largura da imagem
+   * @description Define a largura da imagem em pixels. Se não for especificado, o valor padrão será 120px.
+   */
   width?: number;
 }
 export interface Props extends SectionHeaderProps {
@@ -32,7 +32,10 @@ export interface Props extends SectionHeaderProps {
 }
 function Card({ image, href, label, height, width }: Item) {
   return (
-    <a href={href} class="flex flex-col items-center justify-center gap-4 group transition-all">
+    <a
+      href={href}
+      class="flex flex-col items-center justify-center gap-4 group transition-all"
+    >
       <div class="p-5 rounded-full bg-white flex justify-center items-center border border-base-200 group-hover:border-primary">
         <Image
           src={image}

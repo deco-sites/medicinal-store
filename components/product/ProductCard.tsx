@@ -22,6 +22,9 @@ interface Props {
   index?: number;
 
   class?: string;
+
+  /** @description if true, shows "Recomendado" badge */
+  isRecommended?: boolean;
 }
 
 const WIDTH = 287;
@@ -34,6 +37,7 @@ function ProductCard({
   itemListName,
   index,
   class: _class,
+  isRecommended,
 }: Props) {
   const { url, image: images, offers, isVariantOf } = product;
   const title = isVariantOf?.name ?? product.name;
@@ -116,17 +120,25 @@ function ProductCard({
             loading="lazy"
             decoding="async"
           />
+               {isRecommended && (
+              <span class="text-xs font-bold border border-white text-white bg-orange-500 text-center rounded-badge px-3 py-1 uppercase absolute bottom-1 right-1">
+                Recomendado
+              </span>
+            )}
         </a>
 
-        <div class="absolute top-0 left-0 w-full flex items-center justify-between">
-          <span
-            class={clx(
-              "text-xs font-bold text-white bg-primary text-center rounded-badge px-3 py-1 m-3 uppercase",
-              (percent <= 0) && "opacity-0",
-            )}
-          >
-            {percent}% off
-          </span>
+        <div class="absolute top-1 left-1 w-full flex items-center justify-between">
+          <div class="flex flex-col gap-1">
+            <span
+              class={clx(
+                "text-xs font-bold text-white bg-primary text-center rounded-badge px-3 py-1 uppercase",
+                (percent <= 0) && "opacity-0",
+              )}
+            >
+              {percent}% off
+            </span>
+       
+          </div>
         </div>
 
         <div class="absolute top-0 right-0 m-2">
@@ -154,6 +166,7 @@ function ProductCard({
             seller={seller}
             item={item}
             class="btn btn-sm sm:btn-md border-primary text-primary bg-white hover:border-primary disabled:bg-white disabled:border-base-300 disabled:text-base-300"
+            
           />
         )}
       </div>

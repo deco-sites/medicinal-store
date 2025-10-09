@@ -27,7 +27,7 @@ export type AvailableIcons =
   | "file"
   | "document"
   | "copy"
-  | "info"
+  | "info";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**

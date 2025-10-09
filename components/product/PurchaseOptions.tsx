@@ -90,7 +90,7 @@ export default function ({
                   {discount.quantity > 1 ? "unidades " : "unidade "}
                 </span>
                 <b>por {formatPrice(price * (1 - discount.discount / 100))}</b>
-                {discount.quantity > 1 && <span> cada</span>}
+                {discount.quantity > 1 && <span>cada</span>}
                 {discount.discount > 0 && (
                   <span class="ml-1">
                     ({discount.discount}% OFF)

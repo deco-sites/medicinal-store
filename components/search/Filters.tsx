@@ -12,6 +12,7 @@ import PriceRangeSlider from "../../islands/PriceRangeSlider.tsx";
 
 interface Props {
   filters: ProductListingPage["filters"];
+  allowedFilters?: string[]; // Array de chaves dos filtros a mostrar (se definido, só mostra esses)
 }
 
 const isToggle = (filter: Filter): filter is FilterToggle =>
@@ -83,7 +84,7 @@ const labelMap: Record<string, string> = {
 // Função para extrair min/max dos price ranges
 function extractPriceRange(filter: FilterToggle) {
   const prices: number[] = [];
-  
+
   filter.values.forEach((item) => {
     const range = parseRange(item.value);
     if (range) {
@@ -115,16 +116,28 @@ function clearPriceRange() {
   window.location.href = url.toString();
 }
 
-function Filters({ filters }: Props) {
+function Filters({ filters, allowedFilters }: Props) {
+  console.log("Filters received:", {
+    filters: filters.map((f) => ({ key: f.key, label: f.label })),
+    allowedFilters,
+  });
   return (
     <ul class="flex flex-col gap-6 p-4 sm:p-0">
       {filters
         .filter(isToggle)
+        .filter((filter) => {
+          const shouldShow = !allowedFilters ||
+            allowedFilters.includes(filter.key.toLowerCase());
+          console.log(
+            `Filter ${filter.key} (${filter.label}): shouldShow = ${shouldShow}`,
+          );
+          return shouldShow;
+        })
         .map((filter) => {
           // Tratamento especial para price ranges
           if (filter.key === "PriceRanges") {
             const priceRange = extractPriceRange(filter);
-            
+
             if (!priceRange) return null;
 
             return (

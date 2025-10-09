@@ -94,15 +94,39 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Content/PerguntasFrequentes.tsx",
+        "questions": [
+          {
+            "question": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+            "answer": "<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>"
+          },
+          {
+            "question": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+            "answer": "<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>"
+          },
+          {
+            "question": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+            "answer": "<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley<br><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>"
+          },
+          {
+            "question": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+            "answer": "<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Content/InfoCard.tsx",
         "title": "<p style=\"text-align: right\"><strong><span style=\"color: rgb(150, 34, 57); font-size: 25pt\">Morosil faz perder barriga?</span></strong></p>",
         "description": "<p style=\"text-align: right\"><span style=\"color: rgb(0, 0, 0); font-size: 20px\">Morosil é um tratamento que auxilia na perda de medidas, especialmente na região abdominal. Seus bioativos atuam melhorando a hipóxia e a inflamação causadas pela hipertrofia dos adipócitos. A ação das antocianidinas, presentes no Morosil, promove a melhora do metabolismo do tecido adiposo, contribuindo por diversos mecanismos para a redução de medidas na região do abdômen. Resultados excelentes são obtidos quando associado a uma alimentação saudável e à prática regular de atividade física.</span></p>",
+        "backgroundColor": "#ffffff",
         "image": {
-          "mobile": "https://assets.decocache.com/medicinal-store/24ad19e6-d142-4614-872b-9ca92537cdda/AN-Morosil-04.jpg",
           "desktop": "https://assets.decocache.com/medicinal-store/24ad19e6-d142-4614-872b-9ca92537cdda/AN-Morosil-04.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/24ad19e6-d142-4614-872b-9ca92537cdda/AN-Morosil-04.jpg",
           "alt": "infocard image"
         },
-        "backgroundColor": "#ffffff",
         "padding": "none",
         "textAlign": "left"
       }
@@ -112,13 +136,13 @@
       "section": {
         "__resolveType": "site/sections/Content/InfoCard.tsx",
         "title": "<p><strong><span style=\"color: rgb(150, 34, 57); font-size: 25pt\">Morosil é enganação?</span></strong></p>",
-        "description": "<p><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Morosil é um produto com ação comprovada no metabolismo do tecido adiposo. Sabe-se que a hipertrofia das células de gordura (adipócitos) é um importante fator para a obesidade. Esse aumento do adipócitos causa a hipóxia tecidual, que a esta associada com o desenvolvimento de inflamação e resistência à insulina sistemica. Os compostos bioativos do Morosil, especialmente a antocianidida C3G são capazes de atuar nesse mecanismo, melhorando o metabolismo do tecido adiposo. Os polifenóis tem alto poder antioxidante e atuam na redução dos eventos relacionados à inflamação e estresse oxidativo. A antocianidina C3G também contribui para reduzir o transporte de ácidos graxos e a sua captação pelos adipócitos. Os polifenóis presentes no Morosil contribuem para diminuir a enzima HMG-CoA, que tem papel importante na síntese do coleterol. Desta forma, o uso do Morosil reduz os o colesterol tecidual e aumenta a expressão dos receptores de LDL.</span></p>",
-        "backgroundColor": "#ffffff",
         "image": {
-          "desktop": "https://assets.decocache.com/medicinal-store/d3d7ca48-f803-4cc4-86e6-c4de26904cc4/morosil-enganacao-desktop.jpg",
           "mobile": "https://assets.decocache.com/medicinal-store/4fb02750-2646-4e36-9bff-df4cd3965382/morosil-enganacao.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/d3d7ca48-f803-4cc4-86e6-c4de26904cc4/morosil-enganacao-desktop.jpg",
           "alt": "infocard image"
         },
+        "description": "<p><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Morosil é um produto com ação comprovada no metabolismo do tecido adiposo. Sabe-se que a hipertrofia das células de gordura (adipócitos) é um importante fator para a obesidade. Esse aumento do adipócitos causa a hipóxia tecidual, que a esta associada com o desenvolvimento de inflamação e resistência à insulina sistemica. Os compostos bioativos do Morosil, especialmente a antocianidida C3G são capazes de atuar nesse mecanismo, melhorando o metabolismo do tecido adiposo. Os polifenóis tem alto poder antioxidante e atuam na redução dos eventos relacionados à inflamação e estresse oxidativo. A antocianidina C3G também contribui para reduzir o transporte de ácidos graxos e a sua captação pelos adipócitos. Os polifenóis presentes no Morosil contribuem para diminuir a enzima HMG-CoA, que tem papel importante na síntese do coleterol. Desta forma, o uso do Morosil reduz os o colesterol tecidual e aumenta a expressão dos receptores de LDL.</span></p>",
+        "backgroundColor": "#ffffff",
         "padding": "none",
         "textAlign": "right"
       }
@@ -128,14 +152,14 @@
       "section": {
         "__resolveType": "site/sections/Content/InfoCard.tsx",
         "title": "<p style=\"text-align: right\"><strong><span style=\"color: rgb(150, 34, 57); font-size: 25pt\">Outros Benefícios do Morosil</span></strong></p>",
+        "description": "<p style=\"text-align: right\"><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Os compostos bioativos do Morosil podem contribuir para reduzir a esteatose hepática através do aumento da expressão de genes lipolíticos e redução da expressão de genes lipogênicos no fígado como o LXR e a FAS. Desta forma, ocorre redução na síntese de triacilgliceróis e a oxidação de gordura no fígado. Acredita-se que o grande responsável por esses efeitos benéficos no fígado sejam as antocianididas C3G e seus metabólitos. Outros bioativos presentes no Morosil ampliam esse resutado terapêutico</span></p>",
+        "padding": "none",
         "image": {
-          "mobile": "https://assets.decocache.com/medicinal-store/77095474-5863-4430-9618-d0b57a209632/morosil-figado.png",
           "desktop": "https://assets.decocache.com/medicinal-store/b504e1f5-7b6a-4244-8fc1-2bc2bc461b3d/morosil-figado-desktop.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/77095474-5863-4430-9618-d0b57a209632/morosil-figado.png",
           "alt": "morosil"
         },
-        "description": "<p style=\"text-align: right\"><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Os compostos bioativos do Morosil podem contribuir para reduzir a esteatose hepática através do aumento da expressão de genes lipolíticos e redução da expressão de genes lipogênicos no fígado como o LXR e a FAS. Desta forma, ocorre redução na síntese de triacilgliceróis e a oxidação de gordura no fígado. Acredita-se que o grande responsável por esses efeitos benéficos no fígado sejam as antocianididas C3G e seus metabólitos. Outros bioativos presentes no Morosil ampliam esse resutado terapêutico</span></p>",
         "backgroundColor": "#ffffff",
-        "padding": "none",
         "textAlign": "left"
       }
     },
@@ -145,13 +169,13 @@
         "__resolveType": "site/sections/Content/InfoCard.tsx",
         "title": "<p><strong><span style=\"color: rgb(150, 34, 57); font-size: 25pt\">Como tomar Morosil?</span></strong></p>",
         "description": "<p><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">O </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">Morosil</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\"> é um extrato padronizado da Laranja Moro, 100% natural e sem adição de corantes. Pode ser ingerido em cápsulas de </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">500 mg</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">, na dose de </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">1 a 4 cápsulas por dia</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">, em qualquer horário, pois não contém cafeína nem substâncias que atrapalham o sono.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">A formulação pode ser feita em </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">cápsulas vegetais</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">, tornando o produto </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">vegano</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">, além de ser </span><strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">livre de lactose e glúten</span></strong><span style=\"color: rgb(0, 0, 0); font-size: 15pt\">.</span></p>",
-        "padding": "none",
+        "backgroundColor": "#ffffff",
         "image": {
           "desktop": "https://assets.decocache.com/medicinal-store/9c50da7c-a3bc-452d-8253-a86752e065ef/morosil-comotomar-desktop.jpg",
           "mobile": "https://assets.decocache.com/medicinal-store/7c7a3fc0-73e9-4a12-bcd8-3e847ad1a0f1/morosil-comotomar-mobile.jpg",
           "alt": "morosil"
         },
-        "backgroundColor": "#ffffff",
+        "padding": "none",
         "textAlign": "right"
       }
     },

@@ -20,7 +20,7 @@ import {
 } from "../../constants.ts";
 import { useDevice, useScript } from "@deco/deco/hooks";
 import { type LoadingFallbackProps } from "@deco/deco";
-import ModalCoupon from "../../islands/ModalCoupon.tsx"
+import ModalCoupon from "../../islands/ModalCoupon.tsx";
 
 export interface Logo {
   src: ImageWidget;
@@ -69,7 +69,7 @@ export interface SectionProps {
   /**
    * @title Modal Cupom
    * @description Configuração do Modal que aparece após 3 segundos na entrada do site
-   * */
+   */
   modal?: Modal;
 }
 
@@ -79,20 +79,20 @@ interface Modal {
    *  @description Marque esta opção para desativar o modal de cupom que aparece na entrada do site
    */
   disabledModal?: boolean;
-  /** 
-   * @title Imagem 
+  /**
+   * @title Imagem
    * @description Tamanho recomendado 313 x 326
-  */
+   */
   image?: ImageWidget;
   /**
-   *  @title Código do cupom 
+   *  @title Código do cupom
    * @description Ex: PRIMEIRACOMPRA10
-  */
+   */
   coupom?: string;
-  /** 
-   * @title Link regulamento 
+  /**
+   * @title Link regulamento
    * @description Link para o regulamento do cupom
-   * */
+   */
   regulation?: string;
 }
 type Props = Omit<SectionProps, "alert">;
@@ -131,13 +131,19 @@ const Link = ({
     />
   </a>
 );
-const Desktop = ({ navItems, logo, searchbar, loading, links, modal }: Props) => (
+const Desktop = (
+  { navItems, logo, searchbar, loading, links, modal }: Props,
+) => (
   <>
     <div class="relative bg-white px-2 xl:px-0 w-full shadow-sm rounded-b-xl">
       {
         <>
           {modal?.disabledModal ? null : (
-            <ModalCoupon image={modal?.image} coupom={modal?.coupom} regulation={modal?.regulation} />
+            <ModalCoupon
+              image={modal?.image}
+              coupom={modal?.coupom}
+              regulation={modal?.regulation}
+            />
           )}
         </>
       }
@@ -184,11 +190,17 @@ const Desktop = ({ navItems, logo, searchbar, loading, links, modal }: Props) =>
     </div>
   </>
 );
-const Mobile = ({ logo, searchbar, navItems, loading, links, modal }: Props) => (
+const Mobile = (
+  { logo, searchbar, navItems, loading, links, modal }: Props,
+) => (
   <>
     <>
       {modal?.disabledModal ? null : (
-        <ModalCoupon image={modal?.image} coupom={modal?.coupom} regulation={modal?.regulation} />
+        <ModalCoupon
+          image={modal?.image}
+          coupom={modal?.coupom}
+          regulation={modal?.regulation}
+        />
       )}
     </>
     <Drawer
@@ -281,7 +293,6 @@ function Header({
               ? <Desktop logo={logo} {...props} />
               : <Mobile logo={logo} {...props} />}
           </div>
-
         </header>
       </div>
       <script

@@ -102,5 +102,12 @@
       ],
       "clusterId": "184"
     }
+  ],
+  "productFlags": [
+    {
+      "collectionId": "184",
+      "backgroundColor": "#cc0000",
+      "label": "descontos progressivos"
+    }
   ]
 }
