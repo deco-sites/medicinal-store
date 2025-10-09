@@ -11,6 +11,12 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
+          "desktop": "https://assets.decocache.com/medicinal-store/05bfac44-a900-48ab-a1bf-1ea6eedc1605/banner-pept-desktop.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/5b56968e-88e6-4f61-8f8c-e6363b88b70c/banner-pept-mobile.jpg",
+          "href": "https://www.medicinalnaweb.com.br/peptistrong-chocolate-belga/p",
+          "alt": "banner 2"
+        },
+        {
           "desktop": "https://assets.decocache.com/medicinal-store/6129ccd4-75c2-4633-a9a1-b38ce76c6366/banner-morosil-desktop.png",
           "mobile": "https://assets.decocache.com/medicinal-store/216543fd-3bb4-4fb0-a71c-10db256c2fbc/banner-morosil-mobile.png",
           "href": "/morosil-500mg-60-doses/p",
@@ -25,14 +31,8 @@
         {
           "desktop": "https://assets.decocache.com/medicinal-store/908bf794-b5e9-4adf-83d3-655b0b049b8c/banner-akkermat2-desktop.png",
           "mobile": "https://assets.decocache.com/medicinal-store/ae60d631-7ae1-4cde-a631-4c34195a3cfa/banner-akkermat2-mobile.png",
-          "href": "/akkermat-150mg-30-doses-capsula-gastrorresistente/p",
-          "alt": "Banner 3"
-        },
-        {
-          "desktop": "https://assets.decocache.com/medicinal-store/c5af6358-e23d-492a-b92d-589d2ca480fe/banner-derma-fusion.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/51e86496-6230-4971-b8d8-c92c147ed1f3/banner-derma-fusion-mobile.png",
-          "alt": "banner 2",
-          "href": "/s?q=DermaFusion&page=1"
+          "alt": "Banner 3",
+          "href": "/akkermat-150mg-30-doses-capsula-gastrorresistente/p"
         }
       ],
       "preload": true,
@@ -110,14 +110,55 @@
           "__resolveType": "vtex/loaders/legacy/productList.ts",
           "props": {
             "query": "a",
-            "sort": "OrderByPriceDESC",
-            "count": 10,
+            "sort": "",
+            "count": 5,
             "fuzzy": "automatic",
             "similars": true,
-            "collection": "156"
+            "collection": "193"
           }
         },
-        "title": "Destaques"
+        "title": "recomendados"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
+        "products": {
+          "__resolveType": "commerce/loaders/product/extensions/list.ts",
+          "extensions": [
+            {
+              "__resolveType": "vtex/loaders/product/extensions/list.ts",
+              "similars": false
+            }
+          ],
+          "data": {
+            "__resolveType": "vtex/loaders/legacy/productList.ts",
+            "props": {
+              "sort": "OrderByPriceDESC",
+              "collection": "194",
+              "count": 5,
+              "similars": true
+            }
+          }
+        },
+        "banner": {
+          "mobile": "https://assets.decocache.com/medicinal-store/424faf9a-8749-4f72-8c51-8403ae14518d/gordura-abdominal-mobile.png",
+          "desktop": "https://assets.decocache.com/medicinal-store/cb8d4ddd-0db9-4211-87f2-ca051f7201c4/gordura-abdominal-desktop.png",
+          "alt": "Teste",
+          "href": "#"
+        },
+        "title": "GORDURA ABDOMININAL"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/Banner.tsx",
+        "mobile": "https://assets.decocache.com/medicinal-store/67545106-d0bf-4dc8-9cfa-3a9ec9e7fe0c/mitburn-banner-mobile-2-(1).png",
+        "desktop": "https://assets.decocache.com/medicinal-store/b1015aa8-7eca-4028-bccd-1b498ecece0e/mitburn-banner-2-(1).png",
+        "alt": "#",
+        "href": "#"
       }
     },
     {
@@ -147,17 +188,28 @@
           "desktop": "https://assets.decocache.com/medicinal-store/a85b0a07-4e14-4992-854f-22a802fab2d2/mais-termogenicos-desktop.png",
           "alt": "#",
           "href": "/gerenciamento-de-peso/aumentar-metabolismo?"
-        }
+        },
+        "title": "AUMENTAR METABOLISMO"
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Images/Banner.tsx",
-        "mobile": "https://assets.decocache.com/medicinal-store/67545106-d0bf-4dc8-9cfa-3a9ec9e7fe0c/mitburn-banner-mobile-2-(1).png",
-        "desktop": "https://assets.decocache.com/medicinal-store/b1015aa8-7eca-4028-bccd-1b498ecece0e/mitburn-banner-2-(1).png",
-        "alt": "#",
-        "href": "#"
+        "__resolveType": "site/sections/Images/ImageGallery.tsx",
+        "banners": [
+          {
+            "mobile": "https://assets.decocache.com/medicinal-store/92a9394e-246d-43b1-ba82-b51365370ab4/peptistrong-aliado-desktop.jpg",
+            "desktop": "https://assets.decocache.com/medicinal-store/bbc1cf33-44f7-4ade-982e-452271b9f51d/PEPT-ALIADO.png",
+            "alt": "Banner Gallery 1",
+            "href": "https://www.medicinalnaweb.com.br/peptistrong-chocolate-belga/p"
+          },
+          {
+            "mobile": "https://assets.decocache.com/medicinal-store/6d6d4545-6acd-48c5-b373-861c541a80c5/AN-Morosil-02.jpg",
+            "desktop": "https://assets.decocache.com/medicinal-store/6f2a97ea-4971-44b8-93ec-df237d68736d/morosil-peso.png",
+            "alt": "Banner Gallery 2",
+            "href": "https://www.medicinalnaweb.com.br/morosil-500mg-60-doses/p"
+          }
+        ]
       }
     },
     {
@@ -187,43 +239,34 @@
           "desktop": "https://assets.decocache.com/medicinal-store/3050f23f-8be8-4bf3-9f10-186d0276b081/Diureticos-naturais.jpg",
           "alt": "Teste",
           "href": "#"
-        }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Images/ImageGallery.tsx",
-        "banners": [
-          {
-            "mobile": "https://assets.decocache.com/medicinal-store/e797baee-b6a4-4468-8ed1-d866ab8f0ad6/UC-II.jpg",
-            "desktop": "https://assets.decocache.com/medicinal-store/b9d48379-38a3-42d4-bb4d-5a945fc90053/UC-II-mobile.jpg",
-            "alt": "Banner Gallery 1",
-            "href": "#"
-          },
-          {
-            "mobile": "https://assets.decocache.com/medicinal-store/4ac72e49-c26e-4eba-8ae5-cab948a9e13f/CANTIN.jpg",
-            "desktop": "https://assets.decocache.com/medicinal-store/f08c5a21-0c30-483f-9def-b389ff6c3033/CANTIN-mobile.jpg",
-            "alt": "Banner Gallery 2",
-            "href": "/cactin-500mg-60-doses/p?skuId=1016"
-          }
-        ]
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Content/Faq.tsx",
-        "contact": {
-          "description": "<p></p>"
         },
-        "questions": [
-          {
-            "answer": "<p>Oferecemos frete grátis para compras acima de R$ 250,00. Para garantir esse benefício, basta que o valor total dos produtos no seu carrinho seja igual ou superior a R$ 250,00 no momento do fechamento do pedido, sem incluir o valor do frete.</p><p>Caso você aplique cupons de desconto e o valor final fique abaixo de R$ 250,00, o frete grátis não será aplicado.</p><p>Essa condição é válida para entregas dentro do Brasil e pode ter exceções dependendo da sua região. Se houver alguma restrição, será informada no cálculo do frete na página de checkout.</p>",
-            "question": "Frete grátis a partir de R$ 250,00"
-          }
-        ]
+        "title": "DIURÉTICOS NATURAIS"
       }
+    },
+    {
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
+        {
+          "value": {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Content/Faq.tsx",
+              "contact": {
+                "description": "<p></p>"
+              },
+              "questions": [
+                {
+                  "answer": "<p>Oferecemos frete grátis para compras acima de R$ 250,00. Para garantir esse benefício, basta que o valor total dos produtos no seu carrinho seja igual ou superior a R$ 250,00 no momento do fechamento do pedido, sem incluir o valor do frete.</p><p>Caso você aplique cupons de desconto e o valor final fique abaixo de R$ 250,00, o frete grátis não será aplicado.</p><p>Essa condição é válida para entregas dentro do Brasil e pode ter exceções dependendo da sua região. Se houver alguma restrição, será informada no cálculo do frete na página de checkout.</p>",
+                  "question": "Frete grátis a partir de R$ 250,00"
+                }
+              ]
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/never.ts"
+          }
+        }
+      ]
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

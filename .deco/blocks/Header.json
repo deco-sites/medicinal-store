@@ -396,6 +396,6 @@
     }
   ],
   "modal": {
-    "disabledModal": false
+    "disabledModal": true
   }
 }
