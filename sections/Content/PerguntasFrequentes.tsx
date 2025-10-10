@@ -39,7 +39,7 @@ const Question = ({ number, question, answer }: Question) => {
     return (
         <div class="flex flex-col gap-1 border-t border-gray-400 py-5">
             <>
-                <h3 class="custom-category-title mb-4"><span>{number} - </span> {question}</h3>
+                <h2 class="custom-category-title mb-4"><span>{number} - </span> {question}</h2>
                 <p class="custom-category-text text-sm lg:text-base" dangerouslySetInnerHTML={{ __html: answer }} />
             </>
             <span class="text-xs text-gray-500">{new Date().toLocaleDateString("pt-BR")}</span>
@@ -67,15 +67,15 @@ const PerguntasFrequentes = ({
 
 export const LoadingFallback = (props: Props) => {
     return (
-   <div style={{ height: "300px" }} class="flex flex-col justify-center items-center">
-   <div class="skeleton w-full h-[200px]">
-            <>
+        <div style={{ height: "300px" }} class="flex flex-col justify-center items-center">
+            <div class="skeleton w-full h-[200px]">
+                <>
+                    <div class="skeleton w-full h-2"></div>
+                    <div class="skeleton w-full h-2"></div>
+                </>
                 <div class="skeleton w-full h-2"></div>
-                <div class="skeleton w-full h-2"></div>
-            </>
-            <div class="skeleton w-full h-2"></div>
+            </div>
         </div>
-   </div>
     );
 };
 
