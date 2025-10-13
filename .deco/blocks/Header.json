@@ -23,6 +23,10 @@
     {
       "icon": "https://assets.decocache.com/medicinal-store/7d599bd8-da2f-42c2-813c-fb34fe4487b0/CreditCard.svg",
       "text": "<p><span>Até </span><strong><span>12x sem juros</span></strong><span> no cartão.</span></p>"
+    },
+    {
+      "text": "<p>36% OFF no <strong>PeptiStrong</strong>  <strong>CUPOM: PEPTOFF</strong></p>",
+      "icon": "https://assets.decocache.com/medicinal-store/f9b14a9f-87d5-4c7f-a9fc-5a5ba5fc9cd6/Tag.svg"
     }
   ],
   "logo": {
