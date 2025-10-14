@@ -120,11 +120,11 @@ function ProductCard({
             loading="lazy"
             decoding="async"
           />
-               {isRecommended && (
-              <span class="text-xs font-bold border border-white text-white bg-orange-500 text-center rounded-badge px-3 py-1 uppercase absolute bottom-1 right-1">
-                Recomendado
-              </span>
-            )}
+          {isRecommended && (
+            <span class="text-xs font-bold border border-white text-white bg-orange-500 text-center rounded-badge px-3 py-1 uppercase absolute bottom-1 right-1">
+              Recomendado
+            </span>
+          )}
         </a>
 
         <div class="absolute top-1 left-1 w-full flex items-center justify-between">
@@ -137,7 +137,6 @@ function ProductCard({
             >
               {percent}% off
             </span>
-       
           </div>
         </div>
 
@@ -166,7 +165,6 @@ function ProductCard({
             seller={seller}
             item={item}
             class="btn btn-sm sm:btn-md border-primary text-primary bg-white hover:border-primary disabled:bg-white disabled:border-base-300 disabled:text-base-300"
-            
           />
         )}
       </div>

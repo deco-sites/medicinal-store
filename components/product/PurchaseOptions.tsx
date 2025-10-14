@@ -54,28 +54,49 @@ export default function ({
     );
   }
 
+  // Criar array com opção de 1 unidade + descontos
+  const allOptions = [
+    { quantity: 1, discount: 0 }, // Opção padrão de 1 unidade
+    ...discountsOnCluster
+  ];
+
   return (
     <div id="purchase-options" class="max-w-md">
       <div
         class="flex flex-col gap-2"
         style={{ margin: 0 }}
       >
-        {discountsOnCluster.map((discount, index) => {
+        {allOptions.map((discount, index) => {
           const isSelected = quantity === discount.quantity;
+          const maxDiscount = discountsOnCluster.reduce((max, current) => {
+            return current.discount > max.discount ? current : max;
+          }, { discount: 0 });
+          const isBestDiscount = discount.discount === maxDiscount.discount && maxDiscount.discount > 0 && discount.quantity > 1;
           return (
             <button
               key={index}
-              class="w-full rounded-full bg-white border border-primary text-primary p-2 flex gap-2 cursor-pointer"
+              class={`relative w-full rounded-full bg-white border text-primary p-2 flex gap-2 cursor-pointer items-center ${
+                isSelected ? 'border-primary bg-primary/10' : 'border-primary'
+              }`}
               hx-post={useSection({
                 props: {
-                  only_purchase_options: true,
-                  quantity: isSelected ? undefined : discount.quantity, // desmarca se já está selecionado
+                  only_price_update: true,
+                  quantity: isSelected ? 1 : discount.quantity,
                 },
               })}
-              hx-swap="outerHTML"
-              hx-target="#purchase-options"
+              hx-swap="innerHTML"
+              hx-target="#product-info-content"
+              hx-trigger="click"
               type="button"
             >
+              {isBestDiscount && (
+                <div 
+                  class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-2 py-1 h-full flex items-center "
+                  style={{ borderRadius: "8px 20px 20px 8px" }}
+                >
+                  MAIOR DESCONTO
+                </div>
+              )}
               <input
                 type="checkbox"
                 name="quantity"
@@ -84,13 +105,16 @@ export default function ({
                 checked={isSelected}
                 readOnly
               />
-              <span>
+              <span class="text-xs lg:text-sm flex items-center gap-1 leading-auto">
                 <span>
                   {discount.quantity}{" "}
                   {discount.quantity > 1 ? "unidades " : "unidade "}
                 </span>
-                <b>por {formatPrice(price * (1 - discount.discount / 100))}</b>
-                {discount.quantity > 1 && <span>cada</span>}
+                {discount.quantity === 1 ? (
+                  <b>{formatPrice(price)}</b>
+                ) : (
+                  <b>por {formatPrice(price * (1 - discount.discount / 100))} cada</b>
+                )}
                 {discount.discount > 0 && (
                   <span class="ml-1">
                     ({discount.discount}% OFF)

@@ -232,7 +232,14 @@ function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
   const device = useDevice();
-  const { startingPage = 0, url, partial, descriptionSections, showFilters = true, allowedFilters } = props;
+  const {
+    startingPage = 0,
+    url,
+    partial,
+    descriptionSections,
+    showFilters = true,
+    allowedFilters,
+  } = props;
   console.log("SearchResult allowedFilters:", allowedFilters);
   const page = props.page!;
   const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
@@ -306,7 +313,10 @@ function Result(props: SectionProps<typeof loader>) {
                         </label>
                       </div>
                       <div class="flex-grow overflow-auto">
-                        <Filters filters={filters} allowedFilters={allowedFilters} />
+                        <Filters
+                          filters={filters}
+                          allowedFilters={allowedFilters}
+                        />
                       </div>
                     </div>
                   }
@@ -331,13 +341,19 @@ function Result(props: SectionProps<typeof loader>) {
                 </Drawer>
               )}
 
-              <div class={clx(
-                "grid grid-cols-1",
-                showFilters && device === "desktop" && "sm:grid-cols-[350px_1fr]"
-              )}>
+              <div
+                class={clx(
+                  "grid grid-cols-1",
+                  showFilters && device === "desktop" &&
+                    "sm:grid-cols-[350px_1fr]",
+                )}
+              >
                 {device === "desktop" && showFilters && (
                   <aside>
-                    <Filters filters={filters} allowedFilters={allowedFilters} />
+                    <Filters
+                      filters={filters}
+                      allowedFilters={allowedFilters}
+                    />
                   </aside>
                 )}
 

@@ -54,7 +54,8 @@ function Alert({ alerts = [] }: Props) {
         </div>
       </div>
 
-      <style>{`
+      <style>
+        {`
         @keyframes marquee {
           0% {
             transform: translateX(0%);
@@ -67,7 +68,8 @@ function Alert({ alerts = [] }: Props) {
         .animate-marquee {
           animation: marquee 25s linear infinite;
         }
-      `}</style>
+      `}
+      </style>
     </div>
   );
 }

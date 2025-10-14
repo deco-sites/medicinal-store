@@ -367,7 +367,19 @@
         ],
         "clusterDiscount": [
           {}
-        ]
+        ],
+        "showLeveJunto": true,
+        "only_purchase_options": false,
+        "relatedProducts": {
+          "__resolveType": "vtex/loaders/legacy/relatedProductsLoader.ts",
+          "crossSelling": "showtogether",
+          "slug": {
+            "__resolveType": "website/functions/requestToParam.ts",
+            "param": "slug"
+          },
+          "count": 3,
+          "hideUnavailableItems": true
+        }
       }
     },
     {

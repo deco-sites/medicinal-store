@@ -1,16 +1,22 @@
 import Section from "../../components/ui/Section.tsx";
 import ProductInfo from "../../components/product/ProductInfo.tsx";
-import ProductTitle from "../../components/product/ProductTitle.tsx";
+
 import PurchaseOptions from "../../components/product/PurchaseOptions.tsx";
 import ImageGallerySlider from "../../components/product/Gallery.tsx";
 import DescriptionCollapse from "../../islands/DescriptionCollapse.tsx";
 
+
+
 import { useDevice } from "@deco/deco/hooks";
 import { SectionProps } from "@deco/deco";
 import { renderSection } from "apps/website/pages/Page.tsx";
-import { ProductDetailsPage, PropertyValue } from "apps/commerce/types.ts";
+import {
+  Product,
+  ProductDetailsPage,
+  PropertyValue,
+} from "apps/commerce/types.ts";
 
-import type { AppContext, ClusterDiscount } from "../../apps/site.ts";
+import type { AppContext, Cluster } from "../../apps/site.ts";
 import type { Section as SectionComponent } from "@deco/deco/blocks";
 
 // Função para limpar CSS e atributos indesejados
@@ -57,33 +63,58 @@ export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
   sections?: DescriptionSections[];
-  clusterDiscount: ClusterDiscount[];
+  clusterDiscount: Cluster[];
+  /** @title Produtos Relacionados (Leve Junto) */
+  relatedProducts?: Product[] | null;
+  /** @title Mostrar Seção Leve Junto */
+  showLeveJunto?: boolean;
   /** @hidden */
   only_purchase_options?: boolean;
+  /** @hidden */
+  only_price_update?: boolean;
   /** @hidden */
   quantity?: number;
 }
 
-const Desktop = ({ page, clusterDiscount }: Props) => {
+const Desktop = (
+  { page, clusterDiscount, relatedProducts, showLeveJunto, quantity }: Props,
+) => {
+  // Verificar se LeveJunto deve ser exibido e se há produtos relacionados
+  const hasLeveJunto = showLeveJunto && relatedProducts && relatedProducts.length > 0;
+  
   return (
-    <div class="grid grid-cols-[1fr_600px] gap-8">
-      <div>
+    <div class={`grid ${hasLeveJunto ? 'grid-cols-3' : 'grid-cols-[1fr_600px]'} gap-8`}>
+      <div class={hasLeveJunto ? 'col-span-1' : ''}>
         <ImageGallerySlider page={page} />
       </div>
-      <div>
-        <ProductTitle page={page} />
-        <ProductInfo page={page} clusterDiscount={clusterDiscount} />
+      <div class={hasLeveJunto ? 'col-span-2' : ''}>
+        {/* <ProductTitle page={page} /> */}
+        <ProductInfo
+          page={page}
+          clusterDiscount={clusterDiscount}
+          relatedProducts={relatedProducts}
+          showLeveJunto={showLeveJunto}
+          quantity={quantity}
+        />
       </div>
     </div>
   );
 };
 
-const Mobile = ({ page, clusterDiscount }: Props) => {
+const Mobile = (
+  { page, clusterDiscount, relatedProducts, showLeveJunto, quantity }: Props,
+) => {
   return (
     <div class="flex flex-col w-full">
-      <ProductTitle page={page} />
+      {/* <ProductTitle page={page} /> */}
       <ImageGallerySlider page={page} />
-      <ProductInfo page={page} clusterDiscount={clusterDiscount} />
+      <ProductInfo
+        page={page}
+        clusterDiscount={clusterDiscount}
+        relatedProducts={relatedProducts}
+        showLeveJunto={showLeveJunto}
+        quantity={quantity}
+      />
     </div>
   );
 };
@@ -109,6 +140,20 @@ function ProductDetails(props: SectionProps<typeof loader>) {
         page={page}
         quantity={props.quantity || 1}
         clusterDiscount={props.clusterDiscount}
+      />
+    );
+  }
+
+  // Se only_price_update é true, retorna o ProductInfo completo atualizado
+  if (props.only_price_update) {
+    return (
+      <ProductInfo
+        page={page}
+        clusterDiscount={props.clusterDiscount}
+        relatedProducts={props.relatedProducts}
+        showLeveJunto={props.showLeveJunto}
+        quantity={props.quantity || 1}
+        isPartialUpdate={true}
       />
     );
   }

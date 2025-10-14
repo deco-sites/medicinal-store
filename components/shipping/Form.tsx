@@ -62,7 +62,7 @@ export default function Form({ items }: Props) {
         </form>
         <a
           href="https://buscacepinter.correios.com.br/app/endereco/index.php?t"
-          class="text-sm underline"
+          class="text-sm underline w-fit"
           target="_blank"
         >
           Descobrir meu CEP
