@@ -11,14 +11,8 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://assets.decocache.com/medicinal-store/05bfac44-a900-48ab-a1bf-1ea6eedc1605/banner-pept-desktop.jpg",
-          "mobile": "https://assets.decocache.com/medicinal-store/5b56968e-88e6-4f61-8f8c-e6363b88b70c/banner-pept-mobile.jpg",
-          "href": "https://www.medicinalnaweb.com.br/peptistrong-chocolate-belga/p",
-          "alt": "banner 2"
-        },
-        {
-          "desktop": "https://assets.decocache.com/medicinal-store/6129ccd4-75c2-4633-a9a1-b38ce76c6366/banner-morosil-desktop.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/216543fd-3bb4-4fb0-a71c-10db256c2fbc/banner-morosil-mobile.png",
+          "desktop": "https://assets.decocache.com/medicinal-store/81b27dff-f916-4555-a142-3a98706504a2/banner-pre-verao-morosil-desktop.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/019d6e6d-9ab1-4dd7-83b7-ff82b5d2a305/banner-pre-verao-morosil-mobile.jpg",
           "href": "/morosil-500mg-60-doses/p",
           "alt": "Banner 1",
           "action": {
@@ -27,6 +21,12 @@
             "href": "/s?q=shoes&page=0",
             "label": "Grab Yours Now!"
           }
+        },
+        {
+          "desktop": "https://assets.decocache.com/medicinal-store/05bfac44-a900-48ab-a1bf-1ea6eedc1605/banner-pept-desktop.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/5b56968e-88e6-4f61-8f8c-e6363b88b70c/banner-pept-mobile.jpg",
+          "href": "https://www.medicinalnaweb.com.br/peptistrong-chocolate-belga/p",
+          "alt": "banner 2"
         },
         {
           "desktop": "https://assets.decocache.com/medicinal-store/908bf794-b5e9-4adf-83d3-655b0b049b8c/banner-akkermat2-desktop.png",
