@@ -369,26 +369,29 @@
     },
     {
       "children": [],
-      "name": "Promoção",
-      "href": "/busca?fq=H:189",
       "isHighlighted": false,
       "mobileOnly": false,
-      "isBold": true
-    },
-    {
-      "children": [],
-      "name": "Lançamentos",
-      "isHighlighted": false,
-      "href": "/busca?fq=H:188",
-      "isBold": true
-    },
-    {
-      "children": [],
-      "href": "/busca?fq=H:190",
-      "isHighlighted": false,
-      "name": "Mais Vendidos",
       "isBold": true,
+      "name": "Promoção",
+      "href": "/busca?fq=H:189"
+    },
+    {
+      "children": [],
+      "name": "Saúde e Bem Estar",
+      "isHighlighted": false,
+      "isBold": true,
+      "href": "/saude-e-bem-estar"
+    },
+    {
+      "children": [],
+      "href": "/gerenciamento-de-peso",
+      "isHighlighted": false,
+      "isBold": true,
+      "name": "Gerenciamento de Peso",
       "mobileOnly": false
+    },
+    {
+      "children": []
     }
   ],
   "loading": "eager",
