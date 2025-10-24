@@ -45,7 +45,7 @@
           "children": [
             {
               "name": "Ansiedade e Estresse",
-              "href": "#"
+              "href": "/gerenciamento-de-peso/ansiedade-e-estresse"
             },
             {
               "name": "Aumentar Metabolismo",
@@ -183,11 +183,11 @@
             },
             {
               "name": "Antioxidantes",
-              "href": "#"
+              "href": "/nutricosmeticos/antioxidantes"
             },
             {
               "name": "Celulite",
-              "href": "#"
+              "href": "/nutricosmeticos/celulite"
             },
             {
               "name": "Clareadores",
@@ -229,7 +229,7 @@
             },
             {
               "name": "Probióticos",
-              "href": "#"
+              "href": "/longevidade/probioticos"
             },
             {
               "name": "Supra Ômegas",
@@ -325,7 +325,7 @@
             },
             {
               "name": "Suplementos",
-              "href": "#"
+              "href": "/desempenho-fisico/suplementos"
             },
             {
               "name": "Termogênico",
@@ -368,30 +368,357 @@
       "isHighlighted": true
     },
     {
-      "children": [],
-      "isHighlighted": false,
-      "mobileOnly": false,
-      "isBold": true,
-      "name": "Promoção",
-      "href": "/busca?fq=H:189"
-    },
-    {
-      "children": [],
-      "name": "Saúde e Bem Estar",
-      "isHighlighted": false,
-      "isBold": true,
-      "href": "/saude-e-bem-estar"
-    },
-    {
-      "children": [],
-      "href": "/gerenciamento-de-peso",
+      "children": [
+        {
+          "children": [],
+          "name": "Ansiedade e Estresse",
+          "href": "/gerenciamento-de-peso/ansiedade-e-estresse"
+        },
+        {
+          "children": [],
+          "name": " Aumentar Metabolismo",
+          "href": "/gerenciamento-de-peso/aumentar-metabolismo"
+        },
+        {
+          "children": [],
+          "name": " Aumentar Saciedade",
+          "href": "/gerenciamento-de-peso/aumentar-saciedade"
+        },
+        {
+          "children": [],
+          "name": "Bloqueador Carboidrato",
+          "href": "/gerenciamento-de-peso/bloqueador-carboidrato"
+        },
+        {
+          "children": [],
+          "name": " Bloqueador Gordura",
+          "href": "/gerenciamento-de-peso/bloqueador-gordura"
+        },
+        {
+          "children": [],
+          "name": " Compulsão Alimentar",
+          "href": "/gerenciamento-de-peso/compulsao-alimentar"
+        },
+        {
+          "children": [],
+          "name": "Detox",
+          "href": "/gerenciamento-de-peso/detox"
+        },
+        {
+          "children": [],
+          "name": " Diuréticos Naturais",
+          "href": "/gerenciamento-de-peso/diureticos-naturais"
+        },
+        {
+          "children": [],
+          "name": " Fibras",
+          "href": "/gerenciamento-de-peso/fibras"
+        },
+        {
+          "children": [],
+          "name": " Gordura Abdominal",
+          "href": "/gerenciamento-de-peso/gordura-abdominal"
+        },
+        {
+          "children": [],
+          "name": "Inibidor Natural da Fome",
+          "href": "/gerenciamento-de-peso/inibidor-natural-da-fome"
+        },
+        {
+          "children": [],
+          "name": "Vontade de Doces",
+          "href": "/gerenciamento-de-peso/vontade-de-doces"
+        }
+      ],
       "isHighlighted": false,
       "isBold": true,
       "name": "Gerenciamento de Peso",
+      "href": "/gerenciamento-de-peso",
       "mobileOnly": false
     },
     {
-      "children": []
+      "children": [
+        {
+          "children": [],
+          "name": " Aminoácidos",
+          "href": "/desempenho-fisico/aminoacidos"
+        },
+        {
+          "children": [],
+          "name": "AntiCatabólico",
+          "href": "/desempenho-fisico/anticatabolico"
+        },
+        {
+          "children": [],
+          "name": " Aumento de Massa",
+          "href": "/desempenho-fisico/aumento-de-massa"
+        },
+        {
+          "children": [],
+          "name": " Carboidratos",
+          "href": "/desempenho-fisico/carboidratos"
+        },
+        {
+          "children": [],
+          "name": " Energia e Disposição",
+          "href": "/desempenho-fisico/energia-e-disposicao"
+        },
+        {
+          "children": [],
+          "name": " Fadiga Muscular",
+          "href": "/desempenho-fisico/fadiga-muscular"
+        },
+        {
+          "children": [],
+          "name": " Mais Testo",
+          "href": "/desempenho-fisico/mais-testo"
+        },
+        {
+          "children": [],
+          "name": " Proteínas",
+          "href": "/desempenho-fisico/proteinas"
+        },
+        {
+          "children": [],
+          "name": " Suplementos",
+          "href": "/desempenho-fisico/suplementos"
+        },
+        {
+          "children": [],
+          "name": "Termogênico",
+          "href": "/desempenho-fisico/termogenico"
+        },
+        {
+          "children": [],
+          "name": " Vasodilatação",
+          "href": "/desempenho-fisico/vasodilatacao"
+        }
+      ],
+      "name": "Desempenho FIsico",
+      "isHighlighted": false,
+      "isBold": true,
+      "href": "/desempenho-fisico",
+      "mobileOnly": false
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "name": "Articulações e Ossos",
+          "href": "/saude-e-bem-estar/articulacoes-e-ossos"
+        },
+        {
+          "children": [],
+          "name": " Cérebro",
+          "href": "/saude-e-bem-estar/cerebro"
+        },
+        {
+          "children": [],
+          "name": "Circulação",
+          "href": "/saude-e-bem-estar/circulacao"
+        },
+        {
+          "children": [],
+          "name": "Colesterol",
+          "href": "/saude-e-bem-estar/colesterol"
+        },
+        {
+          "children": [],
+          "name": " Digestão e Estômago",
+          "href": "/saude-e-bem-estar/digestao-e-estomago"
+        },
+        {
+          "children": [],
+          "name": "Estresse e Ansiedade",
+          "href": "/saude-e-bem-estar/estresse-e-ansiedade"
+        },
+        {
+          "children": [],
+          "name": "Fígado",
+          "href": "/saude-e-bem-estar/figado"
+        },
+        {
+          "children": [],
+          "name": "Imunidade",
+          "href": "/saude-e-bem-estar/imunidade"
+        },
+        {
+          "children": [],
+          "name": " Insônia",
+          "href": "/saude-e-bem-estar/insonia"
+        },
+        {
+          "children": [],
+          "name": "Intestino",
+          "href": "/saude-e-bem-estar/intestino"
+        },
+        {
+          "children": [],
+          "name": "Saúde da Mulher",
+          "href": "/saude-da-mulher"
+        },
+        {
+          "children": [],
+          "name": "Saúde Sexual",
+          "href": "/saude-e-bem-estar/saude-sexual"
+        }
+      ],
+      "href": "/saude-e-bem-estar",
+      "isHighlighted": false,
+      "isBold": true,
+      "name": "Saúde e Bem Estar"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "name": " Ácido Hialurônico",
+          "href": "/nutricosmeticos/acido-hialuronico"
+        },
+        {
+          "children": [],
+          "name": "Antiglicantes",
+          "href": "/nutricosmeticos/antiglicantes"
+        },
+        {
+          "children": [],
+          "name": "Antioxidantes",
+          "href": "/nutricosmeticos/antioxidantes"
+        },
+        {
+          "children": [],
+          "name": " Celulite",
+          "href": "/nutricosmeticos/celulite"
+        },
+        {
+          "children": [],
+          "name": " Clareadores",
+          "href": "/nutricosmeticos/clareadores"
+        },
+        {
+          "children": [],
+          "name": " Repositores de Silício",
+          "href": "/nutricosmeticos/repositores-de-silicio"
+        },
+        {
+          "children": [],
+          "name": " Colágenos e peptídeos",
+          "href": "/nutricosmeticos/colagenos-e-peptideos"
+        },
+        {
+          "children": [],
+          "name": " Vitaminas",
+          "href": "/nutricosmeticos/vitaminas\\"
+        }
+      ],
+      "isHighlighted": false,
+      "isBold": true,
+      "mobileOnly": false,
+      "name": "Nutricosméticos",
+      "href": "/nutricosmeticos"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "name": "Antioxidantes",
+          "href": "/longevidade/antioxidantes"
+        },
+        {
+          "children": [],
+          "name": " Minerais",
+          "href": "/longevidade/minerais"
+        },
+        {
+          "children": [],
+          "name": "Polifenóis e Flavonóides",
+          "href": "/longevidade/polifenois-e-flavonoides"
+        },
+        {
+          "children": [],
+          "name": " Prevenção",
+          "href": "/longevidade/prevencao"
+        },
+        {
+          "children": [],
+          "name": "Probióticos",
+          "href": "/longevidade/probioticos"
+        },
+        {
+          "children": [],
+          "name": " Supra Ômegas",
+          "href": "/longevidade/supra-omegas"
+        },
+        {
+          "children": [],
+          "name": "Vitaminas",
+          "href": "/longevidade/vitaminas"
+        },
+        {
+          "children": [],
+          "name": " Superóxido Dismutase (SOD)",
+          "href": "/longevidade/superoxido-dismutase--sod-"
+        }
+      ],
+      "href": "/longevidade",
+      "isHighlighted": false,
+      "isBold": true,
+      "name": "Longevidade",
+      "mobileOnly": false
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "href": "/fitoterapicos/calmantes",
+          "name": " Calmantes"
+        },
+        {
+          "children": [],
+          "href": "/fitoterapicos/circulacao",
+          "name": " Circulação"
+        },
+        {
+          "children": [],
+          "href": "/fitoterapicos/diureticos-naturais",
+          "name": " Diuréticos Naturais"
+        },
+        {
+          "children": [],
+          "href": "/fitoterapicos/estomago",
+          "name": " Estômago"
+        },
+        {
+          "children": [],
+          "name": "Fígado",
+          "href": "/fitoterapicos/figado"
+        },
+        {
+          "children": [],
+          "href": "/fitoterapicos/inflamacao",
+          "name": "Inflamação"
+        },
+        {
+          "children": [],
+          "href": "/fitoterapicos/intestino",
+          "name": " Intestino"
+        },
+        {
+          "children": [],
+          "href": "/fitoterapicos/nutricao",
+          "name": " Nutrição"
+        },
+        {
+          "children": [],
+          "name": "Tinturas",
+          "href": "/fitoterapicos/tinturas"
+        }
+      ],
+      "href": "/fitoterapicos",
+      "isHighlighted": false,
+      "isBold": true,
+      "name": "Fitoterápicos",
+      "mobileOnly": false
     }
   ],
   "loading": "eager",
