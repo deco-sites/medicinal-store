@@ -46,11 +46,6 @@ function Alert({ alerts = [] }: Props) {
               <Card key={`second-${index}`} {...alert} />
             ))}
           </div>
-          <div class="flex flex-row gap-10 items-center h-10 whitespace-nowrap">
-            {alerts.map((alert, index) => (
-              <Card key={`tertiary-${index}`} {...alert} />
-            ))}
-          </div>
         </div>
       </div>
 

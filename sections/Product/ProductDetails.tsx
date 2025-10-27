@@ -4,6 +4,7 @@ import ProductInfo from "../../components/product/ProductInfo.tsx";
 import PurchaseOptions from "../../components/product/PurchaseOptions.tsx";
 import ImageGallerySlider from "../../components/product/Gallery.tsx";
 import DescriptionCollapse from "../../islands/DescriptionCollapse.tsx";
+import FormulationDetailsCards from "../../components/product/FormulationDetailsCards.tsx";
 
 
 
@@ -81,7 +82,7 @@ const Desktop = (
 ) => {
   // Verificar se LeveJunto deve ser exibido e se há produtos relacionados
   const hasLeveJunto = showLeveJunto && relatedProducts && relatedProducts.length > 0;
-  
+
   return (
     <div class={`grid ${hasLeveJunto ? 'grid-cols-3' : 'grid-cols-[1fr_600px]'} gap-8`}>
       <div class={hasLeveJunto ? 'col-span-1' : ''}>
@@ -201,6 +202,7 @@ function ProductDetails(props: SectionProps<typeof loader>) {
               "modo de usar",
             ].includes(p.propertyID?.toLowerCase() || "")
           ) {
+            console.log(p.propertyID, p.name)
             return (
               <details class="collapse collapse-arrow rounded-none">
                 <summary class="collapse-title font-semibold px-0 after:!right-1">
@@ -215,7 +217,7 @@ function ProductDetails(props: SectionProps<typeof loader>) {
               </details>
             );
           }
-          if (p.propertyID?.toLowerCase() === "composição") {
+          if (p?.name === "Composição do produto") {
             return (
               <details class="collapse collapse-arrow rounded-none">
                 <summary class="collapse-title font-semibold px-0 after:!right-1">
@@ -230,13 +232,17 @@ function ProductDetails(props: SectionProps<typeof loader>) {
               </details>
             );
           }
-          if (p.propertyID?.toLowerCase() === "detalhes da formulação") {
+
+          if (p?.name === "Detalhes da formulação") {
             return (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: p.value || "",
-                }}
-              />
+              <details class="collapse collapse-arrow rounded-none">
+                <summary class="collapse-title font-semibold px-0 after:!right-1">
+                  {p.name}
+                </summary>
+                <div class="collapse-content !p-0 py-4">
+                  <FormulationDetailsCards content={p.value || ""} />
+                </div>
+              </details>
             );
           }
         })}
