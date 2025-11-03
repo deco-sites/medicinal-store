@@ -4060,9 +4060,6 @@ details.collapse summary::-webkit-details-marker {
 .h-12 {
   height: 3rem;
 }
-.h-16 {
-  height: 4rem;
-}
 .h-2 {
   height: 0.5rem;
 }
@@ -4168,9 +4165,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .w-12 {
   width: 3rem;
-}
-.w-16 {
-  width: 4rem;
 }
 .w-2 {
   width: 0.5rem;
@@ -4538,9 +4532,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .gap-1 {
   gap: 0.25rem;
-}
-.gap-10 {
-  gap: 2.5rem;
 }
 .gap-12 {
   gap: 3rem;
@@ -5376,9 +5367,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .opacity-70 {
   opacity: 0.7;
-}
-.opacity-80 {
-  opacity: 0.8;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);

@@ -33,15 +33,15 @@ function Alert({ alerts = [] }: Props) {
   return (
     <div id={id} class="border-b border-base-400 h-10 flex overflow-hidden">
       <div class="container px-4 overflow-hidden">
-        <div class="flex gap-10 animate-marquee">
+        <div class="flex gap-12 animate-marquee">
           {/* Primeiro conjunto de alertas */}
-          <div class="flex flex-row gap-10 items-center h-10 whitespace-nowrap">
+          <div class="flex flex-row gap-12 items-center h-10 whitespace-nowrap">
             {alerts.map((alert, index) => (
               <Card key={`first-${index}`} {...alert} />
             ))}
           </div>
           {/* Segundo conjunto (duplicado) para loop infinito */}
-          <div class="flex flex-row gap-10 items-center h-10 whitespace-nowrap">
+          <div class="flex flex-row gap-12 items-center h-10 whitespace-nowrap">
             {alerts.map((alert, index) => (
               <Card key={`second-${index}`} {...alert} />
             ))}

@@ -39,9 +39,8 @@ const getYouTubeEmbedUrl = (url: string, autoplay = false) => {
   const videoId = shortMatch?.[1] || normalMatch?.[1];
 
   if (videoId) {
-    const embedUrl = `https://www.youtube.com/embed/${videoId}${
-      autoplay ? "?autoplay=1" : ""
-    }`;
+    const embedUrl = `https://www.youtube.com/embed/${videoId}${autoplay ? "?autoplay=1" : ""
+      }`;
     const type = shortMatch ? "vertical" : "horizontal";
     return { type, url: embedUrl, videoId };
   }
@@ -103,8 +102,8 @@ export default function ProductVideo({
       backgroundPosition: "center",
     }
     : backgroundColor
-    ? { backgroundColor }
-    : {};
+      ? { backgroundColor }
+      : {};
 
   return (
     <section class="py-8" style={backgroundStyle}>
@@ -162,13 +161,8 @@ export default function ProductVideo({
                             class="w-full h-full object-cover rounded-lg"
                           />
                           <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-50">
-                            <svg
-                              class="w-16 h-16 text-white opacity-80"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                            >
-                              <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z">
-                              </path>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xlink" fill="#FF0000" version="1.1" id="Layer_1" width="70px" height="auto" viewBox="0 0 260 180" enable-background="new 0 0 260 180" xml:space="preserve">
+                              <path d="M220,2H40C19.01,2,2,19.01,2,40v100c0,20.99,17.01,38,38,38h180c20.99,0,38-17.01,38-38V40C258,19.01,240.99,2,220,2z   M102,130V50l68,40L102,130z" />
                             </svg>
                           </div>
                         </div>
