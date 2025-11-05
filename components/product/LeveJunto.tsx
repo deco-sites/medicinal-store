@@ -26,7 +26,7 @@ const useAddToCart = (product: Product, seller: string, quantity = 1) => {
   const platform = usePlatform();
   const { additionalProperty = [], isVariantOf, productID } = product;
   const productGroupID = isVariantOf?.productGroupID;
-  
+
   if (platform === "vtex") {
     return {
       allowedOutdatedData: ["paymentData"],
@@ -75,15 +75,30 @@ const useAddToCart = (product: Product, seller: string, quantity = 1) => {
 const setupLeveJunto = (containerId: string) => {
   const container = document.getElementById(containerId);
   if (!container) return;
-  
+
+  // Função para extrair número de parcelas e valor da string de parcelamento
+  const parseInstallments = (installmentsText: string) => {
+    if (!installmentsText) return { count: 1, value: 0 };
+
+    // Tenta extrair "3x de R$ 50,00"
+    const match = installmentsText.match(/(\d+)x\s+de\s+R\$\s+([\d.,]+)/);
+    if (match) {
+      return {
+        count: parseInt(match[1]),
+        value: parseFloat(match[2].replace(/\./g, '').replace(',', '.'))
+      };
+    }
+    return { count: 1, value: 0 };
+  };
+
   const updateSummary = () => {
     const checkedBoxes = container.querySelectorAll('input[name="leve-junto-item"]:checked');
     let total = 0;
     let listTotal = 0;
     let count = 0;
-    
+
     console.log(`LeveJunto - UpdateSummary: ${checkedBoxes.length} checkboxes checked`);
-    
+
     checkedBoxes.forEach((checkbox, index) => {
       const input = checkbox as HTMLInputElement;
       const price = parseFloat(input.getAttribute('data-price') || '0');
@@ -93,14 +108,16 @@ const setupLeveJunto = (containerId: string) => {
       listTotal += listPrice || price;
       count++;
     });
-    
+
     const priceElement = container.querySelector('.leve-junto-total');
     const savingsElement = container.querySelector('.leve-junto-savings');
     const textElement = container.querySelector('.leve-junto-text');
+    const installmentsElement = container.querySelector('.leve-junto-installments');
+
     if (textElement) {
-      const text = count === 1 ? 
+      const text = count === 1 ?
         `Compre este <span class="leve-junto-count">1</span> item por` :
-        `Compre estes <span class="leve-junto-count">${count}</span> itens por até`;
+        `Compre estes <span class="leve-junto-count">${count}</span> items`;
       textElement.innerHTML = text;
     }
     if (priceElement) {
@@ -109,40 +126,73 @@ const setupLeveJunto = (containerId: string) => {
         currency: 'BRL'
       }).format(total) + ' no pix';
     }
-    
+
+    // Calcular parcelamento total de todos os produtos selecionados
+    if (installmentsElement) {
+      let totalInstallmentValue = 0;
+      let installmentCount = 0;
+      let hasInstallments = false;
+
+      checkedBoxes.forEach((checkbox) => {
+        const input = checkbox as HTMLInputElement;
+        const installmentsText = input.getAttribute('data-installments-text') || '';
+
+        if (installmentsText) {
+          hasInstallments = true;
+          const { count, value } = parseInstallments(installmentsText);
+          totalInstallmentValue += value;
+          installmentCount = count; // Todos devem ter a mesma quantidade de parcelas
+          console.log(`LeveJunto - Installments parsed: count=${count}, value=${value}`);
+        }
+      });
+
+      if (hasInstallments && installmentCount > 0) {
+        const formattedValue = new Intl.NumberFormat('pt-BR', {
+          style: 'currency',
+          currency: 'BRL'
+        }).format(totalInstallmentValue);
+        installmentsElement.textContent = `${installmentCount}x de ${formattedValue} sem juros`;
+        console.log(`LeveJunto - Total installments: ${installmentsElement.textContent}`);
+      } else {
+        installmentsElement.textContent = '';
+      }
+    }
+
     // Calcular economia
     const savings = listTotal - total;
     if (savingsElement && savings > 0) {
-      savingsElement.textContent = `Você economiza ${new Intl.NumberFormat('pt-BR', {
+      savingsElement.textContent = `Nessa compra você economiza ${new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL'
       }).format(savings)}`;
+      (savingsElement as HTMLElement).classList.remove('hidden');
       (savingsElement as HTMLElement).style.display = 'block';
     } else if (savingsElement) {
+      (savingsElement as HTMLElement).classList.add('hidden');
       (savingsElement as HTMLElement).style.display = 'none';
     }
-    
+
     // Disparar evento customizado para o ProductInfo
     const updateEvent = new CustomEvent('leveJuntoUpdate', {
       detail: { total, listTotal, count, savings }
     });
     document.dispatchEvent(updateEvent);
-    
+
     console.log(`LeveJunto - Summary updated: ${count} items, total: R$ ${total.toFixed(2)}, savings: R$ ${savings.toFixed(2)}`);
   };
 
-  const handleBuyClick = () => {
+  const handleBuyClick = async () => {
     // Buscar diretamente pelos checkboxes marcados
     const checkedBoxes = container.querySelectorAll('input[name="leve-junto-item"]:checked');
-    
+
     console.log(`LeveJunto - Checked checkboxes count: ${checkedBoxes.length}`);
     console.log('LeveJunto - Checked checkboxes:', checkedBoxes);
-    
+
     if (checkedBoxes.length === 0) {
       alert('Selecione pelo menos um produto');
       return;
     }
-    
+
     // Adicionar cada produto selecionado ao carrinho com delay
     const addToCartSequentially = async () => {
       for (let i = 0; i < checkedBoxes.length; i++) {
@@ -151,22 +201,20 @@ const setupLeveJunto = (containerId: string) => {
         const cartData = itemContainer?.getAttribute('data-cart-item');
         console.log(`LeveJunto - Processing item ${i + 1}/${checkedBoxes.length}`);
         console.log(`LeveJunto - Checkbox value: ${checkbox.value}, checked: ${checkbox.checked}`);
-        
+
         if (cartData && itemContainer) {
           try {
             const { item, platformProps } = JSON.parse(decodeURIComponent(cartData));
             console.log("LeveJunto - Adding to cart:", { item, platformProps });
             console.log("LeveJunto - Product ID:", item.item_id);
             console.log("LeveJunto - Product Name:", item.item_name);
-            
+
             if (window.STOREFRONT && window.STOREFRONT.CART) {
               window.STOREFRONT.CART.addToCart(item, platformProps);
               console.log(`LeveJunto - Successfully added product ${i + 1} to cart`);
-              
-              // Pequeno delay para evitar conflitos
-              if (i < checkedBoxes.length - 1) {
-                await new Promise(resolve => setTimeout(resolve, 100));
-              }
+
+              // Delay para evitar conflitos e garantir que a requisição foi processada
+              await new Promise(resolve => setTimeout(resolve, 300));
             } else {
               console.error("LeveJunto - STOREFRONT.CART not available");
             }
@@ -180,18 +228,22 @@ const setupLeveJunto = (containerId: string) => {
         }
       }
     };
-    
-    addToCartSequentially();
-    
-    // Abrir minicart após adicionar todos os produtos
-    setTimeout(() => {
-      const drawer = document.querySelector('input[type="checkbox"][id*="minicart"]') as HTMLInputElement;
-      if (drawer) {
-        drawer.checked = true;
-      }
-    }, 200);
+
+    // Aguardar TODOS os produtos serem adicionados antes de abrir o carrinho
+    await addToCartSequentially();
+
+    console.log(`LeveJunto - All ${checkedBoxes.length} products added to cart, opening minicart`);
+
+    // Abrir minicart APÓS adicionar todos os produtos
+    const drawer = document.querySelector('input[type="checkbox"][id*="minicart"]') as HTMLInputElement;
+    if (drawer) {
+      drawer.checked = true;
+      console.log("LeveJunto - Minicart opened");
+    } else {
+      console.error("LeveJunto - Minicart drawer not found");
+    }
   };
-  
+
   // Event listeners para checkboxes
   const checkboxes = container.querySelectorAll('input[name="leve-junto-item"]');
   checkboxes.forEach((checkbox) => {
@@ -207,7 +259,7 @@ const setupLeveJunto = (containerId: string) => {
   if (buyButton) {
     buyButton.addEventListener('click', handleBuyClick);
   }
-  
+
   // Inicializar estado dos items baseado nos checkboxes
   checkboxes.forEach((checkbox) => {
     const target = checkbox as HTMLInputElement;
@@ -217,7 +269,7 @@ const setupLeveJunto = (containerId: string) => {
       console.log(`LeveJunto - Initial state: ${target.value}, selected: ${target.checked}`);
     }
   });
-  
+
   // Inicializar cálculo
   updateSummary();
 };
@@ -243,7 +295,7 @@ export default function LeveJunto({
     return { index, discountPercentage };
   });
 
-  const maxDiscountIndex = productsWithDiscount.reduce((max, current) => 
+  const maxDiscountIndex = productsWithDiscount.reduce((max, current) =>
     current.discountPercentage > max.discountPercentage ? current : max
   ).index;
 
@@ -303,31 +355,33 @@ function LeveJuntoItem({ product, index, hasMaxDiscount: _hasMaxDiscount = false
   };
 
   // Criar item para analytics igual ao ProductInfo
-  const item = mapProductToAnalyticsItem({ 
-    product, 
+  const item = mapProductToAnalyticsItem({
+    product,
     breadcrumbList: breadcrumb,
-    price, 
+    price,
     listPrice,
-    index 
+    index
   });
 
   // Criar props da plataforma igual ao AddToCartButton
   const platformProps = useAddToCart(product, seller, 1);
 
   return (
-    <div 
+    <div
       class="leve-junto-item flex items-center gap-3 p-3 bg-white rounded-lg border border-gray-100"
-      data-selected={index === 0 ? "true" : "false"}
+      data-selected="true"
       data-cart-item={encodeURIComponent(JSON.stringify({ item, platformProps }))}
     >
       <input
         type="checkbox"
         name="leve-junto-item"
         value={product.productID}
-        class="checkbox checkbox-primary"
+        class="checkbox checkbox-primary cursor-pointer"
         data-price={price}
         data-list-price={listPrice}
-        checked={index === 0} // Primeiro item selecionado por padrão
+        data-installments={installments || ""}
+        data-installments-text={installments || ""}
+        checked={true}
       />
 
       <div class="flex items-center gap-3 flex-1">
@@ -380,14 +434,25 @@ function LeveJuntoItem({ product, index, hasMaxDiscount: _hasMaxDiscount = false
 function LeveJuntoSummary() {
   return (
     <div class="mt-4 pt-4 border-t border-gray-200">
-      <div class="flex flex-col gap-3">
-        <div class="flex items-start flex-col gap-2 justify-between text-sm">
-          <span class="text-gray-600 leve-junto-text">
-            Compre este <span class="leve-junto-count">1</span> item por até
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-3">
+          <span class="text-gray-600 text-sm leve-junto-text">
+            Compre este <span class="leve-junto-count">1</span>
           </span>
-          <span class="font-bold text-lg text-primary leve-junto-total">
-            R$ 0,00
-          </span>
+
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-1">
+              <span class="font-bold text-lg text-primary leve-junto-total">
+                R$ 0,00
+              </span>
+              <span class="text-xs text-gray-500 leve-junto-installments">
+              </span>
+            </div>
+
+            <div class="leve-junto-savings text-xs text-green-600 font-semibold hidden">
+              Nessa compra você economiza R$ 0,00
+            </div>
+          </div>
         </div>
 
         <button

@@ -731,5 +731,6 @@
   ],
   "modal": {
     "disabledModal": true
-  }
+  },
+  "freeShippingTarget": 300
 }

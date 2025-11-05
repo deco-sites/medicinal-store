@@ -31,7 +31,7 @@ export const cartFrom = (cart: Cart | null): Minicart => {
       locale,
       currency,
       enableCoupon: false,
-      freeShippingTarget: 1000,
+      freeShippingTarget: typeof globalThis !== "undefined" && (globalThis as any).STORE_CONFIG?.freeShippingTarget ? (globalThis as any).STORE_CONFIG.freeShippingTarget : 250,
       checkoutHref,
     },
   };

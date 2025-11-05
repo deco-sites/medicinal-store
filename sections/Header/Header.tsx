@@ -71,6 +71,11 @@ export interface SectionProps {
    * @description Configuração do Modal que aparece após 3 segundos na entrada do site
    */
   modal?: Modal;
+  /**
+   * @title Frete Grátis - Valor Mínimo
+   * @description Valor mínimo de compra para ganhar frete grátis
+   */
+  freeShippingTarget?: number;
 }
 
 interface Modal {
@@ -96,7 +101,13 @@ interface Modal {
   regulation?: string;
 }
 type Props = Omit<SectionProps, "alert">;
-const onLoad = () => {
+const onLoad = (freeShippingTarget?: number) => {
+  // Armazenar freeShippingTarget globalmente
+  if (freeShippingTarget && typeof window !== "undefined") {
+    (window as any).STORE_CONFIG = (window as any).STORE_CONFIG || {};
+    (window as any).STORE_CONFIG.freeShippingTarget = freeShippingTarget;
+  }
+
   const handleScroll = () => {
     const header = document.getElementById("header");
     if (!header) return null;
@@ -274,6 +285,7 @@ function Header({
     height: 16,
     alt: "Logo",
   },
+  freeShippingTarget = 250,
   ...props
 }: Props) {
   const device = useDevice();
@@ -298,7 +310,7 @@ function Header({
       <script
         type="module"
         dangerouslySetInnerHTML={{
-          __html: useScript(onLoad),
+          __html: useScript(onLoad, freeShippingTarget),
         }}
       />
     </>
