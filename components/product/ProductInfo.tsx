@@ -116,6 +116,7 @@ function ProductInfo(
                 <LeveJunto
                   products={relatedProducts || null}
                   showLeveJunto={showLeveJunto}
+                  mainProduct={product}
                 />
               </div>
             )}
