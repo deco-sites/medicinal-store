@@ -2,15 +2,16 @@ import { Product } from "apps/commerce/types.ts";
 import { clx } from "../../sdk/clx.ts";
 import Icon from "../ui/Icon.tsx";
 import Slider from "../ui/Slider.tsx";
-import ProductCard from "./ProductCard.tsx";
+import ProductCard, { type ProductFlag } from "./ProductCard.tsx";
 import { useId } from "../../sdk/useId.ts";
 
 interface Props {
   products: Product[];
   itemListName?: string;
+  productFlags?: ProductFlag[];
 }
 
-function ProductSlider({ products, itemListName }: Props) {
+function ProductSlider({ products, itemListName, productFlags }: Props) {
   const id = useId();
 
   return (
@@ -33,7 +34,7 @@ function ProductSlider({ products, itemListName }: Props) {
                     product={product}
                     itemListName={itemListName}
                     class="w-[287px] sm:w-[300px]"
-                    isRecommended={index < 3}
+                    productFlags={productFlags}
                   />
                 </Slider.Item>
               ))}

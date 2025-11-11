@@ -5,6 +5,7 @@ import PurchaseOptions from "../../components/product/PurchaseOptions.tsx";
 import ImageGallerySlider from "../../components/product/Gallery.tsx";
 import DescriptionCollapse from "../../islands/DescriptionCollapse.tsx";
 import FormulationDetailsCards from "../../components/product/FormulationDetailsCards.tsx";
+import Flag from "../../components/ui/Flag.tsx";
 
 
 
@@ -19,6 +20,7 @@ import {
 
 import type { AppContext, Cluster } from "../../apps/site.ts";
 import type { Section as SectionComponent } from "@deco/deco/blocks";
+import type { ProductFlag } from "../../components/product/ProductCard.tsx";
 
 // Função para limpar CSS e atributos indesejados
 function sanitizeHTML(html: string): string {
@@ -75,18 +77,46 @@ export interface Props {
   only_price_update?: boolean;
   /** @hidden */
   quantity?: number;
+  /** @hidden */
+  productFlags?: ProductFlag[];
 }
 
 const Desktop = (
-  { page, clusterDiscount, relatedProducts, showLeveJunto, quantity }: Props,
+  { page, clusterDiscount, relatedProducts, showLeveJunto, quantity, productFlags }: Props,
 ) => {
   // Verificar se LeveJunto deve ser exibido e se há produtos relacionados
   const hasLeveJunto = showLeveJunto && relatedProducts && relatedProducts.length > 0;
 
+  // Extrair propriedades do produto para verificar flags
+  const { product } = page || {};
+  const { additionalProperty = [] } = product?.isVariantOf || {};
+  const propertyIDs = additionalProperty?.map((prop) => prop.propertyID);
+
   return (
     <div class={`grid ${hasLeveJunto ? 'grid-cols-3' : 'grid-cols-[1fr_600px]'} gap-8`}>
       <div class={hasLeveJunto ? 'col-span-1' : ''}>
-        <ImageGallerySlider page={page} />
+        <div class="relative">
+          <ImageGallerySlider page={page} />
+          
+          {/* Renderizar flags sob a imagem */}
+          <div class="flex flex-wrap gap-2 mt-4">
+            {productFlags?.map((flag, flagIndex) => {
+              // Renderizar flag apenas se:
+              // 1. O produto tem a propriedade correspondente OU
+              // 2. A flag não tem collectionID definido (flag global)
+              const shouldRenderFlag = 
+                !flag.collectionID || 
+                flag.collectionID === "" ||
+                propertyIDs?.includes(flag.collectionID);
+              
+              return shouldRenderFlag ? (
+                <div key={flagIndex}>
+                  <Flag {...flag} />
+                </div>
+              ) : null;
+            })}
+          </div>
+        </div>
       </div>
       <div class={hasLeveJunto ? 'col-span-2' : ''}>
         {/* <ProductTitle page={page} /> */}
@@ -96,6 +126,7 @@ const Desktop = (
           relatedProducts={relatedProducts}
           showLeveJunto={showLeveJunto}
           quantity={quantity}
+          productFlags={productFlags || []}
         />
       </div>
     </div>
@@ -103,18 +134,20 @@ const Desktop = (
 };
 
 const Mobile = (
-  { page, clusterDiscount, relatedProducts, showLeveJunto, quantity }: Props,
+  { page, clusterDiscount, relatedProducts, showLeveJunto, quantity, productFlags }: Props,
 ) => {
   return (
     <div class="flex flex-col w-full">
       {/* <ProductTitle page={page} /> */}
       <ImageGallerySlider page={page} />
+      
       <ProductInfo
         page={page}
         clusterDiscount={clusterDiscount}
         relatedProducts={relatedProducts}
         showLeveJunto={showLeveJunto}
         quantity={quantity}
+        productFlags={productFlags || []}
       />
     </div>
   );
@@ -130,7 +163,7 @@ function ProductDetails(props: SectionProps<typeof loader>) {
   const { product } = page;
   const { isVariantOf } = product;
   // @ts-ignore additionalProperty exists
-  const { additionalProperty } = isVariantOf;
+  const { additionalProperty = [] } = isVariantOf || {};
   const { description } = product;
 
   const device = useDevice();
@@ -155,6 +188,7 @@ function ProductDetails(props: SectionProps<typeof loader>) {
         showLeveJunto={props.showLeveJunto}
         quantity={props.quantity || 1}
         isPartialUpdate={true}
+        productFlags={props.productFlags || []}
       />
     );
   }
@@ -182,7 +216,7 @@ function ProductDetails(props: SectionProps<typeof loader>) {
   return (
     <div class="container mx-auto w-full px-4 py-6 sm:py-10 flex flex-col gap-8">
       {device === "desktop" ? <Desktop {...props} /> : <Mobile {...props} />}
-      {descriptionSections.length > 0 && (
+      {descriptionSections && descriptionSections.length > 0 && (
         <>
           {descriptionSections.map(renderSection)}
         </>
@@ -254,6 +288,10 @@ function ProductDetails(props: SectionProps<typeof loader>) {
 export const LoadingFallback = () => <Section.Placeholder height="635px" />;
 
 export const loader = (props: Props, req: Request, ctx: AppContext) => {
+  const {
+    productFlags = [],
+  } = ctx;
+  
   const descriptionSections = props.sections?.find((section) => {
     if (req.url.indexOf(section.matcher) !== -1) {
       return section.sections;
@@ -264,6 +302,7 @@ export const loader = (props: Props, req: Request, ctx: AppContext) => {
     ...props,
     clusterDiscount: ctx.clusterDiscount || [],
     descriptionSections,
+    productFlags,
   };
 };
 

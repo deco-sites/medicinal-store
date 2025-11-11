@@ -1,14 +1,43 @@
-import type { Product } from "apps/commerce/types.ts";
+import type { Product, PropertyValue } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import Image from "apps/website/components/Image.tsx";
 import { clx } from "../../sdk/clx.ts";
-import { formatPrice } from "../../sdk/format.ts";
 import { relative } from "../../sdk/url.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import WishlistButton from "../wishlist/WishlistButton.tsx";
 import AddToCartButton from "./AddToCartButton.tsx";
 import Price from "../../sections/Product/Price.tsx";
+import Flag from "../ui/Flag.tsx";
+import { ImageWidget, Color } from "apps/admin/widgets.ts";
+
+/**
+ * @titleBy text
+ */
+export interface ProductFlag {
+  /**
+   * @title Cor do texto
+   */
+  textColor: Color;
+  /**
+   * @title Texto da Flag
+   * @description Aponte o ID da coleção desejada
+   */
+  text: string;
+  /**
+   * @title Cor de fundo da Flag
+   */
+  backgroundColor: Color;
+  /**
+   * @title ID da coleção do produto
+   * @description Aponte o ID da coleção desejada
+   */
+  collectionID: string;
+  /**
+   * @title Imagem de background da Flag
+   */
+  backgroundImage?: ImageWidget;
+}
 
 interface Props {
   product: Product;
@@ -23,13 +52,24 @@ interface Props {
 
   class?: string;
 
-  /** @description if true, shows "Recomendado" badge */
-  isRecommended?: boolean;
+  productFlags?: ProductFlag[];
 }
 
 const WIDTH = 287;
 const HEIGHT = 287;
 const ASPECT_RATIO = `${WIDTH} / ${HEIGHT}`;
+
+export const getFlagCluster = (
+  flag: string,
+  additionalProperty?: PropertyValue[],
+) => {
+  const propertie = additionalProperty?.find((prop) => {
+    if (prop.name === "cluster") {
+      return prop.propertyID === flag;
+    }
+  });
+  return propertie;
+};
 
 function ProductCard({
   product,
@@ -37,9 +77,9 @@ function ProductCard({
   itemListName,
   index,
   class: _class,
-  isRecommended,
+  productFlags = [],
 }: Props) {
-  const { url, image: images, offers, isVariantOf } = product;
+  const { url, image: images, offers, isVariantOf, additionalProperty } = product;
   const title = isVariantOf?.name ?? product.name;
   const [front, back] = images ?? [];
 
@@ -52,7 +92,7 @@ function ProductCard({
 
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
 
-  {/* Add click event to dataLayer */}
+  {/* Add click event to dataLayer */ }
   const event = useSendEvent({
     on: "click",
     event: {
@@ -63,6 +103,8 @@ function ProductCard({
       },
     },
   });
+
+  const propertyIDs = additionalProperty?.map((prop) => prop.propertyID);
 
   return (
     <div
@@ -120,11 +162,24 @@ function ProductCard({
             loading="lazy"
             decoding="async"
           />
-          {isRecommended && (
-            <span class="text-xs font-bold border border-white text-white bg-orange-500 text-center rounded-badge px-3 py-1 uppercase absolute bottom-1 right-1">
-              Recomendado
-            </span>
-          )}
+          {/* Renderizar flags personalizadas */}
+          <div class="absolute bottom-1 right-1 flex flex-col gap-[2px]">
+            {productFlags.map((flag, flagIndex) => {
+              // Renderizar flag apenas se:
+              // 1. O produto tem a propriedade correspondente OU
+              // 2. A flag não tem collectionID definido (flag global)
+              const shouldRenderFlag = 
+                !flag.collectionID || 
+                flag.collectionID === "" ||
+                propertyIDs?.includes(flag.collectionID);
+              
+              return (
+                <div key={flagIndex}>
+                  {shouldRenderFlag && <Flag {...flag} />}
+                </div>
+              );
+            })}
+          </div>
         </a>
 
         <div class="absolute top-1 left-1 w-full flex items-center justify-between">
@@ -137,6 +192,7 @@ function ProductCard({
             >
               {percent}% off
             </span>
+
           </div>
         </div>
 

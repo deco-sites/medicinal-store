@@ -9,6 +9,8 @@ import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalytic
 import type { Product } from "apps/commerce/types.ts";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import type { LoadingFallbackProps } from "@deco/deco";
+import type { AppContext } from "../../apps/site.ts";
+import type { ProductFlag } from "../../components/product/ProductCard.tsx";
 import Image from "apps/website/components/Image.tsx";
 import { useDevice } from "@deco/deco/hooks";
 
@@ -24,9 +26,22 @@ export interface Banner {
 export interface Props extends SectionHeaderProps {
   products: Product[] | null;
   banner: Banner;
+  productFlags?: ProductFlag[];
 }
 
-export default function ProductShelf({
+export const loader = (
+  props: Props,
+  _req: Request,
+  ctx: AppContext,
+) => {
+  const {
+    productFlags = [],
+  } = ctx;
+
+  return { ...props, productFlags };
+};
+
+export default function ProductShelfWithBanner({
   title,
   banner: {
     alt,
@@ -35,6 +50,7 @@ export default function ProductShelf({
     desktop: desktopBanner,
   },
   products,
+  productFlags,
 }: Props) {
   const device = useDevice();
 
@@ -78,7 +94,11 @@ export default function ProductShelf({
         </a>
 
         <div class="lg:col-span-2">
-          <ProductSlider products={products} itemListName={title} />
+          <ProductSlider 
+            products={products} 
+            itemListName={title} 
+            productFlags={productFlags}
+          />
         </div>
       </div>
     </div>

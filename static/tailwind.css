@@ -4817,10 +4817,6 @@ details.collapse summary::-webkit-details-marker {
 .border-transparent {
   border-color: transparent;
 }
-.border-white {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
 .\!bg-transparent {
   background-color: transparent !important;
 }
@@ -4874,10 +4870,6 @@ details.collapse summary::-webkit-details-marker {
 .bg-neutral-content {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-nc,oklch(var(--nc)/var(--tw-bg-opacity)));
-}
-.bg-orange-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
 }
 .bg-primary {
   --tw-bg-opacity: 1;

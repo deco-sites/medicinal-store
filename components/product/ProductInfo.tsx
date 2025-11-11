@@ -16,6 +16,9 @@ import Highlights from "./Highlights.tsx";
 import PurchaseOptions from "./PurchaseOptions.tsx";
 import LeveJunto from "./LeveJunto.tsx";
 
+import { ProductFlag } from "./ProductCard.tsx";
+import Flag from "../ui/Flag.tsx";
+
 
 interface Props {
   page: ProductDetailsPage | null;
@@ -28,10 +31,12 @@ interface Props {
   quantity?: number;
   /** @hidden */
   isPartialUpdate?: boolean;
+  
+  productFlags: ProductFlag[] | [];
 }
 
 function ProductInfo(
-  { page, clusterDiscount, relatedProducts, showLeveJunto = true, quantity = 1, isPartialUpdate = false }: Props,
+  { page, clusterDiscount, relatedProducts, showLeveJunto = true, quantity = 1, isPartialUpdate = false,   productFlags }: Props,
 ) {
   const id = useId();
 
@@ -40,7 +45,7 @@ function ProductInfo(
   }
 
   const { breadcrumbList, product } = page;
-  const { productID, offers, isVariantOf } = product;
+  const { productID, offers, isVariantOf, additionalProperty } = product;
 
   const {
     price = 0,
@@ -82,6 +87,7 @@ function ProductInfo(
       variant?.name?.toLowerCase() !== "default title",
   ).length ?? 0) > 1;
 
+  const propertyIDs = additionalProperty?.map((prop) => prop.propertyID);
   return (
     <div {...viewItemEvent} class="flex flex-col gap-4 mt-4" id={id}>
 
@@ -93,6 +99,25 @@ function ProductInfo(
             <div id="product-info-content" class={`flex flex-col gap-4 mt-4 ${relatedProducts && relatedProducts.length > 0 ? '' : 'w-full'}`}>
               <ProductTitle page={page} />
               <Highlights product={product} />
+              
+              {/* Renderizar flags do produto */}
+              <div class="flex flex-wrap gap-2">
+                {productFlags.map((flag, flagIndex) => {
+                  // Renderizar flag apenas se:
+                  // 1. O produto tem a propriedade correspondente OU
+                  // 2. A flag não tem collectionID definido (flag global)
+                  const shouldRenderFlag = 
+                    !flag.collectionID || 
+                    flag.collectionID === "" ||
+                    propertyIDs?.includes(flag.collectionID);
+                  
+                  return shouldRenderFlag ? (
+                    <div key={flagIndex}>
+                      <Flag {...flag} />
+                    </div>
+                  ) : null;
+                })}
+              </div>
               <div id="price-container">
                 <Price
                   type="details"

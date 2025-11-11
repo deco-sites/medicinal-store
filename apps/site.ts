@@ -11,6 +11,8 @@ import manifest, { Manifest } from "../manifest.gen.ts";
 import { type Section } from "@deco/deco/blocks";
 import { type App as A, type AppContext as AC } from "@deco/deco";
 
+import { ProductFlag } from "../components/product/ProductCard.tsx";
+
 /** @titleBy discounts */
 export interface Cluster {
   clusterId: string;
@@ -31,6 +33,12 @@ export interface Props extends WebsiteProps {
    * @description Choose the active ecommerce platform
    * @default custom
    */
+    /**
+   * @title Flags de Produto
+   * @description Aponte o ID da coleção desejada
+   */
+  productFlags?: ProductFlag[];
+
   platform: Platform;
   theme?: Section;
 }

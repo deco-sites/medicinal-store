@@ -77,12 +77,13 @@ const useAddToCart = (product: Product, seller: string, quantity = 1) => {
 const parseInstallments = (installmentsText: string) => {
   if (!installmentsText) return { count: 1, value: 0 };
 
-  // Tenta extrair "3x de R$ 50,00"
+  // Tenta extrair "3x de R$ 50,00" (com ou sem "ou " no início)
   const match = installmentsText.match(/(\d+)x\s+de\s+R\$\s+([\d.,]+)/);
   if (match) {
+    const parsedValue = parseFloat(match[2].replace(/\./g, '').replace(',', '.'));
     return {
       count: parseInt(match[1]),
-      value: parseFloat(match[2].replace(/\./g, '').replace(',', '.'))
+      value: isNaN(parsedValue) ? 0 : parsedValue
     };
   }
   return { count: 1, value: 0 };
@@ -95,8 +96,8 @@ const setupLeveJunto = (containerId: string) => {
 
   // Obter dados do produto principal do atributo data
   const mainProductData = container.getAttribute('data-main-product');
-  let mainProductItem: any = null;
-  let mainProductProps: any = null;
+  let mainProductItem: Record<string, unknown> | null = null;
+  let mainProductProps: Record<string, unknown> | null = null;
 
   if (mainProductData) {
     try {
@@ -226,10 +227,55 @@ const setupLeveJunto = (containerId: string) => {
       }).format(total) + ' no pix';
     }
 
-    // Calcular economia (listPrice - price para cada item selecionado)
+    // Calcular economia (listPrice - price para cada item selecionado + produto principal)
     let totalSavings = 0;
     let totalInstallmentValue = 0;
     let hasInstallments = false;
+    let totalInstallmentItems = 0;
+
+    // Adicionar economia do produto principal (se houver)
+    if (mainProductData) {
+      try {
+        const { item } = JSON.parse(decodeURIComponent(mainProductData));
+
+        let mainPrice = 0;
+        let mainListPrice = 0;
+
+        // Tenta extrair preço diretamente do item
+        if (item.price) {
+          mainPrice = typeof item.price === 'string' ? parseFloat(item.price) : item.price;
+        }
+
+        if (item.list_price) {
+          mainListPrice = typeof item.list_price === 'string' ? parseFloat(item.list_price) : item.list_price;
+        } else if (item.listPrice) {
+          mainListPrice = typeof item.listPrice === 'string' ? parseFloat(item.listPrice) : item.listPrice;
+        }
+
+        // Calcular economia do produto principal multiplicado pela quantidade
+        if (mainListPrice > mainPrice) {
+          const mainProductSavings = (mainListPrice - mainPrice) * mainProductQuantity;
+          totalSavings += mainProductSavings;
+          console.log(`LeveJunto - Main product savings: price=${mainPrice}, listPrice=${mainListPrice}, quantity=${mainProductQuantity}, savings=${mainProductSavings}`);
+        }
+
+        // Verificar se produto principal tem parcelamento
+        const priceElement = document.querySelector('#price-container [data-installments]') as HTMLElement;
+        if (priceElement) {
+          const mainInstallmentsText = priceElement.getAttribute('data-installments');
+          if (mainInstallmentsText) {
+            hasInstallments = true;
+            const { value: mainInstallmentValue } = parseInstallments(mainInstallmentsText);
+            if (mainInstallmentValue > 0) {
+              totalInstallmentValue += mainInstallmentValue * mainProductQuantity;
+              totalInstallmentItems += mainProductQuantity;
+            }
+          }
+        }
+      } catch (error) {
+        console.error("LeveJunto - Error calculating main product savings:", error);
+      }
+    }
 
     checkedBoxes.forEach((checkbox) => {
       const input = checkbox as HTMLInputElement;
@@ -248,35 +294,45 @@ const setupLeveJunto = (containerId: string) => {
 
       if (installmentsText) {
         hasInstallments = true;
-        const { count: installmentCount, value: installmentValue } = parseInstallments(installmentsText);
-        totalInstallmentValue += installmentValue;
-        console.log(`LeveJunto - Item: price=${price}, listPrice=${listPrice}, savings=${itemSavings}, installments=${installmentsText}`);
+        const { value: installmentValue } = parseInstallments(installmentsText);
+        if (installmentValue > 0) {
+          totalInstallmentValue += installmentValue;
+          totalInstallmentItems += 1;
+          console.log(`LeveJunto - Item: price=${price}, listPrice=${listPrice}, savings=${itemSavings}, installments=${installmentsText}, parsedValue=${installmentValue}`);
+        } else {
+          console.warn(`LeveJunto - Failed to parse installments: "${installmentsText}"`);
+        }
       } else {
         console.log(`LeveJunto - Item: price=${price}, listPrice=${listPrice}, savings=${itemSavings}, installments=none`);
       }
     });
 
-    console.log(`LeveJunto - Total summary: savings=${totalSavings}, hasInstallments=${hasInstallments}, installmentTotal=${totalInstallmentValue}, checkedBoxes=${checkedBoxes.length}`);
+    console.log(`LeveJunto - Total summary: savings=${totalSavings}, hasInstallments=${hasInstallments}, installmentTotal=${totalInstallmentValue}, checkedBoxes=${checkedBoxes.length}, installmentItems=${totalInstallmentItems}`);
 
     // Mostrar parcelamento
     if (installmentsElement) {
-      if (hasInstallments && checkedBoxes.length > 0) {
+      if (hasInstallments && totalInstallmentItems > 0 && totalInstallmentValue > 0) {
+        const avgInstallmentValue = totalInstallmentValue / totalInstallmentItems;
         const formattedValue = new Intl.NumberFormat('pt-BR', {
           style: 'currency',
           currency: 'BRL'
-        }).format(totalInstallmentValue / checkedBoxes.length);
-        installmentsElement.textContent = `Parcelado em 3x de ${formattedValue}`;
-        installmentsElement.style.display = 'block';
-        console.log(`LeveJunto - Showing installments: ${installmentsElement.textContent}`);
+        }).format(avgInstallmentValue);
+        installmentsElement.textContent = `ou 3x de ${formattedValue} sem juros`;
+        (installmentsElement as HTMLElement).style.display = 'block';
+        console.log(`LeveJunto - Showing installments: ${installmentsElement.textContent} (${totalInstallmentItems} items, avg: ${avgInstallmentValue})`);
       } else {
         installmentsElement.textContent = '';
-        installmentsElement.style.display = 'none';
+        (installmentsElement as HTMLElement).style.display = 'none';
+        console.log(`LeveJunto - Hiding installments - hasInstallments=${hasInstallments}, itemsCount=${totalInstallmentItems}, totalValue=${totalInstallmentValue}`);
       }
     }
 
     // Mostrar economia
     if (savingsElement) {
-      if (checkedBoxes.length > 0) {
+      // Se houver algum item selecionado OU produto principal, considerar mostrar economia
+      const hasSelectedItems = checkedBoxes.length > 0 || mainProductQuantity > 0;
+      
+      if (hasSelectedItems) {
         // Se houver economia, mostra. Se não houver, esconde.
         if (totalSavings > 0) {
           savingsElement.textContent = `Nessa compra você economiza ${new Intl.NumberFormat('pt-BR', {
@@ -300,11 +356,11 @@ const setupLeveJunto = (containerId: string) => {
 
     // Disparar evento customizado para o ProductInfo
     const updateEvent = new CustomEvent('leveJuntoUpdate', {
-      detail: { total, listTotal, count, savings }
+      detail: { total, listTotal, count, savings: totalSavings }
     });
     document.dispatchEvent(updateEvent);
 
-    console.log(`LeveJunto - Summary updated: ${count} items, total: R$ ${total.toFixed(2)}, savings: R$ ${savings.toFixed(2)}`);
+    console.log(`LeveJunto - Summary updated: ${count} items, total: R$ ${total.toFixed(2)}, savings: R$ ${totalSavings.toFixed(2)}`);
   };
 
   const handleBuyClick = async () => {
@@ -341,8 +397,13 @@ const setupLeveJunto = (containerId: string) => {
       console.log(`LeveJunto - Main product quantity from PurchaseOptions: ${mainProductQuantity}`);
     }
 
-    // Criar lista de produtos a adicionar (principal + selecionados)
-    const productsToAdd: Array<{ item: any; platformProps: any; label: string; quantity?: number }> = [];
+    // Criar lista de produtos a adicionar (principal + selecionados)  
+    const productsToAdd: Array<{
+      item: Record<string, unknown>;
+      platformProps: Record<string, unknown>;
+      label: string;
+      quantity?: number;
+    }> = [];
 
     // Adicionar produto principal se disponível
     if (mainProductItem && mainProductProps) {
@@ -409,7 +470,10 @@ const setupLeveJunto = (containerId: string) => {
 
           if (window.STOREFRONT && window.STOREFRONT.CART) {
             try {
-              const result = window.STOREFRONT.CART.addToCart(item, platformProps);
+              // Type assertion para contornar limitação do tipo
+              const cartItem = item as never;
+              const cartProps = platformProps as never;
+              const result = window.STOREFRONT.CART.addToCart(cartItem, cartProps);
 
               // Se retornar uma promise, aguardar
               if (result && typeof result === 'object' && 'then' in result) {
@@ -721,18 +785,15 @@ function LeveJuntoSummary() {
       <div class="flex flex-col gap-4">
         <div class="flex flex-col gap-3">
           <span class="text-gray-600 text-sm leve-junto-text">
-            Compre este <span class="leve-junto-count">1</span>
+            Compre este <span class="leve-junto-count">1</span> item por
           </span>
 
-          <div class="flex flex-col gap-2">
-            <div class="flex flex-col gap-1">
-              <span class="font-bold text-lg text-primary leve-junto-total">
-                R$ 0,00
-              </span>
-              <span class="text-xs text-gray-500 leve-junto-installments">
-              </span>
-            </div>
-
+          <div class="flex flex-col gap-1">
+            <span class="font-bold text-lg text-primary leve-junto-total">
+              R$ 0,00 no pix
+            </span>
+            <span class="text-xs text-gray-600 leve-junto-installments">
+            </span>
             <div class="leve-junto-savings text-xs text-green-600 font-semibold hidden">
               Nessa compra você economiza R$ 0,00
             </div>

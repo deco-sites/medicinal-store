@@ -11,11 +11,12 @@ import Icon from "../../components/ui/Icon.tsx";
 import Drawer from "../ui/Drawer.tsx";
 import Filters from "../../components/search/Filters.tsx";
 import Breadcrumb from "../ui/Breadcrumb.tsx";
-import ProductCard from "../../components/product/ProductCard.tsx";
+import ProductCard, { type ProductFlag } from "../../components/product/ProductCard.tsx";
 
 import type { Section } from "@deco/deco/blocks";
 import type { SectionProps } from "@deco/deco";
 import type { ProductListingPage } from "apps/commerce/types.ts";
+import type { AppContext } from "../../apps/site.ts";
 
 export interface Layout {
   /**
@@ -49,6 +50,8 @@ export interface Props {
   showFilters?: boolean;
   /** @title Filtros Permitidos */
   allowedFilters?: string[];
+  /** @hidden */
+  productFlags?: ProductFlag[];
 }
 
 function NotFound() {
@@ -96,7 +99,7 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
 };
 
 function PageResult(props: SectionProps<typeof loader>) {
-  const { layout, startingPage = 0, url, partial } = props;
+  const { layout, startingPage = 0, url, partial, productFlags } = props;
   const page = props.page!;
   const { products, pageInfo } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
@@ -149,7 +152,7 @@ function PageResult(props: SectionProps<typeof loader>) {
             preload={index === 0}
             index={offset + index}
             class="h-full min-w-[160px] max-w-[300px]"
-            isRecommended={index < 6}
+            productFlags={productFlags}
           />
         ))}
       </div>
@@ -392,7 +395,11 @@ function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
   return <Result {...props} page={page} />;
 }
 
-export const loader = (props: Props, req: Request) => {
+export const loader = (props: Props, req: Request, ctx: AppContext) => {
+  const {
+    productFlags = [],
+  } = ctx;
+
   const descriptionSections = props.sections?.find((section) => {
     if (req.url.indexOf(section.matcher) !== -1) {
       return section.sections;
@@ -409,6 +416,7 @@ export const loader = (props: Props, req: Request) => {
     ...props,
     url: url.href,
     descriptionSections,
+    productFlags,
   };
 };
 

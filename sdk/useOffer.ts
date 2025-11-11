@@ -67,7 +67,7 @@ export const useOffer = (aggregateOffer?: AggregateOffer) => {
   return {
     pix,
     price,
-    listPrice: listPrice?.price,
+    listPrice: listPrice?.price || price || 0,
     availability,
     seller,
     installments: installment && price

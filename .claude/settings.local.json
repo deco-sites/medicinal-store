@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:code.claude.com)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(dir /B *.md *.txt 2)",
+      "Bash(nul)",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []

@@ -7,10 +7,28 @@ import Section, {
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
+import type { AppContext } from "../../apps/site.ts";
+import type { ProductFlag } from "../../components/product/ProductCard.tsx";
+
+
 export interface Props extends SectionHeaderProps {
   products: Product[] | null;
+  productFlags?: ProductFlag[];
 }
-export default function ProductShelf({ products, title }: Props) {
+export const loader = (
+  props: Props,
+  _req: Request,
+  ctx: AppContext,
+) => {
+  const {
+    productFlags = [],
+  } = ctx;
+
+  return { ...props, productFlags };
+};
+
+export default function ProductShelf({ products, title, productFlags }: Props) {
+
   if (!products || products.length === 0) {
     return null;
   }
@@ -38,12 +56,12 @@ export default function ProductShelf({ products, title }: Props) {
     >
       <Section.Header title={title} />
 
-      <ProductSlider products={products} itemListName={title} />
+      <ProductSlider productFlags={productFlags} products={products} itemListName={title} />
     </div>
   );
 }
 export const LoadingFallback = (
-  { title, cta }: LoadingFallbackProps<Props>,
+  { title }: LoadingFallbackProps<Props>,
 ) => (
   <Section.Container>
     <Section.Header title={title} />
