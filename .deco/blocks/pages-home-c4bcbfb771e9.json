@@ -228,7 +228,7 @@
             "__resolveType": "vtex/loaders/legacy/productList.ts",
             "props": {
               "sort": "OrderByPriceDESC",
-              "collection": "180",
+              "collection": "195",
               "count": 5,
               "similars": true
             }
