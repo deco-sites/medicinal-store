@@ -494,7 +494,7 @@
           "href": "/desempenho-fisico/vasodilatacao"
         }
       ],
-      "name": "Desempenho FIsico",
+      "name": "Desempenho Fisico",
       "isHighlighted": false,
       "isBold": true,
       "href": "/desempenho-fisico",
@@ -719,6 +719,25 @@
       "isBold": true,
       "name": "Fitoterápicos",
       "mobileOnly": false
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "href": "/cabelo/minoxidil",
+          "name": "Minoxidil"
+        },
+        {
+          "children": [],
+          "name": " Pill Food e Suplementos",
+          "href": "/pill-food-e-suplementos"
+        }
+      ],
+      "name": "Cabelos",
+      "href": "/cabelo",
+      "mobileOnly": false,
+      "isHighlighted": false,
+      "isBold": true
     }
   ],
   "loading": "eager",
