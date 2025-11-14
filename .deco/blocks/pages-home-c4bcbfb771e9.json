@@ -23,16 +23,16 @@
           }
         },
         {
-          "desktop": "https://assets.decocache.com/medicinal-store/05bfac44-a900-48ab-a1bf-1ea6eedc1605/banner-pept-desktop.jpg",
-          "mobile": "https://assets.decocache.com/medicinal-store/5b56968e-88e6-4f61-8f8c-e6363b88b70c/banner-pept-mobile.jpg",
-          "href": "https://www.medicinalnaweb.com.br/peptistrong-chocolate-belga/p",
+          "desktop": "https://assets.decocache.com/medicinal-store/7a0c4e5e-4e3f-4c33-bfb6-92242d8de1de/img-Mag-DESKTOP-(1).png",
+          "mobile": "https://assets.decocache.com/medicinal-store/78ffa2d3-b102-4181-846f-727cb8d47f75/img-Mag-MOBILE-(1).png",
+          "href": "/magnesio-quelato-200mg-30-doses/p",
           "alt": "banner 2"
         },
         {
-          "desktop": "https://assets.decocache.com/medicinal-store/908bf794-b5e9-4adf-83d3-655b0b049b8c/banner-akkermat2-desktop.png",
-          "mobile": "https://assets.decocache.com/medicinal-store/ae60d631-7ae1-4cde-a631-4c34195a3cfa/banner-akkermat2-mobile.png",
+          "desktop": "https://assets.decocache.com/medicinal-store/c01316ca-086f-43d4-ad61-fba18303755c/WhatsApp-Image-2025-11-07-at-17.33.48.jpeg",
+          "mobile": "https://assets.decocache.com/medicinal-store/ed914989-c135-4be7-9c38-bbcb2b68719a/WhatsApp-Image-2025-11-07-at-17.33.48-(1).jpeg",
           "alt": "Banner 3",
-          "href": "/akkermat-150mg-30-doses-capsula-gastrorresistente/p"
+          "href": "/coenzima-q10-150mg-30-doses/p"
         }
       ],
       "preload": true,
@@ -228,7 +228,7 @@
             "__resolveType": "vtex/loaders/legacy/productList.ts",
             "props": {
               "sort": "OrderByPriceDESC",
-              "collection": "180",
+              "collection": "195",
               "count": 5,
               "similars": true
             }

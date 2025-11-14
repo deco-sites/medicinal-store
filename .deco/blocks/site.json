@@ -103,32 +103,5 @@
       "clusterId": "184"
     }
   ],
-  "productFlags": [
-    {
-      "collectionId": "184",
-      "backgroundColor": "#e07800",
-      "label": "descontos progressivos",
-      "textColor": "#e2dfdf",
-      "text": "Desconto progressivo - teste",
-      "collectionID": "184"
-    },
-    {
-      "textColor": "#ffffff",
-      "backgroundColor": "#000000",
-      "text": "Recomendados",
-      "collectionID": "5"
-    },
-    {
-      "textColor": "#ffffff",
-      "backgroundColor": "#b70606",
-      "text": "Mais vendidos",
-      "collectionID": "190"
-    },
-    {
-      "textColor": "#c20000",
-      "backgroundColor": "#000000",
-      "text": "Metabolismo",
-      "collectionID": "185"
-    }
-  ]
+  "productFlags": []
 }
