@@ -16,7 +16,7 @@ export default function ({
   return (
     <div class="flex flex-col gap-2">
       {highlightedProperties.map((property, index) => (
-        <div key={index} class="badge badge-primary">
+        <div key={index} class="badge badge-primary py-1 px-2">
           {property.value}
         </div>
       ))}

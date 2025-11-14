@@ -26,10 +26,8 @@ const onClick = () => {
     decodeURIComponent(container.getAttribute("data-cart-item")!),
   );
 
-  console.log("Adding to cart:", item, platformProps);
   window.STOREFRONT.CART.addToCart(item, platformProps);
 
-  // Abre o drawer do minicart
   setTimeout(() => {
     const drawer = document.querySelector(
       'input[type="checkbox"][id*="minicart"]',
@@ -73,12 +71,6 @@ const onLoad = (id: string, type: string) => {
       }
       input.value = quantity.toString();
       checkbox.checked = quantity > 0;
-      // container?.querySelectorAll<HTMLButtonElement>("button").forEach((node) =>
-      //   node.disabled = false
-      // );
-      // container?.querySelectorAll<HTMLButtonElement>("input").forEach((node) =>
-      //   node.disabled = false
-      // );
     }
 
     if (type === "shelf") {
@@ -94,9 +86,13 @@ const onLoad = (id: string, type: string) => {
       container?.querySelectorAll<HTMLButtonElement>("button").forEach((node) =>
         node.disabled = false
       );
+      container?.querySelectorAll<HTMLButtonElement>("input").forEach((node) =>
+        node.disabled = false
+      );
     }
   });
 };
+
 const useAddToCart = ({ product, seller, quantity = 1 }: Props) => {
   const platform = usePlatform();
   const { additionalProperty = [], isVariantOf, productID } = product;
@@ -144,6 +140,7 @@ const useAddToCart = ({ product, seller, quantity = 1 }: Props) => {
   }
   return null;
 };
+
 function AddToCartButton(props: Props) {
   const {
     product,
@@ -200,4 +197,5 @@ function AddToCartButton(props: Props) {
     </div>
   );
 }
+
 export default AddToCartButton;

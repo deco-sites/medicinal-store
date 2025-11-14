@@ -28,7 +28,6 @@ export default function Price({
     installments,
   } = useOffer(offers);
 
-  // Calcular preço com desconto baseado na quantidade selecionada
   const discountsOnCluster =
     clusterDiscount.filter((cluster) =>
       additionalProperty.some(
@@ -74,6 +73,43 @@ export default function Price({
   };
   
   const updatedInstallments = calculateInstallments(finalPrice, quantity);
+
+  if (type === "buy-together") {
+    return (
+      <>
+        {availability === "https://schema.org/InStock"
+          ? (
+            <div class="flex flex-col items-start">
+              <div class="flex items-center gap-2">
+                {listPrice > finalPrice &&
+                  (
+                    <span class="line-through font-normal text-gray-400 text-xs sm:text-sm">
+                      {formatPrice(listPrice)}
+                    </span>
+                  )}
+                <span class="font-bold text-base text-primary">
+                  {hasPixDiscount ? formatPrice(finalPix) : formatPrice(finalPrice)}{" "}
+                  {hasPixDiscount &&
+                    (
+                      <span class="text-base">
+                        à vista
+                      </span>
+                    )}
+                </span>
+              </div>
+              <span class="text-gray-400 text-xs sm:text-sm">
+                {updatedInstallments}
+              </span>
+            </div>
+          )
+          : (
+            <p class="text-left font-bold text-gray-400">
+              Produto Indisponível
+            </p>
+          )}
+      </>
+    );
+  }
 
   if (type === "shelf") {
     return (

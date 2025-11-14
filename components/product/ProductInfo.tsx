@@ -15,6 +15,7 @@ import Price from "../../sections/Product/Price.tsx";
 import Highlights from "./Highlights.tsx";
 import PurchaseOptions from "./PurchaseOptions.tsx";
 import LeveJunto from "./LeveJunto.tsx";
+import BuyTogether from "./BuyTogether.tsx";
 
 import { ProductFlag } from "./ProductCard.tsx";
 import Flag from "../ui/Flag.tsx";
@@ -95,7 +96,7 @@ function ProductInfo(
         <ProductSelector product={product} />}
             {availability === "https://schema.org/InStock"
         ? (
-          <div class={`flex flex-col lg:flex-row ${relatedProducts && relatedProducts.length > 0 ? 'gap-6' : ''} `}>
+          <div class={`flex flex-col lg:flex-row ${relatedProducts && relatedProducts.length > 0 ? 'gap-6 items-start' : ''} `}>
             <div id="product-info-content" class={`flex flex-col gap-4 mt-4 ${relatedProducts && relatedProducts.length > 0 ? '' : 'w-full'}`}>
               <ProductTitle page={page} />
               <Highlights product={product} />
@@ -137,13 +138,10 @@ function ProductInfo(
 
             </div>
             {relatedProducts && relatedProducts.length > 0 && showLeveJunto && !isPartialUpdate && (
-              <div>
-                <LeveJunto
-                  products={relatedProducts || null}
-                  showLeveJunto={showLeveJunto}
-                  mainProduct={product}
-                />
-              </div>
+              <BuyTogether
+                page={page}
+                products={relatedProducts || null}
+              />
             )}
           </div>
 
