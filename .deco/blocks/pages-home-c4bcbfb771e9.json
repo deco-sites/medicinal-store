@@ -11,8 +11,8 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://assets.decocache.com/medicinal-store/a46ae76a-e287-4c5c-a8b8-dd643f9e2552/banner-pre-verao-morosil-desktop.jpg",
-          "mobile": "https://assets.decocache.com/medicinal-store/d59da0dc-556d-47b1-be75-27cf1955cef2/banner-pre-verao-morosil-mobile.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/c1d36fb7-9c32-42f1-a77d-bc766a5cf9b4/banner-kits-desktop.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/ce59946f-96c7-4237-8744-2b24c99ff940/banner-kits-mobile.jpg",
           "href": "/morosil-500mg-60-doses/p",
           "alt": "Banner 1",
           "action": {
@@ -21,18 +21,6 @@
             "href": "/s?q=shoes&page=0",
             "label": "Grab Yours Now!"
           }
-        },
-        {
-          "desktop": "https://assets.decocache.com/medicinal-store/7a0c4e5e-4e3f-4c33-bfb6-92242d8de1de/img-Mag-DESKTOP-(1).png",
-          "mobile": "https://assets.decocache.com/medicinal-store/78ffa2d3-b102-4181-846f-727cb8d47f75/img-Mag-MOBILE-(1).png",
-          "href": "/magnesio-quelato-200mg-30-doses/p",
-          "alt": "banner 2"
-        },
-        {
-          "desktop": "https://assets.decocache.com/medicinal-store/c01316ca-086f-43d4-ad61-fba18303755c/WhatsApp-Image-2025-11-07-at-17.33.48.jpeg",
-          "mobile": "https://assets.decocache.com/medicinal-store/ed914989-c135-4be7-9c38-bbcb2b68719a/WhatsApp-Image-2025-11-07-at-17.33.48-(1).jpeg",
-          "alt": "Banner 3",
-          "href": "/coenzima-q10-150mg-30-doses/p"
         }
       ],
       "preload": true,
@@ -136,98 +124,6 @@
             "__resolveType": "vtex/loaders/legacy/productList.ts",
             "props": {
               "sort": "OrderByPriceDESC",
-              "collection": "194",
-              "count": 5,
-              "similars": true
-            }
-          }
-        },
-        "banner": {
-          "mobile": "https://assets.decocache.com/medicinal-store/424faf9a-8749-4f72-8c51-8403ae14518d/gordura-abdominal-mobile.png",
-          "desktop": "https://assets.decocache.com/medicinal-store/cb8d4ddd-0db9-4211-87f2-ca051f7201c4/gordura-abdominal-desktop.png",
-          "alt": "Teste",
-          "href": "#"
-        },
-        "title": "GORDURA ABDOMININAL"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Images/Banner.tsx",
-        "mobile": "https://assets.decocache.com/medicinal-store/67545106-d0bf-4dc8-9cfa-3a9ec9e7fe0c/mitburn-banner-mobile-2-(1).png",
-        "desktop": "https://assets.decocache.com/medicinal-store/b1015aa8-7eca-4028-bccd-1b498ecece0e/mitburn-banner-2-(1).png",
-        "alt": "#",
-        "href": "#"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
-        "products": {
-          "__resolveType": "commerce/loaders/product/extensions/list.ts",
-          "extensions": [
-            {
-              "__resolveType": "vtex/loaders/product/extensions/list.ts",
-              "similars": false
-            }
-          ],
-          "data": {
-            "__resolveType": "vtex/loaders/legacy/productList.ts",
-            "props": {
-              "sort": "OrderByPriceDESC",
-              "collection": "185",
-              "count": 5,
-              "similars": true
-            }
-          }
-        },
-        "banner": {
-          "mobile": "https://assets.decocache.com/medicinal-store/cf1d2975-440d-42c8-85ec-5bdeaa9436f3/mais-termogenicos-mobile.png",
-          "desktop": "https://assets.decocache.com/medicinal-store/a85b0a07-4e14-4992-854f-22a802fab2d2/mais-termogenicos-desktop.png",
-          "alt": "#",
-          "href": "/gerenciamento-de-peso/aumentar-metabolismo?"
-        },
-        "title": "AUMENTAR METABOLISMO"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Images/ImageGallery.tsx",
-        "banners": [
-          {
-            "mobile": "https://assets.decocache.com/medicinal-store/92a9394e-246d-43b1-ba82-b51365370ab4/peptistrong-aliado-desktop.jpg",
-            "desktop": "https://assets.decocache.com/medicinal-store/bbc1cf33-44f7-4ade-982e-452271b9f51d/PEPT-ALIADO.png",
-            "alt": "Banner Gallery 1",
-            "href": "https://www.medicinalnaweb.com.br/peptistrong-chocolate-belga/p"
-          },
-          {
-            "mobile": "https://assets.decocache.com/medicinal-store/6d6d4545-6acd-48c5-b373-861c541a80c5/AN-Morosil-02.jpg",
-            "desktop": "https://assets.decocache.com/medicinal-store/6f2a97ea-4971-44b8-93ec-df237d68736d/morosil-peso.png",
-            "alt": "Banner Gallery 2",
-            "href": "https://www.medicinalnaweb.com.br/morosil-500mg-60-doses/p"
-          }
-        ]
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
-        "products": {
-          "__resolveType": "commerce/loaders/product/extensions/list.ts",
-          "extensions": [
-            {
-              "__resolveType": "vtex/loaders/product/extensions/list.ts",
-              "similars": false
-            }
-          ],
-          "data": {
-            "__resolveType": "vtex/loaders/legacy/productList.ts",
-            "props": {
-              "sort": "OrderByPriceDESC",
               "collection": "195",
               "count": 5,
               "similars": true
@@ -235,12 +131,145 @@
           }
         },
         "banner": {
-          "mobile": "https://assets.decocache.com/medicinal-store/f691b7e6-0cad-4879-b062-22fac9f56dab/Diureticos-naturais-mobile.jpg",
-          "desktop": "https://assets.decocache.com/medicinal-store/3050f23f-8be8-4bf3-9f10-186d0276b081/Diureticos-naturais.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/585552c7-1c0c-42b4-b53f-585dc8d64f9c/KIT-EMAGRECEDOR-MOBILE.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/898045a1-62c9-4ff6-9c39-6b66882a8f6d/KIT-EMAGRECEDOR-DESKTOP.jpg",
           "alt": "Teste",
           "href": "#"
         },
-        "title": "DIURÉTICOS NATURAIS"
+        "title": "KIT EMAGRECEDOR"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
+        "products": {
+          "__resolveType": "commerce/loaders/product/extensions/list.ts",
+          "extensions": [
+            {
+              "__resolveType": "vtex/loaders/product/extensions/list.ts",
+              "similars": false
+            }
+          ],
+          "data": {
+            "__resolveType": "vtex/loaders/legacy/productList.ts",
+            "props": {
+              "sort": "OrderByPriceDESC",
+              "collection": "196",
+              "count": 5,
+              "similars": true
+            }
+          }
+        },
+        "banner": {
+          "mobile": "https://assets.decocache.com/medicinal-store/acc2c85f-a631-40ac-88e6-7a7781998a8a/KIT-ALTA-PERFORMANCE-MOBILE.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/82f9b7e6-be61-4abf-b854-4d25640aa327/KIT-ALTA-PERFORMANCE-DESKTOP.jpg",
+          "alt": "Teste",
+          "href": "#"
+        },
+        "title": "KIT ALTA PERFORMANCE"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
+        "products": {
+          "__resolveType": "commerce/loaders/product/extensions/list.ts",
+          "extensions": [
+            {
+              "__resolveType": "vtex/loaders/product/extensions/list.ts",
+              "similars": false
+            }
+          ],
+          "data": {
+            "__resolveType": "vtex/loaders/legacy/productList.ts",
+            "props": {
+              "sort": "OrderByPriceDESC",
+              "collection": "197",
+              "count": 5,
+              "similars": true
+            }
+          }
+        },
+        "banner": {
+          "mobile": "https://assets.decocache.com/medicinal-store/de42a2ef-edb6-4697-a27b-b4be5793f4ae/KIT-CABELOS-MOBILE.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/2e955978-281f-4bc1-90e4-28bb5576c884/KIT-CABELOS-DESKTOP.jpg",
+          "alt": "#",
+          "href": "#"
+        },
+        "title": "KIT CABELOS"
+      }
+    },
+    {
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
+        {
+          "value": {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Images/ImageGallery.tsx",
+              "banners": [
+                {
+                  "mobile": "https://assets.decocache.com/medicinal-store/92a9394e-246d-43b1-ba82-b51365370ab4/peptistrong-aliado-desktop.jpg",
+                  "desktop": "https://assets.decocache.com/medicinal-store/bbc1cf33-44f7-4ade-982e-452271b9f51d/PEPT-ALIADO.png",
+                  "alt": "Banner Gallery 1",
+                  "href": "https://www.medicinalnaweb.com.br/peptistrong-chocolate-belga/p"
+                },
+                {
+                  "mobile": "https://assets.decocache.com/medicinal-store/6d6d4545-6acd-48c5-b373-861c541a80c5/AN-Morosil-02.jpg",
+                  "desktop": "https://assets.decocache.com/medicinal-store/6f2a97ea-4971-44b8-93ec-df237d68736d/morosil-peso.png",
+                  "alt": "Banner Gallery 2",
+                  "href": "https://www.medicinalnaweb.com.br/morosil-500mg-60-doses/p"
+                }
+              ]
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/never.ts"
+          }
+        }
+      ]
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelfWithBanner.tsx",
+        "products": {
+          "__resolveType": "commerce/loaders/product/extensions/list.ts",
+          "extensions": [
+            {
+              "__resolveType": "vtex/loaders/product/extensions/list.ts",
+              "similars": false
+            }
+          ],
+          "data": {
+            "__resolveType": "vtex/loaders/legacy/productList.ts",
+            "props": {
+              "sort": "OrderByPriceDESC",
+              "collection": "198",
+              "count": 5,
+              "similars": true
+            }
+          }
+        },
+        "banner": {
+          "mobile": "https://assets.decocache.com/medicinal-store/60b355ca-92a7-4341-accf-ae4ee792aa48/KIT-SAUDE-INTESTINAL-MOBILE.jpg",
+          "desktop": "https://assets.decocache.com/medicinal-store/72150cc5-e5d7-45bb-9631-bff5f0eb0dfa/KIT-SAUDE-INTESTINAL-DESKTOP.jpg",
+          "alt": "Teste",
+          "href": "#"
+        },
+        "title": "KIT SAÚDE INTESTINAL"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/Banner.tsx",
+        "mobile": "https://assets.decocache.com/medicinal-store/a1395269-7191-4637-bcb8-081df4743c79/img-Black-MOBILE-(1).png",
+        "desktop": "https://assets.decocache.com/medicinal-store/284230dd-8a83-4391-b5d9-b57de48acd4c/img-Black-DESKTOP-(1).png",
+        "alt": "#",
+        "href": "#"
       }
     },
     {
