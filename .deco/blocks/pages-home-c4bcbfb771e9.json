@@ -21,6 +21,24 @@
             "href": "/s?q=shoes&page=0",
             "label": "Grab Yours Now!"
           }
+        },
+        {
+          "desktop": "https://assets.decocache.com/medicinal-store/a8da4a4b-b09c-4e5c-a3a8-b53d590f1387/Keranat.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/0a2b14cd-f5e0-46d8-bcfd-f210f0143cb3/Keranat-M.png",
+          "alt": "Keranat",
+          "href": "/keranat-150mg-60caps/p"
+        },
+        {
+          "desktop": "https://assets.decocache.com/medicinal-store/08026308-a95b-4dd9-a19a-41605c9762cc/Clonapure----a-evolucao-da-creatina.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/7b32288a-64a5-46b5-b9bc-f01e2c6886a7/Clonapure----a-evolucao-da-creatina-mobile.png",
+          "alt": "Clonapure",
+          "href": "/clonapure-100g/p"
+        },
+        {
+          "desktop": "https://assets.decocache.com/medicinal-store/5e8309f5-9028-4876-88f5-10e86f5a28ab/Mocaccino.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/aac6d537-8c0e-4a4a-b66e-697f3b08636f/Mocaccino-M.png",
+          "alt": "Mocaccino",
+          "href": "/moccacino-395g/p"
         }
       ],
       "preload": true,
