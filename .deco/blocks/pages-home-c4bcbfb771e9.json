@@ -139,8 +139,8 @@
         "banner": {
           "mobile": "https://assets.decocache.com/medicinal-store/052b612b-a1d6-4efc-8f38-8a26e6bcb977/banner.png",
           "desktop": "https://assets.decocache.com/medicinal-store/d13a2693-e215-43bd-a08d-a24106068228/banner-01.png",
-          "alt": "Teste",
-          "href": "#"
+          "alt": "kit emagrecedor",
+          "href": "/gerenciamento-de-peso"
         }
       }
     },
@@ -189,7 +189,7 @@
         "banner": {
           "mobile": "https://assets.decocache.com/medicinal-store/cf1d2975-440d-42c8-85ec-5bdeaa9436f3/mais-termogenicos-mobile.png",
           "desktop": "https://assets.decocache.com/medicinal-store/a85b0a07-4e14-4992-854f-22a802fab2d2/mais-termogenicos-desktop.png",
-          "alt": "Teste",
+          "alt": "Queima de caloria",
           "href": "#"
         }
       }
@@ -200,8 +200,8 @@
         "__resolveType": "site/sections/Images/Banner.tsx",
         "mobile": "https://assets.decocache.com/medicinal-store/67545106-d0bf-4dc8-9cfa-3a9ec9e7fe0c/mitburn-banner-mobile-2-(1).png",
         "desktop": "https://assets.decocache.com/medicinal-store/b1015aa8-7eca-4028-bccd-1b498ecece0e/mitburn-banner-2-(1).png",
-        "alt": "#",
-        "href": "#"
+        "href": "/mitburn-50mg-30-doses/p?skuId=1215",
+        "alt": "Produto Mitburn"
       }
     },
     {
@@ -229,7 +229,7 @@
         "banner": {
           "mobile": "https://assets.decocache.com/medicinal-store/f691b7e6-0cad-4879-b062-22fac9f56dab/Diureticos-naturais-mobile.jpg",
           "desktop": "https://assets.decocache.com/medicinal-store/3050f23f-8be8-4bf3-9f10-186d0276b081/Diureticos-naturais.jpg",
-          "alt": "Teste",
+          "alt": "Desinche de forma natural e sinta-se mais leve todos os dias",
           "href": "#"
         }
       }
