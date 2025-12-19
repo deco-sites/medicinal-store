@@ -11,22 +11,10 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://assets.decocache.com/medicinal-store/a46ae76a-e287-4c5c-a8b8-dd643f9e2552/banner-pre-verao-morosil-desktop.jpg",
-          "mobile": "https://assets.decocache.com/medicinal-store/d59da0dc-556d-47b1-be75-27cf1955cef2/banner-pre-verao-morosil-mobile.jpg",
-          "href": "/morosil-500mg-60-doses/p",
-          "alt": "Banner 1",
-          "action": {
-            "title": "Skate into Adventure!",
-            "subTitle": "Top-quality roller skate shoes for all levels. ",
-            "href": "/s?q=shoes&page=0",
-            "label": "Grab Yours Now!"
-          }
-        },
-        {
           "desktop": "https://assets.decocache.com/medicinal-store/a8da4a4b-b09c-4e5c-a3a8-b53d590f1387/Keranat.png",
           "mobile": "https://assets.decocache.com/medicinal-store/0a2b14cd-f5e0-46d8-bcfd-f210f0143cb3/Keranat-M.png",
-          "alt": "Keranat",
-          "href": "/keranat-150mg-60caps/p"
+          "href": "/keranat-150mg-60caps/p",
+          "alt": "Keranat"
         },
         {
           "desktop": "https://assets.decocache.com/medicinal-store/08026308-a95b-4dd9-a19a-41605c9762cc/Clonapure----a-evolucao-da-creatina.png",
@@ -149,8 +137,8 @@
           }
         },
         "banner": {
-          "mobile": "https://assets.decocache.com/medicinal-store/424faf9a-8749-4f72-8c51-8403ae14518d/gordura-abdominal-mobile.png",
-          "desktop": "https://assets.decocache.com/medicinal-store/cb8d4ddd-0db9-4211-87f2-ca051f7201c4/gordura-abdominal-desktop.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/052b612b-a1d6-4efc-8f38-8a26e6bcb977/banner.png",
+          "desktop": "https://assets.decocache.com/medicinal-store/d13a2693-e215-43bd-a08d-a24106068228/banner-01.png",
           "alt": "Teste",
           "href": "#"
         }
