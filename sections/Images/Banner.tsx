@@ -53,6 +53,7 @@ function Banner({
             <img
               src={desktop}
               alt={alt}
+              title={alt}
               class="w-full object-cover rounded-2xl"
             />
           </Picture>

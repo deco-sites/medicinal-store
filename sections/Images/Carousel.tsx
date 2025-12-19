@@ -84,6 +84,7 @@ function BannerItem(
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
           alt={alt}
+          title={alt}
         />
       </Picture>
     </a>

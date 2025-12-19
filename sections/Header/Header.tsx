@@ -135,6 +135,8 @@ const Link = ({
       width={24}
       height={24}
       loading="lazy"
+      title={text}
+      alt={text}
     />
     <div
       class="hidden sm:block text-sm"

@@ -86,6 +86,7 @@ export default function ProductShelfWithBanner({
         <a class="block px-4 lg:px-0" href={href}>
           <Image
             alt={alt}
+            title={alt}
             src={device === "mobile" ? mobileBanner : desktopBanner}
             class="rounded-2xl"
             width={device === "mobile" ? 640 : 450}

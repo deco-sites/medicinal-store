@@ -192,6 +192,7 @@ function Footer({
                   <Image
                     src={image}
                     alt={alt}
+                    title={alt}
                     width={49}
                     height={32}
                     loading="lazy"
@@ -210,6 +211,7 @@ function Footer({
                           <Image
                             src={image}
                             alt={alt}
+                            title={alt}
                             width={width}
                             height={height}
                             loading="lazy"
@@ -245,10 +247,10 @@ function Footer({
             <p class="text-xs">{policies}</p>
             <div class="flex flex-nowrap items-center justify-center sm:justify-end gap-4 col-span-2">
               <a href="https://www.wavecommerce.com.br/?utm_source=rodape&utm_medium=site%20medicinal">
-                <img width={97} height={17} src={asset("/wave.png")} />
+                <img width={97} height={17} src={asset("/wave.png")} title="Logo Wave Commerce" alt="Logo Wave Commerce" />
               </a>
               <a href="https://vtex.com/pt-br/?utm_source=rodape&utm_medium=site%20medicinal">
-                <img width={88} height={30} src={asset("/vtex.png")} />
+                <img width={88} height={30} src={asset("/vtex.png")} title="Logo VTEX" alt="Logo VTEX" />
               </a>
             </div>
           </div>

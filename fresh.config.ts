@@ -7,4 +7,8 @@ export default defineConfig({
     manifest,
     htmx: true,
   }),
+  render: (ctx, render) => {
+    ctx.lang = "pt-BR";
+    render();
+  },
 });

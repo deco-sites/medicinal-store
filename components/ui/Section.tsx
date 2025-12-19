@@ -18,9 +18,9 @@ function Header({ title }: Props) {
         "px-5 sm:px-0",
       )}
     >
-      <span class="text-lg sm:text-xl uppercase font-semibold text-center">
+      <h2 class="text-lg sm:text-xl uppercase font-semibold text-center">
         {title}
-      </span>
+      </h2>
     </div>
   );
 }

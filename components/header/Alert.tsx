@@ -14,6 +14,7 @@ const Card = ({
   <div class="flex items-center gap-2">
     <Image
       src={icon}
+      alt={text}
       width={16}
       height={16}
       loading="lazy"
