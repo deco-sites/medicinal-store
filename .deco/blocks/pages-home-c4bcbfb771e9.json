@@ -130,15 +130,15 @@
             "__resolveType": "vtex/loaders/legacy/productList.ts",
             "props": {
               "sort": "OrderByPriceDESC",
-              "collection": "194",
+              "collection": "196",
               "count": 5,
               "similars": true
             }
           }
         },
         "banner": {
-          "mobile": "https://assets.decocache.com/medicinal-store/424faf9a-8749-4f72-8c51-8403ae14518d/gordura-abdominal-mobile.png",
-          "desktop": "https://assets.decocache.com/medicinal-store/cb8d4ddd-0db9-4211-87f2-ca051f7201c4/gordura-abdominal-desktop.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/59772bc1-7913-4ef2-a09d-f81855f0d24c/Kit-alta-performance-m-2.png",
+          "desktop": "https://assets.decocache.com/medicinal-store/7e8d11da-24e7-464d-8b6d-2ec644a06d1e/Kit-alta-performance-2.png",
           "alt": "kit emagrecedor",
           "href": "/gerenciamento-de-peso"
         }
@@ -180,15 +180,15 @@
             "__resolveType": "vtex/loaders/legacy/productList.ts",
             "props": {
               "sort": "OrderByPriceDESC",
-              "collection": "185",
+              "collection": "197",
               "count": 5,
               "similars": true
             }
           }
         },
         "banner": {
-          "mobile": "https://assets.decocache.com/medicinal-store/cf1d2975-440d-42c8-85ec-5bdeaa9436f3/mais-termogenicos-mobile.png",
-          "desktop": "https://assets.decocache.com/medicinal-store/a85b0a07-4e14-4992-854f-22a802fab2d2/mais-termogenicos-desktop.png",
+          "mobile": "https://assets.decocache.com/medicinal-store/6aeb2845-b71c-436a-9d36-acb42297109f/Kit-cabelos.png",
+          "desktop": "https://assets.decocache.com/medicinal-store/61b386d9-d451-4fa2-85a0-dfe7c22edbfb/Kit-cabelos-1.png",
           "alt": "Queima de caloria",
           "href": "#"
         }
@@ -220,15 +220,15 @@
             "__resolveType": "vtex/loaders/legacy/productList.ts",
             "props": {
               "sort": "OrderByPriceDESC",
-              "collection": "180",
+              "collection": "195",
               "count": 5,
               "similars": true
             }
           }
         },
         "banner": {
-          "mobile": "https://assets.decocache.com/medicinal-store/f691b7e6-0cad-4879-b062-22fac9f56dab/Diureticos-naturais-mobile.jpg",
-          "desktop": "https://assets.decocache.com/medicinal-store/3050f23f-8be8-4bf3-9f10-186d0276b081/Diureticos-naturais.jpg",
+          "mobile": "https://assets.decocache.com/medicinal-store/9ec797ca-e582-4fd3-82f5-0d2825d4a123/Kit-Kit-EMAGRECEDOR-M.png",
+          "desktop": "https://assets.decocache.com/medicinal-store/525f8327-598a-4558-ba58-0e397bcc6161/Kit-EMAGRECEDOR.png",
           "alt": "Desinche de forma natural e sinta-se mais leve todos os dias",
           "href": "#"
         }
