@@ -150,16 +150,16 @@
         "__resolveType": "site/sections/Images/ImageGallery.tsx",
         "banners": [
           {
-            "mobile": "https://assets.decocache.com/medicinal-store/92a9394e-246d-43b1-ba82-b51365370ab4/peptistrong-aliado-desktop.jpg",
-            "desktop": "https://assets.decocache.com/medicinal-store/bbc1cf33-44f7-4ade-982e-452271b9f51d/PEPT-ALIADO.png",
+            "mobile": "https://assets.decocache.com/medicinal-store/c82f3b45-ba11-4997-9bb0-3b43fb92fcef/Clonapure-m.png",
+            "desktop": "https://assets.decocache.com/medicinal-store/f206803e-7bf1-40cc-afde-9adb732ad84e/Clonapure.png",
             "alt": "Banner Gallery 1",
-            "href": "https://www.medicinalnaweb.com.br/peptistrong-chocolate-belga/p"
+            "href": "https://www.medicinalnaweb.com.br/clonapure-100g/p"
           },
           {
-            "mobile": "https://assets.decocache.com/medicinal-store/6d6d4545-6acd-48c5-b373-861c541a80c5/AN-Morosil-02.jpg",
-            "desktop": "https://assets.decocache.com/medicinal-store/6f2a97ea-4971-44b8-93ec-df237d68736d/morosil-peso.png",
+            "mobile": "https://assets.decocache.com/medicinal-store/73ba5372-1802-45b0-b037-e88f1e2e3445/Keranat-M.png",
+            "desktop": "https://assets.decocache.com/medicinal-store/37caeaaf-739a-4b35-bfbd-9ff9c89d82f5/Keranat.png",
             "alt": "Banner Gallery 2",
-            "href": "https://www.medicinalnaweb.com.br/morosil-500mg-60-doses/p"
+            "href": "https://www.medicinalnaweb.com.br/keranat-150mg-60caps/p"
           }
         ]
       }
