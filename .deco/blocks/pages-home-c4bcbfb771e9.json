@@ -67,36 +67,6 @@
       ]
     },
     {
-      "__resolveType": "website/flags/multivariate/section.ts",
-      "variants": [
-        {
-          "value": {
-            "__resolveType": "website/sections/Rendering/Lazy.tsx",
-            "section": {
-              "__resolveType": "site/sections/Images/Banner.tsx",
-              "cta": {
-                "label": "Sign Up",
-                "href": "#"
-              },
-              "title": "Register and Save Big!",
-              "description": "<p><span style=\"color: rgb(45, 194, 107);\" data-mce-style=\"color: rgb(45, 194, 107);\">Sign up now to get up to 50% off on your first order. Limited time offer!</span></p>",
-              "images": {
-                "desktop": "https://assets.decocache.com/storefront/d4ba070d-c3ba-4a9c-b75f-e01f859063f1/1742560233015-cf96d47f-564f-40da-ad94-7acac5f39327",
-                "mobile": "https://assets.decocache.com/storefront/c023f1c2-74b9-4b3a-a947-ff5de9d02347/1742560234608-4d5c3212-3f75-4d50-89f3-970815748b43"
-              },
-              "alt": "Banner Teste",
-              "href": "#",
-              "mobile": "https://assets.decocache.com/medicinal-store/dd4ca99f-0e2b-4e54-b9ba-7b6611f3ec55/morosil-peso.png",
-              "desktop": "https://assets.decocache.com/medicinal-store/d464d9fb-5565-4de6-b6e2-2787a0925aec/banner-moro.png"
-            }
-          },
-          "rule": {
-            "__resolveType": "website/matchers/never.ts"
-          }
-        }
-      ]
-    },
-    {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
@@ -143,6 +113,36 @@
           "href": "/gerenciamento-de-peso"
         }
       }
+    },
+    {
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
+        {
+          "value": {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Images/Banner.tsx",
+              "cta": {
+                "label": "Sign Up",
+                "href": "#"
+              },
+              "title": "Register and Save Big!",
+              "description": "<p><span style=\"color: rgb(45, 194, 107);\" data-mce-style=\"color: rgb(45, 194, 107);\">Sign up now to get up to 50% off on your first order. Limited time offer!</span></p>",
+              "images": {
+                "desktop": "https://assets.decocache.com/storefront/d4ba070d-c3ba-4a9c-b75f-e01f859063f1/1742560233015-cf96d47f-564f-40da-ad94-7acac5f39327",
+                "mobile": "https://assets.decocache.com/storefront/c023f1c2-74b9-4b3a-a947-ff5de9d02347/1742560234608-4d5c3212-3f75-4d50-89f3-970815748b43"
+              },
+              "alt": "Banner Teste",
+              "href": "#",
+              "mobile": "https://assets.decocache.com/medicinal-store/dd4ca99f-0e2b-4e54-b9ba-7b6611f3ec55/morosil-peso.png",
+              "desktop": "https://assets.decocache.com/medicinal-store/d464d9fb-5565-4de6-b6e2-2787a0925aec/banner-moro.png"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/never.ts"
+          }
+        }
+      ]
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
