@@ -363,6 +363,59 @@
               }
             ],
             "matcher": "/akkermat-150mg-30-doses-capsula-gastrorresistente/p"
+          },
+          {
+            "sections": [
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/Benefits.tsx",
+                  "benefits": [
+                    {
+                      "icon": "https://assets.decocache.com/medicinal-store/19c014eb-adf7-4c99-9621-4ccfd56bdf34/noun-hair-3531867.svg",
+                      "text": "Atua diretamente na matriz capilar"
+                    },
+                    {
+                      "icon": "https://assets.decocache.com/medicinal-store/20d420b0-ebb3-40de-9d64-53739d39736c/noun-hair-8107473.svg",
+                      "text": "Promove o crescimento dos fios"
+                    },
+                    {
+                      "icon": "https://assets.decocache.com/medicinal-store/e3ed978a-8bf1-4403-893a-a5be7d6b3e4e/nom-gmo.svg",
+                      "text": "NOM-GMO"
+                    }
+                  ]
+                }
+              },
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/InfoCard.tsx",
+                  "image": {
+                    "mobile": "https://assets.decocache.com/medicinal-store/c15ade66-3232-42b8-b8c0-549b2f53af2f/Keranat----Tratamento-capilar-oral.png",
+                    "desktop": "https://assets.decocache.com/medicinal-store/93b6afca-b1f9-499a-8ab9-27f979c0fbbf/Keranat----Tratamento-capilar-oral-M.png",
+                    "alt": "Keranat"
+                  },
+                  "description": "<p><strong>Keranat</strong> é um nutracêutico oral desenvolvido para a <strong>saúde capilar</strong>, indicado para auxiliar na <strong>redução da queda de cabelo</strong> e no fortalecimento dos fios. Sua fórmula patenteada combina <strong>triterpenóides do painço (Miliacine™)</strong> e <strong>fitoceramidas do trigo (Lipowheat™)</strong>, com tecnologia de <strong>microencapsulação</strong>, garantindo maior biodisponibilidade e eficácia.</p><p>O suplemento atua diretamente no <strong>folículo piloso</strong>, estimulando o metabolismo celular da <strong>papila dérmica</strong>, reduzindo a fase telógena (queda) e prolongando a fase anágena (crescimento). Com isso, promove <strong>aumento da densidade capilar</strong>, crescimento de novos fios e melhora da resistência da fibra capilar.</p><p>Keranat é indicado para adultos com <strong>queda capilar não patológica</strong>, fios enfraquecidos ou como suporte em <strong>protocolos estéticos capilares</strong>. Entre seus benefícios estão a redução da queda a partir da <strong>oitava semana de uso</strong>, fortalecimento dos fios, mais brilho, maciez, volume e ação antioxidante no couro cabeludo.</p><p>Estudos clínicos demonstram que o Keranat <strong>não engorda nem altera o metabolismo</strong>, apresentando boa tolerabilidade e ausência de efeitos colaterais relevantes. Sua composição vegetal e baixa carga calórica tornam seu impacto metabólico neutro, sendo uma opção segura para a saúde dos cabelos.</p>",
+                  "backgroundColor": "#ffffff"
+                }
+              },
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/BannerPdp.tsx",
+                  "mobile": {
+                    "mobile": "https://assets.decocache.com/medicinal-store/bd52bc95-5102-41ca-9591-50dd8114ccf2/Keranat----Tratamento-capilar-oral-PDP-M.png",
+                    "alt": "Keranat"
+                  },
+                  "desktop": {
+                    "desktop": "https://assets.decocache.com/medicinal-store/8d0ece5d-81c4-47ae-874b-72d27ba99beb/Keranat----Tratamento-capilar-oral-PDP.png",
+                    "alt": "Keranat"
+                  },
+                  "link": "/keranat-150mg-60caps/p"
+                }
+              }
+            ],
+            "matcher": "/keranat-150mg-60caps/p"
           }
         ],
         "clusterDiscount": [
