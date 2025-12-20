@@ -416,6 +416,48 @@
               }
             ],
             "matcher": "/keranat-150mg-60caps/p"
+          },
+          {
+            "sections": [
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/Benefits.tsx",
+                  "benefits": [
+                    {
+                      "icon": "https://assets.decocache.com/medicinal-store/ddde6861-bf9a-442a-809c-e4c19747814a/timer.svg",
+                      "text": "Única Creatina com efeito imediato"
+                    },
+                    {
+                      "text": "Saturação 20 vezes mais rápida",
+                      "icon": "https://assets.decocache.com/medicinal-store/496cec76-23e6-445e-9a1f-a7c04703c7c8/20-minute.svg"
+                    },
+                    {
+                      "text": ">70% de eficiência de ATP",
+                      "icon": "https://assets.decocache.com/medicinal-store/f2f8f658-5043-45d4-b315-f9970616d292/molecule.svg"
+                    },
+                    {
+                      "icon": "https://assets.decocache.com/medicinal-store/71a59da4-716e-4f88-a24f-e17fdaac8cd1/brain.svg",
+                      "text": "+ Eficiência Cerebral"
+                    }
+                  ]
+                }
+              },
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/InfoCard.tsx",
+                  "description": "<p><strong>Clonapure</strong> é um suplemento de alta performance desenvolvido pela Florien®, baseado em um <strong>complexo trimolecular de creatina</strong> com tecnologia patenteada. Sua formulação combina creatina convencional, formas de alta energia e cofatores bioativos, promovendo <strong>liberação rápida e sustentada da creatina</strong>, o que resulta em aumento eficiente e imediato da <strong>produção de ATP</strong>. Essa inovação atua diretamente nos sistemas <strong>metabólico, muscular e neurológico</strong>, oferecendo suporte bioenergético avançado.</p><p>Clonapure serve como <strong>ergogênico de efeito imediato</strong>, indicado para otimizar o <strong>desempenho físico</strong>, a <strong>performance cognitiva</strong> e o equilíbrio metabólico. Diferente da creatina monohidratada tradicional, não exige fase de saturação, proporcionando resposta energética desde a primeira dose. Estudos indicam <strong>biodisponibilidade até duas vezes superior</strong>, mesmo em concentrações menores.</p><p>Entre seus principais benefícios estão o aumento rápido da concentração plasmática de creatina, melhora da função mitocondrial, suporte neuroprotetor, auxílio à memória e contribuição para a <strong>termogênese e controle energético</strong>. Seu mecanismo de ação atua na via fosfagênica, acelerando a ressíntese de ATP e promovendo energia celular em tempo real. Além do uso esportivo, Clonapure se destaca pelo potencial em <strong>saúde cerebral e suporte neurometabólico</strong>, ampliando suas aplicações clínicas.</p>",
+                  "backgroundColor": "#ffffff",
+                  "image": {
+                    "mobile": "https://assets.decocache.com/medicinal-store/b4d36bfb-fb16-4911-aa64-4e8f90b16dfd/Clonapure-M1.png",
+                    "alt": "Clonapure",
+                    "desktop": "https://assets.decocache.com/medicinal-store/73956488-81fb-4870-8b01-4b687a34dd70/Clonapure----M.png"
+                  }
+                }
+              }
+            ],
+            "matcher": "clonapure-100g/p"
           }
         ],
         "clusterDiscount": [
