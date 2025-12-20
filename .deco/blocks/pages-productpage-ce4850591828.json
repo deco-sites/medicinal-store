@@ -455,6 +455,21 @@
                     "desktop": "https://assets.decocache.com/medicinal-store/73956488-81fb-4870-8b01-4b687a34dd70/Clonapure----M.png"
                   }
                 }
+              },
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/BannerPdp.tsx",
+                  "mobile": {
+                    "mobile": "https://assets.decocache.com/medicinal-store/e929ec29-2ba5-4aa3-838c-14d32055b899/Clonapure-info-1.png",
+                    "alt": "Clonapure - maxima performance fisica e mental"
+                  },
+                  "desktop": {
+                    "desktop": "https://assets.decocache.com/medicinal-store/65a912a1-940d-4bda-a1ed-d5da3c81e554/Clonapure-Info.png",
+                    "alt": "Clonapure - energia celular imediata"
+                  },
+                  "link": "/clonapure-100g/p"
+                }
               }
             ],
             "matcher": "clonapure-100g/p"
