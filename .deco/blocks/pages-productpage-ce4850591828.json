@@ -530,6 +530,67 @@
               }
             ],
             "matcher": "/moccacino-395g/p"
+          },
+          {
+            "sections": [
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/Benefits.tsx",
+                  "benefits": [
+                    {
+                      "icon": "https://assets.decocache.com/medicinal-store/97c3a08e-5a14-4eb7-8d06-f333290c97a3/sintese.svg",
+                      "text": "400% de aumento da síntese proteica em repouso"
+                    },
+                    {
+                      "icon": "https://assets.decocache.com/medicinal-store/d28edde3-7bdb-4d4a-b885-761d77351698/bone.svg",
+                      "text": "1% de aumento na densidade mineral óssea"
+                    },
+                    {
+                      "icon": "https://assets.decocache.com/medicinal-store/20eadaa7-4c86-4967-b047-302fd01aefc8/musculo.svg",
+                      "text": "54% de redução na perda de massa muscular"
+                    },
+                    {
+                      "text": "Hiper recuperação muscular em 4 dias",
+                      "icon": "https://assets.decocache.com/medicinal-store/392f04fe-4662-4bf1-af06-98c3455a8076/recuperacao-muscular.svg"
+                    },
+                    {
+                      "icon": "https://assets.decocache.com/medicinal-store/e24e1234-e3be-4911-a3a2-cd28f70cb35c/whey.svg",
+                      "text": "90% de eficácia anabólica vs 50% Whey"
+                    }
+                  ],
+                  "title": "<p></p>"
+                }
+              },
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/InfoCard.tsx",
+                  "image": {
+                    "mobile": "https://assets.decocache.com/medicinal-store/87076a18-c9f0-40a9-961e-4084d3b8fd88/Peptistrong-info.png",
+                    "desktop": "https://assets.decocache.com/medicinal-store/bf67111f-9c09-42d1-8036-37688732c1e8/Peptistrong-m.png",
+                    "alt": "PeptiStrong - 4 vezes mais potente que whey protein"
+                  },
+                  "backgroundColor": "#ffffff"
+                }
+              },
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/BannerPdp.tsx",
+                  "mobile": {
+                    "mobile": "https://assets.decocache.com/medicinal-store/67861478-fa07-4374-a60d-fc53d9ff270d/Peptistrong-pdp-m.png",
+                    "alt": "PeptiStrong - O construtor muscular natural do corpo"
+                  },
+                  "desktop": {
+                    "desktop": "https://assets.decocache.com/medicinal-store/41a18dd3-8d68-4625-b904-47c5432a3f9c/Peptistrong-pdp.png",
+                    "alt": "PeptiStrong - O construtor muscular natural do corpo"
+                  },
+                  "link": "/peptistrong-chocolate-belga/p"
+                }
+              }
+            ],
+            "matcher": "/peptistrong-chocolate-belga/p"
           }
         ],
         "clusterDiscount": [
