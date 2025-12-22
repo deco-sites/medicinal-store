@@ -473,6 +473,63 @@
               }
             ],
             "matcher": "clonapure-100g/p"
+          },
+          {
+            "sections": [
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/Benefits.tsx",
+                  "benefits": [
+                    {
+                      "icon": "https://assets.decocache.com/medicinal-store/5c9d8eac-b77e-4637-ade8-bd7144293003/rugas.svg",
+                      "text": "Melhora da firmeza, hidratação e elasticidade da pele"
+                    },
+                    {
+                      "icon": "https://assets.decocache.com/medicinal-store/13ee7def-b51b-4986-84dc-65a6ffdce10f/Cabelo.svg",
+                      "text": "Fortalece, da brilho e volume aos cabelos"
+                    },
+                    {
+                      "icon": "https://assets.decocache.com/medicinal-store/13d7c17a-eb3d-41e6-b62c-9fea58e6f5a0/Colagen.svg",
+                      "text": "Estimula a produção de colágeno no organismo"
+                    },
+                    {
+                      "icon": "https://assets.decocache.com/medicinal-store/7bdd277f-639e-4e36-8ab2-d9132cfbd42e/unhas.svg",
+                      "text": "Fortalece, diminui a quebra e melhora da aparência geral. "
+                    }
+                  ],
+                  "title": "<h1></h1>"
+                }
+              },
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/InfoCard.tsx",
+                  "image": {
+                    "alt": "Mocacino - repositor nutricolágeno",
+                    "mobile": "https://assets.decocache.com/medicinal-store/7d9fdebd-ae7c-4cad-a3aa-99be94a7ef9f/mocaccino---repositor-nutricolageno-info.png",
+                    "desktop": "https://assets.decocache.com/medicinal-store/d6607d16-f168-4029-b48f-07502916f22e/mocaccino---repositor-nutricolageno-m.png"
+                  },
+                  "description": "<p><strong>Moccacino</strong> é um suplemento alimentar funcional desenvolvido para atuar como <strong>repositor de colágeno endógeno</strong>, auxiliando na manutenção da saúde da pele, articulações e tecidos conjuntivos. Sua fórmula é composta por <strong>peptídeos bioativos de colágeno</strong>, associados a cofatores que estimulam a <strong>síntese natural de colágeno tipo I e III</strong>, fundamentais para a firmeza, elasticidade e sustentação da pele.</p><p>Apresentado em formato <strong>solúvel</strong> e com sabor agradável semelhante ao <strong>café mocha</strong>, o Moccacino oferece uma forma prática e funcional de consumo diário. Seu uso é indicado especialmente para pessoas que desejam combater os efeitos do <strong>envelhecimento natural</strong>, período em que a produção de colágeno pelo organismo diminui progressivamente.</p><p>O Moccacino serve para melhorar a <strong>firmeza e hidratação da pele</strong>, auxiliar na redução de <strong>linhas finas e marcas de expressão</strong> e oferecer <strong>suporte às articulações e cartilagens</strong>. Por isso, é amplamente utilizado em <strong>protocolos de estética facial, rejuvenescimento e cuidado articular</strong>.</p><p>Entre seus principais benefícios estão o estímulo contínuo da produção de colágeno estrutural, melhora da elasticidade cutânea, prevenção da flacidez e ação antioxidante, proporcionada pelos cofatores vitamínicos presentes na fórmula. Moccacino é indicado para adultos que buscam <strong>beleza, saúde e funcionalidade</strong> em um único suplemento, com foco em resultados progressivos e seguros.</p>",
+                  "backgroundColor": "#ffffff"
+                }
+              },
+              {
+                "__resolveType": "website/sections/Rendering/Lazy.tsx",
+                "section": {
+                  "__resolveType": "site/sections/Content/BannerPdp.tsx",
+                  "mobile": {
+                    "mobile": "https://assets.decocache.com/medicinal-store/b5f67524-f901-481a-8613-7eb2b2ce0a74/mocaccino---repositor-nutricolageno-pdp-m.png",
+                    "alt": "Mocaccino - repositor nutricolageno inteligente para resultados superiores"
+                  },
+                  "desktop": {
+                    "desktop": "https://assets.decocache.com/medicinal-store/7af5f12a-2cdf-4bc3-b77c-608d37874589/mocaccino---repositor-nutricolageno-pdp.png",
+                    "alt": "Mocaccino - repositor nutricolageno inteligente para resultados superiores"
+                  }
+                }
+              }
+            ],
+            "matcher": "/moccacino-395g/p"
           }
         ],
         "clusterDiscount": [
