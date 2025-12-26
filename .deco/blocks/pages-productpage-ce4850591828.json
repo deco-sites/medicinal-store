@@ -396,7 +396,8 @@
                     "alt": "Keranat"
                   },
                   "description": "<p><strong>Keranat</strong> é um nutracêutico oral desenvolvido para a <strong>saúde capilar</strong>, indicado para auxiliar na <strong>redução da queda de cabelo</strong> e no fortalecimento dos fios. Sua fórmula patenteada combina <strong>triterpenóides do painço (Miliacine™)</strong> e <strong>fitoceramidas do trigo (Lipowheat™)</strong>, com tecnologia de <strong>microencapsulação</strong>, garantindo maior biodisponibilidade e eficácia.</p><p>O suplemento atua diretamente no <strong>folículo piloso</strong>, estimulando o metabolismo celular da <strong>papila dérmica</strong>, reduzindo a fase telógena (queda) e prolongando a fase anágena (crescimento). Com isso, promove <strong>aumento da densidade capilar</strong>, crescimento de novos fios e melhora da resistência da fibra capilar.</p><p>Keranat é indicado para adultos com <strong>queda capilar não patológica</strong>, fios enfraquecidos ou como suporte em <strong>protocolos estéticos capilares</strong>. Entre seus benefícios estão a redução da queda a partir da <strong>oitava semana de uso</strong>, fortalecimento dos fios, mais brilho, maciez, volume e ação antioxidante no couro cabeludo.</p><p>Estudos clínicos demonstram que o Keranat <strong>não engorda nem altera o metabolismo</strong>, apresentando boa tolerabilidade e ausência de efeitos colaterais relevantes. Sua composição vegetal e baixa carga calórica tornam seu impacto metabólico neutro, sendo uma opção segura para a saúde dos cabelos.</p>",
-                  "backgroundColor": "#ffffff"
+                  "backgroundColor": "#ffffff",
+                  "title": "<p></p>"
                 }
               },
               {
@@ -453,7 +454,8 @@
                     "mobile": "https://assets.decocache.com/medicinal-store/b4d36bfb-fb16-4911-aa64-4e8f90b16dfd/Clonapure-M1.png",
                     "alt": "Clonapure",
                     "desktop": "https://assets.decocache.com/medicinal-store/73956488-81fb-4870-8b01-4b687a34dd70/Clonapure----M.png"
-                  }
+                  },
+                  "title": "<p></p>"
                 }
               },
               {
@@ -511,7 +513,8 @@
                     "desktop": "https://assets.decocache.com/medicinal-store/d6607d16-f168-4029-b48f-07502916f22e/mocaccino---repositor-nutricolageno-m.png"
                   },
                   "description": "<p><strong>Moccacino</strong> é um suplemento alimentar funcional desenvolvido para atuar como <strong>repositor de colágeno endógeno</strong>, auxiliando na manutenção da saúde da pele, articulações e tecidos conjuntivos. Sua fórmula é composta por <strong>peptídeos bioativos de colágeno</strong>, associados a cofatores que estimulam a <strong>síntese natural de colágeno tipo I e III</strong>, fundamentais para a firmeza, elasticidade e sustentação da pele.</p><p>Apresentado em formato <strong>solúvel</strong> e com sabor agradável semelhante ao <strong>café mocha</strong>, o Moccacino oferece uma forma prática e funcional de consumo diário. Seu uso é indicado especialmente para pessoas que desejam combater os efeitos do <strong>envelhecimento natural</strong>, período em que a produção de colágeno pelo organismo diminui progressivamente.</p><p>O Moccacino serve para melhorar a <strong>firmeza e hidratação da pele</strong>, auxiliar na redução de <strong>linhas finas e marcas de expressão</strong> e oferecer <strong>suporte às articulações e cartilagens</strong>. Por isso, é amplamente utilizado em <strong>protocolos de estética facial, rejuvenescimento e cuidado articular</strong>.</p><p>Entre seus principais benefícios estão o estímulo contínuo da produção de colágeno estrutural, melhora da elasticidade cutânea, prevenção da flacidez e ação antioxidante, proporcionada pelos cofatores vitamínicos presentes na fórmula. Moccacino é indicado para adultos que buscam <strong>beleza, saúde e funcionalidade</strong> em um único suplemento, com foco em resultados progressivos e seguros.</p>",
-                  "backgroundColor": "#ffffff"
+                  "backgroundColor": "#ffffff",
+                  "title": "<p></p>"
                 }
               },
               {
